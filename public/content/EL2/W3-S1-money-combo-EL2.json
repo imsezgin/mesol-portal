@@ -1,0 +1,61 @@
+{
+  "id": "W3-S1-money-combo-EL2",
+  "week": 3,
+  "session": 1,
+  "level": "EL2",
+  "type": "mesol_combo",
+  "topic": "British money and prices",
+  "lo": "LO3",
+  "title": "Shopping and money",
+  "instruction": "Answer these English and maths questions about money.",
+  "english_section": {
+    "title": "Money language",
+    "questions": [
+      {
+        "question": "How do you say '£3.75'?",
+        "options": [
+          "Three pounds and seventy five",
+          "Three point seven five pounds",
+          "Three seventy five",
+          "Three pounds seventy five pence"
+        ],
+        "answer": "Three pounds seventy five pence"
+      },
+      {
+        "question": "A sign says 'BOGOF'. What does this mean?",
+        "options": [
+          "Buy One Get One Free",
+          "Big Offer Going On Friday",
+          "Bags Of Goods On Floor",
+          "Buy Online Get One Free"
+        ],
+        "answer": "Buy One Get One Free"
+      },
+      {
+        "question": "Which word means the same as 'price'?",
+        "options": ["cost", "change", "receipt", "total"],
+        "answer": "cost"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Calculating with money",
+    "questions": [
+      {
+        "question": "You buy: bread £1.20, milk £1.05, eggs £2.30. What is the total?",
+        "options": ["£4.45", "£4.55", "£4.65", "£4.75"],
+        "answer": "£4.55"
+      },
+      {
+        "question": "You pay with a £10 note. Your total is £6.35. How much change do you get?",
+        "options": ["£3.55", "£3.65", "£3.75", "£4.65"],
+        "answer": "£3.65"
+      },
+      {
+        "question": "3 apples cost £1.50. How much is 1 apple?",
+        "options": ["40p", "45p", "50p", "55p"],
+        "answer": "50p"
+      }
+    ]
+  }
+}

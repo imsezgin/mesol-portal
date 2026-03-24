@@ -1,0 +1,39 @@
+{
+  "id": "W2-S2-recipes-mcq-EL1",
+  "week": 2,
+  "session": 2,
+  "level": "EL1",
+  "type": "mcq",
+  "topic": "Recipe ingredients",
+  "lo": "LO2",
+  "title": "Chocolate brownies",
+  "instruction": "Look at this recipe and answer the questions.",
+  "context": "Chocolate Brownie Recipe (makes 12): 200g dark chocolate, 150g butter, 250g sugar, 3 eggs, 100g flour, 50g cocoa powder.",
+  "questions": [
+    {
+      "question": "How much sugar do you need?",
+      "options": ["200g", "150g", "250g", "100g"],
+      "answer": "250g"
+    },
+    {
+      "question": "How many eggs do you need?",
+      "options": ["1", "2", "3", "4"],
+      "answer": "3"
+    },
+    {
+      "question": "Which ingredient do you need the most of?",
+      "options": ["chocolate", "butter", "sugar", "flour"],
+      "answer": "sugar"
+    },
+    {
+      "question": "How much flour do you need?",
+      "options": ["50g", "100g", "150g", "200g"],
+      "answer": "100g"
+    },
+    {
+      "question": "The recipe makes 12 brownies. Which word means 'makes'?",
+      "options": ["needs", "serves", "takes", "makes"],
+      "answer": "makes"
+    }
+  ]
+}

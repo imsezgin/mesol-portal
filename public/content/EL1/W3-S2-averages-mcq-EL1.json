@@ -1,0 +1,38 @@
+{
+  "id": "W3-S2-averages-mcq-EL1",
+  "week": 3,
+  "session": 2,
+  "level": "EL1",
+  "type": "mcq",
+  "topic": "Dividing money",
+  "lo": "LO3",
+  "title": "Sharing money equally",
+  "instruction": "Choose the correct answer.",
+  "questions": [
+    {
+      "question": "4 friends share a pizza that costs £12. How much does each person pay?",
+      "options": ["£2", "£3", "£4", "£6"],
+      "answer": "£3"
+    },
+    {
+      "question": "You buy 3 bags of apples for £6. How much is 1 bag?",
+      "options": ["£1", "£2", "£3", "£4"],
+      "answer": "£2"
+    },
+    {
+      "question": "A taxi costs £20. 5 people share the cost equally. How much does each person pay?",
+      "options": ["£2", "£3", "£4", "£5"],
+      "answer": "£4"
+    },
+    {
+      "question": "You earn £80 in 4 days. How much do you earn per day?",
+      "options": ["£15", "£20", "£25", "£30"],
+      "answer": "£20"
+    },
+    {
+      "question": "Which word means to split equally between people?",
+      "options": ["multiply", "divide", "add", "subtract"],
+      "answer": "divide"
+    }
+  ]
+}

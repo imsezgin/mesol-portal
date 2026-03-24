@@ -1,0 +1,61 @@
+{
+  "id": "W4-S1-fractions-combo-EL3",
+  "week": 4,
+  "session": 1,
+  "level": "EL3",
+  "type": "mesol_combo",
+  "topic": "Complex fractions, decimals and percentages",
+  "lo": "LO1",
+  "title": "Discounts and instalments",
+  "instruction": "Answer these English and maths questions about real-life situations.",
+  "english_section": {
+    "title": "Understanding financial language",
+    "questions": [
+      {
+        "question": "A sofa costs £1,200. The shop offers '12 monthly instalments'. What does 'instalment' mean?",
+        "options": [
+          "A one-off discount",
+          "One of a series of regular payments",
+          "A type of insurance",
+          "A delivery charge"
+        ],
+        "answer": "One of a series of regular payments"
+      },
+      {
+        "question": "A label says 'mortgage interest rate: 4.5% p.a.' What does 'p.a.' mean?",
+        "options": ["per application", "per annum (per year)", "paid already", "private account"],
+        "answer": "per annum (per year)"
+      },
+      {
+        "question": "Which sentence correctly uses a fraction greater than 1?",
+        "options": [
+          "I spent 5/3 of my budget — less than planned",
+          "I spent 5/3 of my budget — more than planned",
+          "5/3 means the same as 1/3",
+          "5/3 is less than 1"
+        ],
+        "answer": "I spent 5/3 of my budget — more than planned"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Real-life calculations",
+    "questions": [
+      {
+        "question": "A laptop costs £840. It is reduced by 1/3. What is the sale price?",
+        "options": ["£520", "£540", "£560", "£580"],
+        "answer": "£560"
+      },
+      {
+        "question": "You pay for a £960 sofa in 12 equal monthly instalments. How much is each payment?",
+        "options": ["£70", "£75", "£80", "£85"],
+        "answer": "£80"
+      },
+      {
+        "question": "A mortgage of £150,000 has 4.5% annual interest. How much interest do you pay in the first year?",
+        "options": ["£5,750", "£6,250", "£6,750", "£7,250"],
+        "answer": "£6,750"
+      }
+    ]
+  }
+}

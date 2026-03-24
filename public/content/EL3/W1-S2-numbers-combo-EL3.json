@@ -1,0 +1,61 @@
+{
+  "id": "W1-S2-numbers-combo-EL3",
+  "week": 1,
+  "session": 2,
+  "level": "EL3",
+  "type": "mesol_combo",
+  "topic": "Numbers — reading and calculating",
+  "lo": "LO1",
+  "title": "Numbers in real life",
+  "instruction": "Answer these English and maths questions about numbers.",
+  "english_section": {
+    "title": "Reading numbers",
+    "questions": [
+      {
+        "question": "Read this: 'The population of Huddersfield is 162,949.' How do you say this number?",
+        "options": [
+          "One hundred and sixty two thousand nine hundred and forty nine",
+          "One six two nine four nine",
+          "Sixteen thousand two hundred and ninety four",
+          "One hundred sixty nine thousand"
+        ],
+        "answer": "One hundred and sixty two thousand nine hundred and forty nine"
+      },
+      {
+        "question": "Which sentence uses an ordinal number correctly?",
+        "options": [
+          "I live in the 3 floor",
+          "I live on the third floor",
+          "I live at the 3th floor",
+          "I live in floor three"
+        ],
+        "answer": "I live on the third floor"
+      },
+      {
+        "question": "On a form it says 'NI Number'. What does NI stand for?",
+        "options": ["Northern Ireland", "National Insurance", "New Identity", "Name Initial"],
+        "answer": "National Insurance"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Number calculations",
+    "questions": [
+      {
+        "question": "A bus arrives at 08:45. It is 25 minutes late. What time should it have arrived?",
+        "options": ["08:10", "08:20", "09:10", "08:15"],
+        "answer": "08:20"
+      },
+      {
+        "question": "A form asks for your age in months. You are 34 years old. How many months is that?",
+        "options": ["340", "408", "384", "412"],
+        "answer": "408"
+      },
+      {
+        "question": "You need to write your height in cm on a medical form. You are 1.65 metres tall. What do you write?",
+        "options": ["16.5 cm", "1650 cm", "165 cm", "0.165 cm"],
+        "answer": "165 cm"
+      }
+    ]
+  }
+}

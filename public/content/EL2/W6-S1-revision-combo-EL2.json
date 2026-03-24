@@ -1,0 +1,71 @@
+{
+  "id": "W6-S1-revision-combo-EL2",
+  "week": 6,
+  "session": 1,
+  "level": "EL2",
+  "type": "mesol_combo",
+  "topic": "Revision — all topics",
+  "lo": "LO1",
+  "title": "End of course revision",
+  "instruction": "Answer these revision questions covering everything you have learned.",
+  "english_section": {
+    "title": "English revision",
+    "questions": [
+      {
+        "question": "A supermarket receipt shows 'Subtotal: £34.60 | VAT (20%): £6.92 | Total: £41.52'. What is VAT?",
+        "options": [
+          "Value Added Tax — a government tax on goods",
+          "Very Affordable Total",
+          "Value After Trade",
+          "Variable Amount Tax"
+        ],
+        "answer": "Value Added Tax — a government tax on goods"
+      },
+      {
+        "question": "Which sentence correctly describes a budget shortfall?",
+        "options": [
+          "Income is more than expenses",
+          "Income equals expenses exactly",
+          "Expenses are more than income",
+          "Savings are more than expenses"
+        ],
+        "answer": "Expenses are more than income"
+      },
+      {
+        "question": "A form asks for your 'NOK'. This stands for Next of Kin. What does NOK mean in everyday language?",
+        "options": [
+          "Your nearest neighbour",
+          "Your doctor",
+          "Your closest family member or contact",
+          "Your employer"
+        ],
+        "answer": "Your closest family member or contact"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Maths revision",
+    "questions": [
+      {
+        "question": "A 2kg bag of rice costs £3.60. A 5kg bag costs £8.25. Which is better value per kg?",
+        "options": [
+          "2kg bag (£1.80/kg)",
+          "5kg bag (£1.65/kg)",
+          "They are the same",
+          "Cannot calculate"
+        ],
+        "answer": "5kg bag (£1.65/kg)"
+      },
+      {
+        "question": "Convert 3/8 to a percentage.",
+        "options": ["32.5%", "37.5%", "38%", "40%"],
+        "answer": "37.5%"
+      },
+      {
+        "question": "A family's income rises by 5% from £2,400. What is the new income?",
+        "options": ["£2,480", "£2,500", "£2,520", "£2,540"],
+        "answer": "£2,520"
+      }
+    ]
+  }
+}

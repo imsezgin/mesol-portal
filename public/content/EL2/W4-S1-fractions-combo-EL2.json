@@ -1,0 +1,56 @@
+{
+  "id": "W4-S1-fractions-combo-EL2",
+  "week": 4,
+  "session": 1,
+  "level": "EL2",
+  "type": "mesol_combo",
+  "topic": "Expressing fractions, decimals and percentages",
+  "lo": "LO1",
+  "title": "Fractions, decimals and percentages",
+  "instruction": "Answer these English and maths questions.",
+  "english_section": {
+    "title": "Reading and understanding",
+    "questions": [
+      {
+        "question": "A sign says 'SALE — 1/3 OFF all shoes'. What does this mean?",
+        "options": [
+          "Shoes cost one third more",
+          "You save one third of the price",
+          "Only one third of shoes are on sale",
+          "Shoes are reduced by 13%"
+        ],
+        "answer": "You save one third of the price"
+      },
+      {
+        "question": "How do you say this fraction correctly: 3/4?",
+        "options": ["Three quarters", "Three over four", "Three fours", "Three from four"],
+        "answer": "Three quarters"
+      },
+      {
+        "question": "A label says '0.75 litres'. What is this as a fraction of 1 litre?",
+        "options": ["1/2", "2/3", "3/4", "4/5"],
+        "answer": "3/4"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Calculating with fractions and percentages",
+    "questions": [
+      {
+        "question": "A TV costs £480. It is reduced by 25%. What is the sale price?",
+        "options": ["£340", "£350", "£360", "£370"],
+        "answer": "£360"
+      },
+      {
+        "question": "You pay £36 for an item in a 1/4 off sale. What was the original price?",
+        "options": ["£44", "£46", "£48", "£50"],
+        "answer": "£48"
+      },
+      {
+        "question": "A loan has 10% interest per year. You borrow £500. How much interest do you pay after 1 year?",
+        "options": ["£40", "£45", "£50", "£55"],
+        "answer": "£50"
+      }
+    ]
+  }
+}

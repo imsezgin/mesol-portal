@@ -1,0 +1,14 @@
+{
+  "id": "W2-S1-weights-gap-EL2",
+  "week": 2,
+  "session": 1,
+  "level": "EL2",
+  "type": "gap_fill",
+  "topic": "Metric and imperial measures",
+  "lo": "LO2",
+  "title": "Metric and imperial",
+  "instruction": "Complete the sentences with the correct word or abbreviation.",
+  "passage": "In the UK, we use both ___ and imperial measurements. In metric, we measure weight in ___ and kilograms. We measure liquid in millilitres and ___. In imperial, we use ___ and pounds for weight. For liquid, we use ___ and gallons. One kilogram is about ___ pounds.",
+  "blanks": ["metric", "grams", "litres", "ounces", "pints", "2.2"],
+  "word_bank": ["metric", "grams", "litres", "ounces", "pints", "2.2", "inches", "3.5"]
+}

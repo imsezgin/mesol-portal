@@ -1,0 +1,20 @@
+{
+  "id": "W2-bonus-weights-vocab-EL2",
+  "week": 2,
+  "session": 1,
+  "level": "EL2",
+  "type": "vocab_match",
+  "topic": "Metric and imperial units",
+  "lo": "LO2",
+  "title": "Units of measurement",
+  "instruction": "Match each unit to its description.",
+  "pairs": [
+    { "term": "millimetre (mm)",  "definition": "Very small unit of length — 10mm = 1cm" },
+    { "term": "centimetre (cm)",  "definition": "Unit of length — 100cm = 1 metre" },
+    { "term": "metre (m)",        "definition": "Standard unit of length — about the height of a door handle" },
+    { "term": "kilometre (km)",   "definition": "Unit of distance — 1km ≈ 0.6 miles" },
+    { "term": "ounce (oz)",       "definition": "Imperial unit of weight — 16oz = 1 pound" },
+    { "term": "pound (lb)",       "definition": "Imperial unit of weight — 1lb ≈ 450g" },
+    { "term": "pint",             "definition": "Imperial unit of liquid — about 568ml" }
+  ]
+}

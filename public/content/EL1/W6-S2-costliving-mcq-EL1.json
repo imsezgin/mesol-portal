@@ -1,0 +1,44 @@
+{
+  "id": "W6-S2-costliving-mcq-EL1",
+  "week": 6,
+  "session": 2,
+  "level": "EL1",
+  "type": "mcq",
+  "topic": "Cost of living — Huddersfield vs London",
+  "lo": "LO3",
+  "title": "Huddersfield or London?",
+  "instruction": "Look at the prices and choose the correct answer.",
+  "context": "Monthly rent: Huddersfield £750 | London £1,800. Weekly food shop: Huddersfield £80 | London £110. Bus pass (monthly): Huddersfield £55 | London £165.",
+  "questions": [
+    {
+      "question": "Which city has cheaper rent?",
+      "options": ["London", "Huddersfield", "They are the same", "Cannot tell"],
+      "answer": "Huddersfield"
+    },
+    {
+      "question": "How much more expensive is London rent per month?",
+      "options": ["£850", "£950", "£1,000", "£1,050"],
+      "answer": "£1,050"
+    },
+    {
+      "question": "How much does a London bus pass cost per year?",
+      "options": ["£1,680", "£1,820", "£1,960", "£1,980"],
+      "answer": "£1,980"
+    },
+    {
+      "question": "What does 'cost of living' mean?",
+      "options": [
+        "How much you earn",
+        "How much it costs to live in a place",
+        "The price of a house",
+        "Your monthly savings"
+      ],
+      "answer": "How much it costs to live in a place"
+    },
+    {
+      "question": "Which city is more expensive to live in overall?",
+      "options": ["Huddersfield", "London", "They are the same", "Cannot tell"],
+      "answer": "London"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "W2-S1-weights-mcq-EL1",
+  "week": 2,
+  "session": 1,
+  "level": "EL1",
+  "type": "mcq",
+  "topic": "Weights and measures",
+  "lo": "LO2",
+  "title": "Which unit?",
+  "instruction": "Choose the correct unit of measurement.",
+  "questions": [
+    {
+      "question": "You are buying flour at the supermarket. The bag weighs 1.5 ___.",
+      "options": ["ml", "kg", "cm", "l"],
+      "answer": "kg"
+    },
+    {
+      "question": "A recipe needs 200 ___ of milk.",
+      "options": ["kg", "g", "ml", "km"],
+      "answer": "ml"
+    },
+    {
+      "question": "You walk 2 ___ to school.",
+      "options": ["kg", "ml", "km", "g"],
+      "answer": "km"
+    },
+    {
+      "question": "A chocolate bar weighs 45 ___.",
+      "options": ["kg", "g", "l", "cm"],
+      "answer": "g"
+    },
+    {
+      "question": "A bottle of water holds 1 ___.",
+      "options": ["kg", "g", "l", "cm"],
+      "answer": "l"
+    }
+  ]
+}

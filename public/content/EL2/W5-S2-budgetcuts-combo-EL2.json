@@ -1,0 +1,62 @@
+{
+  "id": "W5-S2-budgetcuts-combo-EL2",
+  "week": 5,
+  "session": 2,
+  "level": "EL2",
+  "type": "mesol_combo",
+  "topic": "Percentage increases and cuts in a budget",
+  "lo": "LO3",
+  "title": "The Schofield family in trouble",
+  "instruction": "The Schofield family face financial difficulties. Answer these questions.",
+  "context": "The Schofields' monthly income was £2,600. Mr Schofield's hours were cut — income fell by 15%. Meanwhile: rent increased by 10% from £800 | energy bills increased by 20% from £150 | food costs increased by 8% from £350.",
+  "english_section": {
+    "title": "Understanding financial news",
+    "questions": [
+      {
+        "question": "Mr Schofield's 'hours were cut'. What does this mean for their income?",
+        "options": [
+          "He works longer hours for less pay",
+          "He works fewer hours and earns less",
+          "He lost his job completely",
+          "He received a pay rise"
+        ],
+        "answer": "He works fewer hours and earns less"
+      },
+      {
+        "question": "Bills and rent 'increased'. What is another word for increased?",
+        "options": ["fell", "dropped", "rose", "reduced"],
+        "answer": "rose"
+      },
+      {
+        "question": "The family need to 'prioritise' their spending. What does prioritise mean?",
+        "options": [
+          "Spend on everything equally",
+          "Decide what is most important",
+          "Cut all spending by the same amount",
+          "Borrow money from a bank"
+        ],
+        "answer": "Decide what is most important"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Calculating the impact",
+    "questions": [
+      {
+        "question": "Income fell by 15% from £2,600. What is the new monthly income?",
+        "options": ["£2,080", "£2,150", "£2,210", "£2,250"],
+        "answer": "£2,210"
+      },
+      {
+        "question": "Rent increased by 10% from £800. What is the new rent?",
+        "options": ["£840", "£860", "£880", "£900"],
+        "answer": "£880"
+      },
+      {
+        "question": "Energy bills increased by 20% from £150. What is the new bill?",
+        "options": ["£170", "£175", "£178", "£180"],
+        "answer": "£180"
+      }
+    ]
+  }
+}

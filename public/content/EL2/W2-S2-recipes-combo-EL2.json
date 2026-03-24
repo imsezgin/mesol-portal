@@ -1,0 +1,52 @@
+{
+  "id": "W2-S2-recipes-combo-EL2",
+  "week": 2,
+  "session": 2,
+  "level": "EL2",
+  "type": "mesol_combo",
+  "topic": "Recipe quantities",
+  "lo": "LO2",
+  "title": "Pancake recipe",
+  "instruction": "Answer these questions about the pancake recipe.",
+  "context": "Basic Pancake Recipe (makes 8 pancakes): 100g plain flour, 2 eggs, 300ml milk, 1 tablespoon butter, pinch of salt.",
+  "english_section": {
+    "title": "Recipe vocabulary",
+    "questions": [
+      {
+        "question": "What does 'pinch of salt' mean?",
+        "options": ["1 teaspoon", "A very small amount", "Half a cup", "One tablespoon"],
+        "answer": "A very small amount"
+      },
+      {
+        "question": "Which word means to mix ingredients together quickly?",
+        "options": ["bake", "whisk", "boil", "chop"],
+        "answer": "whisk"
+      },
+      {
+        "question": "The recipe 'makes 8 pancakes'. What is another word for 'makes' in cooking?",
+        "options": ["serves", "yields", "takes", "needs"],
+        "answer": "yields"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Calculating quantities",
+    "questions": [
+      {
+        "question": "You want to make 16 pancakes (double the recipe). How much flour do you need?",
+        "options": ["150g", "200g", "250g", "300g"],
+        "answer": "200g"
+      },
+      {
+        "question": "You want to make 4 pancakes (half the recipe). How much milk do you need?",
+        "options": ["100ml", "150ml", "200ml", "250ml"],
+        "answer": "150ml"
+      },
+      {
+        "question": "You make the recipe 3 times. How many pancakes do you have?",
+        "options": ["16", "20", "24", "32"],
+        "answer": "24"
+      }
+    ]
+  }
+}

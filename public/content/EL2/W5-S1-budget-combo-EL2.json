@@ -1,0 +1,62 @@
+{
+  "id": "W5-S1-budget-combo-EL2",
+  "week": 5,
+  "session": 1,
+  "level": "EL2",
+  "type": "mesol_combo",
+  "topic": "Analysing a family budget",
+  "lo": "LO3",
+  "title": "Budget categories and percentages",
+  "instruction": "Read the Patel family budget and answer the questions.",
+  "context": "Patel family monthly income: £2,400. Rent: £780 | Food: £380 | Transport: £120 | Utilities (gas, electric, water): £150 | Mobile phones: £60 | Internet: £35 | Childcare: £320 | Clothing: £80 | Entertainment: £75 | Total expenses: £2,000.",
+  "english_section": {
+    "title": "Understanding budget categories",
+    "questions": [
+      {
+        "question": "What does 'utilities' include in this budget?",
+        "options": [
+          "Phone and internet",
+          "Gas, electric and water",
+          "Food and transport",
+          "Rent and childcare"
+        ],
+        "answer": "Gas, electric and water"
+      },
+      {
+        "question": "The family spends £320 on childcare. What does 'childcare' mean?",
+        "options": [
+          "Children's clothing",
+          "School fees",
+          "Professional care for children while parents work",
+          "Children's entertainment"
+        ],
+        "answer": "Professional care for children while parents work"
+      },
+      {
+        "question": "What percentage of income is left after expenses?",
+        "options": ["10%", "15%", "16.7%", "20%"],
+        "answer": "16.7%"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Percentage of budget",
+    "questions": [
+      {
+        "question": "What percentage of income is spent on rent? (£780 of £2,400)",
+        "options": ["30.5%", "32.5%", "33.5%", "35.5%"],
+        "answer": "32.5%"
+      },
+      {
+        "question": "Food and transport together cost how much per year?",
+        "options": ["£5,800", "£6,000", "£6,200", "£6,400"],
+        "answer": "£6,000"
+      },
+      {
+        "question": "The family saves all remaining money. After how many months can they save £2,400?",
+        "options": ["4 months", "5 months", "6 months", "7 months"],
+        "answer": "6 months"
+      }
+    ]
+  }
+}

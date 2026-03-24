@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#1a7a35">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>YESchool — Exercise</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#1a7a35;--green-dark:#0f5225;--green-mid:#2ea34d;
+  --green-pale:#f0faf2;--green-light:#d4edda;
+  --gold:#d4920a;--navy:#1a2a6e;
+  --ink:#0d1117;--mid:#4a5568;--muted:#8a96a3;--line:#e2e8f0;
+  --white:#ffffff;--bg:#f7f8fa;
+  --error:#c0392b;--error-bg:#fdecea;
+}
+html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink)}
+
+/* ── Top bar ───────────────────────────────────── */
+.topbar{display:flex;align-items:center;padding:14px 16px;background:var(--green);position:sticky;top:0;z-index:50;gap:12px}
+.back-btn{color:#fff;background:none;border:none;font-size:22px;cursor:pointer;padding:4px;-webkit-tap-highlight-color:transparent;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
+.topbar-title{flex:1;font-size:15px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.progress-pill{background:rgba(255,255,255,.18);border-radius:20px;padding:5px 14px;font-size:13px;font-weight:700;color:#fff;white-space:nowrap}
+
+/* ── Main ──────────────────────────────────────── */
+.main{padding:20px 16px 40px;max-width:460px;margin:0 auto}
+.card{background:#fff;border-radius:16px;padding:24px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px}
+
+.instruction{font-size:14px;color:var(--mid);line-height:1.6;margin-bottom:20px;background:var(--green-pale);padding:14px 16px;border-radius:12px;border-left:4px solid var(--green)}
+
+/* ── Gap Fill ──────────────────────────────────── */
+.passage{font-size:16px;line-height:1.8;color:var(--ink);margin-bottom:20px}
+.blank{display:inline-block;min-width:100px;border-bottom:2px dashed var(--green);padding:2px 8px;margin:0 2px;cursor:pointer;border-radius:4px;transition:all .15s;font-weight:600;color:var(--green-dark);background:var(--green-pale);min-height:28px;vertical-align:baseline}
+.blank.filled{border-bottom-style:solid;background:var(--green-light)}
+.blank.correct{border-color:var(--green);background:var(--green-light);color:var(--green-dark)}
+.blank.wrong{border-color:var(--error);background:var(--error-bg);color:var(--error)}
+.blank.active{background:#e8f5e9;box-shadow:0 0 0 2px var(--green)}
+
+.word-bank{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{padding:10px 16px;border-radius:10px;background:var(--green-pale);color:var(--green-dark);font-size:14px;font-weight:600;cursor:pointer;transition:all .15s;border:2px solid transparent;-webkit-tap-highlight-color:transparent;min-height:44px;display:flex;align-items:center}
+.chip:hover{background:var(--green-light)}
+.chip.used{opacity:.3;pointer-events:none;text-decoration:line-through}
+.chip.selected{border-color:var(--green);background:var(--green-light)}
+
+/* ── MCQ ───────────────────────────────────────── */
+.question-text{font-size:17px;font-weight:600;line-height:1.5;margin-bottom:20px;color:var(--ink)}
+.options{display:flex;flex-direction:column;gap:10px}
+.option{padding:16px 18px;border-radius:12px;border:2px solid var(--line);font-size:15px;cursor:pointer;transition:all .15s;background:#fff;-webkit-tap-highlight-color:transparent;min-height:52px;display:flex;align-items:center}
+.option:hover{border-color:var(--green);background:var(--green-pale)}
+.option.selected{border-color:var(--green);background:var(--green-light);font-weight:600}
+.option.correct{border-color:var(--green);background:var(--green-light);color:var(--green-dark)}
+.option.wrong{border-color:var(--error);background:var(--error-bg);color:var(--error)}
+.option.disabled{pointer-events:none;opacity:.7}
+
+/* ── Vocab Match ───────────────────────────────── */
+.match-container{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.match-item{padding:14px 12px;border-radius:12px;border:2px solid var(--line);font-size:13px;line-height:1.4;cursor:pointer;transition:all .15s;background:#fff;text-align:center;min-height:52px;display:flex;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent}
+.match-item:hover{border-color:var(--green)}
+.match-item.selected{border-color:var(--green);background:var(--green-light);font-weight:600}
+.match-item.matched{border-color:var(--green);background:var(--green-light);opacity:.6;pointer-events:none}
+.match-item.wrong{border-color:var(--error);background:var(--error-bg);animation:shake .35s ease}
+.match-left{border-left:3px solid var(--navy)}
+.match-right{border-left:3px solid var(--gold)}
+
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-4px)}40%{transform:translateX(4px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
+
+/* ── Combo section header ──────────────────────── */
+.section-header{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:16px;padding:10px 14px;background:#eef0ff;border-radius:10px;text-align:center}
+.section-header.maths{color:var(--gold);background:#fff8e1}
+
+/* ── Context block ─────────────────────────────── */
+.context-block{font-size:14px;line-height:1.7;color:var(--mid);background:#fafafa;padding:16px;border-radius:12px;border:1px solid var(--line);margin-bottom:20px}
+
+/* ── Result screen ─────────────────────────────── */
+.result-screen{text-align:center;padding:40px 20px}
+.result-emoji{font-size:64px;margin-bottom:16px}
+.result-pct{font-size:56px;font-weight:800;color:var(--green);font-family:Georgia,'Times New Roman',serif;margin-bottom:8px}
+.result-pct.ok{color:var(--gold)}
+.result-pct.low{color:var(--error)}
+.result-label{font-size:16px;color:var(--mid);margin-bottom:24px}
+.result-msg{font-size:14px;color:var(--mid);margin-bottom:32px;line-height:1.5}
+.result-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{padding:16px 28px;border-radius:12px;font-size:15px;font-weight:700;border:none;cursor:pointer;transition:all .15s;min-height:52px;-webkit-tap-highlight-color:transparent}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-mid)}
+.btn-outline{background:#fff;color:var(--green);border:2px solid var(--green)}
+.btn-outline:hover{background:var(--green-pale)}
+
+/* ── Loading ───────────────────────────────────── */
+.loading-state{text-align:center;padding:60px 20px;color:var(--muted);font-size:15px}
+.loading-state .spinner{width:40px;height:40px;border:3px solid var(--line);border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <button class="back-btn" onclick="goBack()" aria-label="Go back">←</button>
+  <div class="topbar-title" id="topTitle">Loading...</div>
+  <div class="progress-pill" id="progressPill">--</div>
+</div>
+
+<div class="main" id="mainContent">
+  <div class="loading-state" id="loadingState">
+    <div class="spinner"></div>
+    Loading exercise...
+  </div>
+</div>
+
+<script>
+const TOKEN = localStorage.getItem('yes_token');
+if (!TOKEN) window.location.href = '/';
+
+const params = new URLSearchParams(window.location.search);
+const exerciseId = params.get('id');
+const level = params.get('level') || localStorage.getItem('yes_level');
+
+let exerciseData = null;
+let startTime = Date.now();
+let currentQuestion = 0;
+let score = 0;
+let totalQuestions = 0;
+let answered = [];
+// Combo tracking
+let comboPhase = null; // 'english' | 'maths'
+let englishScore = 0;
+let mathsScore = 0;
+
+function goBack() {
+  window.location.href = '/practice';
+}
+
+// ── Load exercise ──────────────────────────────────
+async function loadExercise() {
+  if (!exerciseId || !level) {
+    showError('Missing exercise ID or level.');
+    return;
+  }
+
+  // Try localStorage first (saved progress)
+  const saved = localStorage.getItem('yes_progress_' + exerciseId);
+
+  try {
+    const res = await fetch(`/content/${level}/${exerciseId}.json`);
+    if (!res.ok) throw new Error('Exercise not found');
+    exerciseData = await res.json();
+  } catch (err) {
+    showError('Could not load exercise. Check your connection.');
+    return;
+  }
+
+  document.getElementById('topTitle').textContent = exerciseData.title || exerciseId;
+  startTime = Date.now();
+
+  switch (exerciseData.type) {
+    case 'gap_fill':    renderGapFill(); break;
+    case 'mcq':         renderMCQ(); break;
+    case 'vocab_match': renderVocabMatch(); break;
+    case 'mesol_combo': renderCombo(); break;
+    default: showError('Unknown exercise type: ' + exerciseData.type);
+  }
+}
+
+function showError(msg) {
+  document.getElementById('loadingState').innerHTML = `<div style="font-size:40px;margin-bottom:12px">⚠️</div>${msg}<br><br><a href="/practice" style="color:var(--green);font-weight:600">Back to Practice</a>`;
+}
+
+// ══════════════════════════════════════════════════
+//  GAP FILL
+// ══════════════════════════════════════════════════
+function renderGapFill() {
+  const d = exerciseData;
+  totalQuestions = d.blanks.length;
+  const blanks = d.blanks;
+  let filledBlanks = new Array(blanks.length).fill(null);
+  let activeBlank = 0;
+
+  // Build passage with blank spans
+  let passageHtml = d.passage;
+  for (let i = blanks.length - 1; i >= 0; i--) {
+    passageHtml = passageHtml.replace('___', `<span class="blank${i === 0 ? ' active' : ''}" data-idx="${i}" id="blank${i}"></span>`);
+  }
+
+  // Shuffle word bank
+  const bank = [...d.word_bank].sort(() => Math.random() - 0.5);
+
+  document.getElementById('progressPill').textContent = `0/${totalQuestions}`;
+
+  document.getElementById('mainContent').innerHTML = `
+    <div class="card">
+      <div class="instruction">${d.instruction}</div>
+      <div class="passage" id="passage">${passageHtml}</div>
+      <div class="word-bank" id="wordBank">
+        ${bank.map((w, i) => `<div class="chip" data-word="${w}" onclick="selectWord(this)">${w}</div>`).join('')}
+      </div>
+    </div>`;
+
+  // Tap blank to make it active
+  document.querySelectorAll('.blank').forEach(el => {
+    el.addEventListener('click', () => {
+      document.querySelectorAll('.blank').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      activeBlank = parseInt(el.dataset.idx);
+    });
+  });
+
+  window.selectWord = function(chip) {
+    const word = chip.dataset.word;
+    const blankEl = document.getElementById('blank' + activeBlank);
+
+    // If this blank already has a word, free the old chip
+    if (filledBlanks[activeBlank]) {
+      document.querySelectorAll('.chip').forEach(c => {
+        if (c.dataset.word === filledBlanks[activeBlank] && c.classList.contains('used')) {
+          c.classList.remove('used');
+        }
+      });
+    }
+
+    filledBlanks[activeBlank] = word;
+    blankEl.textContent = word;
+    blankEl.classList.add('filled');
+    chip.classList.add('used');
+
+    // Move to next empty blank
+    const nextEmpty = filledBlanks.findIndex((v, i) => i > activeBlank && v === null);
+    if (nextEmpty >= 0) {
+      document.querySelectorAll('.blank').forEach(b => b.classList.remove('active'));
+      document.getElementById('blank' + nextEmpty).classList.add('active');
+      activeBlank = nextEmpty;
+    } else {
+      // Check if all filled
+      const firstEmpty = filledBlanks.indexOf(null);
+      if (firstEmpty === -1) {
+        // All blanks filled — check answers
+        setTimeout(() => checkGapFill(filledBlanks, blanks), 300);
+      } else {
+        document.querySelectorAll('.blank').forEach(b => b.classList.remove('active'));
+        document.getElementById('blank' + firstEmpty).classList.add('active');
+        activeBlank = firstEmpty;
+      }
+    }
+
+    document.getElementById('progressPill').textContent = `${filledBlanks.filter(v => v !== null).length}/${totalQuestions}`;
+  };
+}
+
+function checkGapFill(filled, correct) {
+  let s = 0;
+  filled.forEach((word, i) => {
+    const el = document.getElementById('blank' + i);
+    if (word && word.toLowerCase().trim() === correct[i].toLowerCase().trim()) {
+      el.classList.add('correct');
+      s++;
+    } else {
+      el.classList.add('wrong');
+      el.title = 'Correct: ' + correct[i];
+    }
+  });
+  score = s;
+  // Disable word bank
+  document.querySelectorAll('.chip').forEach(c => c.style.pointerEvents = 'none');
+  setTimeout(() => showResult(score, totalQuestions), 1500);
+}
+
+// ══════════════════════════════════════════════════
+//  MCQ
+// ══════════════════════════════════════════════════
+function renderMCQ() {
+  const questions = exerciseData.questions;
+  totalQuestions = questions.length;
+  currentQuestion = 0;
+  score = 0;
+
+  function showQuestion(idx) {
+    const q = questions[idx];
+    document.getElementById('progressPill').textContent = `${idx + 1}/${totalQuestions}`;
+
+    document.getElementById('mainContent').innerHTML = `
+      <div class="card">
+        <div class="instruction">${exerciseData.instruction}</div>
+        <div class="question-text">${q.question}</div>
+        <div class="options" id="options">
+          ${q.options.map((opt, i) => `<div class="option" data-val="${opt}" onclick="pickOption(this)">${opt}</div>`).join('')}
+        </div>
+      </div>`;
+  }
+
+  window.pickOption = function(el) {
+    if (el.parentElement.querySelector('.correct,.wrong')) return; // Already answered
+    const q = questions[currentQuestion];
+    const isCorrect = el.dataset.val === q.answer;
+
+    // Disable all options
+    el.parentElement.querySelectorAll('.option').forEach(o => o.classList.add('disabled'));
+
+    if (isCorrect) {
+      el.classList.add('correct');
+      score++;
+    } else {
+      el.classList.add('wrong');
+      // Highlight correct
+      el.parentElement.querySelectorAll('.option').forEach(o => {
+        if (o.dataset.val === q.answer) o.classList.add('correct');
+      });
+    }
+
+    setTimeout(() => {
+      currentQuestion++;
+      if (currentQuestion < totalQuestions) {
+        showQuestion(currentQuestion);
+      } else {
+        showResult(score, totalQuestions);
+      }
+    }, 1500);
+  };
+
+  showQuestion(0);
+}
+
+// ══════════════════════════════════════════════════
+//  VOCAB MATCH
+// ══════════════════════════════════════════════════
+function renderVocabMatch() {
+  const pairs = exerciseData.pairs;
+  totalQuestions = pairs.length;
+  score = 0;
+  let selectedTerm = null;
+  let matchedPairs = 0;
+
+  // Shuffle both columns independently
+  const terms = pairs.map((p, i) => ({ text: p.term, idx: i })).sort(() => Math.random() - 0.5);
+  const defs  = pairs.map((p, i) => ({ text: p.definition, idx: i })).sort(() => Math.random() - 0.5);
+
+  document.getElementById('progressPill').textContent = `0/${totalQuestions}`;
+
+  document.getElementById('mainContent').innerHTML = `
+    <div class="card">
+      <div class="instruction">${exerciseData.instruction}</div>
+      <div class="match-container" id="matchGrid">
+        ${terms.map(t => `<div class="match-item match-left" data-type="term" data-idx="${t.idx}" onclick="pickMatch(this)">${t.text}</div>`).join('')}
+        ${defs.map(d => `<div class="match-item match-right" data-type="def" data-idx="${d.idx}" onclick="pickMatch(this)">${d.text}</div>`).join('')}
+      </div>
+    </div>`;
+
+  // Reorder: interleave left and right columns
+  const grid = document.getElementById('matchGrid');
+  const leftItems = [...grid.querySelectorAll('.match-left')];
+  const rightItems = [...grid.querySelectorAll('.match-right')];
+  grid.innerHTML = '';
+  const maxLen = Math.max(leftItems.length, rightItems.length);
+  for (let i = 0; i < maxLen; i++) {
+    if (leftItems[i]) grid.appendChild(leftItems[i]);
+    if (rightItems[i]) grid.appendChild(rightItems[i]);
+  }
+
+  window.pickMatch = function(el) {
+    if (el.classList.contains('matched')) return;
+
+    const type = el.dataset.type;
+    const idx = parseInt(el.dataset.idx);
+
+    if (!selectedTerm) {
+      if (type !== 'term') return; // Must pick term first
+      selectedTerm = { el, idx };
+      el.classList.add('selected');
+    } else {
+      if (type !== 'def') {
+        // Clicked another term — switch selection
+        selectedTerm.el.classList.remove('selected');
+        selectedTerm = { el, idx };
+        el.classList.add('selected');
+        return;
+      }
+
+      // Check match
+      if (idx === selectedTerm.idx) {
+        // Correct match
+        selectedTerm.el.classList.remove('selected');
+        selectedTerm.el.classList.add('matched');
+        el.classList.add('matched');
+        score++;
+        matchedPairs++;
+        document.getElementById('progressPill').textContent = `${matchedPairs}/${totalQuestions}`;
+      } else {
+        // Wrong match
+        el.classList.add('wrong');
+        selectedTerm.el.classList.add('wrong');
+        setTimeout(() => {
+          el.classList.remove('wrong');
+          selectedTerm.el.classList.remove('wrong', 'selected');
+          selectedTerm = null;
+        }, 600);
+        selectedTerm = null;
+        return;
+      }
+
+      selectedTerm = null;
+
+      if (matchedPairs === totalQuestions) {
+        setTimeout(() => showResult(score, totalQuestions), 800);
+      }
+    }
+  };
+}
+
+// ══════════════════════════════════════════════════
+//  MESOL COMBO
+// ══════════════════════════════════════════════════
+function renderCombo() {
+  const d = exerciseData;
+  const engQ = d.english_section.questions;
+  const mathQ = d.maths_section.questions;
+  totalQuestions = engQ.length + mathQ.length;
+  englishScore = 0;
+  mathsScore = 0;
+  comboPhase = 'english';
+  currentQuestion = 0;
+
+  function showComboQuestion() {
+    const isEnglish = comboPhase === 'english';
+    const questions = isEnglish ? engQ : mathQ;
+    const qIdx = currentQuestion;
+    const q = questions[qIdx];
+    const globalIdx = isEnglish ? qIdx : engQ.length + qIdx;
+
+    document.getElementById('progressPill').textContent = `${globalIdx + 1}/${totalQuestions}`;
+
+    let contextHtml = d.context ? `<div class="context-block">${d.context}</div>` : '';
+    let headerHtml = isEnglish
+      ? `<div class="section-header">📖 ${d.english_section.title}</div>`
+      : `<div class="section-header maths">🔢 ${d.maths_section.title}</div>`;
+
+    document.getElementById('mainContent').innerHTML = `
+      <div class="card">
+        ${contextHtml}
+        ${headerHtml}
+        <div class="question-text">${q.question}</div>
+        <div class="options" id="options">
+          ${q.options.map(opt => `<div class="option" data-val="${opt}" onclick="pickCombo(this)">${opt}</div>`).join('')}
+        </div>
+      </div>`;
+  }
+
+  window.pickCombo = function(el) {
+    if (el.parentElement.querySelector('.correct,.wrong')) return;
+
+    const isEnglish = comboPhase === 'english';
+    const questions = isEnglish ? engQ : mathQ;
+    const q = questions[currentQuestion];
+    const isCorrect = el.dataset.val === q.answer;
+
+    el.parentElement.querySelectorAll('.option').forEach(o => o.classList.add('disabled'));
+
+    if (isCorrect) {
+      el.classList.add('correct');
+      if (isEnglish) englishScore++; else mathsScore++;
+    } else {
+      el.classList.add('wrong');
+      el.parentElement.querySelectorAll('.option').forEach(o => {
+        if (o.dataset.val === q.answer) o.classList.add('correct');
+      });
+    }
+
+    setTimeout(() => {
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        showComboQuestion();
+      } else if (comboPhase === 'english') {
+        comboPhase = 'maths';
+        currentQuestion = 0;
+        showComboQuestion();
+      } else {
+        score = englishScore + mathsScore;
+        showResult(score, totalQuestions);
+      }
+    }, 1500);
+  };
+
+  showComboQuestion();
+}
+
+// ══════════════════════════════════════════════════
+//  RESULT SCREEN
+// ══════════════════════════════════════════════════
+function showResult(correct, total) {
+  const pct = Math.round((correct / total) * 100);
+  const tier = pct >= 70 ? 'good' : pct >= 40 ? 'ok' : 'low';
+  const emoji = pct >= 90 ? '🌟' : pct >= 70 ? '✅' : pct >= 40 ? '💪' : '📖';
+  const msg = pct >= 90 ? 'Brilliant work!' : pct >= 70 ? 'Well done — keep going!' : pct >= 40 ? 'Good try — practice makes perfect!' : 'Don\'t worry — try again to improve!';
+
+  const timeSec = Math.round((Date.now() - startTime) / 1000);
+
+  document.getElementById('progressPill').textContent = `${total}/${total}`;
+
+  let comboDetail = '';
+  if (exerciseData.type === 'mesol_combo') {
+    comboDetail = `
+      <div style="display:flex;gap:16px;justify-content:center;margin-bottom:16px">
+        <div style="background:#eef0ff;padding:10px 18px;border-radius:10px;font-size:14px">📖 English: <strong>${englishScore}/${exerciseData.english_section.questions.length}</strong></div>
+        <div style="background:#fff8e1;padding:10px 18px;border-radius:10px;font-size:14px">🔢 Maths: <strong>${mathsScore}/${exerciseData.maths_section.questions.length}</strong></div>
+      </div>`;
+  }
+
+  document.getElementById('mainContent').innerHTML = `
+    <div class="card result-screen">
+      <div class="result-emoji">${emoji}</div>
+      <div class="result-pct ${tier}">${pct}%</div>
+      <div class="result-label">${correct} out of ${total} correct</div>
+      ${comboDetail}
+      <div class="result-msg">${msg}</div>
+      <div class="result-btns">
+        <button class="btn btn-outline" onclick="retryExercise()">↻ Try again</button>
+        <button class="btn btn-primary" onclick="window.location.href='/practice'">Next →</button>
+      </div>
+    </div>`;
+
+  // Save result
+  saveResult(correct, total, timeSec);
+
+  // Clear any saved progress
+  localStorage.removeItem('yes_progress_' + exerciseId);
+}
+
+async function saveResult(correct, total, timeSec) {
+  try {
+    await fetch('/api/results', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + TOKEN
+      },
+      body: JSON.stringify({
+        exercise_id: exerciseId,
+        score: correct,
+        max_score: total,
+        time_seconds: timeSec,
+        attempt: 1
+      })
+    });
+  } catch (err) {
+    // Save offline if API fails
+    const offlineResults = JSON.parse(localStorage.getItem('yes_offline_results') || '[]');
+    offlineResults.push({ exercise_id: exerciseId, score: correct, max_score: total, time_seconds: timeSec, attempt: 1, saved_at: new Date().toISOString() });
+    localStorage.setItem('yes_offline_results', JSON.stringify(offlineResults));
+  }
+}
+
+function retryExercise() {
+  score = 0;
+  currentQuestion = 0;
+  englishScore = 0;
+  mathsScore = 0;
+  comboPhase = null;
+  startTime = Date.now();
+  loadExercise();
+}
+
+// ── Save progress on leave ─────────────────────────
+window.addEventListener('beforeunload', () => {
+  if (score === 0 && currentQuestion > 0) {
+    localStorage.setItem('yes_progress_' + exerciseId, JSON.stringify({
+      currentQuestion, score, comboPhase, englishScore, mathsScore
+    }));
+  }
+});
+
+loadExercise();
+</script>
+</body>
+</html>

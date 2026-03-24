@@ -1,0 +1,20 @@
+{
+  "id": "W6-bonus-costliving-vocab-EL3",
+  "week": 6,
+  "session": 2,
+  "level": "EL3",
+  "type": "vocab_match",
+  "topic": "Cost of living and financial language",
+  "lo": "LO3",
+  "title": "Advanced finance vocabulary",
+  "instruction": "Match each term to its correct meaning.",
+  "pairs": [
+    { "term": "Living Wage",       "definition": "The minimum hourly rate needed to cover basic living costs" },
+    { "term": "disposable income", "definition": "Money remaining after taxes and essential spending" },
+    { "term": "mortgage",          "definition": "A long-term loan used to buy a property" },
+    { "term": "direct debit",      "definition": "An automatic regular payment from your bank account" },
+    { "term": "VAT",               "definition": "Value Added Tax — a tax added to the price of goods" },
+    { "term": "National Insurance", "definition": "A UK tax deducted from pay that funds NHS and benefits" },
+    { "term": "cost of living",    "definition": "The amount of money needed for housing, food, transport and other basics" }
+  ]
+}

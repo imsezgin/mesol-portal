@@ -1,0 +1,57 @@
+{
+  "id": "W5-S2-budgetcuts-combo-EL3",
+  "week": 5,
+  "session": 2,
+  "level": "EL3",
+  "type": "mesol_combo",
+  "topic": "Calculating budget shortfall and making cuts",
+  "lo": "LO3",
+  "title": "Solving the Schofields' budget crisis",
+  "instruction": "Use the information to calculate the Schofield family's new budget situation.",
+  "context": "Original income: £2,600/month. After 15% cut: £2,210/month. New expenses: Rent £880 | Energy £180 | Food £378 | Transport £120 | Phone/internet £80 | Childcare £400 | Clothing £60 | Entertainment £90 | Other £50 | New total expenses: £2,238.",
+  "english_section": {
+    "title": "Analysing the situation",
+    "questions": [
+      {
+        "question": "The family's expenses are £2,238 but income is £2,210. What is their monthly shortfall?",
+        "options": ["£18", "£24", "£28", "£32"],
+        "answer": "£28"
+      },
+      {
+        "question": "Which expense would you cut first to help the family? Choose the most sensible option.",
+        "options": [
+          "Childcare — they can look after the children themselves",
+          "Entertainment — it is the least essential expense",
+          "Food — they can eat less",
+          "Rent — they can negotiate with the landlord"
+        ],
+        "answer": "Entertainment — it is the least essential expense"
+      },
+      {
+        "question": "After cutting entertainment (£90) and reducing clothing by 50% (saving £30), what is the new monthly surplus?",
+        "options": ["£82", "£88", "£92", "£98"],
+        "answer": "£92"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Full budget recalculation",
+    "questions": [
+      {
+        "question": "The family cuts entertainment fully (£90) and clothing by half (saves £30). What are new total expenses?",
+        "options": ["£2,108", "£2,112", "£2,118", "£2,128"],
+        "answer": "£2,118"
+      },
+      {
+        "question": "With new income £2,210 and new expenses £2,118, what is the monthly surplus?",
+        "options": ["£82", "£88", "£92", "£98"],
+        "answer": "£92"
+      },
+      {
+        "question": "If they save this surplus for 12 months, how much will they have saved?",
+        "options": ["£1,004", "£1,044", "£1,084", "£1,104"],
+        "answer": "£1,104"
+      }
+    ]
+  }
+}

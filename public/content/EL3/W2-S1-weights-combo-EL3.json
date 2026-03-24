@@ -1,0 +1,56 @@
+{
+  "id": "W2-S1-weights-combo-EL3",
+  "week": 2,
+  "session": 1,
+  "level": "EL3",
+  "type": "mesol_combo",
+  "topic": "Weights, measures and conversions",
+  "lo": "LO2",
+  "title": "Metric and imperial conversions",
+  "instruction": "Answer these English and maths questions about weights and measures.",
+  "english_section": {
+    "title": "Reading about measurements",
+    "questions": [
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "I need 500 millimetres of milk for this recipe",
+          "I need 500 millilitres of milk for this recipe",
+          "I need 500 kilometres of milk for this recipe",
+          "I need 500 kilograms of milk for this recipe"
+        ],
+        "answer": "I need 500 millilitres of milk for this recipe"
+      },
+      {
+        "question": "What does the abbreviation 'lbs' stand for?",
+        "options": ["litres by scale", "pounds (imperial weight)", "large bag size", "litres below standard"],
+        "answer": "pounds (imperial weight)"
+      },
+      {
+        "question": "A recipe says 'half a pint of cream'. Which metric amount is closest?",
+        "options": ["100ml", "250ml", "500ml", "1 litre"],
+        "answer": "250ml"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Conversion calculations",
+    "questions": [
+      {
+        "question": "1 kg = 2.2 lbs. How many lbs is 3 kg?",
+        "options": ["5.2 lbs", "6.2 lbs", "6.6 lbs", "7.2 lbs"],
+        "answer": "6.6 lbs"
+      },
+      {
+        "question": "1 mile = 1.6 km. You drive 5 miles. How many km is that?",
+        "options": ["6.5 km", "7 km", "8 km", "8.5 km"],
+        "answer": "8 km"
+      },
+      {
+        "question": "A recipe uses 250g of butter. You want to make double the amount. How much butter do you need?",
+        "options": ["375g", "400g", "450g", "500g"],
+        "answer": "500g"
+      }
+    ]
+  }
+}

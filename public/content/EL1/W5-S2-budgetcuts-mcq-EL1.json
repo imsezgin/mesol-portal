@@ -1,0 +1,38 @@
+{
+  "id": "W5-S2-budgetcuts-mcq-EL1",
+  "week": 5,
+  "session": 2,
+  "level": "EL1",
+  "type": "mcq",
+  "topic": "Making budget cuts",
+  "lo": "LO3",
+  "title": "Saving money",
+  "instruction": "The Schofield family need to cut their spending. Choose the best answer.",
+  "questions": [
+    {
+      "question": "The family spends £200 on entertainment. They want to cut this by half. How much do they spend now?",
+      "options": ["£50", "£75", "£100", "£150"],
+      "answer": "£100"
+    },
+    {
+      "question": "Their food bill is £400. They cut it by 25%. How much do they save?",
+      "options": ["£80", "£90", "£100", "£120"],
+      "answer": "£100"
+    },
+    {
+      "question": "Which word means to spend less money?",
+      "options": ["increase", "reduce", "earn", "borrow"],
+      "answer": "reduce"
+    },
+    {
+      "question": "The rent goes up by £50 per month. How much more do they pay in one year?",
+      "options": ["£500", "£550", "£600", "£650"],
+      "answer": "£600"
+    },
+    {
+      "question": "Income is £1,800. Expenses are £2,100. What is the shortfall?",
+      "options": ["£200", "£250", "£300", "£350"],
+      "answer": "£300"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "W5-S1-budget-combo-EL1",
+  "week": 5,
+  "session": 1,
+  "level": "EL1",
+  "type": "mesol_combo",
+  "topic": "Understanding a family budget",
+  "lo": "LO3",
+  "title": "The Ahmed family budget",
+  "instruction": "Read the budget and answer the questions.",
+  "context": "Monthly income: £1,600. Expenses: Rent £650 | Food shopping £250 | Gas and electric £90 | Water £30 | Phone £25 | Bus pass £55 | Clothes £50 | Total expenses: £1,150.",
+  "english_section": {
+    "title": "Reading the budget",
+    "questions": [
+      {
+        "question": "What is the Ahmed family's monthly income?",
+        "options": ["£1,150", "£1,400", "£1,600", "£1,800"],
+        "answer": "£1,600"
+      },
+      {
+        "question": "Which is their biggest expense?",
+        "options": ["food shopping", "gas and electric", "rent", "phone"],
+        "answer": "rent"
+      },
+      {
+        "question": "What does 'bus pass' mean?",
+        "options": [
+          "A ticket to travel on buses",
+          "A pass to drive a bus",
+          "A discount card for shops",
+          "A monthly train ticket"
+        ],
+        "answer": "A ticket to travel on buses"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Budget calculations",
+    "questions": [
+      {
+        "question": "How much money is left after all expenses?",
+        "options": ["£350", "£400", "£450", "£500"],
+        "answer": "£450"
+      },
+      {
+        "question": "What fraction of income is spent on rent?",
+        "options": ["1/4", "1/3", "1/2", "2/5"],
+        "answer": "1/3"  
+      },
+      {
+        "question": "If the family saves all remaining money for 6 months, how much do they save?",
+        "options": ["£2,400", "£2,600", "£2,700", "£2,800"],
+        "answer": "£2,700"
+      }
+    ]
+  }
+}

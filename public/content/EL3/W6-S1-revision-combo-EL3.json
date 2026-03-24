@@ -1,0 +1,66 @@
+{
+  "id": "W6-S1-revision-combo-EL3",
+  "week": 6,
+  "session": 1,
+  "level": "EL3",
+  "type": "mesol_combo",
+  "topic": "Full revision — advanced",
+  "lo": "LO1",
+  "title": "Advanced revision challenge",
+  "instruction": "Answer these challenging revision questions.",
+  "english_section": {
+    "title": "Complex reading",
+    "questions": [
+      {
+        "question": "A payslip shows: Gross pay £2,100 | Income tax (20%) £420 | National Insurance (12%) £252 | Net pay: £1,428. What is 'net pay'?",
+        "options": [
+          "Pay before deductions",
+          "Pay after all deductions",
+          "Tax you must pay",
+          "Pension contribution"
+        ],
+        "answer": "Pay after all deductions"
+      },
+      {
+        "question": "A bank statement shows 'DR £450'. DR means debit — money leaving your account. What has happened?",
+        "options": [
+          "You received £450",
+          "You paid £450 out",
+          "Your balance increased by £450",
+          "You earned £450 interest"
+        ],
+        "answer": "You paid £450 out"
+      },
+      {
+        "question": "An energy bill says 'Direct Debit of £95 p.m.' What does this mean?",
+        "options": [
+          "You pay £95 once per year",
+          "£95 is automatically taken from your bank each month",
+          "You owe £95 total",
+          "Your bill increased by £95"
+        ],
+        "answer": "£95 is automatically taken from your bank each month"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Multi-step revision",
+    "questions": [
+      {
+        "question": "Gross pay: £2,100. Tax: 20%. NI: 12%. What is net pay?",
+        "options": ["£1,386", "£1,406", "£1,428", "£1,448"],
+        "answer": "£1,428"
+      },
+      {
+        "question": "You have £3,500 savings. Interest rate is 3% per year. How much interest do you earn after 1 year?",
+        "options": ["£95", "£100", "£105", "£110"],
+        "answer": "£105"
+      },
+      {
+        "question": "Energy bill: £95/month. It rises by 18%. What is the new monthly cost?",
+        "options": ["£110.10", "£111.10", "£112.10", "£113.10"],
+        "answer": "£112.10"
+      }
+    ]
+  }
+}

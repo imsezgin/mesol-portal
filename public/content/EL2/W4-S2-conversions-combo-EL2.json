@@ -1,0 +1,56 @@
+{
+  "id": "W4-S2-conversions-combo-EL2",
+  "week": 4,
+  "session": 2,
+  "level": "EL2",
+  "type": "mesol_combo",
+  "topic": "Converting and applying fractions, decimals, percentages",
+  "lo": "LO1",
+  "title": "Real-life conversions",
+  "instruction": "Answer these questions about converting and using fractions, decimals and percentages.",
+  "english_section": {
+    "title": "Reading about percentages",
+    "questions": [
+      {
+        "question": "A news article says: '1 in 5 people in the UK rent their home.' What percentage is this?",
+        "options": ["15%", "20%", "25%", "30%"],
+        "answer": "20%"
+      },
+      {
+        "question": "A food label says a product contains '0.25g of salt per 100g'. How do you say '0.25'?",
+        "options": [
+          "Zero point twenty five",
+          "Nought point two five",
+          "Twenty five hundredths",
+          "Two point five"
+        ],
+        "answer": "Nought point two five"
+      },
+      {
+        "question": "A bank offers '2.5% interest'. Which fraction is equivalent to 2.5%?",
+        "options": ["1/4", "1/40", "1/400", "25/100"],
+        "answer": "1/40"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Conversion calculations",
+    "questions": [
+      {
+        "question": "Convert 3/5 to a percentage.",
+        "options": ["35%", "50%", "55%", "60%"],
+        "answer": "60%"
+      },
+      {
+        "question": "A jacket costs £120. It is reduced by 0.2 (20%). What is the saving?",
+        "options": ["£20", "£22", "£24", "£26"],
+        "answer": "£24"
+      },
+      {
+        "question": "You score 18 out of 24 on a test. What is your score as a percentage?",
+        "options": ["70%", "72%", "75%", "78%"],
+        "answer": "75%"
+      }
+    ]
+  }
+}

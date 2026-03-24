@@ -1,0 +1,14 @@
+{
+  "id": "W1-S1-forms-gap-EL3",
+  "week": 1,
+  "session": 1,
+  "level": "EL3",
+  "type": "gap_fill",
+  "topic": "Filling in forms — accident report",
+  "lo": "LO1",
+  "title": "Accident report form",
+  "instruction": "Read this accident report. Choose the correct word for each gap.",
+  "passage": "On 14th February 2026, at approximately 10:30am, an ___ occurred at 32 John William Street, Huddersfield. The ___ is Maria Santos, date of birth 12/06/1989. She slipped on a wet floor near the entrance. The ___ of the accident was a wet floor with no warning sign. Maria ___ her right wrist. She was taken to Huddersfield Royal Infirmary by ___. The incident was ___ to the manager at 11:00am.",
+  "blanks": ["incident", "casualty", "cause", "injured", "ambulance", "reported"],
+  "word_bank": ["incident", "casualty", "cause", "injured", "ambulance", "reported", "witnessed", "supervisor"]
+}

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#1a7a35">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>YESchool — Student Login</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:      #1a7a35;
+  --green-dark: #0f5225;
+  --green-mid:  #2ea34d;
+  --green-pale: #f0faf2;
+  --green-light:#d4edda;
+  --gold:       #d4920a;
+  --ink:        #0d1117;
+  --mid:        #4a5568;
+  --muted:      #8a96a3;
+  --line:       #e2e8f0;
+  --error:      #c0392b;
+  --error-bg:   #fdecea;
+  --white:      #ffffff;
+}
+
+html, body {
+  height: 100%;
+  background: var(--green-dark);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px 40px;
+  background: linear-gradient(160deg, var(--green-dark) 0%, var(--green) 100%);
+}
+
+/* Logo */
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -1px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+.logo span { color: var(--gold); }
+.logo-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,.55);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px 28px 28px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+
+.card-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.card-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* Phone input */
+.field { margin-bottom: 20px; }
+.field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--mid);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 7px;
+}
+.phone-wrap {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color .15s;
+}
+.phone-wrap:focus-within { border-color: var(--green); }
+.phone-prefix {
+  background: var(--green-pale);
+  padding: 12px 12px;
+  font-size: 14px;
+  color: var(--mid);
+  font-weight: 600;
+  border-right: 2px solid var(--line);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.phone-input {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: var(--ink);
+  background: transparent;
+  -webkit-appearance: none;
+}
+.phone-input::placeholder { color: var(--muted); }
+
+/* PIN label row */
+.pin-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+.pin-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--mid);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.forgot-link {
+  font-size: 12px;
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 600;
+}
+.forgot-link:hover { text-decoration: underline; }
+
+/* PIN grid */
+.pin-grid {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.pin-box {
+  width: 64px;
+  height: 64px;
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ink);
+  text-align: center;
+  outline: none;
+  transition: border-color .15s, transform .1s;
+  background: var(--green-pale);
+  caret-color: var(--green);
+  -webkit-appearance: none;
+}
+.pin-box:focus { border-color: var(--green); background: white; }
+.pin-box.filled { border-color: var(--green); background: white; }
+.pin-box.shake {
+  animation: shake .35s ease;
+  border-color: var(--error);
+  background: var(--error-bg);
+}
+
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20%      { transform: translateX(-6px); }
+  40%      { transform: translateX(6px); }
+  60%      { transform: translateX(-4px); }
+  80%      { transform: translateX(4px); }
+}
+
+/* Error message */
+.error-msg {
+  display: none;
+  background: var(--error-bg);
+  color: var(--error);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 14px;
+  text-align: center;
+}
+.error-msg.show { display: block; }
+
+/* Submit button */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: var(--green);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  letter-spacing: 0.3px;
+  transition: background .15s, transform .1s;
+  -webkit-appearance: none;
+}
+.btn:hover  { background: var(--green-mid); }
+.btn:active { transform: scale(0.98); }
+.btn:disabled { background: var(--muted); cursor: not-allowed; }
+.btn.loading { position: relative; color: transparent; }
+.btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 18px; height: 18px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(255,255,255,.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+/* Footer */
+.card-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.card-footer a { color: var(--green); text-decoration: none; }
+
+/* Forgot PIN modal */
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-backdrop.show { display: flex; }
+.modal {
+  background: white;
+  border-radius: 16px;
+  padding: 28px 24px;
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+}
+.modal-title { font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+.modal-body  { font-size: 14px; color: var(--mid); line-height: 1.6; margin-bottom: 20px; }
+.modal-close {
+  background: var(--green-pale);
+  color: var(--green);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+}
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <div class="logo">YES<span>.</span></div>
+  <div class="logo-sub">Student Learning Portal</div>
+
+  <div class="card">
+    <div class="card-title">Welcome back 👋</div>
+    <div class="card-sub">Enter your phone number and 4-digit PIN to continue.</div>
+
+    <div class="field">
+      <label>Phone number</label>
+      <div class="phone-wrap">
+        <div class="phone-prefix">🇬🇧 +44</div>
+        <input
+          class="phone-input"
+          id="phone"
+          type="tel"
+          inputmode="numeric"
+          placeholder="7700 900 123"
+          autocomplete="tel"
+          maxlength="12"
+        >
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="pin-label-row">
+        <span class="pin-label">Your PIN</span>
+        <a href="#" class="forgot-link" id="forgotLink">Forgot PIN?</a>
+      </div>
+      <div class="pin-grid" id="pinGrid">
+        <input class="pin-box" id="p0" type="password" inputmode="numeric" maxlength="1" autocomplete="off">
+        <input class="pin-box" id="p1" type="password" inputmode="numeric" maxlength="1" autocomplete="off">
+        <input class="pin-box" id="p2" type="password" inputmode="numeric" maxlength="1" autocomplete="off">
+        <input class="pin-box" id="p3" type="password" inputmode="numeric" maxlength="1" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="error-msg" id="errorMsg">Incorrect phone number or PIN. Please try again.</div>
+
+    <button class="btn" id="loginBtn" onclick="handleLogin()">Sign in</button>
+
+    <div class="card-footer">
+      Having trouble? Ask your teacher or<br>
+      email <a href="mailto:info@yeschool.uk">info@yeschool.uk</a>
+    </div>
+  </div>
+</div>
+
+<!-- Forgot PIN modal -->
+<div class="modal-backdrop" id="forgotModal">
+  <div class="modal">
+    <div class="modal-title">Forgotten your PIN?</div>
+    <div class="modal-body">Ask your teacher to reset your PIN, or contact the school:<br><br><strong>info@yeschool.uk</strong><br>or call us during office hours.</div>
+    <button class="modal-close" onclick="document.getElementById('forgotModal').classList.remove('show')">Got it</button>
+  </div>
+</div>
+
+<script>
+// ── PIN grid keyboard behaviour ──────────────────────────────
+const pins = [0,1,2,3].map(i => document.getElementById('p' + i));
+
+pins.forEach((box, i) => {
+  box.addEventListener('input', e => {
+    const val = e.target.value.replace(/\D/g, '');
+    box.value = val ? val[0] : '';
+    box.classList.toggle('filled', !!box.value);
+    if (box.value && i < 3) pins[i + 1].focus();
+    if (getPin().length === 4) handleLogin();
+  });
+
+  box.addEventListener('keydown', e => {
+    if (e.key === 'Backspace' && !box.value && i > 0) {
+      pins[i - 1].focus();
+      pins[i - 1].value = '';
+      pins[i - 1].classList.remove('filled');
+    }
+  });
+
+  box.addEventListener('paste', e => {
+    e.preventDefault();
+    const pasted = (e.clipboardData || window.clipboardData).getData('text').replace(/\D/g, '');
+    [...pasted.slice(0, 4)].forEach((digit, idx) => {
+      if (pins[idx]) {
+        pins[idx].value = digit;
+        pins[idx].classList.add('filled');
+      }
+    });
+    if (pasted.length >= 4) handleLogin();
+  });
+});
+
+function getPin() { return pins.map(p => p.value).join(''); }
+
+function shakePins() {
+  pins.forEach(p => {
+    p.classList.remove('shake');
+    void p.offsetWidth; // reflow to restart animation
+    p.classList.add('shake');
+    p.value = '';
+    p.classList.remove('filled');
+  });
+  setTimeout(() => pins.forEach(p => p.classList.remove('shake')), 400);
+  pins[0].focus();
+}
+
+// ── Login handler ────────────────────────────────────────────
+async function handleLogin() {
+  const rawPhone = document.getElementById('phone').value.trim().replace(/\s+/g, '');
+  const pin = getPin();
+  const errorMsg = document.getElementById('errorMsg');
+  const btn = document.getElementById('loginBtn');
+
+  errorMsg.classList.remove('show');
+
+  if (!rawPhone) {
+    document.getElementById('phone').focus();
+    return;
+  }
+  if (pin.length < 4) {
+    pins[pin.length]?.focus();
+    return;
+  }
+
+  // Format phone: strip leading 0, prepend +44
+  let phone = rawPhone.replace(/^0/, '');
+  if (!phone.startsWith('+')) phone = '+44' + phone;
+
+  btn.classList.add('loading');
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('/api/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ phone, pin })
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      shakePins();
+      errorMsg.classList.add('show');
+      return;
+    }
+
+    // Store token and student info
+    localStorage.setItem('yes_token',  data.token);
+    localStorage.setItem('yes_name',   data.name);
+    localStorage.setItem('yes_level',  data.level);
+    localStorage.setItem('yes_prog',   data.programme);
+
+    // Redirect to homepage
+    window.location.href = '/home';
+
+  } catch (err) {
+    shakePins();
+    errorMsg.textContent = 'Connection error. Please check your internet and try again.';
+    errorMsg.classList.add('show');
+  } finally {
+    btn.classList.remove('loading');
+    btn.disabled = false;
+  }
+}
+
+// ── Forgot PIN modal ─────────────────────────────────────────
+document.getElementById('forgotLink').addEventListener('click', e => {
+  e.preventDefault();
+  document.getElementById('forgotModal').classList.add('show');
+});
+
+// ── If already logged in, skip to home ───────────────────────
+if (localStorage.getItem('yes_token')) {
+  window.location.href = '/home';
+}
+
+// ── Register service worker ───────────────────────────────────
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(() => {});
+}
+</script>
+</body>
+</html>

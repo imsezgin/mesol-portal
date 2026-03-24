@@ -1,0 +1,52 @@
+{
+  "id": "W2-S2-recipes-combo-EL3",
+  "week": 2,
+  "session": 2,
+  "level": "EL3",
+  "type": "mesol_combo",
+  "topic": "Fractions in recipes",
+  "lo": "LO2",
+  "title": "Changing recipe quantities",
+  "instruction": "Answer these questions about changing recipe amounts using fractions.",
+  "context": "Victoria Sponge Recipe (makes 1 cake, serves 8): 225g self-raising flour, 225g butter, 225g caster sugar, 4 eggs, 2 teaspoons baking powder, 150ml double cream, 3 tablespoons jam.",
+  "english_section": {
+    "title": "Recipe language",
+    "questions": [
+      {
+        "question": "The recipe 'serves 8'. You need to serve 4 people. What fraction of the recipe do you make?",
+        "options": ["One quarter", "One half", "Three quarters", "One third"],
+        "answer": "One half"
+      },
+      {
+        "question": "Which word means the same as 'caster sugar'?",
+        "options": ["Brown sugar (coarse)", "Fine white sugar", "Icing sugar", "Raw sugar"],
+        "answer": "Fine white sugar"
+      },
+      {
+        "question": "'Self-raising flour' already contains which ingredient?",
+        "options": ["Salt", "Sugar", "Baking powder", "Butter"],
+        "answer": "Baking powder"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Fraction calculations",
+    "questions": [
+      {
+        "question": "You want to make half the recipe. How much butter do you need?",
+        "options": ["100g", "112.5g", "125g", "150g"],
+        "answer": "112.5g"
+      },
+      {
+        "question": "You want to make a quarter of the recipe. How many eggs do you need?",
+        "options": ["0.5", "1", "1.5", "2"],
+        "answer": "1"
+      },
+      {
+        "question": "You double the recipe to serve 16 people. How much flour do you need?",
+        "options": ["350g", "400g", "450g", "500g"],
+        "answer": "450g"
+      }
+    ]
+  }
+}

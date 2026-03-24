@@ -1,0 +1,52 @@
+{
+  "id": "W3-S1-supermarket-combo-EL3",
+  "week": 3,
+  "session": 1,
+  "level": "EL3",
+  "type": "mesol_combo",
+  "topic": "Comparing supermarket prices",
+  "lo": "LO3",
+  "title": "Best value shopping",
+  "instruction": "Read the price information and answer the questions.",
+  "context": "Tilda Basmati Rice prices: Tesco: 2kg for £4.50 | Asda: 5kg for £9.75 | Lidl: 1kg for £1.99 | Aldi: 2kg for £3.98",
+  "english_section": {
+    "title": "Reading price information",
+    "questions": [
+      {
+        "question": "Which word means the cheapest option for the amount you get?",
+        "options": ["best seller", "best value", "best quality", "best brand"],
+        "answer": "best value"
+      },
+      {
+        "question": "What does 'per kg' mean?",
+        "options": ["for every packet", "for every kilogram", "for every kilo of profit", "per kilowatt"],
+        "answer": "for every kilogram"
+      },
+      {
+        "question": "The Asda price is '5kg for £9.75'. What is the price per kg?",
+        "options": ["£1.75", "£1.85", "£1.95", "£2.05"],
+        "answer": "£1.95"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Price comparison calculations",
+    "questions": [
+      {
+        "question": "Tesco sells 2kg for £4.50. What is the price per kg?",
+        "options": ["£2.00", "£2.10", "£2.20", "£2.25"],
+        "answer": "£2.25"
+      },
+      {
+        "question": "Aldi sells 2kg for £3.98. What is the price per kg?",
+        "options": ["£1.89", "£1.95", "£1.99", "£2.05"],
+        "answer": "£1.99"
+      },
+      {
+        "question": "Which supermarket offers the cheapest price per kg?",
+        "options": ["Tesco (£2.25/kg)", "Asda (£1.95/kg)", "Lidl (£1.99/kg)", "Aldi (£1.99/kg)"],
+        "answer": "Asda (£1.95/kg)"
+      }
+    ]
+  }
+}

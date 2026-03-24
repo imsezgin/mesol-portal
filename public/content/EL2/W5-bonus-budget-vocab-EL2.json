@@ -1,0 +1,20 @@
+{
+  "id": "W5-bonus-budget-vocab-EL2",
+  "week": 5,
+  "session": 1,
+  "level": "EL2",
+  "type": "vocab_match",
+  "topic": "Budget and finance vocabulary",
+  "lo": "LO3",
+  "title": "Finance words",
+  "instruction": "Match each finance word to its meaning.",
+  "pairs": [
+    { "term": "gross pay",        "definition": "Your total earnings before any deductions" },
+    { "term": "net pay",          "definition": "Your take-home pay after tax and NI" },
+    { "term": "deduction",        "definition": "Money taken away from your pay (e.g. tax)" },
+    { "term": "outgoings",        "definition": "All the money you spend regularly" },
+    { "term": "disposable income","definition": "Money left after paying all essential costs" },
+    { "term": "priority",         "definition": "The most important thing that must be paid first" },
+    { "term": "deficit",          "definition": "When spending is more than income" }
+  ]
+}

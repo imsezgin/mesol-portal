@@ -1,0 +1,56 @@
+{
+  "id": "W4-S2-conversions-combo-EL3",
+  "week": 4,
+  "session": 2,
+  "level": "EL3",
+  "type": "mesol_combo",
+  "topic": "Complex conversions in real life",
+  "lo": "LO1",
+  "title": "Fractions, decimals and percentages — advanced",
+  "instruction": "Answer these challenging questions combining English and maths.",
+  "english_section": {
+    "title": "Financial language",
+    "questions": [
+      {
+        "question": "A mortgage document says 'LTV ratio: 75%'. LTV stands for Loan-to-Value. If your home is worth £200,000, how much is the mortgage?",
+        "options": ["£130,000", "£140,000", "£150,000", "£160,000"],
+        "answer": "£150,000"
+      },
+      {
+        "question": "A payslip says 'Tax deducted: 20% of gross pay'. If gross pay is £1,800, what is the tax?",
+        "options": ["£300", "£320", "£340", "£360"],
+        "answer": "£360"
+      },
+      {
+        "question": "Which sentence correctly compares decimals?",
+        "options": [
+          "0.3 is greater than 0.25 because 3 is less than 25",
+          "0.3 is greater than 0.25 because 0.30 > 0.25",
+          "0.25 is greater than 0.3 because 25 is bigger than 3",
+          "0.3 and 0.25 are equal"
+        ],
+        "answer": "0.3 is greater than 0.25 because 0.30 > 0.25"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Multi-step calculations",
+    "questions": [
+      {
+        "question": "You earn £2,200 per month. You save 1/5 of your income. How much do you save per year?",
+        "options": ["£4,800", "£5,040", "£5,280", "£5,520"],
+        "answer": "£5,280"
+      },
+      {
+        "question": "A price rises from £80 to £96. What is the percentage increase?",
+        "options": ["15%", "16%", "20%", "24%"],
+        "answer": "20%"
+      },
+      {
+        "question": "After a 30% reduction, a coat costs £84. What was the original price?",
+        "options": ["£110", "£115", "£120", "£125"],
+        "answer": "£120"
+      }
+    ]
+  }
+}

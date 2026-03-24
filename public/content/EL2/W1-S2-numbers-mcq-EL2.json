@@ -1,0 +1,48 @@
+{
+  "id": "W1-S2-numbers-mcq-EL2",
+  "week": 1,
+  "session": 2,
+  "level": "EL2",
+  "type": "mcq",
+  "topic": "Expressing numbers accurately",
+  "lo": "LO1",
+  "title": "Say it correctly",
+  "instruction": "Choose the correct way to say or write each number.",
+  "questions": [
+    {
+      "question": "How do you say the number 1,450?",
+      "options": ["One thousand four hundred and fifty", "Fourteen fifty", "One four five zero", "One thousand and fifty"],
+      "answer": "One thousand four hundred and fifty"
+    },
+    {
+      "question": "How do you say 3.5 miles?",
+      "options": ["Three and a half miles", "Three point five zero miles", "Thirty five miles", "Three five miles"],
+      "answer": "Three and a half miles"
+    },
+    {
+      "question": "A car costs £12,750. How do you say this?",
+      "options": [
+        "Twelve seven fifty pounds",
+        "Twelve thousand seven hundred and fifty pounds",
+        "One hundred and twenty seven pounds fifty",
+        "Twelve seventy five pounds"
+      ],
+      "answer": "Twelve thousand seven hundred and fifty pounds"
+    },
+    {
+      "question": "Which number is an ordinal number?",
+      "options": ["25", "Twenty-five", "25th", "0.25"],
+      "answer": "25th"
+    },
+    {
+      "question": "The car has 34,200 miles on it. How do you say this?",
+      "options": [
+        "Thirty four thousand and two hundred",
+        "Three hundred and forty two",
+        "Thirty four thousand two hundred",
+        "Three four two zero zero"
+      ],
+      "answer": "Thirty four thousand two hundred"
+    }
+  ]
+}

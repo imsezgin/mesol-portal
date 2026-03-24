@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#0f5225">
+<title>YESchool — Teacher Dashboard</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#1a7a35;--green-dark:#0f5225;--green-mid:#2ea34d;
+  --green-pale:#f0faf2;--green-light:#d4edda;
+  --gold:#d4920a;--navy:#1a2a6e;
+  --ink:#0d1117;--mid:#4a5568;--muted:#8a96a3;--line:#e2e8f0;
+  --white:#ffffff;--bg:#f7f8fa;
+  --error:#c0392b;--error-bg:#fdecea;
+}
+html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink)}
+
+/* ── Login form ────────────────────────────────── */
+.login-shell{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 20px;background:linear-gradient(160deg,var(--green-dark),var(--green))}
+.login-card{background:#fff;border-radius:20px;padding:32px 28px;width:100%;max-width:380px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.login-title{font-size:20px;font-weight:700;margin-bottom:4px}
+.login-sub{font-size:13px;color:var(--muted);margin-bottom:24px}
+.login-input{width:100%;padding:14px 16px;border:2px solid var(--line);border-radius:12px;font-size:15px;outline:none;transition:border-color .15s}
+.login-input:focus{border-color:var(--green)}
+.login-btn{width:100%;padding:15px;background:var(--green);color:#fff;font-size:15px;font-weight:700;border:none;border-radius:12px;cursor:pointer;margin-top:16px;transition:background .15s}
+.login-btn:hover{background:var(--green-mid)}
+.login-error{display:none;background:var(--error-bg);color:var(--error);border-radius:8px;padding:10px;font-size:13px;text-align:center;margin-top:12px}
+
+/* ── Dashboard ─────────────────────────────────── */
+.dashboard{display:none}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:var(--green-dark);position:sticky;top:0;z-index:50}
+.topbar-logo{font-size:22px;font-weight:800;color:#fff;letter-spacing:-1px}
+.topbar-logo span{color:var(--gold)}
+.topbar-right{display:flex;align-items:center;gap:12px}
+.topbar-badge{background:rgba(255,255,255,.15);color:#fff;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600}
+.logout-btn{background:none;border:1px solid rgba(255,255,255,.3);color:#fff;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer}
+
+.main{padding:20px;max-width:900px;margin:0 auto}
+
+/* Stats row */
+.summary-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:24px}
+.summary-card{background:#fff;border-radius:14px;padding:18px 16px;text-align:center;box-shadow:0 1px 6px rgba(0,0,0,.04)}
+.summary-val{font-size:28px;font-weight:800;color:var(--green)}
+.summary-val.gold{color:var(--gold)}
+.summary-label{font-size:12px;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:.4px}
+
+/* Table */
+.table-card{background:#fff;border-radius:16px;box-shadow:0 1px 6px rgba(0,0,0,.04);overflow:hidden;margin-bottom:24px}
+.table-header{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.table-title{font-size:16px;font-weight:700}
+.table-count{font-size:13px;color:var(--muted)}
+
+table{width:100%;border-collapse:collapse}
+thead th{padding:12px 16px;text-align:left;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--line);background:#fafafa}
+tbody tr{cursor:pointer;transition:background .1s}
+tbody tr:hover{background:var(--green-pale)}
+tbody td{padding:14px 16px;font-size:14px;border-bottom:1px solid #f5f5f5}
+.td-name{font-weight:600;color:var(--ink)}
+.level-tag{font-size:11px;padding:3px 8px;border-radius:6px;font-weight:700;text-transform:uppercase}
+.level-tag.EL1{background:#e8f5e9;color:var(--green)}
+.level-tag.EL2{background:#e3f2fd;color:#1565c0}
+.level-tag.EL3{background:#f3e5f5;color:#7b1fa2}
+.score-tag{font-weight:700}
+.score-tag.good{color:var(--green)}
+.score-tag.ok{color:var(--gold)}
+.score-tag.low{color:var(--error)}
+.streak-tag{font-size:13px}
+.last-active{font-size:12px;color:var(--muted)}
+
+/* ── Student detail panel ──────────────────────── */
+.detail-panel{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;justify-content:center;align-items:flex-start;padding:40px 20px;overflow-y:auto}
+.detail-panel.show{display:flex}
+.detail-card{background:#fff;border-radius:20px;padding:28px 24px;max-width:560px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.3);max-height:90vh;overflow-y:auto}
+.detail-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.detail-name{font-size:20px;font-weight:700}
+.detail-close{background:none;border:none;font-size:24px;cursor:pointer;color:var(--muted);padding:8px;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
+
+.detail-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:20px}
+.detail-stat{background:var(--green-pale);border-radius:10px;padding:12px;text-align:center}
+.detail-stat-val{font-size:20px;font-weight:800;color:var(--green)}
+.detail-stat-label{font-size:11px;color:var(--muted);margin-top:2px}
+
+.detail-table{width:100%;border-collapse:collapse;font-size:13px}
+.detail-table th{padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;border-bottom:1px solid var(--line)}
+.detail-table td{padding:10px 12px;border-bottom:1px solid #f5f5f5}
+
+/* Responsive */
+@media(max-width:600px){
+  table,thead,tbody,th,td,tr{display:block}
+  thead{display:none}
+  tbody tr{margin-bottom:12px;background:#fff;border-radius:12px;padding:12px 16px;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+  tbody td{padding:4px 0;border:none;display:flex;justify-content:space-between;align-items:center}
+  tbody td::before{content:attr(data-label);font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+}
+</style>
+</head>
+<body>
+
+<!-- ── Login ─────────────────────────────────────── -->
+<div class="login-shell" id="loginView">
+  <div class="login-card">
+    <div class="login-title">Teacher Dashboard 🔐</div>
+    <div class="login-sub">Enter the teacher password to continue.</div>
+    <input class="login-input" id="pwInput" type="password" placeholder="Password" autocomplete="current-password">
+    <button class="login-btn" onclick="teacherLogin()">Sign in</button>
+    <div class="login-error" id="loginError">Incorrect password. Please try again.</div>
+  </div>
+</div>
+
+<!-- ── Dashboard ─────────────────────────────────── -->
+<div class="dashboard" id="dashView">
+  <div class="topbar">
+    <div class="topbar-logo">YES<span>.</span></div>
+    <div class="topbar-right">
+      <div class="topbar-badge">👩‍🏫 Teacher</div>
+      <button class="logout-btn" onclick="teacherLogout()">Log out</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="summary-row" id="summaryRow"></div>
+
+    <div class="table-card">
+      <div class="table-header">
+        <div class="table-title">Student Cohort</div>
+        <div class="table-count" id="cohortCount"></div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Level</th>
+            <th>This Week</th>
+            <th>Avg Score</th>
+            <th>Streak</th>
+            <th>Last Active</th>
+          </tr>
+        </thead>
+        <tbody id="cohortBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ── Student detail ────────────────────────────── -->
+<div class="detail-panel" id="detailPanel" onclick="if(event.target===this)closeDetail()">
+  <div class="detail-card">
+    <div class="detail-header">
+      <div class="detail-name" id="detailName">Student</div>
+      <button class="detail-close" onclick="closeDetail()">✕</button>
+    </div>
+    <div class="detail-stats" id="detailStats"></div>
+    <table class="detail-table">
+      <thead>
+        <tr><th>Exercise</th><th>Score</th><th>Time</th><th>Date</th></tr>
+      </thead>
+      <tbody id="detailBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+const TEACHER_TOKEN_KEY = 'yes_teacher_token';
+
+// Check existing session
+if (localStorage.getItem(TEACHER_TOKEN_KEY)) {
+  showDashboard();
+}
+
+// Enter key on password
+document.getElementById('pwInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') teacherLogin();
+});
+
+async function teacherLogin() {
+  const pw = document.getElementById('pwInput').value;
+  const errEl = document.getElementById('loginError');
+  errEl.style.display = 'none';
+
+  try {
+    const res = await fetch('/api/auth/teacher', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: pw })
+    });
+    const data = await res.json();
+    if (!res.ok) { errEl.style.display = 'block'; return; }
+    localStorage.setItem(TEACHER_TOKEN_KEY, data.token);
+    showDashboard();
+  } catch (err) {
+    errEl.textContent = 'Connection error.';
+    errEl.style.display = 'block';
+  }
+}
+
+function teacherLogout() {
+  localStorage.removeItem(TEACHER_TOKEN_KEY);
+  document.getElementById('loginView').style.display = '';
+  document.getElementById('dashView').style.display = 'none';
+}
+
+function showDashboard() {
+  document.getElementById('loginView').style.display = 'none';
+  document.getElementById('dashView').style.display = 'block';
+  loadCohort();
+}
+
+async function loadCohort() {
+  const token = localStorage.getItem(TEACHER_TOKEN_KEY);
+  try {
+    const res = await fetch('/api/teacher/cohort', {
+      headers: { 'Authorization': 'Bearer ' + token }
+    });
+    if (res.status === 401 || res.status === 403) { teacherLogout(); return; }
+    const data = await res.json();
+
+    // Summary
+    const cohort = data.cohort;
+    const active = cohort.filter(s => s.weeklyCount > 0).length;
+    const avgAll = cohort.filter(s => s.avgScore !== null);
+    const avgScore = avgAll.length > 0 ? Math.round(avgAll.reduce((s, c) => s + c.avgScore, 0) / avgAll.length) : 0;
+    const totalExercises = cohort.reduce((s, c) => s + c.weeklyCount, 0);
+
+    document.getElementById('summaryRow').innerHTML = `
+      <div class="summary-card"><div class="summary-val">${cohort.length}</div><div class="summary-label">Students</div></div>
+      <div class="summary-card"><div class="summary-val">${active}</div><div class="summary-label">Active This Week</div></div>
+      <div class="summary-card"><div class="summary-val gold">${avgScore}%</div><div class="summary-label">Avg Score</div></div>
+      <div class="summary-card"><div class="summary-val">${totalExercises}</div><div class="summary-label">Exercises (7d)</div></div>`;
+
+    document.getElementById('cohortCount').textContent = `${cohort.length} students`;
+
+    // Table
+    const tbody = document.getElementById('cohortBody');
+    tbody.innerHTML = cohort.map(s => {
+      const scoreTier = s.avgScore === null ? '' : s.avgScore >= 70 ? 'good' : s.avgScore >= 40 ? 'ok' : 'low';
+      const lastActive = s.lastActive ? timeAgo(s.lastActive) : 'Never';
+      return `
+        <tr onclick="openDetail('${s.id}')">
+          <td data-label="Name" class="td-name">${s.name}</td>
+          <td data-label="Level"><span class="level-tag ${s.level}">${s.level}</span></td>
+          <td data-label="This Week">${s.weeklyCount}</td>
+          <td data-label="Avg Score"><span class="score-tag ${scoreTier}">${s.avgScore !== null ? s.avgScore + '%' : '—'}</span></td>
+          <td data-label="Streak"><span class="streak-tag">${s.streak > 0 ? '🔥 ' + s.streak : '—'}</span></td>
+          <td data-label="Last Active"><span class="last-active">${lastActive}</span></td>
+        </tr>`;
+    }).join('');
+
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+async function openDetail(studentId) {
+  const token = localStorage.getItem(TEACHER_TOKEN_KEY);
+  const panel = document.getElementById('detailPanel');
+  panel.classList.add('show');
+
+  try {
+    const res = await fetch(`/api/teacher/student/${studentId}`, {
+      headers: { 'Authorization': 'Bearer ' + token }
+    });
+    const data = await res.json();
+
+    document.getElementById('detailName').textContent = data.student.name + ' — ' + data.student.level;
+
+    const total = data.results.length;
+    const avg = total > 0 ? Math.round(data.results.reduce((s, r) => s + (r.score / r.max_score * 100), 0) / total) : 0;
+    const streak = data.streak?.current_days || 0;
+
+    document.getElementById('detailStats').innerHTML = `
+      <div class="detail-stat"><div class="detail-stat-val">${total}</div><div class="detail-stat-label">Total Done</div></div>
+      <div class="detail-stat"><div class="detail-stat-val">${avg}%</div><div class="detail-stat-label">Avg Score</div></div>
+      <div class="detail-stat"><div class="detail-stat-val">🔥 ${streak}</div><div class="detail-stat-label">Streak</div></div>`;
+
+    document.getElementById('detailBody').innerHTML = data.results.map(r => {
+      const pct = Math.round((r.score / r.max_score) * 100);
+      const timeStr = r.time_seconds ? Math.floor(r.time_seconds / 60) + 'm ' + (r.time_seconds % 60) + 's' : '—';
+      const date = new Date(r.completed_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+      return `<tr>
+        <td>${r.exercise_id}</td>
+        <td>${r.score}/${r.max_score} (${pct}%)</td>
+        <td>${timeStr}</td>
+        <td>${date}</td>
+      </tr>`;
+    }).join('');
+
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+function closeDetail() {
+  document.getElementById('detailPanel').classList.remove('show');
+}
+
+function timeAgo(dateStr) {
+  const diff = Date.now() - new Date(dateStr).getTime();
+  const hrs = Math.floor(diff / 3600000);
+  if (hrs < 24) return hrs + 'h ago';
+  const days = Math.floor(hrs / 24);
+  if (days === 1) return 'Yesterday';
+  return days + 'd ago';
+}
+</script>
+</body>
+</html>

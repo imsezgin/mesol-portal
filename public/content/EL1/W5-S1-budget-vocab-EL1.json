@@ -1,0 +1,20 @@
+{
+  "id": "W5-S1-budget-vocab-EL1",
+  "week": 5,
+  "session": 1,
+  "level": "EL1",
+  "type": "vocab_match",
+  "topic": "Family budget",
+  "lo": "LO3",
+  "title": "Budget words",
+  "instruction": "Match each word to its meaning.",
+  "pairs": [
+    { "term": "income",     "definition": "Money you receive (e.g. wages, benefits)" },
+    { "term": "expenses",   "definition": "Money you spend" },
+    { "term": "budget",     "definition": "A plan for how to spend your money" },
+    { "term": "rent",       "definition": "Money you pay to live in a home" },
+    { "term": "bills",      "definition": "Payments for electricity, gas, water, phone" },
+    { "term": "savings",    "definition": "Money you keep for the future" },
+    { "term": "shortfall",  "definition": "When you spend more than you earn" }
+  ]
+}

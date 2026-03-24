@@ -1,0 +1,19 @@
+{
+  "id": "W2-S1-weights-vocab-EL1",
+  "week": 2,
+  "session": 1,
+  "level": "EL1",
+  "type": "vocab_match",
+  "topic": "Weights and measures",
+  "lo": "LO2",
+  "title": "Units of measurement",
+  "instruction": "Match each abbreviation to what it means.",
+  "pairs": [
+    { "term": "kg",  "definition": "kilogram — used to weigh food and people" },
+    { "term": "g",   "definition": "gram — used for small amounts of food" },
+    { "term": "ml",  "definition": "millilitre — used for liquids" },
+    { "term": "l",   "definition": "litre — used for larger amounts of liquid" },
+    { "term": "cm",  "definition": "centimetre — used for length" },
+    { "term": "km",  "definition": "kilometre — used for distance" }
+  ]
+}

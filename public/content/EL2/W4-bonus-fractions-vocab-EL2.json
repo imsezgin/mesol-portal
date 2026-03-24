@@ -1,0 +1,20 @@
+{
+  "id": "W4-bonus-fractions-vocab-EL2",
+  "week": 4,
+  "session": 1,
+  "level": "EL2",
+  "type": "vocab_match",
+  "topic": "Fractions, decimals, percentages — key terms",
+  "lo": "LO1",
+  "title": "Match the maths terms",
+  "instruction": "Match each term to its correct definition.",
+  "pairs": [
+    { "term": "equivalent",     "definition": "Equal in value, e.g. 1/2 = 0.5 = 50%" },
+    { "term": "convert",        "definition": "Change from one form to another, e.g. fraction to decimal" },
+    { "term": "discount",       "definition": "A reduction in price" },
+    { "term": "interest",       "definition": "Extra money paid on savings or a loan" },
+    { "term": "instalment",     "definition": "One of a series of regular payments" },
+    { "term": "increase",       "definition": "To become larger or higher" },
+    { "term": "decrease",       "definition": "To become smaller or lower" }
+  ]
+}

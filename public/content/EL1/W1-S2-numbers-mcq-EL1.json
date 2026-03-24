@@ -1,0 +1,43 @@
+{
+  "id": "W1-S2-numbers-mcq-EL1",
+  "week": 1,
+  "session": 2,
+  "level": "EL1",
+  "type": "mcq",
+  "topic": "Numbers in everyday life",
+  "lo": "LO1",
+  "title": "Numbers around us",
+  "instruction": "Choose the correct answer.",
+  "questions": [
+    {
+      "question": "A UK phone number has how many digits (not counting the area code)?",
+      "options": ["6", "7", "8", "9"],
+      "answer": "7"
+    },
+    {
+      "question": "Which is the correct way to say 07700 900 123?",
+      "options": [
+        "Oh seven seven hundred nine hundred one two three",
+        "Zero seven seven zero zero nine zero zero one two three",
+        "Seven seven nine one two three",
+        "Seven hundred nine hundred"
+      ],
+      "answer": "Zero seven seven zero zero nine zero zero one two three"
+    },
+    {
+      "question": "How do you write the date 'fifth of March 2026' on a form?",
+      "options": ["5-3-26", "05/03/2026", "March 5 26", "5th March"],
+      "answer": "05/03/2026"
+    },
+    {
+      "question": "What does 'DOB' mean on a form?",
+      "options": ["Day of Bank", "Date of Birth", "Details of Business", "Department of Benefits"],
+      "answer": "Date of Birth"
+    },
+    {
+      "question": "A postcode in Huddersfield starts with:",
+      "options": ["LS", "BD", "HD", "WF"],
+      "answer": "HD"
+    }
+  ]
+}

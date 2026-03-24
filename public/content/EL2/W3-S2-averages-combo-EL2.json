@@ -1,0 +1,61 @@
+{
+  "id": "W3-S2-averages-combo-EL2",
+  "week": 3,
+  "session": 2,
+  "level": "EL2",
+  "type": "mesol_combo",
+  "topic": "Average prices",
+  "lo": "LO3",
+  "title": "Working out averages",
+  "instruction": "Answer these questions about average prices.",
+  "english_section": {
+    "title": "Understanding averages",
+    "questions": [
+      {
+        "question": "What does 'average price' mean?",
+        "options": [
+          "The most expensive price",
+          "The cheapest price",
+          "The middle or typical price",
+          "The price in the middle shop"
+        ],
+        "answer": "The middle or typical price"
+      },
+      {
+        "question": "Which sentence uses 'average' correctly?",
+        "options": [
+          "The average price of milk is very cheap",
+          "The average price of milk in the UK is about £1.20",
+          "The average is always the lowest number",
+          "Average means the biggest number"
+        ],
+        "answer": "The average price of milk in the UK is about £1.20"
+      },
+      {
+        "question": "Mean, median, and mode are all types of ___.",
+        "options": ["measurement", "average", "fraction", "percentage"],
+        "answer": "average"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Calculating averages",
+    "questions": [
+      {
+        "question": "Bread costs: £1.00, £1.20, £1.40. What is the mean (average) price?",
+        "options": ["£1.10", "£1.20", "£1.30", "£1.40"],
+        "answer": "£1.20"
+      },
+      {
+        "question": "A shopkeeper sold: 5 items on Monday, 3 on Tuesday, 7 on Wednesday. What is the mean number of items sold per day?",
+        "options": ["4", "5", "6", "7"],
+        "answer": "5"
+      },
+      {
+        "question": "Prices of the same tin of tomatoes in 4 shops: 65p, 72p, 58p, 65p. What is the mean price?",
+        "options": ["63p", "65p", "67p", "70p"],
+        "answer": "65p"
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "W6-S2-costliving-combo-EL3",
+  "week": 6,
+  "session": 2,
+  "level": "EL3",
+  "type": "mesol_combo",
+  "topic": "Complex cost of living comparison with percentage increases",
+  "lo": "LO3",
+  "title": "Huddersfield vs London — advanced analysis",
+  "instruction": "Use the data to answer these advanced questions about cost of living.",
+  "context": "A family considers moving from Huddersfield to London for a higher-paid job. Current Huddersfield costs: Rent £850 | Food £320 | Transport £55 | Utilities £140 | Childcare £900 | Other £200 | Total: £2,465/month. London equivalent costs are 81% higher overall. Current salary: £32,000/year. London job offer: £44,000/year.",
+  "english_section": {
+    "title": "Making a financial decision",
+    "questions": [
+      {
+        "question": "The London costs are '81% higher'. Which calculation gives the London total?",
+        "options": [
+          "£2,465 × 0.81",
+          "£2,465 + (£2,465 × 0.81)",
+          "£2,465 ÷ 0.81",
+          "£2,465 × 1.19"
+        ],
+        "answer": "£2,465 + (£2,465 × 0.81)"
+      },
+      {
+        "question": "The family's disposable income is their salary minus living costs. Which sentence explains this correctly?",
+        "options": [
+          "A higher salary always means more disposable income",
+          "You must compare salary increase against cost of living increase",
+          "London salaries are always worth more",
+          "Living costs do not affect disposable income"
+        ],
+        "answer": "You must compare salary increase against cost of living increase"
+      },
+      {
+        "question": "What does 'net financial gain' mean when comparing two locations?",
+        "options": [
+          "The total salary in each city",
+          "How much better or worse off you are financially after costs",
+          "The cost of moving between cities",
+          "The difference in house prices"
+        ],
+        "answer": "How much better or worse off you are financially after costs"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Should they move? Calculate and decide.",
+    "questions": [
+      {
+        "question": "London monthly costs are 81% higher than Huddersfield (£2,465). What are the London monthly costs?",
+        "options": ["£4,341.65", "£4,421.65", "£4,461.65", "£4,501.65"],
+        "answer": "£4,461.65"
+      },
+      {
+        "question": "Huddersfield: salary £32,000/year = £2,667/month. Monthly disposable income after costs (£2,465)?",
+        "options": ["£182", "£192", "£202", "£212"],
+        "answer": "£202"
+      },
+      {
+        "question": "London: salary £44,000/year = £3,667/month. Monthly disposable income after London costs (£4,462)? Should they move?",
+        "options": [
+          "£795 surplus — yes, move to London",
+          "-£795 deficit — no, stay in Huddersfield",
+          "£0 — they break even",
+          "-£205 deficit — no, stay in Huddersfield"
+        ],
+        "answer": "-£795 deficit — no, stay in Huddersfield"
+      }
+    ]
+  }
+}

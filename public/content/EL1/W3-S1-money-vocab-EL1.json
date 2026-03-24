@@ -1,0 +1,19 @@
+{
+  "id": "W3-S1-money-vocab-EL1",
+  "week": 3,
+  "session": 1,
+  "level": "EL1",
+  "type": "vocab_match",
+  "topic": "British money",
+  "lo": "LO3",
+  "title": "Money words",
+  "instruction": "Match each word to its meaning.",
+  "pairs": [
+    { "term": "coin",       "definition": "A round piece of metal money" },
+    { "term": "note",       "definition": "Paper money (£5, £10, £20, £50)" },
+    { "term": "price",      "definition": "How much something costs" },
+    { "term": "change",     "definition": "Money you get back when you pay too much" },
+    { "term": "receipt",    "definition": "A piece of paper that shows what you paid" },
+    { "term": "total",      "definition": "The full amount you must pay" }
+  ]
+}

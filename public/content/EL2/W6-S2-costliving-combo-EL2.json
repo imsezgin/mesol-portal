@@ -1,0 +1,67 @@
+{
+  "id": "W6-S2-costliving-combo-EL2",
+  "week": 6,
+  "session": 2,
+  "level": "EL2",
+  "type": "mesol_combo",
+  "topic": "Comparing cost of living between two cities",
+  "lo": "LO3",
+  "title": "Huddersfield vs London — cost comparison",
+  "instruction": "Use the data to compare living costs in Huddersfield and London.",
+  "context": "Monthly costs: | | Huddersfield | London | | Rent (2-bed flat) | £850 | £1,950 | | Food shopping | £320 | £420 | | Transport | £55 | £168 | | Utilities | £140 | £160 | | Childcare (full-time) | £900 | £1,400 | | TOTAL | £2,265 | £4,098 |",
+  "english_section": {
+    "title": "Comparing cities",
+    "questions": [
+      {
+        "question": "Which category has the biggest difference in cost between the two cities?",
+        "options": ["food shopping", "transport", "rent", "utilities"],
+        "answer": "rent"
+      },
+      {
+        "question": "Which sentence uses a comparative correctly?",
+        "options": [
+          "London is more cheaper than Huddersfield",
+          "Huddersfield is more affordable than London",
+          "London is affordabler than Huddersfield",
+          "Huddersfield is most expensive city"
+        ],
+        "answer": "Huddersfield is more affordable than London"
+      },
+      {
+        "question": "The Living Wage in London is higher than in the rest of the UK. Why might this be?",
+        "options": [
+          "London has fewer jobs",
+          "The cost of living is higher in London",
+          "London workers are more skilled",
+          "London has better weather"
+        ],
+        "answer": "The cost of living is higher in London"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Cost of living calculations",
+    "questions": [
+      {
+        "question": "How much more does it cost to live in London than Huddersfield each month?",
+        "options": ["£1,733", "£1,793", "£1,833", "£1,893"],
+        "answer": "£1,833"
+      },
+      {
+        "question": "London total costs are what percentage higher than Huddersfield? (Round to nearest whole number)",
+        "options": ["71%", "76%", "81%", "86%"],
+        "answer": "81%"
+      },
+      {
+        "question": "A worker earns £3,500/month in London or £2,600/month in Huddersfield. After total living costs, which gives more disposable income?",
+        "options": [
+          "London (£3,500 - £4,098 = -£598)",
+          "Huddersfield (£2,600 - £2,265 = £335)",
+          "They are equal",
+          "London always pays more"
+        ],
+        "answer": "Huddersfield (£2,600 - £2,265 = £335)"
+      }
+    ]
+  }
+}

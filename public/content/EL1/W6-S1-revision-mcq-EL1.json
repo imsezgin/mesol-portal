@@ -1,0 +1,43 @@
+{
+  "id": "W6-S1-revision-mcq-EL1",
+  "week": 6,
+  "session": 1,
+  "level": "EL1",
+  "type": "mcq",
+  "topic": "Revision — fractions, percentages, decimals",
+  "lo": "LO1",
+  "title": "Revision quiz",
+  "instruction": "This is a revision quiz. Choose the correct answer for each question.",
+  "questions": [
+    {
+      "question": "What is 50% of £80?",
+      "options": ["£30", "£35", "£40", "£45"],
+      "answer": "£40"
+    },
+    {
+      "question": "What is 1/4 as a decimal?",
+      "options": ["0.1", "0.2", "0.25", "0.4"],
+      "answer": "0.25"
+    },
+    {
+      "question": "A recipe needs 300ml. You make half the recipe. How much do you need?",
+      "options": ["100ml", "125ml", "150ml", "175ml"],
+      "answer": "150ml"
+    },
+    {
+      "question": "You earn £900 per month. You spend £675. What fraction do you spend?",
+      "options": ["1/2", "2/3", "3/4", "4/5"],
+      "answer": "3/4"
+    },
+    {
+      "question": "A price goes from £40 to £50. Has it increased or decreased, and by how much?",
+      "options": [
+        "Decreased by £10",
+        "Increased by £10",
+        "Decreased by 25%",
+        "Increased by 25%"
+      ],
+      "answer": "Increased by 25%"
+    }
+  ]
+}

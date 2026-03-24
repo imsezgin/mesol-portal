@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#1a7a35">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>YESchool — Practice</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#1a7a35;--green-dark:#0f5225;--green-mid:#2ea34d;
+  --green-pale:#f0faf2;--green-light:#d4edda;
+  --gold:#d4920a;--navy:#1a2a6e;
+  --ink:#0d1117;--mid:#4a5568;--muted:#8a96a3;--line:#e2e8f0;
+  --white:#ffffff;--bg:#f7f8fa;
+}
+html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink)}
+
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:var(--green);position:sticky;top:0;z-index:50}
+.topbar-logo{font-size:22px;font-weight:800;color:#fff;letter-spacing:-1px}
+.topbar-logo span{color:var(--gold)}
+.topbar-title{font-size:16px;font-weight:700;color:#fff}
+
+.main{padding:16px 16px 100px;max-width:460px;margin:0 auto}
+
+/* Filter tabs */
+.filter-row{display:flex;gap:8px;overflow-x:auto;padding:4px 0 16px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.filter-row::-webkit-scrollbar{display:none}
+.filter-tab{padding:8px 16px;border-radius:20px;font-size:13px;font-weight:600;background:#fff;color:var(--mid);border:2px solid var(--line);cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent;min-height:40px;display:flex;align-items:center}
+.filter-tab.active{background:var(--green);color:#fff;border-color:var(--green)}
+.filter-tab:hover{border-color:var(--green)}
+
+/* Exercise list */
+.exercise-list{display:flex;flex-direction:column;gap:10px}
+.exercise-card{display:flex;align-items:center;gap:14px;background:#fff;border-radius:14px;padding:16px;box-shadow:0 1px 6px rgba(0,0,0,.04);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:all .15s;text-decoration:none;color:inherit}
+.exercise-card:hover{box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.exercise-card:active{transform:scale(.99)}
+
+.ex-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.ex-icon.gap_fill{background:#e8f5e9}
+.ex-icon.mcq{background:#e3f2fd}
+.ex-icon.vocab_match{background:#fff8e1}
+.ex-icon.mesol_combo{background:#f3e5f5}
+
+.ex-info{flex:1;min-width:0}
+.ex-title{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ex-meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.ex-badge{font-size:11px;padding:3px 8px;border-radius:6px;font-weight:600;text-transform:uppercase;letter-spacing:.3px}
+.badge-week{background:var(--green-pale);color:var(--green)}
+.badge-type{background:#eef0ff;color:var(--navy)}
+
+.ex-done{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}
+.ex-done.completed{background:var(--green-light);color:var(--green)}
+.ex-done.pending{background:var(--bg);color:var(--line)}
+
+.empty-state{text-align:center;padding:60px 20px;color:var(--muted);font-size:14px;line-height:1.6}
+.empty-state .emoji{font-size:40px;margin-bottom:12px}
+
+/* Bottom nav */
+.bottomnav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);display:flex;z-index:50;padding-bottom:env(safe-area-inset-bottom)}
+.bottomnav a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:56px;text-decoration:none;font-size:11px;font-weight:600;color:var(--muted);gap:3px;-webkit-tap-highlight-color:transparent}
+.bottomnav a.active{color:var(--green)}
+.bottomnav a svg{width:22px;height:22px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-logo">YES<span>.</span></div>
+  <div class="topbar-title">Practice</div>
+</div>
+
+<div class="main">
+  <div class="filter-row" id="filterRow"></div>
+  <div class="exercise-list" id="exerciseList">
+    <div class="empty-state" id="loading"><div class="emoji">📚</div>Loading exercises...</div>
+  </div>
+</div>
+
+<nav class="bottomnav">
+  <a href="/home">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Home
+  </a>
+  <a href="/practice" class="active">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    Practice
+  </a>
+  <a href="/progress">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+    Progress
+  </a>
+  <a href="#" onclick="event.preventDefault();alert('Need help?\\n\\nAsk your teacher or email info@yeschool.uk')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    Help
+  </a>
+</nav>
+
+<script>
+const TOKEN = localStorage.getItem('yes_token');
+const LEVEL = localStorage.getItem('yes_level');
+if (!TOKEN) window.location.href = '/';
+
+const TYPE_ICONS = {
+  gap_fill: '✏️',
+  mcq: '🔘',
+  vocab_match: '🔗',
+  mesol_combo: '📐'
+};
+
+const TYPE_LABELS = {
+  gap_fill: 'Gap Fill',
+  mcq: 'MCQ',
+  vocab_match: 'Vocab',
+  mesol_combo: 'Combo'
+};
+
+let allExercises = [];
+let completedIds = new Set();
+let activeFilter = 'all';
+
+async function loadData() {
+  try {
+    // Fetch content index and student results in parallel
+    const [indexRes, meRes] = await Promise.all([
+      fetch(`/api/content/${LEVEL}`),
+      fetch('/api/student/me', { headers: { 'Authorization': 'Bearer ' + TOKEN } })
+    ]);
+
+    if (meRes.status === 401) {
+      localStorage.clear();
+      window.location.href = '/';
+      return;
+    }
+
+    const exercises = await indexRes.json();
+    const meData = await meRes.json();
+
+    allExercises = exercises;
+
+    // Get completed from recent (we also fetch full results via progress)
+    // Fetch all results for completion tracking
+    const progRes = await fetch('/api/student/progress', { headers: { 'Authorization': 'Bearer ' + TOKEN } });
+    if (progRes.ok) {
+      const progData = await progRes.json();
+      (progData.results || []).forEach(r => completedIds.add(r.exercise_id));
+    }
+
+    // Build week filter tabs
+    const weeks = [...new Set(exercises.map(e => e.week))].sort((a, b) => a - b);
+    const filterRow = document.getElementById('filterRow');
+    filterRow.innerHTML = `<div class="filter-tab active" data-week="all" onclick="setFilter(this)">All</div>`;
+    weeks.forEach(w => {
+      filterRow.innerHTML += `<div class="filter-tab" data-week="${w}" onclick="setFilter(this)">Week ${w}</div>`;
+    });
+
+    renderList();
+  } catch (err) {
+    console.error(err);
+    document.getElementById('loading').innerHTML = '<div class="emoji">📶</div>Could not load exercises.';
+  }
+}
+
+function setFilter(el) {
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  activeFilter = el.dataset.week;
+  renderList();
+}
+
+function renderList() {
+  const list = document.getElementById('exerciseList');
+  const filtered = activeFilter === 'all'
+    ? allExercises
+    : allExercises.filter(e => String(e.week) === activeFilter);
+
+  if (filtered.length === 0) {
+    list.innerHTML = '<div class="empty-state"><div class="emoji">📭</div>No exercises found.</div>';
+    return;
+  }
+
+  list.innerHTML = filtered.map(e => {
+    const done = completedIds.has(e.id);
+    return `
+      <a class="exercise-card" href="/exercise?id=${e.id}&level=${LEVEL}">
+        <div class="ex-icon ${e.type}">${TYPE_ICONS[e.type] || '📝'}</div>
+        <div class="ex-info">
+          <div class="ex-title">${e.title}</div>
+          <div class="ex-meta">
+            <span class="ex-badge badge-week">W${e.week}</span>
+            <span class="ex-badge badge-type">${TYPE_LABELS[e.type] || e.type}</span>
+          </div>
+        </div>
+        <div class="ex-done ${done ? 'completed' : 'pending'}">${done ? '✓' : '○'}</div>
+      </a>`;
+  }).join('');
+}
+
+window.setFilter = setFilter;
+loadData();
+</script>
+</body>
+</html>

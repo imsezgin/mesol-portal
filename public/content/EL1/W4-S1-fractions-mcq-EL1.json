@@ -1,0 +1,43 @@
+{
+  "id": "W4-S1-fractions-mcq-EL1",
+  "week": 4,
+  "session": 1,
+  "level": "EL1",
+  "type": "mcq",
+  "topic": "Fractions, decimals, percentages",
+  "lo": "LO1",
+  "title": "Fractions in everyday life",
+  "instruction": "Choose the correct answer.",
+  "questions": [
+    {
+      "question": "A pizza is cut into 4 equal pieces. You eat 1 piece. What fraction did you eat?",
+      "options": ["1/2", "1/3", "1/4", "1/5"],
+      "answer": "1/4"
+    },
+    {
+      "question": "Which is the same as 1/2?",
+      "options": ["25%", "50%", "75%", "100%"],
+      "answer": "50%"
+    },
+    {
+      "question": "Which is the same as 0.25?",
+      "options": ["1/2", "1/3", "1/4", "1/5"],
+      "answer": "1/4"
+    },
+    {
+      "question": "A shop has a '50% off' sale. A coat costs £60. How much do you pay?",
+      "options": ["£10", "£20", "£30", "£40"],
+      "answer": "£30"
+    },
+    {
+      "question": "How do you say 0.5?",
+      "options": [
+        "Zero point fifty",
+        "Nought point five",
+        "Zero five",
+        "Five point zero"
+      ],
+      "answer": "Nought point five"
+    }
+  ]
+}

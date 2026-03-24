@@ -1,0 +1,52 @@
+{
+  "id": "W3-S2-averages-combo-EL3",
+  "week": 3,
+  "session": 2,
+  "level": "EL3",
+  "type": "mesol_combo",
+  "topic": "Comparing supermarket prices and averages",
+  "lo": "LO3",
+  "title": "Supermarket price comparison",
+  "instruction": "Read the data and answer the questions.",
+  "context": "Weekly shopping basket prices for the same items: Tesco £68.50 | Asda £62.30 | Sainsbury's £71.20 | Lidl £54.80 | Aldi £53.60",
+  "english_section": {
+    "title": "Interpreting data",
+    "questions": [
+      {
+        "question": "Which supermarket is the most expensive?",
+        "options": ["Tesco", "Asda", "Sainsbury's", "Lidl"],
+        "answer": "Sainsbury's"
+      },
+      {
+        "question": "Which word means the difference between the highest and lowest price?",
+        "options": ["average", "range", "total", "median"],
+        "answer": "range"
+      },
+      {
+        "question": "What is the range between the cheapest and most expensive basket?",
+        "options": ["£15.40", "£16.60", "£17.60", "£18.40"],
+        "answer": "£17.60"
+      }
+    ]
+  },
+  "maths_section": {
+    "title": "Average calculations",
+    "questions": [
+      {
+        "question": "What is the mean (average) price of the five baskets?",
+        "options": ["£60.48", "£62.08", "£62.48", "£63.08"],
+        "answer": "£62.08"
+      },
+      {
+        "question": "You shop at Aldi every week for 4 weeks. How much do you spend in total?",
+        "options": ["£204.40", "£210.40", "£214.40", "£220.40"],
+        "answer": "£214.40"
+      },
+      {
+        "question": "By shopping at Aldi instead of Sainsbury's each week, how much do you save in one year (52 weeks)?",
+        "options": ["£892.80", "£902.80", "£912.80", "£922.80"],
+        "answer": "£912.80"
+      }
+    ]
+  }
+}
