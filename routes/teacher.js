@@ -87,4 +87,74 @@ router.get('/student/:id', requireTeacher, async (req, res) => {
   res.json({ student, results: results || [], streak });
 });
 
+// ── POST /api/teacher/import  ──────────────────────────────
+// Bulk-create students from teacher dashboard
+// Body: { students: [{ name, phone, level, programme, email? }] }
+router.post('/import', requireTeacher, async (req, res) => {
+  const { students } = req.body;
+
+  if (!students || !Array.isArray(students) || students.length === 0) {
+    return res.status(400).json({ error: 'students array required' });
+  }
+
+  const results = [];
+
+  for (const s of students) {
+    if (!s.name || !s.phone || !s.level || !s.programme) {
+      results.push({ name: s.name, phone: s.phone, status: 'error', error: 'Missing required fields' });
+      continue;
+    }
+
+    // Normalise phone: strip spaces, ensure +44
+    let phone = s.phone.trim().replace(/\s+/g, '');
+    if (phone.startsWith('0')) phone = '+44' + phone.substring(1);
+    if (!phone.startsWith('+')) phone = '+44' + phone;
+
+    // Check if already exists
+    const { data: existing } = await supabase
+      .from('students')
+      .select('id, phone, pin')
+      .eq('phone', phone)
+      .single();
+
+    if (existing) {
+      results.push({ name: s.name, phone, pin: existing.pin, status: 'exists' });
+      continue;
+    }
+
+    // Generate 4-digit PIN
+    const pin = String(Math.floor(1000 + Math.random() * 9000));
+
+    const { data: created, error } = await supabase
+      .from('students')
+      .insert({
+        phone,
+        name:      s.name.trim(),
+        level:     s.level.trim().toUpperCase(),
+        programme: s.programme.trim(),
+        pin,
+        sheet_row: s.sheet_row || null
+      })
+      .select('id, phone, name, pin')
+      .single();
+
+    if (error) {
+      results.push({ name: s.name, phone, status: 'error', error: error.message });
+      continue;
+    }
+
+    // Initialise streak row
+    await supabase.from('streaks').insert({ student_id: created.id });
+
+    results.push({ name: created.name, phone: created.phone, pin: created.pin, status: 'created' });
+  }
+
+  res.json({
+    imported: results.filter(r => r.status === 'created').length,
+    existing: results.filter(r => r.status === 'exists').length,
+    errors:   results.filter(r => r.status === 'error').length,
+    results
+  });
+});
+
 module.exports = router;

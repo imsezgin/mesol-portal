@@ -86,6 +86,36 @@ tbody td{padding:14px 16px;font-size:14px;border-bottom:1px solid #f5f5f5}
 .detail-table th{padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;border-bottom:1px solid var(--line)}
 .detail-table td{padding:10px 12px;border-bottom:1px solid #f5f5f5}
 
+/* ── Import panel ─────────────────────────────── */
+.import-btn{display:inline-flex;align-items:center;gap:6px;background:var(--green);color:#fff;border:none;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;transition:background .15s;min-height:44px}
+.import-btn:hover{background:var(--green-mid)}
+.import-panel{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;justify-content:center;align-items:flex-start;padding:30px 16px;overflow-y:auto}
+.import-panel.show{display:flex}
+.import-card{background:#fff;border-radius:20px;padding:28px 24px;max-width:700px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.3);max-height:90vh;overflow-y:auto}
+.import-close{background:none;border:none;font-size:24px;cursor:pointer;color:var(--muted);padding:8px;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
+.import-textarea{width:100%;min-height:200px;border:2px solid var(--line);border-radius:12px;padding:14px;font-family:monospace;font-size:12px;line-height:1.6;resize:vertical;outline:none}
+.import-textarea:focus{border-color:var(--green)}
+.import-help{font-size:12px;color:var(--muted);margin:8px 0 16px;line-height:1.5}
+.import-go{width:100%;padding:15px;background:var(--green);color:#fff;font-size:15px;font-weight:700;border:none;border-radius:12px;cursor:pointer;transition:background .15s}
+.import-go:hover{background:var(--green-mid)}
+.import-go:disabled{background:var(--muted);cursor:wait}
+
+.pin-results{margin-top:20px}
+.pin-row{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:10px;margin-bottom:6px;font-size:13px}
+.pin-row.created{background:var(--green-pale)}
+.pin-row.exists{background:#fff8e1}
+.pin-row.error{background:var(--error-bg)}
+.pin-name{flex:1;font-weight:600}
+.pin-phone{color:var(--mid);min-width:120px}
+.pin-code{font-size:18px;font-weight:800;color:var(--green);font-family:monospace;letter-spacing:2px}
+.pin-status{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:3px 8px;border-radius:6px}
+.pin-status.created{background:var(--green-light);color:var(--green-dark)}
+.pin-status.exists{background:#ffe0b2;color:#e65100}
+.pin-status.error{background:var(--error-bg);color:var(--error)}
+
+.copy-all-btn{margin-top:12px;padding:12px 20px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;width:100%}
+.copy-all-btn:hover{opacity:.9}
+
 /* Responsive */
 @media(max-width:600px){
   table,thead,tbody,th,td,tr{display:block}
@@ -122,6 +152,10 @@ tbody td{padding:14px 16px;font-size:14px;border-bottom:1px solid #f5f5f5}
   <div class="main">
     <div class="summary-row" id="summaryRow"></div>
 
+    <div style="display:flex;justify-content:flex-end;margin-bottom:16px">
+      <button class="import-btn" onclick="openImport()">+ Import Students</button>
+    </div>
+
     <div class="table-card">
       <div class="table-header">
         <div class="table-title">Student Cohort</div>
@@ -141,6 +175,36 @@ tbody td{padding:14px 16px;font-size:14px;border-bottom:1px solid #f5f5f5}
         <tbody id="cohortBody"></tbody>
       </table>
     </div>
+  </div>
+</div>
+
+<!-- ── Import students panel ──────────────────────── -->
+<div class="import-panel" id="importPanel" onclick="if(event.target===this)closeImport()">
+  <div class="import-card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+      <div style="font-size:18px;font-weight:700">Import Students</div>
+      <button class="import-close" onclick="closeImport()">✕</button>
+    </div>
+    <div class="import-help">
+      One student per line: <strong>Name, Phone, Level, Programme</strong><br>
+      Phone can be 07xxx or +447xxx format. Level: EL1, EL2, or EL3.
+    </div>
+    <textarea class="import-textarea" id="importData">Ayoub Qadir, 07480758995, EL1, MESOL
+Ana-Andrada Popescu, 07516093376, EL1, MESOL
+Nayab Zahra, 07599370043, EL1, MESOL
+Aras Karimi, 07470124209, EL1, MESOL
+Karzan Khalil, 07469616121, EL1, MESOL
+Khanda Salah, 07352986986, EL1, MESOL
+Marziyeh Noroozijafarloo, 07352983335, EL1, MESOL
+Zhino Kakayani, 07310068130, EL1, MESOL
+Jalil Al-Tamimi, 07466642083, EL1, MESOL
+Alim Alizade, 07762743911, EL1, MESOL
+Feleku Lwnetu, 07483113844, EL1, MESOL
+Dongmei An, 07303079753, EL1, MESOL
+Sanaz Dashzarin, 07717782488, EL1, MESOL
+Balen Yasin Ali, 07448198061, EL1, MESOL</textarea>
+    <button class="import-go" id="importGoBtn" onclick="runImport()">Import 14 students & generate PINs</button>
+    <div class="pin-results" id="pinResults"></div>
   </div>
 </div>
 
@@ -302,6 +366,106 @@ function timeAgo(dateStr) {
   const days = Math.floor(hrs / 24);
   if (days === 1) return 'Yesterday';
   return days + 'd ago';
+}
+
+// ── Import functions ────────────────────────────────
+function openImport() {
+  document.getElementById('importPanel').classList.add('show');
+  updateImportCount();
+}
+function closeImport() {
+  document.getElementById('importPanel').classList.remove('show');
+}
+
+// Update button count when textarea changes
+document.getElementById('importData').addEventListener('input', updateImportCount);
+function updateImportCount() {
+  const lines = document.getElementById('importData').value.trim().split('\n').filter(l => l.trim());
+  document.getElementById('importGoBtn').textContent = `Import ${lines.length} student${lines.length !== 1 ? 's' : ''} & generate PINs`;
+}
+
+async function runImport() {
+  const btn = document.getElementById('importGoBtn');
+  const raw = document.getElementById('importData').value.trim();
+  const lines = raw.split('\n').filter(l => l.trim());
+
+  if (lines.length === 0) return;
+
+  // Parse CSV lines
+  const students = lines.map(line => {
+    const parts = line.split(',').map(s => s.trim());
+    return {
+      name:      parts[0] || '',
+      phone:     parts[1] || '',
+      level:     parts[2] || 'EL1',
+      programme: parts[3] || 'MESOL'
+    };
+  });
+
+  btn.disabled = true;
+  btn.textContent = 'Importing...';
+
+  try {
+    const token = localStorage.getItem(TEACHER_TOKEN_KEY);
+    const res = await fetch('/api/teacher/import', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + token
+      },
+      body: JSON.stringify({ students })
+    });
+
+    if (res.status === 401 || res.status === 403) { teacherLogout(); return; }
+    const data = await res.json();
+
+    // Show results
+    const resultsDiv = document.getElementById('pinResults');
+    let html = `<div style="margin-bottom:12px;font-size:14px;font-weight:600">
+      ✅ ${data.imported} created · ${data.existing} already existed · ${data.errors} errors
+    </div>`;
+
+    data.results.forEach(r => {
+      html += `<div class="pin-row ${r.status}">
+        <span class="pin-name">${r.name}</span>
+        <span class="pin-phone">${r.phone}</span>
+        <span class="pin-code">${r.pin || '—'}</span>
+        <span class="pin-status ${r.status}">${r.status}</span>
+      </div>`;
+    });
+
+    // Copy all button
+    html += `<button class="copy-all-btn" onclick="copyAllPins()">📋 Copy all PINs (for WhatsApp)</button>`;
+
+    resultsDiv.innerHTML = html;
+    btn.textContent = 'Done!';
+
+    // Store results for copy
+    window._importResults = data.results;
+
+    // Refresh cohort table
+    loadCohort();
+
+  } catch (err) {
+    console.error(err);
+    btn.textContent = 'Error — try again';
+  } finally {
+    setTimeout(() => { btn.disabled = false; updateImportCount(); }, 2000);
+  }
+}
+
+function copyAllPins() {
+  if (!window._importResults) return;
+  const lines = window._importResults
+    .filter(r => r.pin)
+    .map(r => `${r.name}\nPhone: ${r.phone}\nPIN: ${r.pin}\nPortal: mesol.yeschool.uk\n`);
+
+  const text = lines.join('\n---\n\n');
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.copy-all-btn');
+    btn.textContent = '✅ Copied to clipboard!';
+    setTimeout(() => { btn.textContent = '📋 Copy all PINs (for WhatsApp)'; }, 2000);
+  });
 }
 </script>
 </body>
