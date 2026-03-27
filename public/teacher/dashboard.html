@@ -193,7 +193,7 @@ async function doLogin() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, password: pass })
   });
-  if (!res.ok) { document.getElementById('loginErr').classList.add('show'); return; }
+  if (!res.ok) { const errEl = document.getElementById('loginErr'); errEl.textContent = data.error || 'Incorrect password'; errEl.classList.add('show'); return; }
   const d = await res.json();
   localStorage.setItem(TOKEN_KEY, d.token);
   showApp();

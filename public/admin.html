@@ -289,7 +289,7 @@ async function doLogin() {
   });
   const data = await res.json();
   if (!res.ok) {
-    document.getElementById('loginError').classList.add('show');
+    const errEl = document.getElementById('loginError'); errEl.textContent = data.error || 'Incorrect password'; errEl.classList.add('show');
     return;
   }
   localStorage.setItem(TOKEN_KEY, data.token);

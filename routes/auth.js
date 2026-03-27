@@ -18,7 +18,17 @@ router.post('/login', async (req, res) => {
 // ── POST /api/auth/teacher  (staff: admin or teacher) ───────
 router.post('/teacher', async (req, res) => {
   const { email, password } = req.body;
-  if (!email || !password) return res.status(400).json({ error: 'Email and password required' });
+  console.log(`🔑 Staff login attempt: email="${email}"`);
+
+  if (!email || !password) {
+    // Fallback for old global teacher password (if email NOT provided)
+    if (password === process.env.TEACHER_PASSWORD) {
+       console.log('✅ Logged in via global TEACHER_PASSWORD fallback');
+       const token = jwt.sign({ role: 'teacher', name: 'Legacy Admin' }, process.env.JWT_SECRET, { expiresIn: '12h' });
+       return res.json({ token, name: 'Legacy Admin', role: 'teacher' });
+    }
+    return res.status(400).json({ error: 'Email and password required' });
+  }
 
   // Use ILIKE for case-insensitive email lookup
   const { data: user, error } = await supabase
@@ -28,17 +38,16 @@ router.post('/teacher', async (req, res) => {
     .single();
 
   if (error || !user) {
-    if (password === process.env.TEACHER_PASSWORD && !email) {
-       const token = jwt.sign({ role: 'teacher', name: 'Admin' }, process.env.JWT_SECRET, { expiresIn: '12h' });
-       return res.json({ token, name: 'Admin', role: 'teacher' });
-    }
-    return res.status(401).json({ error: 'User not found' });
+    console.error(`❌ Staff user not found in database: "${email}"`);
+    return res.status(401).json({ error: `User not found: ${email}` });
   }
 
   if (user.password !== password.trim()) {
+    console.error(`❌ Incorrect password for staff user: "${email}"`);
     return res.status(401).json({ error: 'Incorrect password' });
   }
 
+  console.log(`✅ Staff login successful: ${user.name} (${user.role})`);
   const token = jwt.sign({ id: user.id, email: user.email, name: user.name, role: user.role }, process.env.JWT_SECRET, { expiresIn: '12h' });
   res.json({ token, name: user.name, role: user.role });
 });
