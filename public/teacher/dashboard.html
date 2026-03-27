@@ -117,8 +117,8 @@ tr:hover td{background:var(--gp);cursor:pointer}
     <h2>Teacher login</h2>
     <p>Dashboard access for YESchool staff</p>
     <div class="form-group">
-      <label>Password</label>
-      <input type="password" id="passInput" placeholder="Enter password" onkeydown="if(event.key==='Enter')doLogin()">
+      <label>Email</label><input type="email" id="emailInput" placeholder="Enter your email" style="margin-bottom:10px"><br><label>Password</label>
+      <input type="password" id="passInput" placeholder="Enter your password" onkeydown="if(event.key==='Enter')doLogin()">
     </div>
     <div class="alert alert-error" id="loginErr">Incorrect password</div>
     <button class="btn-primary" style="width:100%" onclick="doLogin()">Sign in</button>
@@ -187,11 +187,11 @@ let currentProg = 'all';
 
 // ── AUTH ──────────────────────────────────────────────────────
 async function doLogin() {
-  const pass = document.getElementById('passInput').value;
+  const email = document.getElementById('emailInput').value; const pass = document.getElementById('passInput').value;
   const res = await fetch('/api/auth/teacher', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ password: pass })
+    body: JSON.stringify({ email, password: pass })
   });
   if (!res.ok) { document.getElementById('loginErr').classList.add('show'); return; }
   const d = await res.json();

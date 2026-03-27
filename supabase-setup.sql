@@ -51,6 +51,29 @@ ALTER TABLE students DISABLE ROW LEVEL SECURITY;
 ALTER TABLE results  DISABLE ROW LEVEL SECURITY;
 ALTER TABLE streaks  DISABLE ROW LEVEL SECURITY;
 
+-- ═══════════════════════════════════════════════════════════
+-- NEW: Staff table (Admins/Teachers)
+-- ═══════════════════════════════════════════════════════════
+CREATE TABLE IF NOT EXISTS staff (
+  id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email       TEXT UNIQUE NOT NULL,
+  password    TEXT NOT NULL,         -- Stored plain for now as per project style
+  name        TEXT NOT NULL,
+  role        TEXT NOT NULL CHECK (role IN ('admin', 'teacher')),
+  phone       TEXT,
+  dob         TEXT,
+  created_at  TIMESTAMPTZ DEFAULT now()
+);
+
+ALTER TABLE staff DISABLE ROW LEVEL SECURITY;
+
+-- Insert initial accounts
+-- PIN/Password is DOB digits for now (e.g. 29081995)
+INSERT INTO staff (name, email, password, role, dob, phone) VALUES
+('Gwyn Maher', 'GwynMaher@gmail.com', '29081995', 'admin', '29/08/1995', '07762163947'),
+('Steve Culhane', 'steveculhane67@gmail.com', '06051967', 'teacher', '06/05/1967', '07541651064')
+ON CONFLICT (email) DO NOTHING;
+
 -- ── Verification ─────────────────────────────────────────────
 -- Run this to confirm tables exist:
 -- SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';

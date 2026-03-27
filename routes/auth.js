@@ -38,55 +38,53 @@ router.post('/login', async (req, res) => {
   res.json({ token, name: student.name, level: student.level, programme: student.programme });
 });
 
-// ── POST /api/auth/teacher  (teacher) ───────────────────────
-// Body: { password }
-router.post('/teacher', (req, res) => {
-  const { password } = req.body;
+// ── POST /api/auth/teacher  (staff: admin or teacher) ───────
+// Body: { email, password }
+router.post('/teacher', async (req, res) => {
+  const { email, password } = req.body;
 
-  if (!password || password !== process.env.TEACHER_PASSWORD) {
+  if (!email || !password) {
+    return res.status(400).json({ error: 'Email and password required' });
+  }
+
+  const { data: user, error } = await supabase
+    .from('staff')
+    .select('id, name, email, password, role')
+    .eq('email', email.trim())
+    .single();
+
+  if (error || !user) {
+    // Fallback for global teacher password (backwards compatibility for dev/tests)
+    if (password === process.env.TEACHER_PASSWORD && !email) {
+       const token = jwt.sign({ role: 'teacher', name: 'Admin' }, process.env.JWT_SECRET, { expiresIn: '12h' });
+       return res.json({ token, name: 'Admin', role: 'teacher' });
+    }
+    return res.status(401).json({ error: 'User not found' });
+  }
+
+  if (user.password !== password.trim()) {
     return res.status(401).json({ error: 'Incorrect password' });
   }
 
   const token = jwt.sign(
-    { role: 'teacher' },
+    { id: user.id, email: user.email, name: user.name, role: user.role },
     process.env.JWT_SECRET,
     { expiresIn: '12h' }
   );
 
-  res.json({ token });
+  res.json({ token, name: user.name, role: user.role });
 });
 
 // ── POST /api/auth/forgot-pin  ───────────────────────────────
-// Student requests a new PIN by phone number
-// Generates new PIN, updates DB, triggers WhatsApp via GHL
 router.post('/forgot-pin', async (req, res) => {
   const { phone } = req.body;
   if (!phone) return res.status(400).json({ error: 'Phone required' });
-
   const normPhone = phone.trim().replace(/\s+/g, '');
-
-  const { data: student, error } = await supabase
-    .from('students')
-    .select('id, name, phone')
-    .eq('phone', normPhone)
-    .single();
-
-  if (error || !student) {
-    return res.status(404).json({ error: 'Phone number not found' });
-  }
-
-  // Generate new PIN
+  const { data: student, error } = await supabase.from('students').select('id, name, phone').eq('phone', normPhone).single();
+  if (error || !student) return res.status(404).json({ error: 'Phone number not found' });
   const pin = String(Math.floor(1000 + Math.random() * 9000));
-
-  await supabase
-    .from('students')
-    .update({ pin, pin_sent_at: new Date().toISOString() })
-    .eq('id', student.id);
-
-  // TODO: send WhatsApp via GHL when Make.com webhook is configured
-  // For now: log the PIN so it can be communicated manually
+  await supabase.from('students').update({ pin, pin_sent_at: new Date().toISOString() }).eq('id', student.id);
   console.log(`PIN reset for ${student.name} (${student.phone}): ${pin}`);
-
   res.json({ success: true, message: 'New PIN generated' });
 });
 

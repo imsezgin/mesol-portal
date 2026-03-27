@@ -9,14 +9,14 @@ function requireAuth(req, res, next) {
   const token = authHeader.split(' ')[1];
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.student = decoded; // { id, phone, name, level, programme }
+    req.student = decoded;
     next();
   } catch (err) {
     return res.status(401).json({ error: 'Invalid or expired token' });
   }
 }
 
-// Protects teacher routes
+// Protects teacher/admin dashboard routes
 function requireTeacher(req, res, next) {
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
@@ -25,17 +25,36 @@ function requireTeacher(req, res, next) {
   const token = authHeader.split(' ')[1];
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    if (decoded.role !== 'teacher') {
-      return res.status(403).json({ error: 'Teacher access only' });
+    // Allow both teacher and admin roles to access teacher routes
+    if (decoded.role !== 'teacher' && decoded.role !== 'admin') {
+      return res.status(403).json({ error: 'Staff access only' });
     }
-    req.teacher = decoded;
+    req.staff = decoded;
     next();
   } catch (err) {
     return res.status(401).json({ error: 'Invalid or expired token' });
   }
 }
 
-// Protects Make.com webhook routes
+// Protects specific admin-only routes
+function requireAdmin(req, res, next) {
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return res.status(401).json({ error: 'No token provided' });
+  }
+  const token = authHeader.split(' ')[1];
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    if (decoded.role !== 'admin') {
+      return res.status(403).json({ error: 'Admin access only' });
+    }
+    req.admin = decoded;
+    next();
+  } catch (err) {
+    return res.status(401).json({ error: 'Invalid or expired token' });
+  }
+}
+
 function requireMakeSecret(req, res, next) {
   const secret = req.headers['x-make-secret'];
   if (!secret || secret !== process.env.MAKE_SECRET) {
@@ -44,4 +63,4 @@ function requireMakeSecret(req, res, next) {
   next();
 }
 
-module.exports = { requireAuth, requireTeacher, requireMakeSecret };
+module.exports = { requireAuth, requireTeacher, requireAdmin, requireMakeSecret };
