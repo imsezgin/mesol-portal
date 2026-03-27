@@ -1,0 +1,53 @@
+{
+  "id": "EL3-W2-008",
+  "session": 2,
+  "type": "mcq",
+  "title": "Complex Value Comparisons",
+  "topic": "Comparisons",
+  "instruction": "Work out the best value.",
+  "context": "Gym memberships: Gym A: £35/month, no joining fee, includes classes. Gym B: £25/month + £50 joining fee, classes £5 extra each. Gym C: £30/month, £20 joining fee, 2 free classes/month then £3 each.",
+  "questions": [
+    {
+      "question": "Total cost for Gym A over 12 months?",
+      "options": [
+        "£420",
+        "£300",
+        "£470",
+        "£360"
+      ],
+      "answer": "£420"
+    },
+    {
+      "question": "Total cost for Gym B over 12 months (no extra classes)?",
+      "options": [
+        "£350",
+        "£300",
+        "£420",
+        "£380"
+      ],
+      "answer": "£350"
+    },
+    {
+      "question": "Gym B with 4 classes per month for 12 months?",
+      "options": [
+        "£590",
+        "£350",
+        "£540",
+        "£480"
+      ],
+      "answer": "£590"
+    },
+    {
+      "question": "If you attend 4 classes per month, which gym is cheapest?",
+      "options": [
+        "Gym A (£420)",
+        "Gym B (£590)",
+        "Gym C (varies)",
+        "Cannot tell"
+      ],
+      "answer": "Gym A (£420)"
+    }
+  ],
+  "week": 2,
+  "level": "EL3"
+}

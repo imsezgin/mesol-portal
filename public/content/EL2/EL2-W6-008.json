@@ -1,0 +1,52 @@
+{
+  "id": "EL2-W6-008",
+  "session": 6,
+  "type": "mcq",
+  "title": "Rounding Times",
+  "topic": "Date & Time",
+  "instruction": "Round to the nearest 5 minutes.",
+  "questions": [
+    {
+      "question": "Round 3:22 to the nearest 5 minutes.",
+      "options": [
+        "3:20",
+        "3:25",
+        "3:15",
+        "3:30"
+      ],
+      "answer": "3:20"
+    },
+    {
+      "question": "Round 7:48 to the nearest 5 minutes.",
+      "options": [
+        "7:50",
+        "7:45",
+        "7:55",
+        "8:00"
+      ],
+      "answer": "7:50"
+    },
+    {
+      "question": "Round 11:13 to the nearest 5 minutes.",
+      "options": [
+        "11:15",
+        "11:10",
+        "11:20",
+        "11:00"
+      ],
+      "answer": "11:15"
+    },
+    {
+      "question": "Round 6:37 to the nearest 5 minutes.",
+      "options": [
+        "6:35",
+        "6:40",
+        "6:30",
+        "6:45"
+      ],
+      "answer": "6:35"
+    }
+  ],
+  "week": 6,
+  "level": "EL2"
+}

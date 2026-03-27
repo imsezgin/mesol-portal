@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W5-003",
+  "session": 5,
+  "type": "gap_fill",
+  "title": "At the Bank",
+  "topic": "Banking",
+  "instruction": "Complete the conversation at the bank.",
+  "passage": "Customer: I would like to ___ an account. Staff: What type? A current ___ or savings? Customer: A current account, ___. Staff: Please fill in this ___. Customer: Do I get a debit ___?",
+  "blanks": [
+    "open",
+    "account",
+    "please",
+    "form",
+    "card"
+  ],
+  "word_bank": [
+    "open",
+    "account",
+    "please",
+    "form",
+    "card",
+    "close"
+  ],
+  "week": 5,
+  "level": "EL1"
+}

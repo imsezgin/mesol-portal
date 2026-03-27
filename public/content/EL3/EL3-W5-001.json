@@ -1,0 +1,36 @@
+{
+  "id": "EL3-W5-001",
+  "session": 5,
+  "type": "vocab_match",
+  "title": "Advanced Banking Terms",
+  "topic": "Banking",
+  "instruction": "Match each term to its definition.",
+  "pairs": [
+    {
+      "term": "amortisation",
+      "definition": "spreading loan repayments over time"
+    },
+    {
+      "term": "equity",
+      "definition": "the value of your ownership (e.g. home value minus mortgage)"
+    },
+    {
+      "term": "liquidity",
+      "definition": "how easily an asset can be converted to cash"
+    },
+    {
+      "term": "portfolio",
+      "definition": "a collection of financial investments"
+    },
+    {
+      "term": "collateral",
+      "definition": "an asset pledged as security for a loan"
+    },
+    {
+      "term": "yield",
+      "definition": "the income return on an investment"
+    }
+  ],
+  "week": 5,
+  "level": "EL3"
+}

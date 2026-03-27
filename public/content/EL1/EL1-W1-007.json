@@ -1,0 +1,80 @@
+{
+  "id": "EL1-W1-007",
+  "session": 1,
+  "type": "mesol_combo",
+  "title": "Cooking with Numbers",
+  "topic": "Cooking & Weights",
+  "context": "You are helping to make soup. The recipe is for 4 people.",
+  "english_section": {
+    "instruction": "Answer the English questions about cooking.",
+    "questions": [
+      {
+        "question": "What is another word for 'a recipe'?",
+        "options": [
+          "Instructions for cooking",
+          "A shopping list",
+          "A restaurant menu",
+          "A food label"
+        ],
+        "answer": "Instructions for cooking"
+      },
+      {
+        "question": "What does 'ingredients' mean?",
+        "options": [
+          "The things you need to cook with",
+          "The cooking time",
+          "The oven temperature",
+          "The plate"
+        ],
+        "answer": "The things you need to cook with"
+      },
+      {
+        "question": "'Weigh the flour' means...",
+        "options": [
+          "Find out how heavy the flour is",
+          "Buy the flour",
+          "Open the flour bag",
+          "Eat the flour"
+        ],
+        "answer": "Find out how heavy the flour is"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Answer the maths questions about the recipe.",
+    "questions": [
+      {
+        "question": "The recipe needs 500g of potatoes for 4 people. How much for 2 people?",
+        "options": [
+          "250g",
+          "500g",
+          "1000g",
+          "100g"
+        ],
+        "answer": "250g"
+      },
+      {
+        "question": "You need 1 litre of water. How many ml is that?",
+        "options": [
+          "1000 ml",
+          "100 ml",
+          "500 ml",
+          "10 ml"
+        ],
+        "answer": "1000 ml"
+      },
+      {
+        "question": "The soup needs 200g of carrots. You have 150g. How much more do you need?",
+        "options": [
+          "50g",
+          "100g",
+          "200g",
+          "350g"
+        ],
+        "answer": "50g"
+      }
+    ]
+  },
+  "week": 1,
+  "level": "EL1"
+}

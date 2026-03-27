@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W2-003",
+  "session": 2,
+  "type": "gap_fill",
+  "title": "Writing Comparisons",
+  "topic": "Comparisons",
+  "instruction": "Complete the sentences using the correct comparative or superlative form.",
+  "passage": "Tesco is ___ than Waitrose for groceries. Aldi is the ___ supermarket in my area. This phone contract is ___ expensive than the other one. Plan C has the ___ data of all three plans. Overall, Plan B offers the ___ value for money.",
+  "blanks": [
+    "cheaper",
+    "cheapest",
+    "more",
+    "most",
+    "best"
+  ],
+  "word_bank": [
+    "cheaper",
+    "cheapest",
+    "more",
+    "most",
+    "best",
+    "worst",
+    "least"
+  ],
+  "week": 2,
+  "level": "EL2"
+}

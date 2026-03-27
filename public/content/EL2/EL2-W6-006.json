@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W6-006",
+  "session": 6,
+  "type": "gap_fill",
+  "title": "Making Appointments",
+  "topic": "Date & Time",
+  "instruction": "Complete the phone conversation.",
+  "passage": "Receptionist: Good morning, how can I help? You: I would like to ___ an appointment, please. Receptionist: When would be ___? You: Could I come on ___ afternoon? Receptionist: We have 2:30 or 3:45. You: 2:30 would be ___. Receptionist: That is ___ for you.",
+  "blanks": [
+    "book",
+    "convenient",
+    "Thursday",
+    "perfect",
+    "confirmed"
+  ],
+  "word_bank": [
+    "book",
+    "convenient",
+    "Thursday",
+    "perfect",
+    "confirmed",
+    "cancel",
+    "Monday"
+  ],
+  "week": 6,
+  "level": "EL2"
+}

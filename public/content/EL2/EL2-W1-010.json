@@ -1,0 +1,80 @@
+{
+  "id": "EL2-W1-010",
+  "session": 1,
+  "type": "mesol_combo",
+  "title": "Infographic: UK vs Metric",
+  "topic": "Weights & Measures",
+  "context": "In the UK, we use a mix of metric and imperial measurements. Shops use kg, but people often say pounds. Roads use miles, but running races use km.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What does 'a mix of' mean?",
+        "options": [
+          "Some of both types",
+          "Only one type",
+          "None of them",
+          "A new type"
+        ],
+        "answer": "Some of both types"
+      },
+      {
+        "question": "An 'infographic' is...",
+        "options": [
+          "A picture that shows information",
+          "A type of graph",
+          "A photograph",
+          "A recipe"
+        ],
+        "answer": "A picture that shows information"
+      },
+      {
+        "question": "What does 'approximately' mean?",
+        "options": [
+          "About / nearly",
+          "Exactly",
+          "More than",
+          "Less than"
+        ],
+        "answer": "About / nearly"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Answer the maths questions.",
+    "questions": [
+      {
+        "question": "1 mile is approximately 1.6 km. How many km is 5 miles?",
+        "options": [
+          "8 km",
+          "5 km",
+          "16 km",
+          "3 km"
+        ],
+        "answer": "8 km"
+      },
+      {
+        "question": "1 stone = 14 pounds. How many pounds is 2 stone?",
+        "options": [
+          "28",
+          "14",
+          "7",
+          "42"
+        ],
+        "answer": "28"
+      },
+      {
+        "question": "A bag of rice weighs 2.2 lbs. That is approximately...",
+        "options": [
+          "1 kg",
+          "2 kg",
+          "500g",
+          "5 kg"
+        ],
+        "answer": "1 kg"
+      }
+    ]
+  },
+  "week": 1,
+  "level": "EL2"
+}

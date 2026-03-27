@@ -1,0 +1,53 @@
+{
+  "id": "EL2-W4-002",
+  "session": 4,
+  "type": "mcq",
+  "title": "Calculating Bills",
+  "topic": "Money & Calculations",
+  "instruction": "Calculate the correct amounts.",
+  "context": "Restaurant bill: 2 mains at £12.50 each, 2 drinks at £3.00 each, 1 dessert at £6.50. Service charge: 12.5%.",
+  "questions": [
+    {
+      "question": "Subtotal (before service)?",
+      "options": [
+        "£37.50",
+        "£34.00",
+        "£40.00",
+        "£31.00"
+      ],
+      "answer": "£37.50"
+    },
+    {
+      "question": "Service charge (12.5% of £37.50)?",
+      "options": [
+        "£4.69",
+        "£3.75",
+        "£5.00",
+        "£4.50"
+      ],
+      "answer": "£4.69"
+    },
+    {
+      "question": "Total bill?",
+      "options": [
+        "£42.19",
+        "£37.50",
+        "£41.25",
+        "£43.50"
+      ],
+      "answer": "£42.19"
+    },
+    {
+      "question": "Split between 2 people?",
+      "options": [
+        "£21.10",
+        "£18.75",
+        "£20.00",
+        "£22.00"
+      ],
+      "answer": "£21.10"
+    }
+  ],
+  "week": 4,
+  "level": "EL2"
+}

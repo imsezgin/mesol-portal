@@ -1,0 +1,62 @@
+{
+  "id": "EL2-W2-005",
+  "session": 2,
+  "type": "mcq",
+  "title": "Mean and Mode",
+  "topic": "Comparisons",
+  "instruction": "Calculate the mean or mode for each question.",
+  "questions": [
+    {
+      "question": "What is the 'mean'?",
+      "options": [
+        "The average (add all numbers, divide by how many)",
+        "The middle number",
+        "The most common number",
+        "The biggest number"
+      ],
+      "answer": "The average (add all numbers, divide by how many)"
+    },
+    {
+      "question": "Find the mean of: 10, 20, 30",
+      "options": [
+        "20",
+        "30",
+        "10",
+        "15"
+      ],
+      "answer": "20"
+    },
+    {
+      "question": "What is the 'mode'?",
+      "options": [
+        "The most common number",
+        "The average",
+        "The middle number",
+        "The smallest number"
+      ],
+      "answer": "The most common number"
+    },
+    {
+      "question": "Find the mode of: 5, 3, 5, 7, 5, 8",
+      "options": [
+        "5",
+        "3",
+        "7",
+        "8"
+      ],
+      "answer": "5"
+    },
+    {
+      "question": "Scores: 60, 70, 80, 90, 100. What is the mean?",
+      "options": [
+        "80",
+        "70",
+        "90",
+        "75"
+      ],
+      "answer": "80"
+    }
+  ],
+  "week": 2,
+  "level": "EL2"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W3-009",
+  "session": 3,
+  "type": "gap_fill",
+  "title": "Sorting by Groups",
+  "topic": "Fractions & Percentages",
+  "instruction": "Complete the sentences about grouping items.",
+  "passage": "There are 10 chocolates: 5 are ___, 3 are dark, and 2 are white. Half of the chocolates are milk. 3 out of 10 is the same as ___%. 2 out of 10 is the same as ___%. The ___ common type is milk. The ___ common type is white.",
+  "blanks": [
+    "milk",
+    "30",
+    "20",
+    "most",
+    "least"
+  ],
+  "word_bank": [
+    "milk",
+    "30",
+    "20",
+    "most",
+    "least",
+    "dark"
+  ],
+  "week": 3,
+  "level": "EL1"
+}

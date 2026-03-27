@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W6-009",
+  "session": 6,
+  "type": "gap_fill",
+  "title": "Course Review: Key Vocabulary",
+  "topic": "Course Review",
+  "instruction": "Complete the course review summary.",
+  "passage": "In this course we learned about ___ and measures, including metric and imperial units. We practiced ___ prices and services using comparative language. We studied fractions, decimals and ___ and applied them to money. We learned about ___ and how bank accounts work. Finally, we practiced telling the ___ and making appointments.",
+  "blanks": [
+    "weights",
+    "comparing",
+    "percentages",
+    "banking",
+    "time"
+  ],
+  "word_bank": [
+    "weights",
+    "comparing",
+    "percentages",
+    "banking",
+    "time",
+    "cooking",
+    "shopping"
+  ],
+  "week": 6,
+  "level": "EL2"
+}

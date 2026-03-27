@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W4-003",
+  "session": 4,
+  "type": "gap_fill",
+  "title": "Understanding Invoices",
+  "topic": "Money & Calculations",
+  "instruction": "Complete the invoice explanation.",
+  "passage": "An invoice shows the ___ for goods or services. Line items list each product with its ___ price. The ___ is the total before tax. VAT at 20% is then added. Payment ___ are usually 30 days. Late payments may incur an ___ charge.",
+  "blanks": [
+    "charges",
+    "unit",
+    "subtotal",
+    "terms",
+    "interest"
+  ],
+  "word_bank": [
+    "charges",
+    "unit",
+    "subtotal",
+    "terms",
+    "interest",
+    "invoice",
+    "balance"
+  ],
+  "week": 4,
+  "level": "EL3"
+}

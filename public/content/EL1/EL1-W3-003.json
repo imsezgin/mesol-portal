@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W3-003",
+  "session": 3,
+  "type": "gap_fill",
+  "title": "Sharing Equally",
+  "topic": "Fractions & Percentages",
+  "instruction": "Fill in the blanks about sharing.",
+  "passage": "There are 12 sweets. We share them ___ between 3 people. Each person gets ___. If we share 12 sweets between ___ people, each gets 6. Half of 12 is ___. A quarter of 12 is ___.",
+  "blanks": [
+    "equally",
+    "4",
+    "2",
+    "6",
+    "3"
+  ],
+  "word_bank": [
+    "equally",
+    "4",
+    "2",
+    "6",
+    "3",
+    "12"
+  ],
+  "week": 3,
+  "level": "EL1"
+}

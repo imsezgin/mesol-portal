@@ -1,0 +1,52 @@
+{
+  "id": "EL3-W4-008",
+  "session": 4,
+  "type": "mcq",
+  "title": "Compound Calculations",
+  "topic": "Money & Calculations",
+  "instruction": "Work through multi-step calculations.",
+  "questions": [
+    {
+      "question": "Meal: £65.50. 12.5% service. Then 10% off total with voucher. Final?",
+      "options": [
+        "£66.19",
+        "£73.69",
+        "£65.50",
+        "£59.95"
+      ],
+      "answer": "£66.19"
+    },
+    {
+      "question": "3 people eat. Person A: £22, B: £18, C: £25.50. Tax 20% shared equally. Each person's tax share?",
+      "options": [
+        "£4.37",
+        "£13.10",
+        "£5.00",
+        "£3.67"
+      ],
+      "answer": "£4.37"
+    },
+    {
+      "question": "You earn £11.44/hour. Overtime is 1.5x rate. Overtime hourly rate?",
+      "options": [
+        "£17.16",
+        "£11.44",
+        "£22.88",
+        "£14.30"
+      ],
+      "answer": "£17.16"
+    },
+    {
+      "question": "Work 37.5 hours + 5 overtime. Weekly gross?",
+      "options": [
+        "£514.30",
+        "£429.00",
+        "£485.80",
+        "£500"
+      ],
+      "answer": "£514.30"
+    }
+  ],
+  "week": 4,
+  "level": "EL3"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W1-006",
+  "session": 1,
+  "type": "gap_fill",
+  "title": "Writing a Recipe",
+  "topic": "Cooking & Weights",
+  "instruction": "Complete the recipe with the correct measurement words.",
+  "passage": "Lentil Soup (serves 6). ___ 250g of red lentils and drain. Dice 2 ___ onions and 3 cloves of garlic. Heat 2 ___ of olive oil in a large pot. Cook the onions for 5 ___. Add 1.5 ___ of vegetable stock and simmer for 30 minutes.",
+  "blanks": [
+    "Rinse",
+    "medium",
+    "tablespoons",
+    "minutes",
+    "litres"
+  ],
+  "word_bank": [
+    "Rinse",
+    "medium",
+    "tablespoons",
+    "minutes",
+    "litres",
+    "teaspoons",
+    "hours"
+  ],
+  "week": 1,
+  "level": "EL3"
+}

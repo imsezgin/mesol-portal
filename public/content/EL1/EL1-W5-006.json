@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W5-006",
+  "session": 5,
+  "type": "gap_fill",
+  "title": "Using a Cash Machine",
+  "topic": "Banking",
+  "instruction": "Complete the steps for using a cash machine.",
+  "passage": "Put your ___ into the machine. Enter your ___. Choose the ___ you want. Take your ___. Do not forget your ___.",
+  "blanks": [
+    "card",
+    "PIN",
+    "amount",
+    "cash",
+    "card"
+  ],
+  "word_bank": [
+    "card",
+    "PIN",
+    "amount",
+    "cash",
+    "card",
+    "receipt"
+  ],
+  "week": 5,
+  "level": "EL1"
+}

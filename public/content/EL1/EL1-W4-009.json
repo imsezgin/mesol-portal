@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W4-009",
+  "session": 4,
+  "type": "gap_fill",
+  "title": "Simple Discounts",
+  "topic": "Money & Calculations",
+  "instruction": "Complete the sentences about discounts.",
+  "passage": "A shirt costs ___. It has 50% off. 50% means ___. The new price is ___. A book costs £6. It has ___ off. You save £3. You pay ___.",
+  "blanks": [
+    "£20",
+    "half",
+    "£10",
+    "50%",
+    "£3"
+  ],
+  "word_bank": [
+    "£20",
+    "half",
+    "£10",
+    "50%",
+    "£3",
+    "£6"
+  ],
+  "week": 4,
+  "level": "EL1"
+}

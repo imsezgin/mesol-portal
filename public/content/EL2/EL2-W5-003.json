@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W5-003",
+  "session": 5,
+  "type": "gap_fill",
+  "title": "Types of Bank Accounts",
+  "topic": "Banking",
+  "instruction": "Complete the description of account types.",
+  "passage": "A ___ account is for daily use — your wages go in and bills come out. A ___ account pays you interest on your money. An ___ is a savings account that is tax-free. A ___ account is designed for people aged 16-25. Before choosing, ___ the interest rates and fees.",
+  "blanks": [
+    "current",
+    "savings",
+    "ISA",
+    "student",
+    "compare"
+  ],
+  "word_bank": [
+    "current",
+    "savings",
+    "ISA",
+    "student",
+    "compare",
+    "joint",
+    "business"
+  ],
+  "week": 5,
+  "level": "EL2"
+}

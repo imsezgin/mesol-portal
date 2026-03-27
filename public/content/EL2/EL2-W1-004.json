@@ -1,0 +1,90 @@
+{
+  "id": "EL2-W1-004",
+  "session": 1,
+  "type": "mesol_combo",
+  "title": "Recipe Measurements",
+  "topic": "Cooking & Weights",
+  "context": "A recipe for chicken curry serves 4 people: 500g chicken, 1 onion, 400g tin of tomatoes, 200ml coconut milk, 2 tablespoons of curry paste.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What does 'serves 4 people' mean?",
+        "options": [
+          "There is enough food for 4 people",
+          "4 people made the food",
+          "It takes 4 minutes to cook",
+          "You need 4 ingredients"
+        ],
+        "answer": "There is enough food for 4 people"
+      },
+      {
+        "question": "A 'tablespoon' is...",
+        "options": [
+          "A large spoon used for measuring",
+          "A type of table",
+          "A knife",
+          "A cup"
+        ],
+        "answer": "A large spoon used for measuring"
+      },
+      {
+        "question": "What is a 'tin' of tomatoes?",
+        "options": [
+          "Tomatoes in a metal container",
+          "Fresh tomatoes",
+          "Dried tomatoes",
+          "Tomato seeds"
+        ],
+        "answer": "Tomatoes in a metal container"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Answer the maths questions about the recipe.",
+    "questions": [
+      {
+        "question": "To serve 8 people, how much chicken do you need?",
+        "options": [
+          "1000g (1kg)",
+          "500g",
+          "250g",
+          "750g"
+        ],
+        "answer": "1000g (1kg)"
+      },
+      {
+        "question": "To serve 2 people (half), how much coconut milk?",
+        "options": [
+          "100ml",
+          "200ml",
+          "400ml",
+          "50ml"
+        ],
+        "answer": "100ml"
+      },
+      {
+        "question": "If you double the recipe, how many tablespoons of curry paste?",
+        "options": [
+          "4",
+          "2",
+          "1",
+          "6"
+        ],
+        "answer": "4"
+      },
+      {
+        "question": "500g of chicken costs £4. What is the cost per 100g?",
+        "options": [
+          "80p",
+          "40p",
+          "£1",
+          "£2"
+        ],
+        "answer": "80p"
+      }
+    ]
+  },
+  "week": 1,
+  "level": "EL2"
+}

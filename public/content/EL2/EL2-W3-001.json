@@ -1,0 +1,36 @@
+{
+  "id": "EL2-W3-001",
+  "session": 3,
+  "type": "vocab_match",
+  "title": "Fraction & Decimal Terms",
+  "topic": "Fractions & Percentages",
+  "instruction": "Match each term to its definition.",
+  "pairs": [
+    {
+      "term": "numerator",
+      "definition": "the top number in a fraction"
+    },
+    {
+      "term": "denominator",
+      "definition": "the bottom number in a fraction"
+    },
+    {
+      "term": "decimal point",
+      "definition": "the dot that separates whole numbers from parts"
+    },
+    {
+      "term": "equivalent",
+      "definition": "fractions that have the same value"
+    },
+    {
+      "term": "simplify",
+      "definition": "reduce a fraction to its smallest form"
+    },
+    {
+      "term": "convert",
+      "definition": "change from one form to another"
+    }
+  ],
+  "week": 3,
+  "level": "EL2"
+}

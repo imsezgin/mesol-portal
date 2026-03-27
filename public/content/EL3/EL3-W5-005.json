@@ -1,0 +1,62 @@
+{
+  "id": "EL3-W5-005",
+  "session": 5,
+  "type": "mcq",
+  "title": "Credit Scores",
+  "topic": "Banking",
+  "instruction": "Answer questions about credit scores.",
+  "questions": [
+    {
+      "question": "What improves your credit score?",
+      "options": [
+        "Paying bills on time",
+        "Missing payments",
+        "Using all your credit",
+        "Applying for many cards at once"
+      ],
+      "answer": "Paying bills on time"
+    },
+    {
+      "question": "What is a 'credit utilisation ratio'?",
+      "options": [
+        "Percentage of available credit you are using",
+        "Your credit score",
+        "Your income",
+        "Number of credit cards"
+      ],
+      "answer": "Percentage of available credit you are using"
+    },
+    {
+      "question": "Ideal credit utilisation is under...",
+      "options": [
+        "30%",
+        "90%",
+        "100%",
+        "50%"
+      ],
+      "answer": "30%"
+    },
+    {
+      "question": "Credit limit £2,000. Ideal maximum balance?",
+      "options": [
+        "£600",
+        "£1,800",
+        "£2,000",
+        "£1,000"
+      ],
+      "answer": "£600"
+    },
+    {
+      "question": "A 'hard search' on your credit file happens when...",
+      "options": [
+        "You apply for credit",
+        "You check your own score",
+        "You open a bank account",
+        "You get paid"
+      ],
+      "answer": "You apply for credit"
+    }
+  ],
+  "week": 5,
+  "level": "EL3"
+}

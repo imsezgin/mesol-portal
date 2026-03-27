@@ -1,0 +1,36 @@
+{
+  "id": "EL2-W2-007",
+  "session": 2,
+  "type": "vocab_match",
+  "title": "Financial Comparison Terms",
+  "topic": "Comparisons",
+  "instruction": "Match each term to its meaning.",
+  "pairs": [
+    {
+      "term": "tariff",
+      "definition": "a set plan with prices for a service"
+    },
+    {
+      "term": "value for money",
+      "definition": "getting good quality for the price"
+    },
+    {
+      "term": "compare",
+      "definition": "to look at differences between things"
+    },
+    {
+      "term": "rate",
+      "definition": "the price charged per unit"
+    },
+    {
+      "term": "deal",
+      "definition": "a special offer or agreement"
+    },
+    {
+      "term": "contract",
+      "definition": "a written agreement for a service"
+    }
+  ],
+  "week": 2,
+  "level": "EL2"
+}

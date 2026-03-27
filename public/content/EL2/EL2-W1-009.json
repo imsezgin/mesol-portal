@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W1-009",
+  "session": 1,
+  "type": "gap_fill",
+  "title": "Shopping for Ingredients",
+  "topic": "Weights & Measures",
+  "instruction": "Complete the dialogue at the supermarket.",
+  "passage": "Shop assistant: Can I ___ you? Customer: Yes, I need 500 ___ of mince. Shop assistant: Here you are. Anything ___? Customer: How much is a ___ of milk? Shop assistant: It is one pound twenty. Customer: I will take ___. Thank you.",
+  "blanks": [
+    "help",
+    "grams",
+    "else",
+    "litre",
+    "one"
+  ],
+  "word_bank": [
+    "help",
+    "grams",
+    "else",
+    "litre",
+    "one",
+    "two",
+    "please"
+  ],
+  "week": 1,
+  "level": "EL2"
+}

@@ -1,0 +1,90 @@
+{
+  "id": "EL3-W2-004",
+  "session": 2,
+  "type": "mesol_combo",
+  "title": "Analysing Mobile Contracts",
+  "topic": "Comparisons",
+  "context": "Contract A: £18/month, 12 months, 5GB data, £50 upfront. Contract B: £22/month, 24 months, unlimited data, £0 upfront. Contract C: £15/month, SIM only, 8GB, no commitment.",
+  "english_section": {
+    "instruction": "Answer the English questions about contracts.",
+    "questions": [
+      {
+        "question": "What does 'upfront cost' mean?",
+        "options": [
+          "Money you pay at the beginning",
+          "Monthly payment",
+          "A hidden charge",
+          "The total cost"
+        ],
+        "answer": "Money you pay at the beginning"
+      },
+      {
+        "question": "What does 'no commitment' mean?",
+        "options": [
+          "You can cancel anytime",
+          "You must stay for 2 years",
+          "It is free",
+          "You cannot change plans"
+        ],
+        "answer": "You can cancel anytime"
+      },
+      {
+        "question": "What is a 'SIM only' deal?",
+        "options": [
+          "A plan without a new phone included",
+          "A plan with a free phone",
+          "A pay-as-you-go plan",
+          "An internet-only plan"
+        ],
+        "answer": "A plan without a new phone included"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate the total costs over the contract period.",
+    "questions": [
+      {
+        "question": "Contract A total cost (12 months + upfront)?",
+        "options": [
+          "£266",
+          "£216",
+          "£306",
+          "£250"
+        ],
+        "answer": "£266"
+      },
+      {
+        "question": "Contract B total cost (24 months)?",
+        "options": [
+          "£528",
+          "£264",
+          "£480",
+          "£550"
+        ],
+        "answer": "£528"
+      },
+      {
+        "question": "Contract C for 12 months?",
+        "options": [
+          "£180",
+          "£150",
+          "£200",
+          "£165"
+        ],
+        "answer": "£180"
+      },
+      {
+        "question": "Which is cheapest over 12 months?",
+        "options": [
+          "Contract C (£180)",
+          "Contract A (£266)",
+          "Contract B (£264 for 12)",
+          "All the same"
+        ],
+        "answer": "Contract C (£180)"
+      }
+    ]
+  },
+  "week": 2,
+  "level": "EL3"
+}

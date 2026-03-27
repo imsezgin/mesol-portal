@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W3-006",
+  "session": 3,
+  "type": "gap_fill",
+  "title": "Time and Fractions",
+  "topic": "Fractions & Percentages",
+  "instruction": "Complete the sentences about time and fractions.",
+  "passage": "One hour has ___ minutes. Half an hour is ___ minutes. A quarter of an hour is ___ minutes. 'Half past three' means 3:___. 'Quarter past five' means 5:___.",
+  "blanks": [
+    "60",
+    "30",
+    "15",
+    "30",
+    "15"
+  ],
+  "word_bank": [
+    "60",
+    "30",
+    "15",
+    "30",
+    "15",
+    "45"
+  ],
+  "week": 3,
+  "level": "EL1"
+}

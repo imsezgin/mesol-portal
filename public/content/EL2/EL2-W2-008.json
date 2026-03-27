@@ -1,0 +1,53 @@
+{
+  "id": "EL2-W2-008",
+  "session": 2,
+  "type": "mcq",
+  "title": "Real-World Comparisons",
+  "topic": "Comparisons",
+  "instruction": "Choose the best answer.",
+  "context": "Car insurance quotes: Company A: £450/year, Company B: £380/year, Company C: £420/year.",
+  "questions": [
+    {
+      "question": "Which company is the cheapest?",
+      "options": [
+        "Company B",
+        "Company A",
+        "Company C",
+        "All the same"
+      ],
+      "answer": "Company B"
+    },
+    {
+      "question": "How much cheaper is B than A per year?",
+      "options": [
+        "£70",
+        "£30",
+        "£40",
+        "£80"
+      ],
+      "answer": "£70"
+    },
+    {
+      "question": "Company A per month (£450 ÷ 12)?",
+      "options": [
+        "£37.50",
+        "£45.00",
+        "£38.00",
+        "£40.00"
+      ],
+      "answer": "£37.50"
+    },
+    {
+      "question": "Company B per month (£380 ÷ 12)?",
+      "options": [
+        "£31.67",
+        "£38.00",
+        "£35.00",
+        "£30.00"
+      ],
+      "answer": "£31.67"
+    }
+  ],
+  "week": 2,
+  "level": "EL2"
+}

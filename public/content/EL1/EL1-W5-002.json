@@ -1,0 +1,52 @@
+{
+  "id": "EL1-W5-002",
+  "session": 5,
+  "type": "mcq",
+  "title": "Bank Accounts",
+  "topic": "Banking",
+  "instruction": "Choose the correct answer about banks.",
+  "questions": [
+    {
+      "question": "Where do you put money to keep it safe?",
+      "options": [
+        "A bank account",
+        "Under your bed",
+        "In your pocket",
+        "In a shop"
+      ],
+      "answer": "A bank account"
+    },
+    {
+      "question": "What is a PIN?",
+      "options": [
+        "A secret number for your card",
+        "A type of bank",
+        "A type of money",
+        "A bank's address"
+      ],
+      "answer": "A secret number for your card"
+    },
+    {
+      "question": "What machine gives you cash?",
+      "options": [
+        "ATM / cash machine",
+        "Washing machine",
+        "Computer",
+        "Telephone"
+      ],
+      "answer": "ATM / cash machine"
+    },
+    {
+      "question": "A debit card takes money from...",
+      "options": [
+        "Your bank account",
+        "Another person",
+        "The shop",
+        "The government"
+      ],
+      "answer": "Your bank account"
+    }
+  ],
+  "week": 5,
+  "level": "EL1"
+}

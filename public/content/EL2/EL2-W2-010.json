@@ -1,0 +1,90 @@
+{
+  "id": "EL2-W2-010",
+  "session": 2,
+  "type": "mesol_combo",
+  "title": "Supermarket Price War",
+  "topic": "Comparisons",
+  "context": "You need: 1kg rice, 6 eggs, 1L milk. Aldi: Rice £1.20, Eggs £1.00, Milk £0.90. Tesco: Rice £1.50, Eggs £1.20, Milk £0.85.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What is a 'price war'?",
+        "options": [
+          "When shops compete by lowering prices",
+          "A fight in a shop",
+          "When prices go up",
+          "A type of sale"
+        ],
+        "answer": "When shops compete by lowering prices"
+      },
+      {
+        "question": "What does 'budget' mean as an adjective?",
+        "options": [
+          "Low cost / affordable",
+          "Expensive",
+          "Luxury",
+          "Medium price"
+        ],
+        "answer": "Low cost / affordable"
+      },
+      {
+        "question": "What is 'comparison shopping'?",
+        "options": [
+          "Checking prices at different shops before buying",
+          "Buying everything at one shop",
+          "Shopping online only",
+          "Never comparing prices"
+        ],
+        "answer": "Checking prices at different shops before buying"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate and compare the totals.",
+    "questions": [
+      {
+        "question": "Total at Aldi?",
+        "options": [
+          "£3.10",
+          "£3.50",
+          "£2.90",
+          "£3.55"
+        ],
+        "answer": "£3.10"
+      },
+      {
+        "question": "Total at Tesco?",
+        "options": [
+          "£3.55",
+          "£3.10",
+          "£3.85",
+          "£3.20"
+        ],
+        "answer": "£3.55"
+      },
+      {
+        "question": "How much do you save shopping at Aldi?",
+        "options": [
+          "45p",
+          "50p",
+          "30p",
+          "£1.00"
+        ],
+        "answer": "45p"
+      },
+      {
+        "question": "Over 4 weeks, how much would you save at Aldi?",
+        "options": [
+          "£1.80",
+          "£0.45",
+          "£3.60",
+          "£2.00"
+        ],
+        "answer": "£1.80"
+      }
+    ]
+  },
+  "week": 2,
+  "level": "EL2"
+}

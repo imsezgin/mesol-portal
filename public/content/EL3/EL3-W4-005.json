@@ -1,0 +1,52 @@
+{
+  "id": "EL3-W4-005",
+  "session": 4,
+  "type": "mcq",
+  "title": "Currency Exchange",
+  "topic": "Money & Calculations",
+  "instruction": "Calculate currency conversions.",
+  "questions": [
+    {
+      "question": "£1 = $1.27. Convert £500 to dollars.",
+      "options": [
+        "$635",
+        "$500",
+        "$627",
+        "$394"
+      ],
+      "answer": "$635"
+    },
+    {
+      "question": "£1 = €1.15. You have €230. How many pounds?",
+      "options": [
+        "£200",
+        "£230",
+        "£264.50",
+        "£115"
+      ],
+      "answer": "£200"
+    },
+    {
+      "question": "Bureau charges 3% commission on £300 exchange. Commission?",
+      "options": [
+        "£9",
+        "£3",
+        "£30",
+        "£15"
+      ],
+      "answer": "£9"
+    },
+    {
+      "question": "You get €1.12 at airport vs €1.18 online for £1. On £500, how much more online?",
+      "options": [
+        "€30 more",
+        "€6 more",
+        "€60 more",
+        "€3 more"
+      ],
+      "answer": "€30 more"
+    }
+  ],
+  "week": 4,
+  "level": "EL3"
+}

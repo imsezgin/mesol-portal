@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W3-006",
+  "session": 3,
+  "type": "gap_fill",
+  "title": "Percentage Calculations",
+  "topic": "Fractions & Percentages",
+  "instruction": "Complete the percentage calculations.",
+  "passage": "To find 10% of a number, ___ by 10. To find 50%, divide by ___. 10% of £60 is ___. 20% of £60 is ___ (double the 10%). 5% of £60 is ___ (half of 10%).",
+  "blanks": [
+    "divide",
+    "2",
+    "£6",
+    "£12",
+    "£3"
+  ],
+  "word_bank": [
+    "divide",
+    "2",
+    "£6",
+    "£12",
+    "£3",
+    "multiply",
+    "£30"
+  ],
+  "week": 3,
+  "level": "EL2"
+}

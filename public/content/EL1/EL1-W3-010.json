@@ -1,0 +1,80 @@
+{
+  "id": "EL1-W3-010",
+  "session": 3,
+  "type": "mesol_combo",
+  "title": "Shopping Discounts",
+  "topic": "Fractions & Percentages",
+  "context": "A shop has a sale. Some items are half price (50% off). Some items are 25% off.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What does 'on sale' mean?",
+        "options": [
+          "Available at a lower price",
+          "Not for sale",
+          "Very expensive",
+          "Sold out"
+        ],
+        "answer": "Available at a lower price"
+      },
+      {
+        "question": "What is a 'discount'?",
+        "options": [
+          "A reduction in price",
+          "An increase in price",
+          "The full price",
+          "A type of shop"
+        ],
+        "answer": "A reduction in price"
+      },
+      {
+        "question": "What does 'save' mean when shopping?",
+        "options": [
+          "Pay less than the normal price",
+          "Keep money in a bank",
+          "Buy more items",
+          "Return an item"
+        ],
+        "answer": "Pay less than the normal price"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate the sale prices.",
+    "questions": [
+      {
+        "question": "A shirt costs £20. It is 50% off. Sale price?",
+        "options": [
+          "£10",
+          "£15",
+          "£5",
+          "£20"
+        ],
+        "answer": "£10"
+      },
+      {
+        "question": "Shoes cost £40. They are 25% off. Sale price?",
+        "options": [
+          "£30",
+          "£20",
+          "£35",
+          "£10"
+        ],
+        "answer": "£30"
+      },
+      {
+        "question": "How much do you save on the £40 shoes?",
+        "options": [
+          "£10",
+          "£20",
+          "£30",
+          "£5"
+        ],
+        "answer": "£10"
+      }
+    ]
+  },
+  "week": 3,
+  "level": "EL1"
+}

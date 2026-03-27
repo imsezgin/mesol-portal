@@ -1,0 +1,36 @@
+{
+  "id": "EL3-W3-001",
+  "session": 3,
+  "type": "vocab_match",
+  "title": "Advanced Fraction Terminology",
+  "topic": "Fractions & Percentages",
+  "instruction": "Match each term to its definition.",
+  "pairs": [
+    {
+      "term": "improper fraction",
+      "definition": "numerator is larger than denominator (e.g. 7/4)"
+    },
+    {
+      "term": "mixed number",
+      "definition": "a whole number and a fraction (e.g. 1 3/4)"
+    },
+    {
+      "term": "reciprocal",
+      "definition": "a fraction flipped upside down (e.g. 3/4 becomes 4/3)"
+    },
+    {
+      "term": "common denominator",
+      "definition": "a shared bottom number for comparing fractions"
+    },
+    {
+      "term": "percentage point",
+      "definition": "the difference between two percentages"
+    },
+    {
+      "term": "compound interest",
+      "definition": "interest calculated on both principal and past interest"
+    }
+  ],
+  "week": 3,
+  "level": "EL3"
+}

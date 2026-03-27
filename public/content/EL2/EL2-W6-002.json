@@ -1,0 +1,62 @@
+{
+  "id": "EL2-W6-002",
+  "session": 6,
+  "type": "mcq",
+  "title": "12-Hour and 24-Hour Clock",
+  "topic": "Date & Time",
+  "instruction": "Convert between 12 and 24-hour time.",
+  "questions": [
+    {
+      "question": "2:30 PM = ?",
+      "options": [
+        "14:30",
+        "2:30",
+        "02:30",
+        "12:30"
+      ],
+      "answer": "14:30"
+    },
+    {
+      "question": "18:00 = ?",
+      "options": [
+        "6:00 PM",
+        "8:00 PM",
+        "6:00 AM",
+        "18:00 PM"
+      ],
+      "answer": "6:00 PM"
+    },
+    {
+      "question": "11:45 PM = ?",
+      "options": [
+        "23:45",
+        "11:45",
+        "13:45",
+        "01:45"
+      ],
+      "answer": "23:45"
+    },
+    {
+      "question": "00:15 = ?",
+      "options": [
+        "12:15 AM",
+        "12:15 PM",
+        "0:15 AM",
+        "24:15"
+      ],
+      "answer": "12:15 AM"
+    },
+    {
+      "question": "15:20 = ?",
+      "options": [
+        "3:20 PM",
+        "5:20 PM",
+        "3:20 AM",
+        "15:20 PM"
+      ],
+      "answer": "3:20 PM"
+    }
+  ],
+  "week": 6,
+  "level": "EL2"
+}

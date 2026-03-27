@@ -1,0 +1,90 @@
+{
+  "id": "EL3-W3-010",
+  "session": 3,
+  "type": "mesol_combo",
+  "title": "Payslip Deductions",
+  "topic": "Fractions & Percentages",
+  "context": "Monthly gross salary: £2,500. Income tax: 20% on earnings above £1,047.50 (monthly personal allowance). National Insurance: 12% on earnings above £1,048.",
+  "english_section": {
+    "instruction": "Answer the vocabulary questions.",
+    "questions": [
+      {
+        "question": "What is 'gross salary'?",
+        "options": [
+          "Total pay before deductions",
+          "Pay after tax",
+          "Bonus pay",
+          "Overtime pay"
+        ],
+        "answer": "Total pay before deductions"
+      },
+      {
+        "question": "What is 'net salary' (take-home pay)?",
+        "options": [
+          "Pay after all deductions",
+          "Total pay before deductions",
+          "Holiday pay",
+          "Pension"
+        ],
+        "answer": "Pay after all deductions"
+      },
+      {
+        "question": "What is a 'personal allowance'?",
+        "options": [
+          "Income you earn tax-free",
+          "Your bank balance",
+          "A type of benefit",
+          "Overtime allowance"
+        ],
+        "answer": "Income you earn tax-free"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate the deductions.",
+    "questions": [
+      {
+        "question": "Taxable income: £2,500 - £1,047.50 = ?",
+        "options": [
+          "£1,452.50",
+          "£1,500",
+          "£1,047.50",
+          "£2,500"
+        ],
+        "answer": "£1,452.50"
+      },
+      {
+        "question": "Income tax: 20% of £1,452.50 = ?",
+        "options": [
+          "£290.50",
+          "£500",
+          "£250",
+          "£300"
+        ],
+        "answer": "£290.50"
+      },
+      {
+        "question": "NI-able income: £2,500 - £1,048 = £1,452. NI at 12%?",
+        "options": [
+          "£174.24",
+          "£300",
+          "£180",
+          "£150"
+        ],
+        "answer": "£174.24"
+      },
+      {
+        "question": "Net salary: £2,500 - £290.50 - £174.24 = ?",
+        "options": [
+          "£2,035.26",
+          "£2,000",
+          "£2,100",
+          "£1,950"
+        ],
+        "answer": "£2,035.26"
+      }
+    ]
+  },
+  "week": 3,
+  "level": "EL3"
+}

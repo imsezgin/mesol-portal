@@ -1,0 +1,52 @@
+{
+  "id": "EL1-W2-008",
+  "session": 2,
+  "type": "mcq",
+  "title": "Better Value",
+  "topic": "Comparisons",
+  "instruction": "Which is better value?",
+  "questions": [
+    {
+      "question": "6 eggs for £1.20 or 12 eggs for £2.00?",
+      "options": [
+        "12 eggs for £2.00",
+        "6 eggs for £1.20",
+        "Both the same",
+        "Cannot tell"
+      ],
+      "answer": "12 eggs for £2.00"
+    },
+    {
+      "question": "500ml milk for 60p or 1 litre milk for £1.00?",
+      "options": [
+        "1 litre for £1.00",
+        "500ml for 60p",
+        "Both the same",
+        "Cannot tell"
+      ],
+      "answer": "1 litre for £1.00"
+    },
+    {
+      "question": "Small coffee £2.00 or large coffee £2.50?",
+      "options": [
+        "It depends on how much you want",
+        "Small is always better",
+        "Large is always better",
+        "They are the same"
+      ],
+      "answer": "It depends on how much you want"
+    },
+    {
+      "question": "What does 'value for money' mean?",
+      "options": [
+        "You get a good amount for what you pay",
+        "It is free",
+        "It is expensive",
+        "It costs nothing"
+      ],
+      "answer": "You get a good amount for what you pay"
+    }
+  ],
+  "week": 2,
+  "level": "EL1"
+}

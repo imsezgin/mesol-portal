@@ -2,471 +2,365 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<meta name="theme-color" content="#0f5225">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YESchool — Teacher Dashboard</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --green:#1a7a35;--green-dark:#0f5225;--green-mid:#2ea34d;
-  --green-pale:#f0faf2;--green-light:#d4edda;
-  --gold:#d4920a;--navy:#1a2a6e;
-  --ink:#0d1117;--mid:#4a5568;--muted:#8a96a3;--line:#e2e8f0;
-  --white:#ffffff;--bg:#f7f8fa;
-  --error:#c0392b;--error-bg:#fdecea;
-}
-html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink)}
+:root{--g:#1a7a35;--gd:#0f5225;--gp:#f0faf2;--gl:#d4edda;--gold:#d4920a;--navy:#1a2a6e;--ink:#0d1117;--mid:#4a5568;--muted:#8a96a3;--line:#e2e8f0;--bg:#f7f9fb;--white:#fff;--error:#c0392b;--error-bg:#fdecea;}
+html,body{min-height:100%;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;color:var(--ink)}
 
-/* ── Login form ────────────────────────────────── */
-.login-shell{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 20px;background:linear-gradient(160deg,var(--green-dark),var(--green))}
-.login-card{background:#fff;border-radius:20px;padding:32px 28px;width:100%;max-width:380px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
-.login-title{font-size:20px;font-weight:700;margin-bottom:4px}
-.login-sub{font-size:13px;color:var(--muted);margin-bottom:24px}
-.login-input{width:100%;padding:14px 16px;border:2px solid var(--line);border-radius:12px;font-size:15px;outline:none;transition:border-color .15s}
-.login-input:focus{border-color:var(--green)}
-.login-btn{width:100%;padding:15px;background:var(--green);color:#fff;font-size:15px;font-weight:700;border:none;border-radius:12px;cursor:pointer;margin-top:16px;transition:background .15s}
-.login-btn:hover{background:var(--green-mid)}
-.login-error{display:none;background:var(--error-bg);color:var(--error);border-radius:8px;padding:10px;font-size:13px;text-align:center;margin-top:12px}
+/* NAV */
+nav{background:var(--gd);height:52px;display:flex;align-items:center;padding:0 24px;gap:16px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.nav-logo{font-weight:800;font-size:17px;color:white;letter-spacing:-0.5px}
+.nav-logo span{color:var(--gold)}
+.nav-tag{font-size:11px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.7);padding:2px 10px;border-radius:99px}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:12px}
+.nav-user{font-size:12px;color:rgba(255,255,255,.6)}
+.btn-sm{padding:5px 12px;border-radius:6px;font-size:12px;font-weight:700;cursor:pointer;border:none;background:rgba(255,255,255,.1);color:white;transition:background .15s}
+.btn-sm:hover{background:rgba(255,255,255,.2)}
 
-/* ── Dashboard ─────────────────────────────────── */
-.dashboard{display:none}
-.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:var(--green-dark);position:sticky;top:0;z-index:50}
-.topbar-logo{font-size:22px;font-weight:800;color:#fff;letter-spacing:-1px}
-.topbar-logo span{color:var(--gold)}
-.topbar-right{display:flex;align-items:center;gap:12px}
-.topbar-badge{background:rgba(255,255,255,.15);color:#fff;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600}
-.logout-btn{background:none;border:1px solid rgba(255,255,255,.3);color:#fff;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer}
+/* LOGIN */
+.login-wrap{min-height:calc(100vh - 52px);display:flex;align-items:center;justify-content:center;padding:24px}
+.login-card{background:white;border:1px solid var(--line);border-radius:16px;padding:32px;width:100%;max-width:360px;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+.login-card h2{font-size:20px;margin-bottom:4px}
+.login-card p{color:var(--muted);font-size:13px;margin-bottom:24px}
 
-.main{padding:20px;max-width:900px;margin:0 auto}
+/* MAIN */
+.main{max-width:1100px;margin:0 auto;padding:28px 24px 60px;display:none}
+.page-head{margin-bottom:24px}
+.page-title{font-size:22px;font-weight:700}
+.page-sub{font-size:13px;color:var(--muted);margin-top:2px}
 
-/* Stats row */
-.summary-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:24px}
-.summary-card{background:#fff;border-radius:14px;padding:18px 16px;text-align:center;box-shadow:0 1px 6px rgba(0,0,0,.04)}
-.summary-val{font-size:28px;font-weight:800;color:var(--green)}
-.summary-val.gold{color:var(--gold)}
-.summary-label{font-size:12px;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:.4px}
+/* STATS ROW */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.stat{background:white;border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
+.stat-n{font-size:28px;font-weight:800;color:var(--g);line-height:1;margin-bottom:4px}
+.stat-l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px}
 
-/* Table */
-.table-card{background:#fff;border-radius:16px;box-shadow:0 1px 6px rgba(0,0,0,.04);overflow:hidden;margin-bottom:24px}
-.table-header{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
-.table-title{font-size:16px;font-weight:700}
-.table-count{font-size:13px;color:var(--muted)}
+/* SEARCH + FILTER */
+.toolbar{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.toolbar input{flex:1;min-width:200px;padding:9px 12px;border:2px solid var(--line);border-radius:8px;font-size:13px;outline:none;transition:border-color .15s}
+.toolbar input:focus{border-color:var(--g)}
+.filter-btn{padding:9px 14px;border:2px solid var(--line);border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;background:white;color:var(--mid);transition:all .15s}
+.filter-btn.active{border-color:var(--g);color:var(--g);background:var(--gp)}
 
-table{width:100%;border-collapse:collapse}
-thead th{padding:12px 16px;text-align:left;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--line);background:#fafafa}
-tbody tr{cursor:pointer;transition:background .1s}
-tbody tr:hover{background:var(--green-pale)}
-tbody td{padding:14px 16px;font-size:14px;border-bottom:1px solid #f5f5f5}
-.td-name{font-weight:600;color:var(--ink)}
-.level-tag{font-size:11px;padding:3px 8px;border-radius:6px;font-weight:700;text-transform:uppercase}
-.level-tag.EL1{background:#e8f5e9;color:var(--green)}
-.level-tag.EL2{background:#e3f2fd;color:#1565c0}
-.level-tag.EL3{background:#f3e5f5;color:#7b1fa2}
-.score-tag{font-weight:700}
-.score-tag.good{color:var(--green)}
-.score-tag.ok{color:var(--gold)}
-.score-tag.low{color:var(--error)}
-.streak-tag{font-size:13px}
+/* TABLE */
+.table-wrap{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:var(--ink);color:white;padding:11px 14px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.8px;white-space:nowrap}
+td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--gp);cursor:pointer}
+
+.badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px}
+.b-el1{background:#e3f2fd;color:#1565c0}
+.b-el2{background:#f3e5f5;color:#6a1b9a}
+.b-el3{background:#fff8e1;color:#e65100}
+.b-mesol{background:var(--gl);color:var(--gd)}
+.b-esol{background:#e8eaf6;color:var(--navy)}
+.b-ge{background:#fce4ec;color:#880e4f}
+
+.streak-pill{font-size:11px;font-weight:700;color:var(--g);background:var(--gp);padding:2px 8px;border-radius:99px;display:inline-flex;align-items:center;gap:3px}
+.score-bar-wrap{background:var(--bg);border-radius:99px;height:6px;width:80px;overflow:hidden;display:inline-block;vertical-align:middle;margin-right:6px}
+.score-bar{height:100%;border-radius:99px;background:var(--g)}
 .last-active{font-size:12px;color:var(--muted)}
+.na{color:var(--muted);font-style:italic}
 
-/* ── Student detail panel ──────────────────────── */
-.detail-panel{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;justify-content:center;align-items:flex-start;padding:40px 20px;overflow-y:auto}
-.detail-panel.show{display:flex}
-.detail-card{background:#fff;border-radius:20px;padding:28px 24px;max-width:560px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.3);max-height:90vh;overflow-y:auto}
-.detail-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
-.detail-name{font-size:20px;font-weight:700}
-.detail-close{background:none;border:none;font-size:24px;cursor:pointer;color:var(--muted);padding:8px;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
+/* STUDENT DETAIL PANEL */
+.panel-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:200;align-items:flex-start;justify-content:flex-end}
+.panel-backdrop.show{display:flex}
+.panel{background:white;width:440px;max-width:100vw;height:100vh;overflow-y:auto;box-shadow:-4px 0 24px rgba(0,0,0,.12);padding:0}
+.panel-head{background:var(--g);color:white;padding:20px 24px;position:sticky;top:0}
+.panel-close{float:right;background:rgba(255,255,255,.15);border:none;color:white;cursor:pointer;border-radius:6px;padding:4px 10px;font-size:16px}
+.panel-name{font-size:20px;font-weight:700;margin-bottom:4px}
+.panel-meta{font-size:13px;color:rgba(255,255,255,.75);display:flex;gap:10px;flex-wrap:wrap}
+.panel-body{padding:20px 24px}
+.panel-section{margin-bottom:24px}
+.panel-section-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:12px}
+.result-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.result-row:last-child{border-bottom:none}
+.result-id{flex:1;color:var(--ink);font-weight:500}
+.result-score{font-weight:700;color:var(--g)}
+.result-date{font-size:11px;color:var(--muted)}
 
-.detail-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:20px}
-.detail-stat{background:var(--green-pale);border-radius:10px;padding:12px;text-align:center}
-.detail-stat-val{font-size:20px;font-weight:800;color:var(--green)}
-.detail-stat-label{font-size:11px;color:var(--muted);margin-top:2px}
+/* FORM */
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--mid);margin-bottom:5px}
+.form-group input,.form-group select{width:100%;padding:9px 12px;border:2px solid var(--line);border-radius:8px;font-size:13px;outline:none;transition:border-color .15s}
+.form-group input:focus,.form-group select:focus{border-color:var(--g)}
 
-.detail-table{width:100%;border-collapse:collapse;font-size:13px}
-.detail-table th{padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;border-bottom:1px solid var(--line)}
-.detail-table td{padding:10px 12px;border-bottom:1px solid #f5f5f5}
+.btn-primary{padding:10px 20px;background:var(--g);color:white;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;transition:background .15s}
+.btn-primary:hover{background:#2ea34d}
+.alert{padding:10px 14px;border-radius:8px;font-size:13px;margin-bottom:12px;display:none}
+.alert.show{display:block}
+.alert-success{background:var(--gp);color:var(--gd);border:1px solid var(--gl)}
+.alert-error{background:var(--error-bg);color:var(--error);border:1px solid #f5c6cb}
 
-/* ── Import panel ─────────────────────────────── */
-.import-btn{display:inline-flex;align-items:center;gap:6px;background:var(--green);color:#fff;border:none;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;transition:background .15s;min-height:44px}
-.import-btn:hover{background:var(--green-mid)}
-.import-panel{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;justify-content:center;align-items:flex-start;padding:30px 16px;overflow-y:auto}
-.import-panel.show{display:flex}
-.import-card{background:#fff;border-radius:20px;padding:28px 24px;max-width:700px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.3);max-height:90vh;overflow-y:auto}
-.import-close{background:none;border:none;font-size:24px;cursor:pointer;color:var(--muted);padding:8px;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
-.import-textarea{width:100%;min-height:200px;border:2px solid var(--line);border-radius:12px;padding:14px;font-family:monospace;font-size:12px;line-height:1.6;resize:vertical;outline:none}
-.import-textarea:focus{border-color:var(--green)}
-.import-help{font-size:12px;color:var(--muted);margin:8px 0 16px;line-height:1.5}
-.import-go{width:100%;padding:15px;background:var(--green);color:#fff;font-size:15px;font-weight:700;border:none;border-radius:12px;cursor:pointer;transition:background .15s}
-.import-go:hover{background:var(--green-mid)}
-.import-go:disabled{background:var(--muted);cursor:wait}
-
-.pin-results{margin-top:20px}
-.pin-row{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:10px;margin-bottom:6px;font-size:13px}
-.pin-row.created{background:var(--green-pale)}
-.pin-row.exists{background:#fff8e1}
-.pin-row.error{background:var(--error-bg)}
-.pin-name{flex:1;font-weight:600}
-.pin-phone{color:var(--mid);min-width:120px}
-.pin-code{font-size:18px;font-weight:800;color:var(--green);font-family:monospace;letter-spacing:2px}
-.pin-status{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:3px 8px;border-radius:6px}
-.pin-status.created{background:var(--green-light);color:var(--green-dark)}
-.pin-status.exists{background:#ffe0b2;color:#e65100}
-.pin-status.error{background:var(--error-bg);color:var(--error)}
-
-.copy-all-btn{margin-top:12px;padding:12px 20px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;width:100%}
-.copy-all-btn:hover{opacity:.9}
-
-/* Responsive */
-@media(max-width:600px){
-  table,thead,tbody,th,td,tr{display:block}
-  thead{display:none}
-  tbody tr{margin-bottom:12px;background:#fff;border-radius:12px;padding:12px 16px;box-shadow:0 1px 4px rgba(0,0,0,.04)}
-  tbody td{padding:4px 0;border:none;display:flex;justify-content:space-between;align-items:center}
-  tbody td::before{content:attr(data-label);font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
-}
+@media(max-width:640px){.stats-row{grid-template-columns:repeat(2,1fr)}.panel{width:100vw}}
 </style>
 </head>
 <body>
 
-<!-- ── Login ─────────────────────────────────────── -->
-<div class="login-shell" id="loginView">
+<nav>
+  <div class="nav-logo">YES<span>.</span></div>
+  <span class="nav-tag">Teacher</span>
+  <div class="nav-right">
+    <span class="nav-user" id="navUser"></span>
+    <button class="btn-sm" onclick="logout()">Sign out</button>
+    <a href="/admin" class="btn-sm" style="text-decoration:none">Admin ↗</a>
+  </div>
+</nav>
+
+<!-- LOGIN -->
+<div class="login-wrap" id="loginWrap">
   <div class="login-card">
-    <div class="login-title">Teacher Dashboard 🔐</div>
-    <div class="login-sub">Enter the teacher password to continue.</div>
-    <input class="login-input" id="pwInput" type="password" placeholder="Password" autocomplete="current-password">
-    <button class="login-btn" onclick="teacherLogin()">Sign in</button>
-    <div class="login-error" id="loginError">Incorrect password. Please try again.</div>
+    <h2>Teacher login</h2>
+    <p>Dashboard access for YESchool staff</p>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="passInput" placeholder="Enter password" onkeydown="if(event.key==='Enter')doLogin()">
+    </div>
+    <div class="alert alert-error" id="loginErr">Incorrect password</div>
+    <button class="btn-primary" style="width:100%" onclick="doLogin()">Sign in</button>
   </div>
 </div>
 
-<!-- ── Dashboard ─────────────────────────────────── -->
-<div class="dashboard" id="dashView">
-  <div class="topbar">
-    <div class="topbar-logo">YES<span>.</span></div>
-    <div class="topbar-right">
-      <div class="topbar-badge">👩‍🏫 Teacher</div>
-      <button class="logout-btn" onclick="teacherLogout()">Log out</button>
-    </div>
+<!-- DASHBOARD -->
+<div class="main" id="mainApp">
+  <div class="page-head">
+    <div class="page-title">Cohort Dashboard</div>
+    <div class="page-sub" id="pageSubtitle">Loading cohort data...</div>
   </div>
 
-  <div class="main">
-    <div class="summary-row" id="summaryRow"></div>
-
-    <div style="display:flex;justify-content:flex-end;margin-bottom:16px">
-      <button class="import-btn" onclick="openImport()">+ Import Students</button>
-    </div>
-
-    <div class="table-card">
-      <div class="table-header">
-        <div class="table-title">Student Cohort</div>
-        <div class="table-count" id="cohortCount"></div>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Level</th>
-            <th>This Week</th>
-            <th>Avg Score</th>
-            <th>Streak</th>
-            <th>Last Active</th>
-          </tr>
-        </thead>
-        <tbody id="cohortBody"></tbody>
-      </table>
-    </div>
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n" id="sTotal">—</div><div class="stat-l">Students</div></div>
+    <div class="stat"><div class="stat-n" id="sActive">—</div><div class="stat-l">Active this week</div></div>
+    <div class="stat"><div class="stat-n" id="sAvgScore">—</div><div class="stat-l">Avg score</div></div>
+    <div class="stat"><div class="stat-n" id="sAvgStreak">—</div><div class="stat-l">Avg streak</div></div>
   </div>
-</div>
 
-<!-- ── Import students panel ──────────────────────── -->
-<div class="import-panel" id="importPanel" onclick="if(event.target===this)closeImport()">
-  <div class="import-card">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
-      <div style="font-size:18px;font-weight:700">Import Students</div>
-      <button class="import-close" onclick="closeImport()">✕</button>
-    </div>
-    <div class="import-help">
-      One student per line: <strong>Name, Phone, Level, Programme</strong><br>
-      Phone can be 07xxx or +447xxx format. Level: EL1, EL2, or EL3.
-    </div>
-    <textarea class="import-textarea" id="importData">Ayoub Qadir, 07480758995, EL1, MESOL
-Ana-Andrada Popescu, 07516093376, EL1, MESOL
-Nayab Zahra, 07599370043, EL1, MESOL
-Aras Karimi, 07470124209, EL1, MESOL
-Karzan Khalil, 07469616121, EL1, MESOL
-Khanda Salah, 07352986986, EL1, MESOL
-Marziyeh Noroozijafarloo, 07352983335, EL1, MESOL
-Zhino Kakayani, 07310068130, EL1, MESOL
-Jalil Al-Tamimi, 07466642083, EL1, MESOL
-Alim Alizade, 07762743911, EL1, MESOL
-Feleku Lwnetu, 07483113844, EL1, MESOL
-Dongmei An, 07303079753, EL1, MESOL
-Sanaz Dashzarin, 07717782488, EL1, MESOL
-Balen Yasin Ali, 07448198061, EL1, MESOL</textarea>
-    <button class="import-go" id="importGoBtn" onclick="runImport()">Import 14 students & generate PINs</button>
-    <div class="pin-results" id="pinResults"></div>
+  <div class="toolbar">
+    <input type="text" id="searchInput" placeholder="Search student..." oninput="filterTable()">
+    <button class="filter-btn active" data-prog="all" onclick="setProg('all')">All</button>
+    <button class="filter-btn" data-prog="MESOL" onclick="setProg('MESOL')">MESOL</button>
+    <button class="filter-btn" data-prog="ESOL" onclick="setProg('ESOL')">ESOL</button>
+    <button class="filter-btn" data-prog="GE" onclick="setProg('GE')">GE</button>
+    <button class="btn-sm" style="background:var(--g);border:none;color:white;padding:9px 14px;border-radius:8px;font-size:12px" onclick="loadCohort()">↻ Refresh</button>
   </div>
-</div>
 
-<!-- ── Student detail ────────────────────────────── -->
-<div class="detail-panel" id="detailPanel" onclick="if(event.target===this)closeDetail()">
-  <div class="detail-card">
-    <div class="detail-header">
-      <div class="detail-name" id="detailName">Student</div>
-      <button class="detail-close" onclick="closeDetail()">✕</button>
-    </div>
-    <div class="detail-stats" id="detailStats"></div>
-    <table class="detail-table">
+  <div class="table-wrap">
+    <table>
       <thead>
-        <tr><th>Exercise</th><th>Score</th><th>Time</th><th>Date</th></tr>
+        <tr>
+          <th>Name</th>
+          <th>Level</th>
+          <th>Programme</th>
+          <th>This week</th>
+          <th>Avg score</th>
+          <th>Streak</th>
+          <th>Last active</th>
+        </tr>
       </thead>
-      <tbody id="detailBody"></tbody>
+      <tbody id="cohortBody">
+        <tr><td colspan="7" style="text-align:center;padding:32px;color:var(--muted)">Loading...</td></tr>
+      </tbody>
     </table>
   </div>
 </div>
 
+<!-- STUDENT DETAIL PANEL -->
+<div class="panel-backdrop" id="panelBackdrop" onclick="closePanel(event)">
+  <div class="panel" id="detailPanel">
+    <div class="panel-head">
+      <button class="panel-close" onclick="closePanelDirect()">✕</button>
+      <div class="panel-name" id="panelName">Student</div>
+      <div class="panel-meta" id="panelMeta"></div>
+    </div>
+    <div class="panel-body" id="panelBody">Loading...</div>
+  </div>
+</div>
+
 <script>
-const TEACHER_TOKEN_KEY = 'yes_teacher_token';
+const TOKEN_KEY = 'yes_teacher_token';
+let allStudents = [];
+let currentProg = 'all';
 
-// Check existing session
-if (localStorage.getItem(TEACHER_TOKEN_KEY)) {
-  showDashboard();
+// ── AUTH ──────────────────────────────────────────────────────
+async function doLogin() {
+  const pass = document.getElementById('passInput').value;
+  const res = await fetch('/api/auth/teacher', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password: pass })
+  });
+  if (!res.ok) { document.getElementById('loginErr').classList.add('show'); return; }
+  const d = await res.json();
+  localStorage.setItem(TOKEN_KEY, d.token);
+  showApp();
 }
 
-// Enter key on password
-document.getElementById('pwInput').addEventListener('keydown', e => {
-  if (e.key === 'Enter') teacherLogin();
-});
+function logout() { localStorage.removeItem(TOKEN_KEY); location.reload(); }
 
-async function teacherLogin() {
-  const pw = document.getElementById('pwInput').value;
-  const errEl = document.getElementById('loginError');
-  errEl.style.display = 'none';
+function getToken() { return localStorage.getItem(TOKEN_KEY); }
 
-  try {
-    const res = await fetch('/api/auth/teacher', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ password: pw })
-    });
-    const data = await res.json();
-    if (!res.ok) { errEl.style.display = 'block'; return; }
-    localStorage.setItem(TEACHER_TOKEN_KEY, data.token);
-    showDashboard();
-  } catch (err) {
-    errEl.textContent = 'Connection error.';
-    errEl.style.display = 'block';
-  }
-}
-
-function teacherLogout() {
-  localStorage.removeItem(TEACHER_TOKEN_KEY);
-  document.getElementById('loginView').style.display = '';
-  document.getElementById('dashView').style.display = 'none';
-}
-
-function showDashboard() {
-  document.getElementById('loginView').style.display = 'none';
-  document.getElementById('dashView').style.display = 'block';
+function showApp() {
+  if (!getToken()) return;
+  document.getElementById('loginWrap').style.display = 'none';
+  document.getElementById('mainApp').style.display = 'block';
+  try { const payload = JSON.parse(atob(getToken().split('.')[1])); document.getElementById('navUser').textContent = payload.name || 'Teacher'; } catch { document.getElementById('navUser').textContent = 'Teacher'; }
   loadCohort();
 }
 
+// ── COHORT ────────────────────────────────────────────────────
 async function loadCohort() {
-  const token = localStorage.getItem(TEACHER_TOKEN_KEY);
-  try {
-    const res = await fetch('/api/teacher/cohort', {
-      headers: { 'Authorization': 'Bearer ' + token }
-    });
-    if (res.status === 401 || res.status === 403) { teacherLogout(); return; }
-    const data = await res.json();
+  const res = await fetch('/api/teacher/cohort', { headers: { Authorization: 'Bearer ' + getToken() } });
+  if (!res.ok) { logout(); return; }
+  const d = await res.json();
+  allStudents = d.cohort || [];
 
-    // Summary
-    const cohort = data.cohort;
-    const active = cohort.filter(s => s.weeklyCount > 0).length;
-    const avgAll = cohort.filter(s => s.avgScore !== null);
-    const avgScore = avgAll.length > 0 ? Math.round(avgAll.reduce((s, c) => s + c.avgScore, 0) / avgAll.length) : 0;
-    const totalExercises = cohort.reduce((s, c) => s + c.weeklyCount, 0);
+  // Stats
+  document.getElementById('sTotal').textContent = allStudents.length;
+  const active = allStudents.filter(s => s.weeklyCount > 0).length;
+  document.getElementById('sActive').textContent = active;
+  const scores = allStudents.filter(s => s.avgScore !== null).map(s => s.avgScore);
+  document.getElementById('sAvgScore').textContent = scores.length ? Math.round(scores.reduce((a,b)=>a+b,0)/scores.length) + '%' : '—';
+  const streaks = allStudents.map(s => s.streak);
+  document.getElementById('sAvgStreak').textContent = streaks.length ? Math.round(streaks.reduce((a,b)=>a+b,0)/streaks.length) : '—';
+  document.getElementById('pageSubtitle').textContent = `${allStudents.length} students · as of ${new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})}`;
 
-    document.getElementById('summaryRow').innerHTML = `
-      <div class="summary-card"><div class="summary-val">${cohort.length}</div><div class="summary-label">Students</div></div>
-      <div class="summary-card"><div class="summary-val">${active}</div><div class="summary-label">Active This Week</div></div>
-      <div class="summary-card"><div class="summary-val gold">${avgScore}%</div><div class="summary-label">Avg Score</div></div>
-      <div class="summary-card"><div class="summary-val">${totalExercises}</div><div class="summary-label">Exercises (7d)</div></div>`;
+  filterTable();
+}
 
-    document.getElementById('cohortCount').textContent = `${cohort.length} students`;
+function setProg(prog) {
+  currentProg = prog;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.prog === prog));
+  filterTable();
+}
 
-    // Table
-    const tbody = document.getElementById('cohortBody');
-    tbody.innerHTML = cohort.map(s => {
-      const scoreTier = s.avgScore === null ? '' : s.avgScore >= 70 ? 'good' : s.avgScore >= 40 ? 'ok' : 'low';
-      const lastActive = s.lastActive ? timeAgo(s.lastActive) : 'Never';
-      return `
-        <tr onclick="openDetail('${s.id}')">
-          <td data-label="Name" class="td-name">${s.name}</td>
-          <td data-label="Level"><span class="level-tag ${s.level}">${s.level}</span></td>
-          <td data-label="This Week">${s.weeklyCount}</td>
-          <td data-label="Avg Score"><span class="score-tag ${scoreTier}">${s.avgScore !== null ? s.avgScore + '%' : '—'}</span></td>
-          <td data-label="Streak"><span class="streak-tag">${s.streak > 0 ? '🔥 ' + s.streak : '—'}</span></td>
-          <td data-label="Last Active"><span class="last-active">${lastActive}</span></td>
-        </tr>`;
-    }).join('');
+function filterTable() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  const filtered = allStudents.filter(s =>
+    (currentProg === 'all' || s.programme === currentProg) &&
+    s.name.toLowerCase().includes(q)
+  );
+  renderTable(filtered);
+}
 
-  } catch (err) {
-    console.error(err);
+function renderTable(students) {
+  const tbody = document.getElementById('cohortBody');
+  if (!students.length) {
+    tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--muted)">No students found</td></tr>';
+    return;
   }
+  tbody.innerHTML = students.map(s => {
+    const lastActive = s.lastActive ? new Date(s.lastActive).toLocaleDateString('en-GB',{day:'numeric',month:'short'}) : '—';
+    const scoreBar = s.avgScore !== null
+      ? `<div class="score-bar-wrap"><div class="score-bar" style="width:${s.avgScore}%"></div></div>${s.avgScore}%`
+      : '<span class="na">No data</span>';
+    return `<tr onclick="openPanel('${s.id}')">
+      <td><strong>${s.name}</strong></td>
+      <td><span class="badge b-${s.level.toLowerCase()}">${s.level}</span></td>
+      <td><span class="badge b-${s.programme.toLowerCase()}">${s.programme}</span></td>
+      <td>${s.weeklyCount > 0 ? `<strong style="color:var(--g)">${s.weeklyCount}</strong>` : '<span class="na">0</span>'}</td>
+      <td>${scoreBar}</td>
+      <td>${s.streak > 0 ? `<span class="streak-pill">🔥 ${s.streak}</span>` : '<span class="na">—</span>'}</td>
+      <td class="last-active">${lastActive}</td>
+    </tr>`;
+  }).join('');
 }
 
-async function openDetail(studentId) {
-  const token = localStorage.getItem(TEACHER_TOKEN_KEY);
-  const panel = document.getElementById('detailPanel');
-  panel.classList.add('show');
+// ── STUDENT DETAIL ─────────────────────────────────────────────
+async function openPanel(id) {
+  document.getElementById('panelBackdrop').classList.add('show');
+  document.getElementById('panelBody').innerHTML = '<div style="padding:20px;color:var(--muted)">Loading...</div>';
 
-  try {
-    const res = await fetch(`/api/teacher/student/${studentId}`, {
-      headers: { 'Authorization': 'Bearer ' + token }
-    });
-    const data = await res.json();
+  const res = await fetch('/api/teacher/student/' + id, { headers: { Authorization: 'Bearer ' + getToken() } });
+  if (!res.ok) return;
+  const d = await res.json();
+  const s = d.student;
+  const results = d.results || [];
+  const streak = d.streak;
 
-    document.getElementById('detailName').textContent = data.student.name + ' — ' + data.student.level;
+  document.getElementById('panelName').textContent = s.name;
+  document.getElementById('panelMeta').innerHTML = `
+    <span>${s.level} · ${s.programme}</span>
+    <span>${s.phone}</span>
+    ${streak ? `<span>🔥 ${streak.current_days} day streak</span>` : ''}
+  `;
 
-    const total = data.results.length;
-    const avg = total > 0 ? Math.round(data.results.reduce((s, r) => s + (r.score / r.max_score * 100), 0) / total) : 0;
-    const streak = data.streak?.current_days || 0;
+  const overall = results.length
+    ? Math.round(results.reduce((a, r) => a + (r.score/r.max_score*100), 0) / results.length)
+    : null;
 
-    document.getElementById('detailStats').innerHTML = `
-      <div class="detail-stat"><div class="detail-stat-val">${total}</div><div class="detail-stat-label">Total Done</div></div>
-      <div class="detail-stat"><div class="detail-stat-val">${avg}%</div><div class="detail-stat-label">Avg Score</div></div>
-      <div class="detail-stat"><div class="detail-stat-val">🔥 ${streak}</div><div class="detail-stat-label">Streak</div></div>`;
-
-    document.getElementById('detailBody').innerHTML = data.results.map(r => {
-      const pct = Math.round((r.score / r.max_score) * 100);
-      const timeStr = r.time_seconds ? Math.floor(r.time_seconds / 60) + 'm ' + (r.time_seconds % 60) + 's' : '—';
-      const date = new Date(r.completed_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
-      return `<tr>
-        <td>${r.exercise_id}</td>
-        <td>${r.score}/${r.max_score} (${pct}%)</td>
-        <td>${timeStr}</td>
-        <td>${date}</td>
-      </tr>`;
-    }).join('');
-
-  } catch (err) {
-    console.error(err);
-  }
-}
-
-function closeDetail() {
-  document.getElementById('detailPanel').classList.remove('show');
-}
-
-function timeAgo(dateStr) {
-  const diff = Date.now() - new Date(dateStr).getTime();
-  const hrs = Math.floor(diff / 3600000);
-  if (hrs < 24) return hrs + 'h ago';
-  const days = Math.floor(hrs / 24);
-  if (days === 1) return 'Yesterday';
-  return days + 'd ago';
-}
-
-// ── Import functions ────────────────────────────────
-function openImport() {
-  document.getElementById('importPanel').classList.add('show');
-  updateImportCount();
-}
-function closeImport() {
-  document.getElementById('importPanel').classList.remove('show');
-}
-
-// Update button count when textarea changes
-document.getElementById('importData').addEventListener('input', updateImportCount);
-function updateImportCount() {
-  const lines = document.getElementById('importData').value.trim().split('\n').filter(l => l.trim());
-  document.getElementById('importGoBtn').textContent = `Import ${lines.length} student${lines.length !== 1 ? 's' : ''} & generate PINs`;
-}
-
-async function runImport() {
-  const btn = document.getElementById('importGoBtn');
-  const raw = document.getElementById('importData').value.trim();
-  const lines = raw.split('\n').filter(l => l.trim());
-
-  if (lines.length === 0) return;
-
-  // Parse CSV lines
-  const students = lines.map(line => {
-    const parts = line.split(',').map(s => s.trim());
-    return {
-      name:      parts[0] || '',
-      phone:     parts[1] || '',
-      level:     parts[2] || 'EL1',
-      programme: parts[3] || 'MESOL'
-    };
-  });
-
-  btn.disabled = true;
-  btn.textContent = 'Importing...';
-
-  try {
-    const token = localStorage.getItem(TEACHER_TOKEN_KEY);
-    const res = await fetch('/api/teacher/import', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + token
-      },
-      body: JSON.stringify({ students })
-    });
-
-    if (res.status === 401 || res.status === 403) { teacherLogout(); return; }
-    const data = await res.json();
-
-    // Show results
-    const resultsDiv = document.getElementById('pinResults');
-    let html = `<div style="margin-bottom:12px;font-size:14px;font-weight:600">
-      ✅ ${data.imported} created · ${data.existing} already existed · ${data.errors} errors
+  const resultsHtml = results.length ? results.map(r => {
+    const pct = Math.round((r.score / r.max_score) * 100);
+    const date = new Date(r.completed_at).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'2-digit'});
+    return `<div class="result-row">
+      <div class="result-id">${r.exercise_id}</div>
+      <div class="result-score">${pct}%</div>
+      <div class="result-date">${date}</div>
     </div>`;
+  }).join('') : '<div style="color:var(--muted);font-size:13px">No exercises completed yet</div>';
 
-    data.results.forEach(r => {
-      html += `<div class="pin-row ${r.status}">
-        <span class="pin-name">${r.name}</span>
-        <span class="pin-phone">${r.phone}</span>
-        <span class="pin-code">${r.pin || '—'}</span>
-        <span class="pin-status ${r.status}">${r.status}</span>
-      </div>`;
-    });
+  document.getElementById('panelBody').innerHTML = `
+    <div class="panel-section">
+      <div class="panel-section-title">Summary</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div style="background:var(--gp);border-radius:10px;padding:12px;text-align:center">
+          <div style="font-size:24px;font-weight:800;color:var(--g)">${results.length}</div>
+          <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px">Total done</div>
+        </div>
+        <div style="background:var(--gp);border-radius:10px;padding:12px;text-align:center">
+          <div style="font-size:24px;font-weight:800;color:var(--g)">${overall !== null ? overall + '%' : '—'}</div>
+          <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px">Overall avg</div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">All results</div>
+      ${resultsHtml}
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">Reset PIN</div>
+      <div class="alert alert-success" id="resetOk">PIN updated successfully.</div>
+      <div class="alert alert-error" id="resetErr">Failed to reset PIN.</div>
+      <div style="display:flex;gap:8px">
+        <input type="text" id="newPinInput" placeholder="New 4-digit PIN (e.g. 1989)" maxlength="4" style="flex:1;padding:9px 12px;border:2px solid var(--line);border-radius:8px;font-size:13px;outline:none">
+        <button class="btn-primary" onclick="resetPin('${id}')">Set PIN</button>
+      </div>
+      <div style="font-size:11px;color:var(--muted);margin-top:6px">Use student's birth year as their PIN (e.g. 1989)</div>
+    </div>
+  `;
+}
 
-    // Copy all button
-    html += `<button class="copy-all-btn" onclick="copyAllPins()">📋 Copy all PINs (for WhatsApp)</button>`;
+async function resetPin(id) {
+  const pin = document.getElementById('newPinInput').value.trim();
+  const okEl = document.getElementById('resetOk');
+  const errEl = document.getElementById('resetErr');
+  okEl.classList.remove('show'); errEl.classList.remove('show');
 
-    resultsDiv.innerHTML = html;
-    btn.textContent = 'Done!';
+  if (!/^\d{4}$/.test(pin)) { errEl.textContent = 'PIN must be 4 digits.'; errEl.classList.add('show'); return; }
 
-    // Store results for copy
-    window._importResults = data.results;
-
-    // Refresh cohort table
+  // Use the students route to reset — pass new PIN
+  const res = await fetch('/api/students/' + id + '/reset-pin', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + getToken() },
+    body: JSON.stringify({ pin })
+  });
+  if (res.ok) {
+    okEl.classList.add('show');
     loadCohort();
-
-  } catch (err) {
-    console.error(err);
-    btn.textContent = 'Error — try again';
-  } finally {
-    setTimeout(() => { btn.disabled = false; updateImportCount(); }, 2000);
+  } else {
+    errEl.textContent = 'Failed to reset PIN.';
+    errEl.classList.add('show');
   }
 }
 
-function copyAllPins() {
-  if (!window._importResults) return;
-  const lines = window._importResults
-    .filter(r => r.pin)
-    .map(r => `${r.name}\nPhone: ${r.phone}\nPIN: ${r.pin}\nPortal: mesol.yeschool.uk\n`);
+function closePanel(e) { if (e.target === document.getElementById('panelBackdrop')) closePanelDirect(); }
+function closePanelDirect() { document.getElementById('panelBackdrop').classList.remove('show'); }
 
-  const text = lines.join('\n---\n\n');
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = document.querySelector('.copy-all-btn');
-    btn.textContent = '✅ Copied to clipboard!';
-    setTimeout(() => { btn.textContent = '📋 Copy all PINs (for WhatsApp)'; }, 2000);
-  });
-}
+// ── INIT ──────────────────────────────────────────────────────
+if (getToken()) showApp();
 </script>
 </body>
 </html>

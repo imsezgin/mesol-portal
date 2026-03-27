@@ -1,0 +1,90 @@
+{
+  "id": "EL2-W4-010",
+  "session": 4,
+  "type": "mesol_combo",
+  "title": "Shopping on a Budget",
+  "topic": "Money & Calculations",
+  "context": "You have £50 to buy a week's food shopping. Essential items: bread £1.30, milk £1.10, rice £1.80, chicken £4.50, vegetables £3.20, eggs £1.50, cheese £2.50, fruit £2.80.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What does 'on a budget' mean?",
+        "options": [
+          "With a limited amount of money",
+          "With unlimited money",
+          "On sale",
+          "Using a credit card"
+        ],
+        "answer": "With a limited amount of money"
+      },
+      {
+        "question": "What are 'staple foods'?",
+        "options": [
+          "Basic foods eaten regularly",
+          "Expensive foods",
+          "Foods from other countries",
+          "Frozen foods"
+        ],
+        "answer": "Basic foods eaten regularly"
+      },
+      {
+        "question": "What does 'prioritise' mean?",
+        "options": [
+          "Decide what is most important",
+          "Buy everything",
+          "Return items",
+          "Compare prices"
+        ],
+        "answer": "Decide what is most important"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate the shopping costs.",
+    "questions": [
+      {
+        "question": "Total cost of all essential items?",
+        "options": [
+          "£18.70",
+          "£17.50",
+          "£20.00",
+          "£19.20"
+        ],
+        "answer": "£18.70"
+      },
+      {
+        "question": "How much left from £50?",
+        "options": [
+          "£31.30",
+          "£32.50",
+          "£30.00",
+          "£31.80"
+        ],
+        "answer": "£31.30"
+      },
+      {
+        "question": "If chicken goes up by 20%, new price?",
+        "options": [
+          "£5.40",
+          "£5.00",
+          "£4.90",
+          "£5.50"
+        ],
+        "answer": "£5.40"
+      },
+      {
+        "question": "How much extra would you pay per week?",
+        "options": [
+          "90p",
+          "50p",
+          "£1.00",
+          "£1.50"
+        ],
+        "answer": "90p"
+      }
+    ]
+  },
+  "week": 4,
+  "level": "EL2"
+}

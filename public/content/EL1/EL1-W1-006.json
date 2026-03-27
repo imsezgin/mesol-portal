@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W1-006",
+  "session": 1,
+  "type": "gap_fill",
+  "title": "Reading a Recipe",
+  "topic": "Cooking & Weights",
+  "instruction": "Fill in the missing words to complete the recipe instructions.",
+  "passage": "For this cake, you need 250 ___ of flour. Add 100 ___ of sugar. Mix with 2 ___ and 200 ___ of milk. Bake for 30 ___.",
+  "blanks": [
+    "grams",
+    "grams",
+    "eggs",
+    "ml",
+    "minutes"
+  ],
+  "word_bank": [
+    "grams",
+    "grams",
+    "eggs",
+    "ml",
+    "minutes",
+    "cups"
+  ],
+  "week": 1,
+  "level": "EL1"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W6-003",
+  "session": 6,
+  "type": "gap_fill",
+  "title": "Date Formats",
+  "topic": "Date & Time",
+  "instruction": "Complete the date format examples.",
+  "passage": "In the UK, dates are written as day/month/year. The first of January 2025 in short form is ___. In the USA, they write month/day/year. 03/04/2025 in the UK means the ___ of ___. The same date in USA format would mean ___ 3rd. Always check which ___ is being used.",
+  "blanks": [
+    "01/01/2025",
+    "3rd",
+    "April",
+    "March",
+    "format"
+  ],
+  "word_bank": [
+    "01/01/2025",
+    "3rd",
+    "April",
+    "March",
+    "format",
+    "4th",
+    "January"
+  ],
+  "week": 6,
+  "level": "EL2"
+}

@@ -1,0 +1,62 @@
+{
+  "id": "EL2-W3-008",
+  "session": 3,
+  "type": "mcq",
+  "title": "Telling the Time with Fractions",
+  "topic": "Fractions & Percentages",
+  "instruction": "Choose the correct time.",
+  "questions": [
+    {
+      "question": "Quarter past 2 =",
+      "options": [
+        "2:15",
+        "2:45",
+        "2:30",
+        "2:25"
+      ],
+      "answer": "2:15"
+    },
+    {
+      "question": "Half past 7 =",
+      "options": [
+        "7:30",
+        "7:15",
+        "7:45",
+        "7:50"
+      ],
+      "answer": "7:30"
+    },
+    {
+      "question": "Quarter to 5 =",
+      "options": [
+        "4:45",
+        "5:15",
+        "5:45",
+        "4:15"
+      ],
+      "answer": "4:45"
+    },
+    {
+      "question": "What fraction of an hour is 20 minutes?",
+      "options": [
+        "1/3",
+        "1/4",
+        "1/2",
+        "2/3"
+      ],
+      "answer": "1/3"
+    },
+    {
+      "question": "What fraction of an hour is 45 minutes?",
+      "options": [
+        "3/4",
+        "1/2",
+        "1/4",
+        "2/3"
+      ],
+      "answer": "3/4"
+    }
+  ],
+  "week": 3,
+  "level": "EL2"
+}

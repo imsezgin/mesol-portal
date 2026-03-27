@@ -1,0 +1,52 @@
+{
+  "id": "EL1-W4-005",
+  "session": 4,
+  "type": "mcq",
+  "title": "Adding Money",
+  "topic": "Money & Calculations",
+  "instruction": "Add the amounts.",
+  "questions": [
+    {
+      "question": "£1.00 + £2.00 = ?",
+      "options": [
+        "£3.00",
+        "£2.00",
+        "£1.20",
+        "£12.00"
+      ],
+      "answer": "£3.00"
+    },
+    {
+      "question": "50p + 50p = ?",
+      "options": [
+        "£1.00",
+        "50p",
+        "£1.50",
+        "£5.00"
+      ],
+      "answer": "£1.00"
+    },
+    {
+      "question": "£2.50 + £1.50 = ?",
+      "options": [
+        "£4.00",
+        "£3.50",
+        "£3.00",
+        "£4.50"
+      ],
+      "answer": "£4.00"
+    },
+    {
+      "question": "£1.20 + £0.80 = ?",
+      "options": [
+        "£2.00",
+        "£1.80",
+        "£2.20",
+        "£1.28"
+      ],
+      "answer": "£2.00"
+    }
+  ],
+  "week": 4,
+  "level": "EL1"
+}

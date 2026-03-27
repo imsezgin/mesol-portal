@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W6-006",
+  "session": 6,
+  "type": "gap_fill",
+  "title": "Digital and Analogue Time",
+  "topic": "Date & Time",
+  "instruction": "Complete the sentences about time.",
+  "passage": "An analogue clock has ___ and a face with numbers. A digital clock shows the time with ___. 3:00 PM on a 24-hour clock is ___. Midnight is 00:00 or ___ AM. There are 60 ___ in one hour.",
+  "blanks": [
+    "hands",
+    "numbers",
+    "15:00",
+    "12",
+    "minutes"
+  ],
+  "word_bank": [
+    "hands",
+    "numbers",
+    "15:00",
+    "12",
+    "minutes",
+    "seconds"
+  ],
+  "week": 6,
+  "level": "EL1"
+}

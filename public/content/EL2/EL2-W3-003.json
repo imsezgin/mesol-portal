@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W3-003",
+  "session": 3,
+  "type": "gap_fill",
+  "title": "Fractions in Cooking",
+  "topic": "Fractions & Percentages",
+  "instruction": "Complete the recipe instructions using fractions.",
+  "passage": "Add ___ a cup of sugar (that is 0.5 cups). Use a ___ of a teaspoon of salt. Cook for one and a ___ hours. The recipe uses ___ of a cup of oil (that is 0.75 cups). If you use ___ the amount of sugar, that is a quarter cup.",
+  "blanks": [
+    "half",
+    "quarter",
+    "half",
+    "three-quarters",
+    "half"
+  ],
+  "word_bank": [
+    "half",
+    "quarter",
+    "half",
+    "three-quarters",
+    "half",
+    "third",
+    "whole"
+  ],
+  "week": 3,
+  "level": "EL2"
+}

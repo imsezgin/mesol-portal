@@ -1,0 +1,52 @@
+{
+  "id": "EL1-W5-008",
+  "session": 5,
+  "type": "mcq",
+  "title": "Simple Banking Maths",
+  "topic": "Banking",
+  "instruction": "Calculate the bank balance.",
+  "questions": [
+    {
+      "question": "Balance: £200. Deposit £50. New balance?",
+      "options": [
+        "£250",
+        "£200",
+        "£150",
+        "£50"
+      ],
+      "answer": "£250"
+    },
+    {
+      "question": "Balance: £300. Withdraw £100. New balance?",
+      "options": [
+        "£200",
+        "£300",
+        "£400",
+        "£100"
+      ],
+      "answer": "£200"
+    },
+    {
+      "question": "Balance: £150. Spend £80, then receive £30. Balance?",
+      "options": [
+        "£100",
+        "£70",
+        "£150",
+        "£80"
+      ],
+      "answer": "£100"
+    },
+    {
+      "question": "Balance: £0. Withdraw £20 (overdraft). Balance?",
+      "options": [
+        "-£20",
+        "£20",
+        "£0",
+        "-£0"
+      ],
+      "answer": "-£20"
+    }
+  ],
+  "week": 5,
+  "level": "EL1"
+}

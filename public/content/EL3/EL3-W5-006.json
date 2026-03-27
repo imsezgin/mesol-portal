@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W5-006",
+  "session": 5,
+  "type": "gap_fill",
+  "title": "Understanding APR",
+  "topic": "Banking",
+  "instruction": "Complete the APR explanation.",
+  "passage": "APR stands for Annual Percentage ___. It includes the interest rate plus any ___. A credit card at 24.9% APR means roughly ___% per month. On a £1,000 balance, monthly interest is about £___. If you only pay the ___ payment, it can take years to clear the balance.",
+  "blanks": [
+    "Rate",
+    "fees",
+    "2.08",
+    "20.75",
+    "minimum"
+  ],
+  "word_bank": [
+    "Rate",
+    "fees",
+    "2.08",
+    "20.75",
+    "minimum",
+    "maximum",
+    "1.08"
+  ],
+  "week": 5,
+  "level": "EL3"
+}

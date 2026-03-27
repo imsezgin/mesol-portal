@@ -1,0 +1,36 @@
+{
+  "id": "EL3-W4-001",
+  "session": 4,
+  "type": "vocab_match",
+  "title": "Advanced Financial Terms",
+  "topic": "Money & Calculations",
+  "instruction": "Match each term to its definition.",
+  "pairs": [
+    {
+      "term": "gross",
+      "definition": "total amount before deductions"
+    },
+    {
+      "term": "net",
+      "definition": "amount remaining after deductions"
+    },
+    {
+      "term": "surcharge",
+      "definition": "an additional charge on top of the normal price"
+    },
+    {
+      "term": "pro rata",
+      "definition": "calculated proportionally to the time/amount used"
+    },
+    {
+      "term": "remittance",
+      "definition": "a payment sent to someone"
+    },
+    {
+      "term": "arrears",
+      "definition": "money owed that should have been paid already"
+    }
+  ],
+  "week": 4,
+  "level": "EL3"
+}

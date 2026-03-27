@@ -1,0 +1,36 @@
+{
+  "id": "EL3-W3-007",
+  "session": 3,
+  "type": "vocab_match",
+  "title": "Financial Percentage Terms",
+  "topic": "Fractions & Percentages",
+  "instruction": "Match each financial term to its definition.",
+  "pairs": [
+    {
+      "term": "APR",
+      "definition": "Annual Percentage Rate — the yearly interest rate"
+    },
+    {
+      "term": "inflation rate",
+      "definition": "how fast prices are rising as a percentage"
+    },
+    {
+      "term": "profit margin",
+      "definition": "the percentage of revenue that is profit"
+    },
+    {
+      "term": "depreciation rate",
+      "definition": "how fast something loses value over time"
+    },
+    {
+      "term": "tax bracket",
+      "definition": "the range of income taxed at a particular rate"
+    },
+    {
+      "term": "yield",
+      "definition": "the return on an investment as a percentage"
+    }
+  ],
+  "week": 3,
+  "level": "EL3"
+}

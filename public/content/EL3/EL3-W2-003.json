@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W2-003",
+  "session": 2,
+  "type": "gap_fill",
+  "title": "Writing a Comparison Report",
+  "topic": "Comparisons",
+  "instruction": "Complete the comparison report.",
+  "passage": "This report ___ three broadband providers. In terms of speed, Provider A offers the ___ download speed at 100Mbps. However, Provider C is the most cost-___ at £25 per month. The ___ monthly cost across all three is £30. We ___ Provider C for most households.",
+  "blanks": [
+    "compares",
+    "fastest",
+    "effective",
+    "average",
+    "recommend"
+  ],
+  "word_bank": [
+    "compares",
+    "fastest",
+    "effective",
+    "average",
+    "recommend",
+    "cheapest",
+    "slowest"
+  ],
+  "week": 2,
+  "level": "EL3"
+}

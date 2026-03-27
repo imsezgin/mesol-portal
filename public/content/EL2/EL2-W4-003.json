@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W4-003",
+  "session": 4,
+  "type": "gap_fill",
+  "title": "Money Vocabulary in Context",
+  "topic": "Money & Calculations",
+  "instruction": "Complete the sentences with the correct financial terms.",
+  "passage": "The ___ of the meal before tax was £45.00. The restaurant adds a 10% service ___. The total with service charge is ___. We paid by ___ card and left an extra £2 tip. The waiter gave us a ___ for our records.",
+  "blanks": [
+    "subtotal",
+    "charge",
+    "£49.50",
+    "debit",
+    "receipt"
+  ],
+  "word_bank": [
+    "subtotal",
+    "charge",
+    "£49.50",
+    "debit",
+    "receipt",
+    "credit",
+    "invoice"
+  ],
+  "week": 4,
+  "level": "EL2"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "EL1-W4-008",
+  "session": 4,
+  "type": "mcq",
+  "title": "Giving Change",
+  "topic": "Money & Calculations",
+  "instruction": "Calculate the change.",
+  "questions": [
+    {
+      "question": "Cost: £2.00. Pay with: £5.00. Change?",
+      "options": [
+        "£3.00",
+        "£2.00",
+        "£7.00",
+        "£5.00"
+      ],
+      "answer": "£3.00"
+    },
+    {
+      "question": "Cost: £7.50. Pay with: £10.00. Change?",
+      "options": [
+        "£2.50",
+        "£7.50",
+        "£3.50",
+        "£2.00"
+      ],
+      "answer": "£2.50"
+    },
+    {
+      "question": "Cost: £4.30. Pay with: £5.00. Change?",
+      "options": [
+        "70p",
+        "£1.30",
+        "30p",
+        "£4.30"
+      ],
+      "answer": "70p"
+    },
+    {
+      "question": "Cost: £3.75. Pay with: £10.00. Change?",
+      "options": [
+        "£6.25",
+        "£3.75",
+        "£7.25",
+        "£6.75"
+      ],
+      "answer": "£6.25"
+    }
+  ],
+  "week": 4,
+  "level": "EL1"
+}

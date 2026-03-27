@@ -1,0 +1,62 @@
+{
+  "id": "EL2-W1-005",
+  "session": 1,
+  "type": "mcq",
+  "title": "Metric vs Imperial in Daily Life",
+  "topic": "Weights & Measures",
+  "instruction": "Choose the correct answer.",
+  "questions": [
+    {
+      "question": "In UK shops, fruit is usually sold in...",
+      "options": [
+        "Kilograms",
+        "Pounds",
+        "Ounces",
+        "Cups"
+      ],
+      "answer": "Kilograms"
+    },
+    {
+      "question": "UK road signs show distance in...",
+      "options": [
+        "Miles",
+        "Kilometres",
+        "Metres",
+        "Feet"
+      ],
+      "answer": "Miles"
+    },
+    {
+      "question": "A recipe from the USA uses 'cups'. 1 cup is about...",
+      "options": [
+        "240ml",
+        "1 litre",
+        "500ml",
+        "100ml"
+      ],
+      "answer": "240ml"
+    },
+    {
+      "question": "A baby's weight in the UK is often given in...",
+      "options": [
+        "Pounds and ounces",
+        "Kilograms only",
+        "Stones",
+        "Grams only"
+      ],
+      "answer": "Pounds and ounces"
+    },
+    {
+      "question": "Body weight in the UK is often measured in...",
+      "options": [
+        "Stones and pounds",
+        "Kilograms only",
+        "Ounces",
+        "Grams"
+      ],
+      "answer": "Stones and pounds"
+    }
+  ],
+  "week": 1,
+  "level": "EL2"
+}

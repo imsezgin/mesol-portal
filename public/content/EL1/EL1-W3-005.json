@@ -1,0 +1,62 @@
+{
+  "id": "EL1-W3-005",
+  "session": 3,
+  "type": "mcq",
+  "title": "Fractions and Percentages",
+  "topic": "Fractions & Percentages",
+  "instruction": "Match the fraction to its percentage.",
+  "questions": [
+    {
+      "question": "1/2 = ?%",
+      "options": [
+        "50%",
+        "25%",
+        "75%",
+        "100%"
+      ],
+      "answer": "50%"
+    },
+    {
+      "question": "1/4 = ?%",
+      "options": [
+        "25%",
+        "50%",
+        "10%",
+        "75%"
+      ],
+      "answer": "25%"
+    },
+    {
+      "question": "3/4 = ?%",
+      "options": [
+        "75%",
+        "50%",
+        "25%",
+        "100%"
+      ],
+      "answer": "75%"
+    },
+    {
+      "question": "1/10 = ?%",
+      "options": [
+        "10%",
+        "1%",
+        "100%",
+        "50%"
+      ],
+      "answer": "10%"
+    },
+    {
+      "question": "1/1 = ?%",
+      "options": [
+        "100%",
+        "50%",
+        "10%",
+        "0%"
+      ],
+      "answer": "100%"
+    }
+  ],
+  "week": 3,
+  "level": "EL1"
+}

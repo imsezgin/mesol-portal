@@ -1,0 +1,53 @@
+{
+  "id": "EL3-W5-008",
+  "session": 5,
+  "type": "mcq",
+  "title": "Loan Comparison",
+  "topic": "Banking",
+  "instruction": "Compare borrowing options.",
+  "context": "Need to borrow £3,000. Option A: Personal loan, 6.9% APR, 3 years. Option B: Credit card, 0% for 18 months then 21.9%. Option C: Overdraft, 39.9% EAR.",
+  "questions": [
+    {
+      "question": "Option A: total interest over 3 years (approx)?",
+      "options": [
+        "~£325",
+        "~£207",
+        "~£621",
+        "~£900"
+      ],
+      "answer": "~£325"
+    },
+    {
+      "question": "Option B: if paid off in 18 months, total interest?",
+      "options": [
+        "£0",
+        "£657",
+        "£325",
+        "£100"
+      ],
+      "answer": "£0"
+    },
+    {
+      "question": "Option C: approximate interest for 1 year?",
+      "options": [
+        "~£1,197",
+        "~£399",
+        "~£120",
+        "~£600"
+      ],
+      "answer": "~£1,197"
+    },
+    {
+      "question": "Which is cheapest if you can repay within 18 months?",
+      "options": [
+        "Option B (0% card)",
+        "Option A (loan)",
+        "Option C (overdraft)",
+        "All the same"
+      ],
+      "answer": "Option B (0% card)"
+    }
+  ],
+  "week": 5,
+  "level": "EL3"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W3-009",
+  "session": 3,
+  "type": "gap_fill",
+  "title": "Comparing Fractions",
+  "topic": "Fractions & Percentages",
+  "instruction": "Complete the explanation of comparing fractions.",
+  "passage": "To compare fractions, find a common ___. Compare 2/3 and 3/4: LCD is ___. 2/3 = 8/12. 3/4 = ___/12. Since 9 > 8, ___ is the larger fraction. As percentages: 2/3 ≈ 66.7%, 3/4 = ___%, confirming 3/4 is larger.",
+  "blanks": [
+    "denominator",
+    "12",
+    "9",
+    "3/4",
+    "75"
+  ],
+  "word_bank": [
+    "denominator",
+    "12",
+    "9",
+    "3/4",
+    "75",
+    "numerator",
+    "2/3"
+  ],
+  "week": 3,
+  "level": "EL3"
+}

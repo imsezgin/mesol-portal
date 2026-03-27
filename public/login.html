@@ -331,8 +331,16 @@ html, body {
 <div class="modal-backdrop" id="forgotModal">
   <div class="modal">
     <div class="modal-title">Forgotten your PIN?</div>
-    <div class="modal-body">Ask your teacher to reset your PIN, or contact the school:<br><br><strong>info@yeschool.uk</strong><br>or call us during office hours.</div>
-    <button class="modal-close" onclick="document.getElementById('forgotModal').classList.remove('show')">Got it</button>
+    <div class="modal-body">Enter your phone number and we will send you a new PIN via WhatsApp.</div>
+    <div style="margin-bottom:14px">
+      <div class="phone-wrap" style="border:2px solid var(--line);border-radius:10px;display:flex;align-items:center;overflow:hidden">
+        <div class="phone-prefix" style="background:var(--green-pale);padding:12px;font-size:14px;color:var(--mid);font-weight:600;border-right:2px solid var(--line)">🇬🇧 +44</div>
+        <input id="forgotPhone" type="tel" inputmode="numeric" placeholder="7700 900 123" style="flex:1;padding:12px 14px;font-size:16px;border:none;outline:none;color:var(--ink)">
+      </div>
+    </div>
+    <div id="forgotMsg" style="display:none;padding:10px 14px;border-radius:8px;font-size:13px;font-weight:600;margin-bottom:14px;text-align:center"></div>
+    <button class="modal-close" id="forgotBtn" onclick="requestNewPin()" style="background:var(--green);color:white;margin-bottom:10px">Send new PIN via WhatsApp</button>
+    <button class="modal-close" onclick="document.getElementById('forgotModal').classList.remove('show')" style="background:var(--green-pale);color:var(--green-dark)">Cancel</button>
   </div>
 </div>
 
@@ -446,8 +454,50 @@ async function handleLogin() {
 // ── Forgot PIN modal ─────────────────────────────────────────
 document.getElementById('forgotLink').addEventListener('click', e => {
   e.preventDefault();
+  document.getElementById('forgotPhone').value = '';
+  document.getElementById('forgotMsg').style.display = 'none';
   document.getElementById('forgotModal').classList.add('show');
 });
+
+async function requestNewPin() {
+  const rawPhone = document.getElementById('forgotPhone').value.trim().replace(/\s+/g,'');
+  const msgEl = document.getElementById('forgotMsg');
+  const btn = document.getElementById('forgotBtn');
+
+  if (!rawPhone) {
+    msgEl.style.cssText = 'display:block;background:var(--error-bg);color:var(--error)';
+    msgEl.textContent = 'Please enter your phone number.';
+    return;
+  }
+
+  let phone = rawPhone.replace(/^0/, '');
+  if (!phone.startsWith('+')) phone = '+44' + phone;
+
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  try {
+    const res = await fetch('/api/auth/forgot-pin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ phone })
+    });
+
+    if (res.ok) {
+      msgEl.style.cssText = 'display:block;background:var(--green-pale);color:var(--green-dark)';
+      msgEl.textContent = 'New PIN sent! Check your WhatsApp.';
+    } else {
+      msgEl.style.cssText = 'display:block;background:var(--error-bg);color:var(--error)';
+      msgEl.textContent = 'Phone number not found. Contact your teacher.';
+    }
+  } catch {
+    msgEl.style.cssText = 'display:block;background:var(--error-bg);color:var(--error)';
+    msgEl.textContent = 'Connection error. Please try again.';
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Send new PIN via WhatsApp';
+}
 
 // ── If already logged in, skip to home ───────────────────────
 if (localStorage.getItem('yes_token')) {

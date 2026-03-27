@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W2-007",
+  "session": 2,
+  "type": "gap_fill",
+  "title": "Comparing Energy",
+  "topic": "Comparisons",
+  "instruction": "Complete the sentences about energy bills.",
+  "passage": "Gas and ___ are types of energy. We pay energy ___ every month. In ___, we use more heating. Energy company A charges £80 per ___. Company B charges £70. Company B is ___ than A.",
+  "blanks": [
+    "electricity",
+    "bills",
+    "winter",
+    "month",
+    "cheaper"
+  ],
+  "word_bank": [
+    "electricity",
+    "bills",
+    "winter",
+    "month",
+    "cheaper",
+    "summer"
+  ],
+  "week": 2,
+  "level": "EL1"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W3-009",
+  "session": 3,
+  "type": "gap_fill",
+  "title": "Dividing Food Equally",
+  "topic": "Fractions & Percentages",
+  "instruction": "Complete the sentences about dividing food.",
+  "passage": "A cake is cut into ___ equal slices. Each slice is 1/8 of the cake. If 4 people share the cake ___, each person gets 2 slices. 2 slices out of 8 = 2/8 = ___. In percentage terms, each person gets ___% of the cake. If one person eats 3 slices, they have eaten ___% of the cake.",
+  "blanks": [
+    "8",
+    "equally",
+    "1/4",
+    "25",
+    "37.5"
+  ],
+  "word_bank": [
+    "8",
+    "equally",
+    "1/4",
+    "25",
+    "37.5",
+    "50",
+    "12"
+  ],
+  "week": 3,
+  "level": "EL2"
+}

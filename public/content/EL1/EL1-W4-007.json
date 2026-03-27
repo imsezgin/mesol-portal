@@ -1,0 +1,32 @@
+{
+  "id": "EL1-W4-007",
+  "session": 4,
+  "type": "vocab_match",
+  "title": "Price Labels",
+  "topic": "Money & Calculations",
+  "instruction": "Match each price to how we say it.",
+  "pairs": [
+    {
+      "term": "£1.99",
+      "definition": "one pound ninety-nine"
+    },
+    {
+      "term": "£5.50",
+      "definition": "five pounds fifty"
+    },
+    {
+      "term": "£0.75",
+      "definition": "seventy-five pence"
+    },
+    {
+      "term": "£10.00",
+      "definition": "ten pounds"
+    },
+    {
+      "term": "£2.25",
+      "definition": "two pounds twenty-five"
+    }
+  ],
+  "week": 4,
+  "level": "EL1"
+}

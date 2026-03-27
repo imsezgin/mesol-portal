@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W3-003",
+  "session": 3,
+  "type": "gap_fill",
+  "title": "Percentage Change",
+  "topic": "Fractions & Percentages",
+  "instruction": "Complete the explanation of percentage change.",
+  "passage": "To calculate percentage change: find the ___ (new value minus original). Divide the difference by the ___ value. Multiply by ___. Example: Price rose from £50 to £60. Difference: £___. Percentage change: 10/50 × 100 = ___%.",
+  "blanks": [
+    "difference",
+    "original",
+    "100",
+    "10",
+    "20"
+  ],
+  "word_bank": [
+    "difference",
+    "original",
+    "100",
+    "10",
+    "20",
+    "50",
+    "new"
+  ],
+  "week": 3,
+  "level": "EL3"
+}

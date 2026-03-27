@@ -1,0 +1,52 @@
+{
+  "id": "EL1-W4-002",
+  "session": 4,
+  "type": "mcq",
+  "title": "Coins and Notes",
+  "topic": "Money & Calculations",
+  "instruction": "Choose the correct answer about British money.",
+  "questions": [
+    {
+      "question": "How many pence in one pound?",
+      "options": [
+        "100",
+        "10",
+        "50",
+        "200"
+      ],
+      "answer": "100"
+    },
+    {
+      "question": "Which coin is worth 50p?",
+      "options": [
+        "The seven-sided silver coin",
+        "The small round copper coin",
+        "The large round gold coin",
+        "The small silver coin"
+      ],
+      "answer": "The seven-sided silver coin"
+    },
+    {
+      "question": "£1.50 means...",
+      "options": [
+        "One pound and fifty pence",
+        "One hundred and fifty pounds",
+        "Fifteen pounds",
+        "Fifteen pence"
+      ],
+      "answer": "One pound and fifty pence"
+    },
+    {
+      "question": "You pay £3.50 with a £5 note. Change?",
+      "options": [
+        "£1.50",
+        "£2.50",
+        "£1.00",
+        "£3.50"
+      ],
+      "answer": "£1.50"
+    }
+  ],
+  "week": 4,
+  "level": "EL1"
+}

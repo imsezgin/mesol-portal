@@ -1,0 +1,62 @@
+{
+  "id": "EL1-W1-002",
+  "session": 1,
+  "type": "mcq",
+  "title": "Which Unit?",
+  "topic": "Weights & Measures",
+  "instruction": "Choose the correct answer.",
+  "questions": [
+    {
+      "question": "What unit do we use to weigh food?",
+      "options": [
+        "kilogram",
+        "metre",
+        "litre",
+        "mile"
+      ],
+      "answer": "kilogram"
+    },
+    {
+      "question": "What unit do we use to measure milk?",
+      "options": [
+        "litre",
+        "kilogram",
+        "pound",
+        "inch"
+      ],
+      "answer": "litre"
+    },
+    {
+      "question": "1 kilogram = how many grams?",
+      "options": [
+        "1000",
+        "100",
+        "10",
+        "500"
+      ],
+      "answer": "1000"
+    },
+    {
+      "question": "Which is heavier: 1 kg or 1 pound?",
+      "options": [
+        "1 kg",
+        "1 pound",
+        "They are the same",
+        "Cannot tell"
+      ],
+      "answer": "1 kg"
+    },
+    {
+      "question": "What does 'ml' stand for?",
+      "options": [
+        "millilitre",
+        "metre long",
+        "mile",
+        "million"
+      ],
+      "answer": "millilitre"
+    }
+  ],
+  "week": 1,
+  "level": "EL1"
+}

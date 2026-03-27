@@ -1,0 +1,90 @@
+{
+  "id": "EL2-W2-004",
+  "session": 2,
+  "type": "mesol_combo",
+  "title": "Comparing Energy Providers",
+  "topic": "Comparisons",
+  "context": "Provider A: Gas £45/month, Electric £35/month. Provider B: Gas £50/month, Electric £30/month. Provider C: Gas £40/month, Electric £40/month.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What is an energy 'provider'?",
+        "options": [
+          "A company that supplies gas or electricity",
+          "A type of energy",
+          "An electricity meter",
+          "A power station"
+        ],
+        "answer": "A company that supplies gas or electricity"
+      },
+      {
+        "question": "What does 'switch provider' mean?",
+        "options": [
+          "Change to a different energy company",
+          "Turn off the electricity",
+          "Move house",
+          "Use less energy"
+        ],
+        "answer": "Change to a different energy company"
+      },
+      {
+        "question": "What is a 'fixed tariff'?",
+        "options": [
+          "The price stays the same for a set time",
+          "The price changes every month",
+          "A free tariff",
+          "The most expensive tariff"
+        ],
+        "answer": "The price stays the same for a set time"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Compare the total monthly costs.",
+    "questions": [
+      {
+        "question": "Provider A total monthly cost?",
+        "options": [
+          "£80",
+          "£45",
+          "£35",
+          "£90"
+        ],
+        "answer": "£80"
+      },
+      {
+        "question": "Provider B total monthly cost?",
+        "options": [
+          "£80",
+          "£50",
+          "£30",
+          "£70"
+        ],
+        "answer": "£80"
+      },
+      {
+        "question": "Provider C total monthly cost?",
+        "options": [
+          "£80",
+          "£40",
+          "£90",
+          "£70"
+        ],
+        "answer": "£80"
+      },
+      {
+        "question": "Which provider has the cheapest gas?",
+        "options": [
+          "Provider C (£40)",
+          "Provider A (£45)",
+          "Provider B (£50)",
+          "All the same"
+        ],
+        "answer": "Provider C (£40)"
+      }
+    ]
+  },
+  "week": 2,
+  "level": "EL2"
+}

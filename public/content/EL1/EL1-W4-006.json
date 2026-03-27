@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W4-006",
+  "session": 4,
+  "type": "gap_fill",
+  "title": "Restaurant Menu",
+  "topic": "Money & Calculations",
+  "instruction": "Complete the sentences about the restaurant.",
+  "passage": "A main course costs eight pounds and ___ pence. A drink costs one pound ___. Together they cost ten ___. The ___ charge is 10%, which is one pound. The ___ total is eleven pounds.",
+  "blanks": [
+    "fifty",
+    "fifty",
+    "pounds",
+    "service",
+    "final"
+  ],
+  "word_bank": [
+    "fifty",
+    "fifty",
+    "pounds",
+    "service",
+    "final",
+    "twenty"
+  ],
+  "week": 4,
+  "level": "EL1"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "EL3-W2-001",
+  "session": 2,
+  "type": "vocab_match",
+  "title": "Advanced Comparison Terms",
+  "topic": "Comparisons",
+  "instruction": "Match each term to its definition.",
+  "pairs": [
+    {
+      "term": "cost-effective",
+      "definition": "achieving good results relative to cost"
+    },
+    {
+      "term": "fluctuate",
+      "definition": "to rise and fall irregularly"
+    },
+    {
+      "term": "benchmark",
+      "definition": "a standard point of reference for comparison"
+    },
+    {
+      "term": "depreciate",
+      "definition": "to decrease in value over time"
+    },
+    {
+      "term": "competitive",
+      "definition": "offering prices as good as or better than others"
+    },
+    {
+      "term": "median",
+      "definition": "the middle value when numbers are in order"
+    }
+  ],
+  "week": 2,
+  "level": "EL3"
+}

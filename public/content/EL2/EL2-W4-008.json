@@ -1,0 +1,52 @@
+{
+  "id": "EL2-W4-008",
+  "session": 4,
+  "type": "mcq",
+  "title": "Tax Included or Excluded",
+  "topic": "Money & Calculations",
+  "instruction": "Answer questions about tax on prices.",
+  "questions": [
+    {
+      "question": "A sign says '£50 + VAT'. VAT is 20%. Total?",
+      "options": [
+        "£60",
+        "£50",
+        "£70",
+        "£55"
+      ],
+      "answer": "£60"
+    },
+    {
+      "question": "A price is '£120 inc. VAT'. What does 'inc.' mean?",
+      "options": [
+        "Including (the price already has VAT)",
+        "Increasing",
+        "Incorrect",
+        "Incomplete"
+      ],
+      "answer": "Including (the price already has VAT)"
+    },
+    {
+      "question": "Price: £200 + VAT. How much VAT?",
+      "options": [
+        "£40",
+        "£20",
+        "£200",
+        "£100"
+      ],
+      "answer": "£40"
+    },
+    {
+      "question": "Price including VAT: £60. Pre-VAT price?",
+      "options": [
+        "£50",
+        "£48",
+        "£54",
+        "£40"
+      ],
+      "answer": "£50"
+    }
+  ],
+  "week": 4,
+  "level": "EL2"
+}

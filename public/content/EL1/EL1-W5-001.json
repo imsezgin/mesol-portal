@@ -1,0 +1,32 @@
+{
+  "id": "EL1-W5-001",
+  "session": 5,
+  "type": "vocab_match",
+  "title": "Banking Words",
+  "topic": "Banking",
+  "instruction": "Match each banking word to its meaning.",
+  "pairs": [
+    {
+      "term": "bank",
+      "definition": "a place that keeps your money safe"
+    },
+    {
+      "term": "account",
+      "definition": "where your money is stored at the bank"
+    },
+    {
+      "term": "save",
+      "definition": "to keep money for later"
+    },
+    {
+      "term": "spend",
+      "definition": "to use money to buy things"
+    },
+    {
+      "term": "cash",
+      "definition": "paper money and coins"
+    }
+  ],
+  "week": 5,
+  "level": "EL1"
+}

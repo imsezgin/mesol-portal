@@ -1,11 +1,13 @@
-const CACHE = 'mesol-v1';
+const CACHE = 'mesol-v2';
 const STATIC = [
   '/',
   '/login.html',
   '/home.html',
   '/exercise.html',
   '/practice.html',
-  '/progress.html'
+  '/progress.html',
+  '/help.html',
+  '/manifest.json'
 ];
 
 // Install: cache static assets

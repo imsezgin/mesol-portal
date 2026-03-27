@@ -1,0 +1,52 @@
+{
+  "id": "EL1-W6-002",
+  "session": 6,
+  "type": "mcq",
+  "title": "Telling the Time",
+  "topic": "Date & Time",
+  "instruction": "Choose the correct time.",
+  "questions": [
+    {
+      "question": "The clock shows 3:00. It is...",
+      "options": [
+        "Three o'clock",
+        "Half past three",
+        "Quarter past three",
+        "Quarter to three"
+      ],
+      "answer": "Three o'clock"
+    },
+    {
+      "question": "The clock shows 6:30. It is...",
+      "options": [
+        "Half past six",
+        "Six o'clock",
+        "Quarter past six",
+        "Quarter to seven"
+      ],
+      "answer": "Half past six"
+    },
+    {
+      "question": "The clock shows 2:15. It is...",
+      "options": [
+        "Quarter past two",
+        "Half past two",
+        "Two o'clock",
+        "Quarter to two"
+      ],
+      "answer": "Quarter past two"
+    },
+    {
+      "question": "The clock shows 8:45. It is...",
+      "options": [
+        "Quarter to nine",
+        "Quarter past eight",
+        "Half past eight",
+        "Nine o'clock"
+      ],
+      "answer": "Quarter to nine"
+    }
+  ],
+  "week": 6,
+  "level": "EL1"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "EL1-W1-004",
+  "session": 1,
+  "type": "mcq",
+  "title": "Metric or Imperial?",
+  "topic": "Weights & Measures",
+  "instruction": "Is this unit metric or imperial?",
+  "questions": [
+    {
+      "question": "Kilogram (kg)",
+      "options": [
+        "Metric",
+        "Imperial"
+      ],
+      "answer": "Metric"
+    },
+    {
+      "question": "Pound (lb)",
+      "options": [
+        "Imperial",
+        "Metric"
+      ],
+      "answer": "Imperial"
+    },
+    {
+      "question": "Litre (l)",
+      "options": [
+        "Metric",
+        "Imperial"
+      ],
+      "answer": "Metric"
+    },
+    {
+      "question": "Ounce (oz)",
+      "options": [
+        "Imperial",
+        "Metric"
+      ],
+      "answer": "Imperial"
+    },
+    {
+      "question": "Millilitre (ml)",
+      "options": [
+        "Metric",
+        "Imperial"
+      ],
+      "answer": "Metric"
+    }
+  ],
+  "week": 1,
+  "level": "EL1"
+}

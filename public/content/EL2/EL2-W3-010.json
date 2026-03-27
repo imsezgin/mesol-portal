@@ -1,0 +1,90 @@
+{
+  "id": "EL2-W3-010",
+  "session": 3,
+  "type": "mesol_combo",
+  "title": "Budget Percentages",
+  "topic": "Fractions & Percentages",
+  "context": "Monthly income: £1,200. Budget plan: 50% essentials, 30% wants, 20% savings.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What are 'essentials'?",
+        "options": [
+          "Things you need (rent, food, bills)",
+          "Things you want but do not need",
+          "Luxury items",
+          "Savings"
+        ],
+        "answer": "Things you need (rent, food, bills)"
+      },
+      {
+        "question": "What does 'allocate' mean?",
+        "options": [
+          "Set aside for a purpose",
+          "Spend freely",
+          "Borrow",
+          "Waste"
+        ],
+        "answer": "Set aside for a purpose"
+      },
+      {
+        "question": "What is a 'budget'?",
+        "options": [
+          "A plan for how to spend money",
+          "A lot of money",
+          "A type of bank account",
+          "A discount"
+        ],
+        "answer": "A plan for how to spend money"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate the budget amounts.",
+    "questions": [
+      {
+        "question": "50% of £1,200 for essentials?",
+        "options": [
+          "£600",
+          "£500",
+          "£1,200",
+          "£300"
+        ],
+        "answer": "£600"
+      },
+      {
+        "question": "30% of £1,200 for wants?",
+        "options": [
+          "£360",
+          "£300",
+          "£400",
+          "£240"
+        ],
+        "answer": "£360"
+      },
+      {
+        "question": "20% of £1,200 for savings?",
+        "options": [
+          "£240",
+          "£200",
+          "£120",
+          "£360"
+        ],
+        "answer": "£240"
+      },
+      {
+        "question": "Check: £600 + £360 + £240 = ?",
+        "options": [
+          "£1,200",
+          "£1,000",
+          "£1,100",
+          "£1,300"
+        ],
+        "answer": "£1,200"
+      }
+    ]
+  },
+  "week": 3,
+  "level": "EL2"
+}

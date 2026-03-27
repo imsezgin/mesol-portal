@@ -1,0 +1,52 @@
+{
+  "id": "EL3-W6-002",
+  "session": 6,
+  "type": "mcq",
+  "title": "Time Zone Calculations",
+  "topic": "Date & Time",
+  "instruction": "Calculate times across time zones.",
+  "questions": [
+    {
+      "question": "It is 2:00 PM in London (GMT). What time in Istanbul (GMT+3)?",
+      "options": [
+        "5:00 PM",
+        "11:00 AM",
+        "2:00 PM",
+        "3:00 PM"
+      ],
+      "answer": "5:00 PM"
+    },
+    {
+      "question": "It is 9:00 AM in London. What time in New York (GMT-5)?",
+      "options": [
+        "4:00 AM",
+        "2:00 PM",
+        "9:00 AM",
+        "7:00 AM"
+      ],
+      "answer": "4:00 AM"
+    },
+    {
+      "question": "A flight from London departs at 10:00 GMT, takes 4 hours, arrives in a GMT+2 zone. Local arrival time?",
+      "options": [
+        "16:00 (4 PM)",
+        "14:00 (2 PM)",
+        "12:00 (noon)",
+        "18:00 (6 PM)"
+      ],
+      "answer": "16:00 (4 PM)"
+    },
+    {
+      "question": "You need to call Dubai (GMT+4) during their 9-5 work hours. Best time to call from London?",
+      "options": [
+        "5:00 AM - 1:00 PM",
+        "9:00 AM - 5:00 PM",
+        "1:00 PM - 9:00 PM",
+        "12:00 PM - 8:00 PM"
+      ],
+      "answer": "5:00 AM - 1:00 PM"
+    }
+  ],
+  "week": 6,
+  "level": "EL3"
+}

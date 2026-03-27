@@ -1,0 +1,36 @@
+{
+  "id": "EL2-W4-001",
+  "session": 4,
+  "type": "vocab_match",
+  "title": "Financial Transaction Terms",
+  "topic": "Money & Calculations",
+  "instruction": "Match each term to its definition.",
+  "pairs": [
+    {
+      "term": "VAT",
+      "definition": "Value Added Tax — a government tax on goods and services"
+    },
+    {
+      "term": "service charge",
+      "definition": "an extra fee for the service provided"
+    },
+    {
+      "term": "discount",
+      "definition": "a reduction from the normal price"
+    },
+    {
+      "term": "subtotal",
+      "definition": "the total before tax or extra charges"
+    },
+    {
+      "term": "deposit",
+      "definition": "a partial payment made in advance"
+    },
+    {
+      "term": "balance",
+      "definition": "the remaining amount still to be paid"
+    }
+  ],
+  "week": 4,
+  "level": "EL2"
+}

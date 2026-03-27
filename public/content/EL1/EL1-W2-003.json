@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W2-003",
+  "session": 2,
+  "type": "gap_fill",
+  "title": "Comparing Two Phones",
+  "topic": "Comparisons",
+  "instruction": "Fill in the blanks to compare the two phones.",
+  "passage": "Phone A costs £10 per month. Phone B costs £15 per month. Phone A is ___ than Phone B. Phone B is more ___ than Phone A. Phone A has ___ minutes. Phone B has ___ minutes. Phone B has the ___ minutes.",
+  "blanks": [
+    "cheaper",
+    "expensive",
+    "100",
+    "200",
+    "most"
+  ],
+  "word_bank": [
+    "cheaper",
+    "expensive",
+    "100",
+    "200",
+    "most",
+    "least"
+  ],
+  "week": 2,
+  "level": "EL1"
+}

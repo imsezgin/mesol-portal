@@ -1,0 +1,90 @@
+{
+  "id": "EL3-W6-004",
+  "session": 6,
+  "type": "mesol_combo",
+  "title": "Project Timeline Planning",
+  "topic": "Date & Time",
+  "context": "You are planning a 12-week project starting 7th April 2025. Key milestones: Research (weeks 1-3), Development (weeks 4-8), Testing (weeks 9-10), Launch (weeks 11-12).",
+  "english_section": {
+    "instruction": "Answer the project vocabulary questions.",
+    "questions": [
+      {
+        "question": "What is a 'milestone'?",
+        "options": [
+          "An important point or event in a project",
+          "A unit of distance",
+          "A type of meeting",
+          "A deadline only"
+        ],
+        "answer": "An important point or event in a project"
+      },
+      {
+        "question": "What does 'deadline' mean?",
+        "options": [
+          "The latest date something must be completed",
+          "The start of a project",
+          "A meeting time",
+          "A budget limit"
+        ],
+        "answer": "The latest date something must be completed"
+      },
+      {
+        "question": "What is a 'Gantt chart'?",
+        "options": [
+          "A visual timeline showing project tasks and dates",
+          "A type of graph showing sales",
+          "A financial report",
+          "An organisation chart"
+        ],
+        "answer": "A visual timeline showing project tasks and dates"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate the project dates.",
+    "questions": [
+      {
+        "question": "Research ends after week 3. Date?",
+        "options": [
+          "25th April",
+          "28th April",
+          "21st April",
+          "14th April"
+        ],
+        "answer": "25th April"
+      },
+      {
+        "question": "Development runs weeks 4-8. How many working days? (5 per week)",
+        "options": [
+          "25 days",
+          "40 days",
+          "20 days",
+          "35 days"
+        ],
+        "answer": "25 days"
+      },
+      {
+        "question": "Project ends after week 12. End date?",
+        "options": [
+          "27th June",
+          "30th June",
+          "7th July",
+          "20th June"
+        ],
+        "answer": "27th June"
+      },
+      {
+        "question": "Total calendar days from 7 April to 27 June?",
+        "options": [
+          "81 days",
+          "84 days",
+          "60 days",
+          "90 days"
+        ],
+        "answer": "81 days"
+      }
+    ]
+  },
+  "week": 6,
+  "level": "EL3"
+}

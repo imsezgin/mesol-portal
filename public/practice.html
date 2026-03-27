@@ -4,64 +4,63 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="theme-color" content="#1a7a35">
-<meta name="apple-mobile-web-app-capable" content="yes">
 <title>YESchool — Practice</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --green:#1a7a35;--green-dark:#0f5225;--green-mid:#2ea34d;
-  --green-pale:#f0faf2;--green-light:#d4edda;
-  --gold:#d4920a;--navy:#1a2a6e;
-  --ink:#0d1117;--mid:#4a5568;--muted:#8a96a3;--line:#e2e8f0;
-  --white:#ffffff;--bg:#f7f8fa;
-}
-html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink)}
+:root{--g:#1a7a35;--gd:#0f5225;--gp:#f0faf2;--gl:#d4edda;--gold:#d4920a;--navy:#1a2a6e;--ink:#0d1117;--mid:#4a5568;--muted:#8a96a3;--line:#e2e8f0;--bg:#f7f9fb;--white:#fff;}
+html,body{min-height:100%;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:15px;color:var(--ink)}
 
-.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:var(--green);position:sticky;top:0;z-index:50}
-.topbar-logo{font-size:22px;font-weight:800;color:#fff;letter-spacing:-1px}
+.topbar{background:var(--g);padding:14px 18px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:10}
+.topbar-logo{font-weight:800;font-size:18px;color:white;letter-spacing:-0.5px}
 .topbar-logo span{color:var(--gold)}
-.topbar-title{font-size:16px;font-weight:700;color:#fff}
+.topbar-title{font-size:15px;font-weight:700;color:white;flex:1}
 
-.main{padding:16px 16px 100px;max-width:460px;margin:0 auto}
+.body{padding:16px 16px 80px}
 
-/* Filter tabs */
-.filter-row{display:flex;gap:8px;overflow-x:auto;padding:4px 0 16px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+/* LEVEL BADGE */
+.level-strip{background:white;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.level-badge{display:inline-block;font-size:12px;font-weight:800;padding:3px 12px;border-radius:99px;color:white}
+.level-EL1{background:#1565c0}
+.level-EL2{background:#6a1b9a}
+.level-EL3{background:var(--gold)}
+.level-text{font-size:13px;color:var(--mid)}
+
+/* WEEK FILTER */
+.filter-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:16px;scrollbar-width:none}
 .filter-row::-webkit-scrollbar{display:none}
-.filter-tab{padding:8px 16px;border-radius:20px;font-size:13px;font-weight:600;background:#fff;color:var(--mid);border:2px solid var(--line);cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent;min-height:40px;display:flex;align-items:center}
-.filter-tab.active{background:var(--green);color:#fff;border-color:var(--green)}
-.filter-tab:hover{border-color:var(--green)}
+.filter-chip{flex-shrink:0;padding:7px 14px;border-radius:99px;font-size:13px;font-weight:600;cursor:pointer;border:2px solid var(--line);background:white;color:var(--mid);transition:all .15s}
+.filter-chip.active{background:var(--g);border-color:var(--g);color:white}
 
-/* Exercise list */
-.exercise-list{display:flex;flex-direction:column;gap:10px}
-.exercise-card{display:flex;align-items:center;gap:14px;background:#fff;border-radius:14px;padding:16px;box-shadow:0 1px 6px rgba(0,0,0,.04);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:all .15s;text-decoration:none;color:inherit}
-.exercise-card:hover{box-shadow:0 2px 12px rgba(0,0,0,.08)}
-.exercise-card:active{transform:scale(.99)}
-
+/* EXERCISE CARDS */
+.ex-list{display:flex;flex-direction:column;gap:10px}
+.ex-card{background:white;border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;text-decoration:none;transition:box-shadow .15s}
+.ex-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08)}
 .ex-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.ex-icon.gap_fill{background:#e8f5e9}
-.ex-icon.mcq{background:#e3f2fd}
-.ex-icon.vocab_match{background:#fff8e1}
-.ex-icon.mesol_combo{background:#f3e5f5}
+.ex-icon-gf{background:#e8f5e9}
+.ex-icon-mcq{background:#e8eaf6}
+.ex-icon-vm{background:#fff8e1}
+.ex-icon-mc{background:#e3f2fd}
+.ex-info{flex:1}
+.ex-title{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px}
+.ex-meta{font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.ex-tag{font-size:10px;font-weight:700;padding:1px 7px;border-radius:99px;background:var(--bg);border:1px solid var(--line);color:var(--mid)}
+.ex-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.ex-tick{font-size:20px;color:var(--g)}
+.ex-score{font-size:12px;font-weight:700;color:var(--g)}
 
-.ex-info{flex:1;min-width:0}
-.ex-title{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.ex-meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.ex-badge{font-size:11px;padding:3px 8px;border-radius:6px;font-weight:600;text-transform:uppercase;letter-spacing:.3px}
-.badge-week{background:var(--green-pale);color:var(--green)}
-.badge-type{background:#eef0ff;color:var(--navy)}
+/* EMPTY */
+.empty{text-align:center;padding:48px 20px;color:var(--muted)}
+.empty-icon{font-size:40px;margin-bottom:10px}
 
-.ex-done{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}
-.ex-done.completed{background:var(--green-light);color:var(--green)}
-.ex-done.pending{background:var(--bg);color:var(--line)}
+/* BOTTOM NAV */
+.bottomnav{position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid var(--line);display:flex;height:60px;box-shadow:0 -2px 12px rgba(0,0,0,.06);z-index:20}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-decoration:none;color:var(--muted);font-size:10px;font-weight:600;min-height:44px}
+.nav-item.active{color:var(--g)}
+.nav-item svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
-.empty-state{text-align:center;padding:60px 20px;color:var(--muted);font-size:14px;line-height:1.6}
-.empty-state .emoji{font-size:40px;margin-bottom:12px}
-
-/* Bottom nav */
-.bottomnav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);display:flex;z-index:50;padding-bottom:env(safe-area-inset-bottom)}
-.bottomnav a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:56px;text-decoration:none;font-size:11px;font-weight:600;color:var(--muted);gap:3px;-webkit-tap-highlight-color:transparent}
-.bottomnav a.active{color:var(--green)}
-.bottomnav a svg{width:22px;height:22px}
+.loading{text-align:center;padding:40px;color:var(--muted)}
+.spinner{width:32px;height:32px;border:3px solid var(--line);border-top-color:var(--g);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 10px}
+@keyframes spin{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
@@ -71,134 +70,142 @@ html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sa
   <div class="topbar-title">Practice</div>
 </div>
 
-<div class="main">
-  <div class="filter-row" id="filterRow"></div>
-  <div class="exercise-list" id="exerciseList">
-    <div class="empty-state" id="loading"><div class="emoji">📚</div>Loading exercises...</div>
+<div class="body">
+  <div class="level-strip">
+    <span class="level-badge" id="levelBadge">EL1</span>
+    <span class="level-text">Showing exercises for your level</span>
   </div>
+
+  <div class="filter-row" id="filterRow">
+    <div class="filter-chip active" data-week="all" onclick="setFilter('all')">All weeks</div>
+    <div class="filter-chip" data-week="1" onclick="setFilter('1')">Week 1</div>
+    <div class="filter-chip" data-week="2" onclick="setFilter('2')">Week 2</div>
+    <div class="filter-chip" data-week="3" onclick="setFilter('3')">Week 3</div>
+    <div class="filter-chip" data-week="4" onclick="setFilter('4')">Week 4</div>
+    <div class="filter-chip" data-week="5" onclick="setFilter('5')">Week 5</div>
+    <div class="filter-chip" data-week="6" onclick="setFilter('6')">Week 6</div>
+  </div>
+
+  <div class="loading" id="loadingState"><div class="spinner"></div>Loading exercises...</div>
+  <div class="ex-list" id="exList" style="display:none"></div>
 </div>
 
 <nav class="bottomnav">
-  <a href="/home">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-    Home
+  <a class="nav-item" href="/home">
+    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home
   </a>
-  <a href="/practice" class="active">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-    Practice
+  <a class="nav-item active" href="/practice">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Practice
   </a>
-  <a href="/progress">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-    Progress
+  <a class="nav-item" href="/progress">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Progress
   </a>
-  <a href="#" onclick="event.preventDefault();alert('Need help?\\n\\nAsk your teacher or email info@yeschool.uk')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-    Help
+  <a class="nav-item" href="/help">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Help
   </a>
 </nav>
 
 <script>
 const TOKEN = localStorage.getItem('yes_token');
-const LEVEL = localStorage.getItem('yes_level');
+const LEVEL = localStorage.getItem('yes_level') || 'EL1';
 if (!TOKEN) window.location.href = '/';
 
-const TYPE_ICONS = {
-  gap_fill: '✏️',
-  mcq: '🔘',
-  vocab_match: '🔗',
-  mesol_combo: '📐'
-};
+document.getElementById('levelBadge').textContent = LEVEL;
+document.getElementById('levelBadge').className = 'level-badge level-' + LEVEL;
 
-const TYPE_LABELS = {
-  gap_fill: 'Gap Fill',
-  mcq: 'MCQ',
-  vocab_match: 'Vocab',
-  mesol_combo: 'Combo'
-};
+const TYPE_ICONS = { gap_fill:'📝', mcq:'❓', vocab_match:'🔗', mesol_combo:'🔢' };
+const TYPE_LABELS = { gap_fill:'Gap fill', mcq:'Multiple choice', vocab_match:'Vocab match', mesol_combo:'English + Maths' };
+const TYPE_CLASSES = { gap_fill:'ex-icon-gf', mcq:'ex-icon-mcq', vocab_match:'ex-icon-vm', mesol_combo:'ex-icon-mc' };
 
 let allExercises = [];
-let completedIds = new Set();
-let activeFilter = 'all';
+let completedMap = {};
+let currentFilter = 'all';
 
-async function loadData() {
+// Fetch exercise list from server
+async function loadExercises() {
   try {
-    // Fetch content index and student results in parallel
-    const [indexRes, meRes] = await Promise.all([
-      fetch(`/api/content/${LEVEL}`),
-      fetch('/api/student/me', { headers: { 'Authorization': 'Bearer ' + TOKEN } })
-    ]);
-
-    if (meRes.status === 401) {
-      localStorage.clear();
-      window.location.href = '/';
-      return;
-    }
-
-    const exercises = await indexRes.json();
-    const meData = await meRes.json();
-
-    allExercises = exercises;
-
-    // Get completed from recent (we also fetch full results via progress)
-    // Fetch all results for completion tracking
-    const progRes = await fetch('/api/student/progress', { headers: { 'Authorization': 'Bearer ' + TOKEN } });
-    if (progRes.ok) {
-      const progData = await progRes.json();
-      (progData.results || []).forEach(r => completedIds.add(r.exercise_id));
-    }
-
-    // Build week filter tabs
-    const weeks = [...new Set(exercises.map(e => e.week))].sort((a, b) => a - b);
-    const filterRow = document.getElementById('filterRow');
-    filterRow.innerHTML = `<div class="filter-tab active" data-week="all" onclick="setFilter(this)">All</div>`;
-    weeks.forEach(w => {
-      filterRow.innerHTML += `<div class="filter-tab" data-week="${w}" onclick="setFilter(this)">Week ${w}</div>`;
+    // Get completed exercises
+    const res = await fetch('/api/student/progress', {
+      headers: { Authorization: 'Bearer ' + TOKEN }
     });
+    if (res.ok) {
+      const d = await res.json();
+      (d.results || []).forEach(r => {
+        if (!completedMap[r.exercise_id] || r.score / r.max_score > completedMap[r.exercise_id]) {
+          completedMap[r.exercise_id] = Math.round((r.score / r.max_score) * 100);
+        }
+      });
+    }
 
+    // Get exercise index
+    const idxRes = await fetch(`/api/exercises/${LEVEL}`);
+    if (idxRes.ok) {
+      allExercises = await idxRes.json();
+    } else {
+      // Fallback: build list from known naming pattern
+      allExercises = buildFallbackList();
+    }
+
+    document.getElementById('loadingState').style.display = 'none';
+    document.getElementById('exList').style.display = 'flex';
     renderList();
-  } catch (err) {
-    console.error(err);
-    document.getElementById('loading').innerHTML = '<div class="emoji">📶</div>Could not load exercises.';
+  } catch(e) {
+    document.getElementById('loadingState').innerHTML = '<div style="color:var(--muted)">Could not load exercises.</div>';
   }
 }
 
-function setFilter(el) {
-  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-  el.classList.add('active');
-  activeFilter = el.dataset.week;
+function buildFallbackList() {
+  // Known exercise IDs based on generated content
+  const ids = [];
+  for (let w = 1; w <= 6; w++) {
+    for (let s = 1; s <= 2; s++) {
+      ids.push({ id: `W${w}-S${s}-`, week: w });
+    }
+  }
+  return ids;
+}
+
+function setFilter(week) {
+  currentFilter = week;
+  document.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('active', c.dataset.week === week));
   renderList();
 }
 
 function renderList() {
-  const list = document.getElementById('exerciseList');
-  const filtered = activeFilter === 'all'
+  const list = document.getElementById('exList');
+  const filtered = currentFilter === 'all'
     ? allExercises
-    : allExercises.filter(e => String(e.week) === activeFilter);
+    : allExercises.filter(e => String(e.week) === currentFilter);
 
-  if (filtered.length === 0) {
-    list.innerHTML = '<div class="empty-state"><div class="emoji">📭</div>No exercises found.</div>';
+  if (!filtered.length) {
+    list.innerHTML = '<div class="empty"><div class="empty-icon">📭</div><div>No exercises for this week yet</div></div>';
     return;
   }
 
-  list.innerHTML = filtered.map(e => {
-    const done = completedIds.has(e.id);
-    return `
-      <a class="exercise-card" href="/exercise?id=${e.id}&level=${LEVEL}">
-        <div class="ex-icon ${e.type}">${TYPE_ICONS[e.type] || '📝'}</div>
-        <div class="ex-info">
-          <div class="ex-title">${e.title}</div>
-          <div class="ex-meta">
-            <span class="ex-badge badge-week">W${e.week}</span>
-            <span class="ex-badge badge-type">${TYPE_LABELS[e.type] || e.type}</span>
-          </div>
+  list.innerHTML = filtered.map(ex => {
+    const done = completedMap[ex.id] !== undefined;
+    const score = completedMap[ex.id];
+    const icon = TYPE_ICONS[ex.type] || '📝';
+    const iconClass = TYPE_CLASSES[ex.type] || 'ex-icon-gf';
+    const typeLabel = TYPE_LABELS[ex.type] || ex.type;
+    return `<a class="ex-card" href="/exercise?id=${ex.id}&level=${LEVEL}">
+      <div class="ex-icon ${iconClass}">${icon}</div>
+      <div class="ex-info">
+        <div class="ex-title">${ex.title}</div>
+        <div class="ex-meta">
+          <span>Week ${ex.week}</span>
+          <span class="ex-tag">${typeLabel}</span>
+          ${ex.topic ? `<span class="ex-tag">${ex.topic}</span>` : ''}
         </div>
-        <div class="ex-done ${done ? 'completed' : 'pending'}">${done ? '✓' : '○'}</div>
-      </a>`;
+      </div>
+      <div class="ex-right">
+        ${done ? `<div class="ex-tick">✓</div><div class="ex-score">${score}%</div>` : '<div style="font-size:13px;color:var(--muted)">→</div>'}
+      </div>
+    </a>`;
   }).join('');
 }
 
-window.setFilter = setFilter;
-loadData();
+loadExercises();
 </script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W5-009",
+  "session": 5,
+  "type": "gap_fill",
+  "title": "Saving Money",
+  "topic": "Banking",
+  "instruction": "Complete the sentences about saving.",
+  "passage": "A ___ account keeps your money safe and earns interest. Interest means the bank ___ you a little extra money. If you save £100 and get 2% interest, you earn £___. After one year you have £___. Saving ___ is very important.",
+  "blanks": [
+    "savings",
+    "gives",
+    "2",
+    "102",
+    "regularly"
+  ],
+  "word_bank": [
+    "savings",
+    "gives",
+    "2",
+    "102",
+    "regularly",
+    "spending"
+  ],
+  "week": 5,
+  "level": "EL1"
+}

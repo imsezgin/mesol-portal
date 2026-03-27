@@ -1,0 +1,52 @@
+{
+  "id": "EL3-W3-008",
+  "session": 3,
+  "type": "mcq",
+  "title": "Reverse Percentages",
+  "topic": "Fractions & Percentages",
+  "instruction": "Work backwards from the final amount.",
+  "questions": [
+    {
+      "question": "A shirt is £45 after a 10% discount. Original price?",
+      "options": [
+        "£50",
+        "£49.50",
+        "£55",
+        "£40.50"
+      ],
+      "answer": "£50"
+    },
+    {
+      "question": "A bill is £144 including 20% VAT. Pre-VAT amount?",
+      "options": [
+        "£120",
+        "£115.20",
+        "£130",
+        "£124"
+      ],
+      "answer": "£120"
+    },
+    {
+      "question": "After a 25% increase, a salary is £25,000. Original salary?",
+      "options": [
+        "£20,000",
+        "£18,750",
+        "£22,500",
+        "£19,000"
+      ],
+      "answer": "£20,000"
+    },
+    {
+      "question": "A house is worth £180,000 after a 20% rise. Original value?",
+      "options": [
+        "£150,000",
+        "£144,000",
+        "£160,000",
+        "£170,000"
+      ],
+      "answer": "£150,000"
+    }
+  ],
+  "week": 3,
+  "level": "EL3"
+}

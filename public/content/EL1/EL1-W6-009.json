@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W6-009",
+  "session": 6,
+  "type": "gap_fill",
+  "title": "Since, For, Ago",
+  "topic": "Date & Time",
+  "instruction": "Complete the sentences with since, for, or ago.",
+  "passage": "I have lived in the UK ___ 2020. I have been here ___ 6 years. I arrived 6 years ___. I have studied English ___ 2 years. I started my course ___ last September.",
+  "blanks": [
+    "since",
+    "for",
+    "ago",
+    "for",
+    "since"
+  ],
+  "word_bank": [
+    "since",
+    "for",
+    "ago",
+    "for",
+    "since",
+    "by"
+  ],
+  "week": 6,
+  "level": "EL1"
+}

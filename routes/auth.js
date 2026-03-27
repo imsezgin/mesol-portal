@@ -56,4 +56,38 @@ router.post('/teacher', (req, res) => {
   res.json({ token });
 });
 
+// ── POST /api/auth/forgot-pin  ───────────────────────────────
+// Student requests a new PIN by phone number
+// Generates new PIN, updates DB, triggers WhatsApp via GHL
+router.post('/forgot-pin', async (req, res) => {
+  const { phone } = req.body;
+  if (!phone) return res.status(400).json({ error: 'Phone required' });
+
+  const normPhone = phone.trim().replace(/\s+/g, '');
+
+  const { data: student, error } = await supabase
+    .from('students')
+    .select('id, name, phone')
+    .eq('phone', normPhone)
+    .single();
+
+  if (error || !student) {
+    return res.status(404).json({ error: 'Phone number not found' });
+  }
+
+  // Generate new PIN
+  const pin = String(Math.floor(1000 + Math.random() * 9000));
+
+  await supabase
+    .from('students')
+    .update({ pin, pin_sent_at: new Date().toISOString() })
+    .eq('id', student.id);
+
+  // TODO: send WhatsApp via GHL when Make.com webhook is configured
+  // For now: log the PIN so it can be communicated manually
+  console.log(`PIN reset for ${student.name} (${student.phone}): ${pin}`);
+
+  res.json({ success: true, message: 'New PIN generated' });
+});
+
 module.exports = router;

@@ -1,0 +1,52 @@
+{
+  "id": "EL1-W3-008",
+  "session": 3,
+  "type": "mcq",
+  "title": "Fractions in Real Life",
+  "topic": "Fractions & Percentages",
+  "instruction": "Choose the correct answer.",
+  "questions": [
+    {
+      "question": "A sale says '50% off'. What does that mean?",
+      "options": [
+        "Half price",
+        "Free",
+        "Double price",
+        "Full price"
+      ],
+      "answer": "Half price"
+    },
+    {
+      "question": "You eat 2 slices from a 4-slice cake. What fraction is left?",
+      "options": [
+        "1/2",
+        "1/4",
+        "3/4",
+        "2/4"
+      ],
+      "answer": "1/2"
+    },
+    {
+      "question": "A glass is half full. What percentage is full?",
+      "options": [
+        "50%",
+        "25%",
+        "100%",
+        "0%"
+      ],
+      "answer": "50%"
+    },
+    {
+      "question": "Half of £20 is...",
+      "options": [
+        "£10",
+        "£20",
+        "£5",
+        "£15"
+      ],
+      "answer": "£10"
+    }
+  ],
+  "week": 3,
+  "level": "EL1"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W2-006",
+  "session": 2,
+  "type": "gap_fill",
+  "title": "Analysing a Comparison Table",
+  "topic": "Comparisons",
+  "instruction": "Complete the analysis of the comparison data.",
+  "passage": "The table shows electricity costs for three ___ over six months. Provider X had the lowest ___ cost at £42.50 per month. Provider Y's costs ___ significantly, ranging from £38 to £55. The ___ across all providers was £45.20 per month. Based on this analysis, Provider X is the most ___ option.",
+  "blanks": [
+    "providers",
+    "average",
+    "fluctuated",
+    "mean",
+    "consistent"
+  ],
+  "word_bank": [
+    "providers",
+    "average",
+    "fluctuated",
+    "mean",
+    "consistent",
+    "variable",
+    "expensive"
+  ],
+  "week": 2,
+  "level": "EL3"
+}

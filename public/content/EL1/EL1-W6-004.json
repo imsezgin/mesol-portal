@@ -1,0 +1,80 @@
+{
+  "id": "EL1-W6-004",
+  "session": 6,
+  "type": "mesol_combo",
+  "title": "Making an Appointment",
+  "topic": "Date & Time",
+  "context": "You need to make a doctor's appointment. The surgery is open Monday to Friday, 8am to 6pm.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What does 'appointment' mean?",
+        "options": [
+          "An arranged time to meet someone",
+          "A type of medicine",
+          "A phone call",
+          "A hospital"
+        ],
+        "answer": "An arranged time to meet someone"
+      },
+      {
+        "question": "What does 'available' mean?",
+        "options": [
+          "Free / not busy",
+          "Expensive",
+          "Closed",
+          "Open all day"
+        ],
+        "answer": "Free / not busy"
+      },
+      {
+        "question": "'Could I book an appointment?' is...",
+        "options": [
+          "A polite request",
+          "A complaint",
+          "An order",
+          "A question about price"
+        ],
+        "answer": "A polite request"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Answer the time questions.",
+    "questions": [
+      {
+        "question": "The surgery opens at 8am and closes at 6pm. How many hours?",
+        "options": [
+          "10 hours",
+          "6 hours",
+          "8 hours",
+          "12 hours"
+        ],
+        "answer": "10 hours"
+      },
+      {
+        "question": "Your appointment is at 10:30. It is 10:15 now. How many minutes?",
+        "options": [
+          "15 minutes",
+          "30 minutes",
+          "10 minutes",
+          "45 minutes"
+        ],
+        "answer": "15 minutes"
+      },
+      {
+        "question": "The doctor runs 20 minutes late. Your 2pm appointment starts at...",
+        "options": [
+          "2:20",
+          "2:40",
+          "1:40",
+          "2:10"
+        ],
+        "answer": "2:20"
+      }
+    ]
+  },
+  "week": 6,
+  "level": "EL1"
+}

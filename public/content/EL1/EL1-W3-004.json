@@ -1,0 +1,80 @@
+{
+  "id": "EL1-W3-004",
+  "session": 3,
+  "type": "mesol_combo",
+  "title": "Pizza Fractions",
+  "topic": "Fractions & Percentages",
+  "context": "A pizza is cut into 8 equal slices. There are 4 people sharing the pizza.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What does 'share equally' mean?",
+        "options": [
+          "Everyone gets the same amount",
+          "One person gets more",
+          "Nobody gets any",
+          "Only one person eats"
+        ],
+        "answer": "Everyone gets the same amount"
+      },
+      {
+        "question": "What is a 'slice'?",
+        "options": [
+          "A piece cut from something",
+          "The whole pizza",
+          "The box",
+          "The topping"
+        ],
+        "answer": "A piece cut from something"
+      },
+      {
+        "question": "What does 'divide' mean?",
+        "options": [
+          "Split into smaller parts",
+          "Add together",
+          "Make bigger",
+          "Count"
+        ],
+        "answer": "Split into smaller parts"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Answer the maths questions about the pizza.",
+    "questions": [
+      {
+        "question": "8 slices shared between 4 people. How many each?",
+        "options": [
+          "2",
+          "4",
+          "8",
+          "1"
+        ],
+        "answer": "2"
+      },
+      {
+        "question": "2 slices out of 8 is what fraction?",
+        "options": [
+          "1/4",
+          "1/2",
+          "1/8",
+          "2/4"
+        ],
+        "answer": "1/4"
+      },
+      {
+        "question": "What percentage is 2 out of 8?",
+        "options": [
+          "25%",
+          "50%",
+          "12.5%",
+          "75%"
+        ],
+        "answer": "25%"
+      }
+    ]
+  },
+  "week": 3,
+  "level": "EL1"
+}

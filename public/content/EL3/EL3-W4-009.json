@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W4-009",
+  "session": 4,
+  "type": "gap_fill",
+  "title": "Mortgage Basics",
+  "topic": "Money & Calculations",
+  "instruction": "Complete the mortgage explanation.",
+  "passage": "A mortgage is a ___ to buy property. A typical deposit is ___% of the property value. For a £200,000 house with 10% deposit, you need £___. The mortgage amount is £___. At 4% interest over 25 years, monthly repayment is approximately £___.",
+  "blanks": [
+    "loan",
+    "10",
+    "20,000",
+    "180,000",
+    "950"
+  ],
+  "word_bank": [
+    "loan",
+    "10",
+    "20,000",
+    "180,000",
+    "950",
+    "5",
+    "200,000"
+  ],
+  "week": 4,
+  "level": "EL3"
+}

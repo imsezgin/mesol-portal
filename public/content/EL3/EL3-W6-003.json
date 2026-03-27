@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W6-003",
+  "session": 6,
+  "type": "gap_fill",
+  "title": "Pro Rata Calculations",
+  "topic": "Date & Time",
+  "instruction": "Complete the pro rata calculation.",
+  "passage": "A full-time salary is £28,000 for ___ hours per week. Pro rata for 20 hours: £28,000 × (20 ÷ ___) = £___. Annual leave: 25 days full-time. Pro rata: 25 × (20 ÷ 37.5) = ___ days. Pro rata means the payment is ___ to the hours worked.",
+  "blanks": [
+    "37.5",
+    "37.5",
+    "14,933",
+    "13.3",
+    "proportional"
+  ],
+  "word_bank": [
+    "37.5",
+    "37.5",
+    "14,933",
+    "13.3",
+    "proportional",
+    "equal",
+    "15,000"
+  ],
+  "week": 6,
+  "level": "EL3"
+}

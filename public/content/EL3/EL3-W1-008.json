@@ -1,0 +1,53 @@
+{
+  "id": "EL3-W1-008",
+  "session": 1,
+  "type": "mcq",
+  "title": "Proportional Reasoning with Recipes",
+  "topic": "Cooking & Weights",
+  "instruction": "Use proportional reasoning to answer.",
+  "context": "Bread recipe (makes 1 loaf): 500g strong flour, 7g yeast, 10g salt, 300ml warm water, 30ml olive oil.",
+  "questions": [
+    {
+      "question": "To make 3 loaves, how much flour?",
+      "options": [
+        "1500g (1.5kg)",
+        "1000g",
+        "500g",
+        "2000g"
+      ],
+      "answer": "1500g (1.5kg)"
+    },
+    {
+      "question": "To make 1.5 loaves, how much water?",
+      "options": [
+        "450ml",
+        "300ml",
+        "600ml",
+        "150ml"
+      ],
+      "answer": "450ml"
+    },
+    {
+      "question": "Flour costs £1.50 per kg. Cost for 3 loaves?",
+      "options": [
+        "£2.25",
+        "£1.50",
+        "£4.50",
+        "£3.00"
+      ],
+      "answer": "£2.25"
+    },
+    {
+      "question": "You only have 350g flour. What fraction of the recipe can you make?",
+      "options": [
+        "7/10",
+        "1/2",
+        "3/4",
+        "2/3"
+      ],
+      "answer": "7/10"
+    }
+  ],
+  "week": 1,
+  "level": "EL3"
+}

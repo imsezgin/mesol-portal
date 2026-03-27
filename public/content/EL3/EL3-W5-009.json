@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W5-009",
+  "session": 5,
+  "type": "gap_fill",
+  "title": "Pension Planning",
+  "topic": "Banking",
+  "instruction": "Complete the pension planning information.",
+  "passage": "A workplace pension requires you to contribute at least ___% of qualifying earnings. Your employer adds at least ___%. The government adds tax relief. If you earn £30,000, your minimum contribution is £___ per year. With employer and tax relief, total going into your pension is much ___. Starting ___ means more compound growth.",
+  "blanks": [
+    "5",
+    "3",
+    "1,500",
+    "higher",
+    "early"
+  ],
+  "word_bank": [
+    "5",
+    "3",
+    "1,500",
+    "higher",
+    "early",
+    "8",
+    "later"
+  ],
+  "week": 5,
+  "level": "EL3"
+}

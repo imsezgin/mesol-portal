@@ -1,0 +1,100 @@
+{
+  "id": "EL2-W6-010",
+  "session": 6,
+  "type": "mesol_combo",
+  "title": "End of Course Review",
+  "topic": "Course Review",
+  "context": "This is the final review covering all topics from the 6-week MESOL course.",
+  "english_section": {
+    "instruction": "Review English vocabulary from the course.",
+    "questions": [
+      {
+        "question": "Complete: The coat was ___ expensive than the jacket.",
+        "options": [
+          "more",
+          "most",
+          "much",
+          "very"
+        ],
+        "answer": "more"
+      },
+      {
+        "question": "What does 'convert' mean?",
+        "options": [
+          "Change from one form to another",
+          "Buy something",
+          "Sell something",
+          "Cook something"
+        ],
+        "answer": "Change from one form to another"
+      },
+      {
+        "question": "A 'tariff' is...",
+        "options": [
+          "A set plan with prices",
+          "A type of food",
+          "A type of bank",
+          "A discount"
+        ],
+        "answer": "A set plan with prices"
+      },
+      {
+        "question": "What does 'approximately' mean?",
+        "options": [
+          "About / nearly",
+          "Exactly",
+          "Never",
+          "Always"
+        ],
+        "answer": "About / nearly"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Review maths from the course.",
+    "questions": [
+      {
+        "question": "Convert 2.5 kg to grams.",
+        "options": [
+          "2,500g",
+          "250g",
+          "25g",
+          "25,000g"
+        ],
+        "answer": "2,500g"
+      },
+      {
+        "question": "Find 15% of £60.",
+        "options": [
+          "£9",
+          "£15",
+          "£6",
+          "£90"
+        ],
+        "answer": "£9"
+      },
+      {
+        "question": "Mean of 20, 30, 40, 50?",
+        "options": [
+          "35",
+          "30",
+          "40",
+          "45"
+        ],
+        "answer": "35"
+      },
+      {
+        "question": "14:45 in 12-hour time?",
+        "options": [
+          "2:45 PM",
+          "4:45 PM",
+          "2:45 AM",
+          "12:45 PM"
+        ],
+        "answer": "2:45 PM"
+      }
+    ]
+  },
+  "week": 6,
+  "level": "EL2"
+}

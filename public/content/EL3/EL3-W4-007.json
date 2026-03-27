@@ -1,0 +1,36 @@
+{
+  "id": "EL3-W4-007",
+  "session": 4,
+  "type": "vocab_match",
+  "title": "Banking & Payment Terms",
+  "topic": "Money & Calculations",
+  "instruction": "Match each term to its definition.",
+  "pairs": [
+    {
+      "term": "direct debit",
+      "definition": "automatic payment that can vary in amount"
+    },
+    {
+      "term": "standing order",
+      "definition": "automatic payment of a fixed amount"
+    },
+    {
+      "term": "contactless",
+      "definition": "payment by tapping a card or phone"
+    },
+    {
+      "term": "BACS",
+      "definition": "bank transfer that takes 2-3 working days"
+    },
+    {
+      "term": "Faster Payment",
+      "definition": "bank transfer that arrives within hours"
+    },
+    {
+      "term": "chargeback",
+      "definition": "reversing a card payment due to a dispute"
+    }
+  ],
+  "week": 4,
+  "level": "EL3"
+}

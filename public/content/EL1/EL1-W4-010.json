@@ -1,0 +1,80 @@
+{
+  "id": "EL1-W4-010",
+  "session": 4,
+  "type": "mesol_combo",
+  "title": "Paying Bills",
+  "topic": "Money & Calculations",
+  "context": "You need to pay a plumber. The plumber charges £40 per hour and worked for 2 hours. There is also a £20 call-out charge.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What is a 'call-out charge'?",
+        "options": [
+          "A fee for coming to your home",
+          "The cost of a phone call",
+          "A tip",
+          "A delivery charge"
+        ],
+        "answer": "A fee for coming to your home"
+      },
+      {
+        "question": "What does 'per hour' mean?",
+        "options": [
+          "For each hour of work",
+          "For the whole job",
+          "Per day",
+          "Once a week"
+        ],
+        "answer": "For each hour of work"
+      },
+      {
+        "question": "What is an 'invoice'?",
+        "options": [
+          "A bill sent for payment",
+          "A receipt",
+          "A contract",
+          "A warranty"
+        ],
+        "answer": "A bill sent for payment"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate the plumber's bill.",
+    "questions": [
+      {
+        "question": "Labour: £40 × 2 hours = ?",
+        "options": [
+          "£80",
+          "£40",
+          "£60",
+          "£120"
+        ],
+        "answer": "£80"
+      },
+      {
+        "question": "Total: Labour + call-out = ?",
+        "options": [
+          "£100",
+          "£80",
+          "£120",
+          "£60"
+        ],
+        "answer": "£100"
+      },
+      {
+        "question": "You pay with two £50 notes. Change?",
+        "options": [
+          "£0 (exact amount)",
+          "£50",
+          "£10",
+          "£20"
+        ],
+        "answer": "£0 (exact amount)"
+      }
+    ]
+  },
+  "week": 4,
+  "level": "EL1"
+}

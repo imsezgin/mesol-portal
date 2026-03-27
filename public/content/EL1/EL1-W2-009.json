@@ -1,0 +1,32 @@
+{
+  "id": "EL1-W2-009",
+  "session": 2,
+  "type": "vocab_match",
+  "title": "More Comparison Words",
+  "topic": "Comparisons",
+  "instruction": "Match each comparison word pair.",
+  "pairs": [
+    {
+      "term": "tall / taller",
+      "definition": "high / higher than something else"
+    },
+    {
+      "term": "fast / faster",
+      "definition": "quick / quicker than something else"
+    },
+    {
+      "term": "good / better",
+      "definition": "nice / nicer than something else"
+    },
+    {
+      "term": "bad / worse",
+      "definition": "not nice / less nice than before"
+    },
+    {
+      "term": "far / further",
+      "definition": "a long way / a longer way"
+    }
+  ],
+  "week": 2,
+  "level": "EL1"
+}

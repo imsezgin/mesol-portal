@@ -1,0 +1,482 @@
+[
+  {
+    "id": "EL1-W1-001",
+    "week": 1,
+    "session": 1,
+    "type": "vocab_match",
+    "title": "Weights & Measures Vocabulary",
+    "topic": "Weights & Measures"
+  },
+  {
+    "id": "EL1-W1-002",
+    "week": 1,
+    "session": 1,
+    "type": "mcq",
+    "title": "Which Unit?",
+    "topic": "Weights & Measures"
+  },
+  {
+    "id": "EL1-W1-003",
+    "week": 1,
+    "session": 1,
+    "type": "gap_fill",
+    "title": "Filling in a Form",
+    "topic": "Forms & Personal Info"
+  },
+  {
+    "id": "EL1-W1-004",
+    "week": 1,
+    "session": 1,
+    "type": "mcq",
+    "title": "Metric or Imperial?",
+    "topic": "Weights & Measures"
+  },
+  {
+    "id": "EL1-W1-005",
+    "week": 1,
+    "session": 1,
+    "type": "vocab_match",
+    "title": "Abbreviations",
+    "topic": "Weights & Measures"
+  },
+  {
+    "id": "EL1-W1-006",
+    "week": 1,
+    "session": 1,
+    "type": "gap_fill",
+    "title": "Reading a Recipe",
+    "topic": "Cooking & Weights"
+  },
+  {
+    "id": "EL1-W1-007",
+    "week": 1,
+    "session": 1,
+    "type": "mesol_combo",
+    "title": "Cooking with Numbers",
+    "topic": "Cooking & Weights"
+  },
+  {
+    "id": "EL1-W1-008",
+    "week": 1,
+    "session": 1,
+    "type": "mcq",
+    "title": "Reading Food Labels",
+    "topic": "Weights & Measures"
+  },
+  {
+    "id": "EL1-W1-009",
+    "week": 1,
+    "session": 1,
+    "type": "gap_fill",
+    "title": "At the Market",
+    "topic": "Weights & Measures"
+  },
+  {
+    "id": "EL1-W1-010",
+    "week": 1,
+    "session": 1,
+    "type": "mesol_combo",
+    "title": "Scaling a Recipe",
+    "topic": "Cooking & Weights"
+  },
+  {
+    "id": "EL1-W2-001",
+    "week": 2,
+    "session": 2,
+    "type": "vocab_match",
+    "title": "Comparison Words",
+    "topic": "Comparisons"
+  },
+  {
+    "id": "EL1-W2-002",
+    "week": 2,
+    "session": 2,
+    "type": "mcq",
+    "title": "Comparing Prices",
+    "topic": "Comparisons"
+  },
+  {
+    "id": "EL1-W2-003",
+    "week": 2,
+    "session": 2,
+    "type": "gap_fill",
+    "title": "Comparing Two Phones",
+    "topic": "Comparisons"
+  },
+  {
+    "id": "EL1-W2-004",
+    "week": 2,
+    "session": 2,
+    "type": "mcq",
+    "title": "Understanding 'Per'",
+    "topic": "Comparisons"
+  },
+  {
+    "id": "EL1-W2-005",
+    "week": 2,
+    "session": 2,
+    "type": "vocab_match",
+    "title": "Shopping Words",
+    "topic": "Comparisons"
+  },
+  {
+    "id": "EL1-W2-006",
+    "week": 2,
+    "session": 2,
+    "type": "mesol_combo",
+    "title": "Supermarket Shopping",
+    "topic": "Comparisons"
+  },
+  {
+    "id": "EL1-W2-007",
+    "week": 2,
+    "session": 2,
+    "type": "gap_fill",
+    "title": "Comparing Energy",
+    "topic": "Comparisons"
+  },
+  {
+    "id": "EL1-W2-008",
+    "week": 2,
+    "session": 2,
+    "type": "mcq",
+    "title": "Better Value",
+    "topic": "Comparisons"
+  },
+  {
+    "id": "EL1-W2-009",
+    "week": 2,
+    "session": 2,
+    "type": "vocab_match",
+    "title": "More Comparison Words",
+    "topic": "Comparisons"
+  },
+  {
+    "id": "EL1-W2-010",
+    "week": 2,
+    "session": 2,
+    "type": "mesol_combo",
+    "title": "Choosing a Mobile Phone",
+    "topic": "Comparisons"
+  },
+  {
+    "id": "EL1-W3-001",
+    "week": 3,
+    "session": 3,
+    "type": "vocab_match",
+    "title": "Fraction Words",
+    "topic": "Fractions & Percentages"
+  },
+  {
+    "id": "EL1-W3-002",
+    "week": 3,
+    "session": 3,
+    "type": "mcq",
+    "title": "Simple Fractions",
+    "topic": "Fractions & Percentages"
+  },
+  {
+    "id": "EL1-W3-003",
+    "week": 3,
+    "session": 3,
+    "type": "gap_fill",
+    "title": "Sharing Equally",
+    "topic": "Fractions & Percentages"
+  },
+  {
+    "id": "EL1-W3-004",
+    "week": 3,
+    "session": 3,
+    "type": "mesol_combo",
+    "title": "Pizza Fractions",
+    "topic": "Fractions & Percentages"
+  },
+  {
+    "id": "EL1-W3-005",
+    "week": 3,
+    "session": 3,
+    "type": "mcq",
+    "title": "Fractions and Percentages",
+    "topic": "Fractions & Percentages"
+  },
+  {
+    "id": "EL1-W3-006",
+    "week": 3,
+    "session": 3,
+    "type": "gap_fill",
+    "title": "Time and Fractions",
+    "topic": "Fractions & Percentages"
+  },
+  {
+    "id": "EL1-W3-007",
+    "week": 3,
+    "session": 3,
+    "type": "vocab_match",
+    "title": "Percentage Words",
+    "topic": "Fractions & Percentages"
+  },
+  {
+    "id": "EL1-W3-008",
+    "week": 3,
+    "session": 3,
+    "type": "mcq",
+    "title": "Fractions in Real Life",
+    "topic": "Fractions & Percentages"
+  },
+  {
+    "id": "EL1-W3-009",
+    "week": 3,
+    "session": 3,
+    "type": "gap_fill",
+    "title": "Sorting by Groups",
+    "topic": "Fractions & Percentages"
+  },
+  {
+    "id": "EL1-W3-010",
+    "week": 3,
+    "session": 3,
+    "type": "mesol_combo",
+    "title": "Shopping Discounts",
+    "topic": "Fractions & Percentages"
+  },
+  {
+    "id": "EL1-W4-001",
+    "week": 4,
+    "session": 4,
+    "type": "vocab_match",
+    "title": "Money Words",
+    "topic": "Money & Calculations"
+  },
+  {
+    "id": "EL1-W4-002",
+    "week": 4,
+    "session": 4,
+    "type": "mcq",
+    "title": "Coins and Notes",
+    "topic": "Money & Calculations"
+  },
+  {
+    "id": "EL1-W4-003",
+    "week": 4,
+    "session": 4,
+    "type": "gap_fill",
+    "title": "At the Cafe",
+    "topic": "Money & Calculations"
+  },
+  {
+    "id": "EL1-W4-004",
+    "week": 4,
+    "session": 4,
+    "type": "mesol_combo",
+    "title": "Shopping Addition",
+    "topic": "Money & Calculations"
+  },
+  {
+    "id": "EL1-W4-005",
+    "week": 4,
+    "session": 4,
+    "type": "mcq",
+    "title": "Adding Money",
+    "topic": "Money & Calculations"
+  },
+  {
+    "id": "EL1-W4-006",
+    "week": 4,
+    "session": 4,
+    "type": "gap_fill",
+    "title": "Restaurant Menu",
+    "topic": "Money & Calculations"
+  },
+  {
+    "id": "EL1-W4-007",
+    "week": 4,
+    "session": 4,
+    "type": "vocab_match",
+    "title": "Price Labels",
+    "topic": "Money & Calculations"
+  },
+  {
+    "id": "EL1-W4-008",
+    "week": 4,
+    "session": 4,
+    "type": "mcq",
+    "title": "Giving Change",
+    "topic": "Money & Calculations"
+  },
+  {
+    "id": "EL1-W4-009",
+    "week": 4,
+    "session": 4,
+    "type": "gap_fill",
+    "title": "Simple Discounts",
+    "topic": "Money & Calculations"
+  },
+  {
+    "id": "EL1-W4-010",
+    "week": 4,
+    "session": 4,
+    "type": "mesol_combo",
+    "title": "Paying Bills",
+    "topic": "Money & Calculations"
+  },
+  {
+    "id": "EL1-W5-001",
+    "week": 5,
+    "session": 5,
+    "type": "vocab_match",
+    "title": "Banking Words",
+    "topic": "Banking"
+  },
+  {
+    "id": "EL1-W5-002",
+    "week": 5,
+    "session": 5,
+    "type": "mcq",
+    "title": "Bank Accounts",
+    "topic": "Banking"
+  },
+  {
+    "id": "EL1-W5-003",
+    "week": 5,
+    "session": 5,
+    "type": "gap_fill",
+    "title": "At the Bank",
+    "topic": "Banking"
+  },
+  {
+    "id": "EL1-W5-004",
+    "week": 5,
+    "session": 5,
+    "type": "mesol_combo",
+    "title": "Debit vs Credit",
+    "topic": "Banking"
+  },
+  {
+    "id": "EL1-W5-005",
+    "week": 5,
+    "session": 5,
+    "type": "mcq",
+    "title": "Positive and Negative",
+    "topic": "Banking"
+  },
+  {
+    "id": "EL1-W5-006",
+    "week": 5,
+    "session": 5,
+    "type": "gap_fill",
+    "title": "Using a Cash Machine",
+    "topic": "Banking"
+  },
+  {
+    "id": "EL1-W5-007",
+    "week": 5,
+    "session": 5,
+    "type": "vocab_match",
+    "title": "Bank Card Words",
+    "topic": "Banking"
+  },
+  {
+    "id": "EL1-W5-008",
+    "week": 5,
+    "session": 5,
+    "type": "mcq",
+    "title": "Simple Banking Maths",
+    "topic": "Banking"
+  },
+  {
+    "id": "EL1-W5-009",
+    "week": 5,
+    "session": 5,
+    "type": "gap_fill",
+    "title": "Saving Money",
+    "topic": "Banking"
+  },
+  {
+    "id": "EL1-W5-010",
+    "week": 5,
+    "session": 5,
+    "type": "mesol_combo",
+    "title": "Understanding Inflation",
+    "topic": "Banking"
+  },
+  {
+    "id": "EL1-W6-001",
+    "week": 6,
+    "session": 6,
+    "type": "vocab_match",
+    "title": "Days and Months",
+    "topic": "Date & Time"
+  },
+  {
+    "id": "EL1-W6-002",
+    "week": 6,
+    "session": 6,
+    "type": "mcq",
+    "title": "Telling the Time",
+    "topic": "Date & Time"
+  },
+  {
+    "id": "EL1-W6-003",
+    "week": 6,
+    "session": 6,
+    "type": "gap_fill",
+    "title": "Writing the Date",
+    "topic": "Date & Time"
+  },
+  {
+    "id": "EL1-W6-004",
+    "week": 6,
+    "session": 6,
+    "type": "mesol_combo",
+    "title": "Making an Appointment",
+    "topic": "Date & Time"
+  },
+  {
+    "id": "EL1-W6-005",
+    "week": 6,
+    "session": 6,
+    "type": "mcq",
+    "title": "Ordinal Numbers",
+    "topic": "Date & Time"
+  },
+  {
+    "id": "EL1-W6-006",
+    "week": 6,
+    "session": 6,
+    "type": "gap_fill",
+    "title": "Digital and Analogue Time",
+    "topic": "Date & Time"
+  },
+  {
+    "id": "EL1-W6-007",
+    "week": 6,
+    "session": 6,
+    "type": "vocab_match",
+    "title": "Time Words",
+    "topic": "Date & Time"
+  },
+  {
+    "id": "EL1-W6-008",
+    "week": 6,
+    "session": 6,
+    "type": "mcq",
+    "title": "Numbers to 60",
+    "topic": "Date & Time"
+  },
+  {
+    "id": "EL1-W6-009",
+    "week": 6,
+    "session": 6,
+    "type": "gap_fill",
+    "title": "Since, For, Ago",
+    "topic": "Date & Time"
+  },
+  {
+    "id": "EL1-W6-010",
+    "week": 6,
+    "session": 6,
+    "type": "mesol_combo",
+    "title": "Course Review Quiz",
+    "topic": "Course Review"
+  }
+]

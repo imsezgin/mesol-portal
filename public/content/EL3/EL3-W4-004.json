@@ -1,0 +1,90 @@
+{
+  "id": "EL3-W4-004",
+  "session": 4,
+  "type": "mesol_combo",
+  "title": "Business Costings",
+  "topic": "Money & Calculations",
+  "context": "You run a small food stall. Costs per portion: ingredients £2.30, packaging £0.40, pitch fee £80/day (you sell about 40 portions/day).",
+  "english_section": {
+    "instruction": "Answer the business vocabulary questions.",
+    "questions": [
+      {
+        "question": "What is a 'profit margin'?",
+        "options": [
+          "The difference between cost and selling price",
+          "The total sales",
+          "The total costs",
+          "The number of items sold"
+        ],
+        "answer": "The difference between cost and selling price"
+      },
+      {
+        "question": "What does 'break even' mean?",
+        "options": [
+          "When total income equals total costs",
+          "When you make a loss",
+          "When you make a big profit",
+          "When you sell nothing"
+        ],
+        "answer": "When total income equals total costs"
+      },
+      {
+        "question": "What is 'overhead'?",
+        "options": [
+          "Ongoing business costs not tied to one product",
+          "The price of ingredients",
+          "The selling price",
+          "Profit"
+        ],
+        "answer": "Ongoing business costs not tied to one product"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate the business figures.",
+    "questions": [
+      {
+        "question": "Cost per portion (ingredients + packaging + pitch share)?",
+        "options": [
+          "£4.70",
+          "£2.70",
+          "£3.70",
+          "£5.00"
+        ],
+        "answer": "£4.70"
+      },
+      {
+        "question": "If selling price is £7, profit per portion?",
+        "options": [
+          "£2.30",
+          "£4.70",
+          "£7.00",
+          "£3.00"
+        ],
+        "answer": "£2.30"
+      },
+      {
+        "question": "Daily revenue at 40 portions × £7?",
+        "options": [
+          "£280",
+          "£188",
+          "£320",
+          "£200"
+        ],
+        "answer": "£280"
+      },
+      {
+        "question": "Daily profit (revenue - all costs)?",
+        "options": [
+          "£92",
+          "£108",
+          "£280",
+          "£80"
+        ],
+        "answer": "£92"
+      }
+    ]
+  },
+  "week": 4,
+  "level": "EL3"
+}

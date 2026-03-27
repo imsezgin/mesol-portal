@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W6-003",
+  "session": 6,
+  "type": "gap_fill",
+  "title": "Writing the Date",
+  "topic": "Date & Time",
+  "instruction": "Fill in the blanks about dates.",
+  "passage": "Today is the ___ of March. March is the ___ month of the year. There are ___ months in a year. The day after Friday is ___. The month before April is ___.",
+  "blanks": [
+    "27th",
+    "third",
+    "12",
+    "Saturday",
+    "March"
+  ],
+  "word_bank": [
+    "27th",
+    "third",
+    "12",
+    "Saturday",
+    "March",
+    "Sunday"
+  ],
+  "week": 6,
+  "level": "EL1"
+}

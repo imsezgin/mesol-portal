@@ -1,0 +1,62 @@
+{
+  "id": "EL3-W2-002",
+  "session": 2,
+  "type": "mcq",
+  "title": "Advanced Price Analysis",
+  "topic": "Comparisons",
+  "instruction": "Analyse the data and choose the correct answer.",
+  "questions": [
+    {
+      "question": "Item A: 1.5kg for £3.60. Item B: 2kg for £4.40. Price per kg for A?",
+      "options": [
+        "£2.40",
+        "£3.60",
+        "£1.80",
+        "£2.00"
+      ],
+      "answer": "£2.40"
+    },
+    {
+      "question": "Price per kg for B?",
+      "options": [
+        "£2.20",
+        "£4.40",
+        "£2.00",
+        "£2.40"
+      ],
+      "answer": "£2.20"
+    },
+    {
+      "question": "Find the median of: 12, 18, 22, 35, 41",
+      "options": [
+        "22",
+        "18",
+        "25.6",
+        "35"
+      ],
+      "answer": "22"
+    },
+    {
+      "question": "Monthly bills: £42, £38, £45, £38, £50, £38. What is the mode?",
+      "options": [
+        "£38",
+        "£42",
+        "£45",
+        "£50"
+      ],
+      "answer": "£38"
+    },
+    {
+      "question": "Same bills. What is the mean?",
+      "options": [
+        "£41.83",
+        "£38",
+        "£42",
+        "£45"
+      ],
+      "answer": "£41.83"
+    }
+  ],
+  "week": 2,
+  "level": "EL3"
+}

@@ -1,0 +1,80 @@
+{
+  "id": "EL1-W5-004",
+  "session": 5,
+  "type": "mesol_combo",
+  "title": "Debit vs Credit",
+  "topic": "Banking",
+  "context": "A debit card uses money from your account. A credit card borrows money that you must pay back.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What does 'borrow' mean?",
+        "options": [
+          "Take something that you give back later",
+          "Keep forever",
+          "Buy",
+          "Sell"
+        ],
+        "answer": "Take something that you give back later"
+      },
+      {
+        "question": "What does 'pay back' mean?",
+        "options": [
+          "Return the money you borrowed",
+          "Pay again",
+          "Pay nothing",
+          "Pay less"
+        ],
+        "answer": "Return the money you borrowed"
+      },
+      {
+        "question": "What does 'owe' mean?",
+        "options": [
+          "Need to pay money to someone",
+          "Have a lot of money",
+          "Save money",
+          "Spend money"
+        ],
+        "answer": "Need to pay money to someone"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Answer the maths questions.",
+    "questions": [
+      {
+        "question": "You have £100 in your account. You spend £35. Balance?",
+        "options": [
+          "£65",
+          "£35",
+          "£100",
+          "£135"
+        ],
+        "answer": "£65"
+      },
+      {
+        "question": "You spend £20 on your credit card. You owe...",
+        "options": [
+          "£20",
+          "£0",
+          "£100",
+          "£120"
+        ],
+        "answer": "£20"
+      },
+      {
+        "question": "You have £50. You buy something for £60 with debit. What happens?",
+        "options": [
+          "The payment may be declined",
+          "You get £10 extra",
+          "Nothing happens",
+          "You get £60"
+        ],
+        "answer": "The payment may be declined"
+      }
+    ]
+  },
+  "week": 5,
+  "level": "EL1"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "EL2-W6-001",
+  "session": 6,
+  "type": "vocab_match",
+  "title": "Date and Time Vocabulary",
+  "topic": "Date & Time",
+  "instruction": "Match each term to its meaning.",
+  "pairs": [
+    {
+      "term": "ordinal number",
+      "definition": "a number showing position (1st, 2nd, 3rd)"
+    },
+    {
+      "term": "leap year",
+      "definition": "a year with 366 days (February has 29)"
+    },
+    {
+      "term": "fortnight",
+      "definition": "a period of two weeks"
+    },
+    {
+      "term": "annually",
+      "definition": "once a year"
+    },
+    {
+      "term": "duration",
+      "definition": "how long something lasts"
+    },
+    {
+      "term": "quarter",
+      "definition": "a period of three months"
+    }
+  ],
+  "week": 6,
+  "level": "EL2"
+}

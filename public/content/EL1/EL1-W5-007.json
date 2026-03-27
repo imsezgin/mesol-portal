@@ -1,0 +1,32 @@
+{
+  "id": "EL1-W5-007",
+  "session": 5,
+  "type": "vocab_match",
+  "title": "Bank Card Words",
+  "topic": "Banking",
+  "instruction": "Match each word to what it means.",
+  "pairs": [
+    {
+      "term": "balance",
+      "definition": "how much money is in your account"
+    },
+    {
+      "term": "withdraw",
+      "definition": "take money out of your account"
+    },
+    {
+      "term": "deposit",
+      "definition": "put money into your account"
+    },
+    {
+      "term": "transfer",
+      "definition": "move money to another account"
+    },
+    {
+      "term": "statement",
+      "definition": "a paper showing all your account activity"
+    }
+  ],
+  "week": 5,
+  "level": "EL1"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "EL1-W4-001",
+  "session": 4,
+  "type": "vocab_match",
+  "title": "Money Words",
+  "topic": "Money & Calculations",
+  "instruction": "Match each money word to its meaning.",
+  "pairs": [
+    {
+      "term": "pound",
+      "definition": "the main unit of British money (£)"
+    },
+    {
+      "term": "pence",
+      "definition": "small units of money (100 = £1)"
+    },
+    {
+      "term": "change",
+      "definition": "money you get back after paying"
+    },
+    {
+      "term": "total",
+      "definition": "all the amounts added together"
+    },
+    {
+      "term": "receipt",
+      "definition": "paper showing what you bought and paid"
+    }
+  ],
+  "week": 4,
+  "level": "EL1"
+}

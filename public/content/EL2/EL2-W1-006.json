@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W1-006",
+  "session": 1,
+  "type": "gap_fill",
+  "title": "Reading a Recipe Card",
+  "topic": "Cooking & Weights",
+  "instruction": "Complete the recipe card with the correct words.",
+  "passage": "Chocolate Brownies (makes 12). ___ the oven to 180°C. ___ 200g of butter in a pan. ___ 250g of sugar and 3 eggs together. ___ in 100g of cocoa powder. ___ into a baking tin and cook for 25 minutes.",
+  "blanks": [
+    "Preheat",
+    "Melt",
+    "Mix",
+    "Stir",
+    "Pour"
+  ],
+  "word_bank": [
+    "Preheat",
+    "Melt",
+    "Mix",
+    "Stir",
+    "Pour",
+    "Chop",
+    "Slice"
+  ],
+  "week": 1,
+  "level": "EL2"
+}

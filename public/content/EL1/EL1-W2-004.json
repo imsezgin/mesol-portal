@@ -1,0 +1,52 @@
+{
+  "id": "EL1-W2-004",
+  "session": 2,
+  "type": "mcq",
+  "title": "Understanding 'Per'",
+  "topic": "Comparisons",
+  "instruction": "Choose the correct answer about 'per'.",
+  "questions": [
+    {
+      "question": "What does 'per' mean?",
+      "options": [
+        "For each one",
+        "All together",
+        "None",
+        "Half"
+      ],
+      "answer": "For each one"
+    },
+    {
+      "question": "Bananas cost 80p per kilogram. How much for 2 kg?",
+      "options": [
+        "£1.60",
+        "80p",
+        "£2.40",
+        "£0.80"
+      ],
+      "answer": "£1.60"
+    },
+    {
+      "question": "Parking costs £2 per hour. How much for 3 hours?",
+      "options": [
+        "£6",
+        "£2",
+        "£3",
+        "£5"
+      ],
+      "answer": "£6"
+    },
+    {
+      "question": "A bus ticket is £1.50 per journey. How much for 2 journeys?",
+      "options": [
+        "£3.00",
+        "£1.50",
+        "£4.50",
+        "£2.00"
+      ],
+      "answer": "£3.00"
+    }
+  ],
+  "week": 2,
+  "level": "EL1"
+}

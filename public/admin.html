@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YESchool — Student Admin</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --green: #1a7a35; --green-dark: #0f5225; --green-pale: #f0faf2;
+  --green-light: #d4edda; --gold: #d4920a; --ink: #0d1117;
+  --mid: #4a5568; --muted: #8a96a3; --line: #e2e8f0;
+  --error: #c0392b; --error-bg: #fdecea; --white: #ffffff; --bg: #f7f9fb;
+}
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; background: var(--bg); color: var(--ink); }
+
+/* NAV */
+nav { background: var(--green-dark); height: 52px; display: flex; align-items: center; padding: 0 24px; gap: 16px; }
+.nav-logo { font-weight: 800; font-size: 17px; color: white; letter-spacing: -0.5px; }
+.nav-logo span { color: var(--gold); }
+.nav-tag { font-size: 11px; background: rgba(255,255,255,.15); color: rgba(255,255,255,.7); padding: 2px 10px; border-radius: 99px; }
+.nav-user { margin-left: auto; font-size: 12px; color: rgba(255,255,255,.6); }
+.btn-logout { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); color: white; padding: 5px 12px; border-radius: 6px; font-size: 12px; cursor: pointer; margin-left: 12px; }
+.btn-logout:hover { background: rgba(255,255,255,.2); }
+
+/* LOGIN SCREEN */
+.login-wrap { min-height: calc(100vh - 52px); display: flex; align-items: center; justify-content: center; padding: 24px; }
+.login-card { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 32px; width: 100%; max-width: 360px; box-shadow: 0 4px 24px rgba(0,0,0,.08); }
+.login-card h2 { font-size: 20px; margin-bottom: 4px; }
+.login-card p { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+
+/* MAIN LAYOUT */
+.main { max-width: 1000px; margin: 0 auto; padding: 28px 24px 60px; display: none; }
+.page-title { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.page-sub { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
+
+/* TABS */
+.tabs { display: flex; gap: 4px; margin-bottom: 24px; border-bottom: 2px solid var(--line); }
+.tab { padding: 10px 18px; font-size: 13px; font-weight: 600; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all .15s; }
+.tab:hover { color: var(--green); }
+.tab.active { color: var(--green); border-bottom-color: var(--green); }
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* CARDS */
+.card { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+.card-title { font-size: 15px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+
+/* FORM */
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 5px; }
+.form-group.full { grid-column: 1 / -1; }
+label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--mid); }
+input, select { padding: 10px 12px; border: 2px solid var(--line); border-radius: 8px; font-size: 14px; color: var(--ink); outline: none; transition: border-color .15s; background: white; }
+input:focus, select:focus { border-color: var(--green); }
+input::placeholder { color: var(--muted); }
+
+/* BUTTONS */
+.btn { padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; border: none; transition: all .15s; }
+.btn-primary { background: var(--green); color: white; }
+.btn-primary:hover { background: #2ea34d; }
+.btn-primary:disabled { background: var(--muted); cursor: not-allowed; }
+.btn-secondary { background: var(--green-pale); color: var(--green-dark); border: 1px solid var(--green-light); }
+.btn-secondary:hover { background: var(--green-light); }
+.btn-danger { background: var(--error-bg); color: var(--error); border: 1px solid #f5c6cb; }
+.btn-danger:hover { background: #f8d7da; }
+.btn-sm { padding: 6px 12px; font-size: 12px; }
+
+/* ALERTS */
+.alert { padding: 12px 16px; border-radius: 8px; font-size: 13px; margin-bottom: 16px; display: none; }
+.alert.show { display: block; }
+.alert-success { background: var(--green-pale); color: var(--green-dark); border: 1px solid var(--green-light); }
+.alert-error { background: var(--error-bg); color: var(--error); border: 1px solid #f5c6cb; }
+
+/* STUDENT TABLE */
+.student-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.student-table th { background: var(--ink); color: white; padding: 10px 12px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; }
+.student-table td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.student-table tr:hover td { background: var(--green-pale); }
+.student-table tr:last-child td { border-bottom: none; }
+
+/* BADGES */
+.badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 99px; }
+.badge-el1 { background: #e3f2fd; color: #1565c0; }
+.badge-el2 { background: #f3e5f5; color: #6a1b9a; }
+.badge-el3 { background: #fff8e1; color: #f57f17; }
+.badge-mesol { background: var(--green-light); color: var(--green-dark); }
+.badge-esol  { background: #e8eaf6; color: #283593; }
+.badge-ge    { background: #fce4ec; color: #880e4f; }
+
+/* PIN DISPLAY */
+.pin-reveal { font-family: monospace; font-size: 16px; font-weight: 700; background: var(--ink); color: #a8d8a8; padding: 4px 10px; border-radius: 6px; letter-spacing: 3px; }
+
+/* SEARCH */
+.search-bar { display: flex; gap: 10px; margin-bottom: 16px; }
+.search-bar input { flex: 1; }
+
+/* STATS ROW */
+.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+.stat-card { background: white; border: 1px solid var(--line); border-radius: 10px; padding: 16px; text-align: center; }
+.stat-n { font-size: 28px; font-weight: 700; color: var(--green); line-height: 1; margin-bottom: 4px; }
+.stat-l { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; }
+
+/* MODAL */
+.modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 100; align-items: center; justify-content: center; padding: 20px; }
+.modal-backdrop.show { display: flex; }
+.modal { background: white; border-radius: 16px; padding: 28px; max-width: 400px; width: 100%; }
+.modal h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+.modal p { color: var(--mid); font-size: 13px; margin-bottom: 20px; }
+.modal-actions { display: flex; gap: 10px; }
+
+@media (max-width: 600px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">YES<span>.</span></div>
+  <span class="nav-tag">Admin</span>
+  <div class="nav-user" id="navUser" style="display:none">
+    <span id="navUserName"></span>
+    <button class="btn-logout" onclick="logout()">Sign out</button>
+  </div>
+</nav>
+
+<!-- LOGIN -->
+<div class="login-wrap" id="loginWrap">
+  <div class="login-card">
+    <h2>Admin login</h2>
+    <p>For YESchool staff only</p>
+    <div class="form-group" style="margin-bottom:14px">
+      <label>Password</label>
+      <input type="password" id="adminPass" placeholder="Enter admin password" onkeydown="if(event.key==='Enter')doLogin()">
+    </div>
+    <div class="alert alert-error" id="loginError">Incorrect password</div>
+    <button class="btn btn-primary" style="width:100%" onclick="doLogin()">Sign in</button>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div class="main" id="mainApp">
+  <div class="page-title">Student Management</div>
+  <div class="page-sub">Manage MESOL portal students — add, view, reset PINs</div>
+
+  <!-- STATS -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-n" id="statTotal">—</div><div class="stat-l">Total students</div></div>
+    <div class="stat-card"><div class="stat-n" id="statMesol">—</div><div class="stat-l">MESOL</div></div>
+    <div class="stat-card"><div class="stat-n" id="statEl1">—</div><div class="stat-l">EL1</div></div>
+    <div class="stat-card"><div class="stat-n" id="statEl2">—</div><div class="stat-l">EL2 / EL3</div></div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('students')">All Students</div>
+    <div class="tab" onclick="switchTab('add')">Add Student</div>
+    <div class="tab" onclick="switchTab('bulk')">Bulk Add</div>
+  </div>
+
+  <!-- TAB: STUDENTS -->
+  <div class="tab-panel active" id="tab-students">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by name or phone..." oninput="filterStudents()">
+      <button class="btn btn-secondary" onclick="loadStudents()">↻ Refresh</button>
+    </div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <table class="student-table" id="studentTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Level</th>
+            <th>Programme</th>
+            <th>PIN</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="studentBody">
+          <tr><td colspan="6" style="text-align:center;color:var(--muted);padding:32px">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TAB: ADD STUDENT -->
+  <div class="tab-panel" id="tab-add">
+    <div class="card">
+      <div class="card-title">➕ Add a new student</div>
+      <div class="alert alert-success" id="addSuccess">Student added successfully! PIN sent via WhatsApp.</div>
+      <div class="alert alert-error" id="addError"></div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>First name</label>
+          <input type="text" id="addFirstName" placeholder="e.g. Fatima">
+        </div>
+        <div class="form-group">
+          <label>Last name</label>
+          <input type="text" id="addLastName" placeholder="e.g. Hassan">
+        </div>
+        <div class="form-group">
+          <label>Phone (UK mobile)</label>
+          <input type="tel" id="addPhone" placeholder="07700 900 123">
+        </div>
+        <div class="form-group">
+          <label>Email (optional)</label>
+          <input type="email" id="addEmail" placeholder="student@email.com">
+        </div>
+        <div class="form-group">
+          <label>Level</label>
+          <select id="addLevel">
+            <option value="EL1">EL1 — Entry Level 1 (beginner)</option>
+            <option value="EL2">EL2 — Entry Level 2</option>
+            <option value="EL3">EL3 — Entry Level 3</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Programme</label>
+          <select id="addProgramme">
+            <option value="MESOL">MESOL (Count Me In)</option>
+            <option value="ESOL">ESOL</option>
+            <option value="GE">General English</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>PIN (4 digits — use birth year e.g. 1989)</label>
+          <input type="text" id="addPin" placeholder="e.g. 1989" maxlength="4" pattern="[0-9]{4}">
+        </div>
+        <div class="form-group">
+          <label>Sheet row (row number in Google Sheets)</label>
+          <input type="number" id="addSheetRow" placeholder="e.g. 5" min="1">
+        </div>
+      </div>
+      <div style="margin-top:20px;display:flex;gap:10px">
+        <button class="btn btn-primary" id="addBtn" onclick="addStudent()">Add student + send PIN</button>
+        <button class="btn btn-secondary" onclick="clearAddForm()">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB: BULK ADD -->
+  <div class="tab-panel" id="tab-bulk">
+    <div class="card">
+      <div class="card-title">📋 Bulk add from list</div>
+      <p style="color:var(--mid);font-size:13px;margin-bottom:16px">Paste student data — one student per line in this format:<br>
+      <code style="background:var(--bg);padding:2px 6px;border-radius:4px;font-size:12px">Full Name | Phone | Level | Programme | SheetRow</code><br>
+      Example: <code style="background:var(--bg);padding:2px 6px;border-radius:4px;font-size:12px">Fatima Hassan | 07700900123 | EL1 | MESOL | 5</code></p>
+      <div class="form-group" style="margin-bottom:14px">
+        <label>Student data (one per line)</label>
+        <textarea id="bulkData" rows="8" style="padding:10px 12px;border:2px solid var(--line);border-radius:8px;font-size:13px;font-family:monospace;resize:vertical;width:100%;outline:none" placeholder="Fatima Hassan | 07700900123 | EL1 | MESOL | 5&#10;Ahmed Ali | 07700900456 | EL2 | MESOL | 6"></textarea>
+      </div>
+      <div class="alert alert-success" id="bulkSuccess"></div>
+      <div class="alert alert-error" id="bulkError"></div>
+      <button class="btn btn-primary" id="bulkBtn" onclick="bulkAdd()">Add all students</button>
+    </div>
+  </div>
+</div>
+
+<!-- PIN RESET MODAL -->
+<div class="modal-backdrop" id="resetModal">
+  <div class="modal">
+    <h3>Reset PIN</h3>
+    <p id="resetModalText">Generate a new 4-digit PIN for this student and send it via WhatsApp.</p>
+    <div class="alert alert-success" id="resetSuccess" style="margin-bottom:16px">New PIN sent via WhatsApp.</div>
+    <div class="modal-actions">
+      <button class="btn btn-primary" id="resetConfirmBtn" onclick="confirmReset()">Generate + send new PIN</button>
+      <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const TOKEN_KEY = 'yes_admin_token';
+const ADMIN_PASS_KEY = 'yes_admin_pass';
+let allStudents = [];
+let resetStudentId = null;
+let resetStudentName = null;
+
+// ── AUTH ────────────────────────────────────────────────────
+async function doLogin() {
+  const pass = document.getElementById('adminPass').value;
+  const res = await fetch('/api/auth/teacher', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password: pass })
+  });
+  const data = await res.json();
+  if (!res.ok) {
+    document.getElementById('loginError').classList.add('show');
+    return;
+  }
+  localStorage.setItem(TOKEN_KEY, data.token);
+  showApp();
+}
+
+function logout() {
+  localStorage.removeItem(TOKEN_KEY);
+  location.reload();
+}
+
+function showApp() {
+  const token = localStorage.getItem(TOKEN_KEY);
+  if (!token) return;
+  document.getElementById('loginWrap').style.display = 'none';
+  document.getElementById('mainApp').style.display = 'block';
+  document.getElementById('navUser').style.display = 'flex';
+  document.getElementById('navUserName').textContent = 'Admin';
+  loadStudents();
+}
+
+// ── TABS ────────────────────────────────────────────────────
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach((t, i) => {
+    const panels = ['students','add','bulk'];
+    t.classList.toggle('active', panels[i] === name);
+  });
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+}
+
+// ── LOAD STUDENTS ───────────────────────────────────────────
+async function loadStudents() {
+  const token = localStorage.getItem(TOKEN_KEY);
+  const res = await fetch('/api/teacher/cohort', {
+    headers: { 'Authorization': 'Bearer ' + token }
+  });
+  const data = await res.json();
+  allStudents = data.cohort || [];
+  renderStudents(allStudents);
+  updateStats(allStudents);
+}
+
+function updateStats(students) {
+  document.getElementById('statTotal').textContent = students.length;
+  document.getElementById('statMesol').textContent = students.filter(s => s.programme === 'MESOL').length;
+  document.getElementById('statEl1').textContent = students.filter(s => s.level === 'EL1').length;
+  document.getElementById('statEl2').textContent = students.filter(s => s.level === 'EL2' || s.level === 'EL3').length;
+}
+
+function renderStudents(students) {
+  const tbody = document.getElementById('studentBody');
+  if (!students.length) {
+    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--muted);padding:32px">No students found</td></tr>';
+    return;
+  }
+  tbody.innerHTML = students.map(s => `
+    <tr>
+      <td><strong>${s.name}</strong></td>
+      <td style="font-family:monospace;font-size:12px">${s.phone || '—'}</td>
+      <td><span class="badge badge-${s.level.toLowerCase()}">${s.level}</span></td>
+      <td><span class="badge badge-${s.programme.toLowerCase()}">${s.programme}</span></td>
+      <td><span class="pin-reveal" id="pin-${s.id}">••••</span>
+          <button class="btn btn-sm btn-secondary" style="margin-left:6px" onclick="togglePin('${s.id}','${s.pin||''}')">Show</button></td>
+      <td style="display:flex;gap:6px;flex-wrap:wrap">
+        <button class="btn btn-sm btn-secondary" onclick="openResetModal('${s.id}','${s.name}')">Reset PIN</button>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function togglePin(id, pin) {
+  const el = document.getElementById('pin-' + id);
+  el.textContent = el.textContent === '••••' ? (pin || '????') : '••••';
+}
+
+function filterStudents() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  const filtered = allStudents.filter(s =>
+    s.name.toLowerCase().includes(q) || (s.phone || '').includes(q)
+  );
+  renderStudents(filtered);
+}
+
+// ── ADD STUDENT ─────────────────────────────────────────────
+async function addStudent() {
+  const btn = document.getElementById('addBtn');
+  const successEl = document.getElementById('addSuccess');
+  const errorEl = document.getElementById('addError');
+  successEl.classList.remove('show');
+  errorEl.classList.remove('show');
+
+  const firstName = document.getElementById('addFirstName').value.trim();
+  const lastName = document.getElementById('addLastName').value.trim();
+  const rawPhone = document.getElementById('addPhone').value.trim().replace(/\s+/g,'');
+  const level = document.getElementById('addLevel').value;
+  const programme = document.getElementById('addProgramme').value;
+  const pin = document.getElementById('addPin').value.trim();
+  const sheetRow = parseInt(document.getElementById('addSheetRow').value);
+
+  if (!firstName || !lastName || !rawPhone || !sheetRow) {
+    errorEl.textContent = 'Please fill in all required fields.';
+    errorEl.classList.add('show');
+    return;
+  }
+  if (!pin || !/^\d{4}$/.test(pin)) {
+    errorEl.textContent = 'PIN must be exactly 4 digits (e.g. birth year 1989).';
+    errorEl.classList.add('show');
+    return;
+  }
+
+  // Format phone
+  let phone = rawPhone.replace(/^0/, '');
+  if (!phone.startsWith('+')) phone = '+44' + phone;
+
+  btn.disabled = true;
+  btn.textContent = 'Adding...';
+
+  const token = localStorage.getItem(TOKEN_KEY);
+  const res = await fetch('/api/students/create', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
+    body: JSON.stringify({ name: firstName + ' ' + lastName, phone, level, programme, sheet_row: sheetRow, pin })
+  });
+  const data = await res.json();
+
+  btn.disabled = false;
+  btn.textContent = 'Add student + send PIN';
+
+  if (!res.ok) {
+    errorEl.textContent = data.error || 'Failed to add student.';
+    errorEl.classList.add('show');
+    return;
+  }
+
+  if (data.action === 'already_exists') {
+    errorEl.textContent = 'A student with this phone number already exists.';
+    errorEl.classList.add('show');
+    return;
+  }
+
+  successEl.classList.add('show');
+  clearAddForm();
+  loadStudents();
+  setTimeout(() => switchTab('students'), 2000);
+}
+
+function clearAddForm() {
+  ['addFirstName','addLastName','addPhone','addEmail','addSheetRow'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('addLevel').value = 'EL1';
+  document.getElementById('addProgramme').value = 'MESOL';
+}
+
+// ── BULK ADD ────────────────────────────────────────────────
+async function bulkAdd() {
+  const btn = document.getElementById('bulkBtn');
+  const successEl = document.getElementById('bulkSuccess');
+  const errorEl = document.getElementById('bulkError');
+  successEl.classList.remove('show');
+  errorEl.classList.remove('show');
+
+  const lines = document.getElementById('bulkData').value.trim().split('\n').filter(l => l.trim());
+  if (!lines.length) { errorEl.textContent = 'No data entered.'; errorEl.classList.add('show'); return; }
+
+  btn.disabled = true;
+  btn.textContent = 'Adding...';
+
+  let added = 0, failed = 0, skipped = 0;
+
+  for (const line of lines) {
+    const parts = line.split('|').map(p => p.trim());
+    if (parts.length < 5) { failed++; continue; }
+    const [name, rawPhone, level, programme, sheetRow] = parts;
+    let phone = rawPhone.replace(/\s+/g,'').replace(/^0/,'');
+    if (!phone.startsWith('+')) phone = '+44' + phone;
+
+    const res = await fetch('/api/students/create', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
+      body: JSON.stringify({ name, phone, level: level.toUpperCase(), programme: programme.toUpperCase(), sheet_row: parseInt(sheetRow) })
+    });
+    const data = await res.json();
+    if (!res.ok) failed++;
+    else if (data.action === 'already_exists') skipped++;
+    else added++;
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Add all students';
+  successEl.textContent = `Done: ${added} added, ${skipped} already existed, ${failed} failed.`;
+  successEl.classList.add('show');
+  if (added > 0) { loadStudents(); document.getElementById('bulkData').value = ''; }
+}
+
+// ── PIN RESET ───────────────────────────────────────────────
+function openResetModal(id, name) {
+  resetStudentId = id;
+  resetStudentName = name;
+  document.getElementById('resetModalText').textContent = `Generate a new PIN for ${name} and send it to their phone via WhatsApp.`;
+  document.getElementById('resetSuccess').classList.remove('show');
+  document.getElementById('resetModal').classList.add('show');
+}
+
+function closeModal() {
+  document.getElementById('resetModal').classList.remove('show');
+  resetStudentId = null;
+}
+
+async function confirmReset() {
+  if (!resetStudentId) return;
+  const btn = document.getElementById('resetConfirmBtn');
+  btn.disabled = true;
+  btn.textContent = 'Resetting...';
+
+  const token = localStorage.getItem(TOKEN_KEY);
+  const res = await fetch('/api/students/' + resetStudentId + '/reset-pin', {
+    method: 'POST',
+    headers: { 'Authorization': 'Bearer ' + token }
+  });
+
+  btn.disabled = false;
+  btn.textContent = 'Generate + send new PIN';
+
+  if (res.ok) {
+    document.getElementById('resetSuccess').classList.add('show');
+    loadStudents();
+    setTimeout(closeModal, 2000);
+  }
+}
+
+// ── INIT ─────────────────────────────────────────────────────
+if (localStorage.getItem(TOKEN_KEY)) showApp();
+</script>
+</body>
+</html>

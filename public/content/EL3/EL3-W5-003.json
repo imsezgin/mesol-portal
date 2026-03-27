@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W5-003",
+  "session": 5,
+  "type": "gap_fill",
+  "title": "Mortgage Terminology",
+  "topic": "Banking",
+  "instruction": "Complete the mortgage explanation.",
+  "passage": "A mortgage ___ is the percentage of the property value you deposit. A 90% LTV (Loan to ___) means you borrow 90%. ___ rate mortgages keep the same interest rate. ___ rate mortgages can change. The ___ is the total amount borrowed plus interest paid over the full term.",
+  "blanks": [
+    "deposit",
+    "Value",
+    "Fixed",
+    "Variable",
+    "total cost"
+  ],
+  "word_bank": [
+    "deposit",
+    "Value",
+    "Fixed",
+    "Variable",
+    "total cost",
+    "Tracker",
+    "repayment"
+  ],
+  "week": 5,
+  "level": "EL3"
+}

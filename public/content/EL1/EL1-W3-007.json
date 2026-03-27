@@ -1,0 +1,32 @@
+{
+  "id": "EL1-W3-007",
+  "session": 3,
+  "type": "vocab_match",
+  "title": "Percentage Words",
+  "topic": "Fractions & Percentages",
+  "instruction": "Match each percentage to what it means.",
+  "pairs": [
+    {
+      "term": "10%",
+      "definition": "one tenth (a small part)"
+    },
+    {
+      "term": "25%",
+      "definition": "one quarter"
+    },
+    {
+      "term": "50%",
+      "definition": "one half"
+    },
+    {
+      "term": "75%",
+      "definition": "three quarters"
+    },
+    {
+      "term": "100%",
+      "definition": "all of it / the whole thing"
+    }
+  ],
+  "week": 3,
+  "level": "EL1"
+}

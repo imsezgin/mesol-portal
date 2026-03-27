@@ -1,0 +1,100 @@
+{
+  "id": "EL3-W6-010",
+  "session": 6,
+  "type": "mesol_combo",
+  "title": "Final Assessment",
+  "topic": "Course Review",
+  "context": "This is the final comprehensive review of the MESOL course covering all 6 weeks.",
+  "english_section": {
+    "instruction": "Answer the English review questions.",
+    "questions": [
+      {
+        "question": "Complete: 'She has lived here ___ 5 years.'",
+        "options": [
+          "for",
+          "since",
+          "ago",
+          "by"
+        ],
+        "answer": "for"
+      },
+      {
+        "question": "What is a 'surplus'?",
+        "options": [
+          "More than needed / extra",
+          "Not enough",
+          "The exact amount",
+          "A type of tax"
+        ],
+        "answer": "More than needed / extra"
+      },
+      {
+        "question": "What does 'fluctuate' mean?",
+        "options": [
+          "Rise and fall irregularly",
+          "Stay the same",
+          "Always increase",
+          "Decrease steadily"
+        ],
+        "answer": "Rise and fall irregularly"
+      },
+      {
+        "question": "What is 'disposable income'?",
+        "options": [
+          "Money left after essential bills",
+          "Total salary",
+          "Money you throw away",
+          "Credit card limit"
+        ],
+        "answer": "Money left after essential bills"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Final maths review.",
+    "questions": [
+      {
+        "question": "Convert 4.5kg to grams.",
+        "options": [
+          "4,500g",
+          "450g",
+          "45g",
+          "45,000g"
+        ],
+        "answer": "4,500g"
+      },
+      {
+        "question": "If inflation is 5% and savings earn 2%, real return?",
+        "options": [
+          "-3%",
+          "+3%",
+          "+7%",
+          "0%"
+        ],
+        "answer": "-3%"
+      },
+      {
+        "question": "£85 + 12.5% service charge?",
+        "options": [
+          "£95.63",
+          "£96.25",
+          "£97.50",
+          "£85.13"
+        ],
+        "answer": "£95.63"
+      },
+      {
+        "question": "17:45 minus 2 hours 30 minutes?",
+        "options": [
+          "15:15",
+          "15:45",
+          "14:15",
+          "15:30"
+        ],
+        "answer": "15:15"
+      }
+    ]
+  },
+  "week": 6,
+  "level": "EL3"
+}

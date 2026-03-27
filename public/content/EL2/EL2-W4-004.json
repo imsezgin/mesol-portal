@@ -1,0 +1,90 @@
+{
+  "id": "EL2-W4-004",
+  "session": 4,
+  "type": "mesol_combo",
+  "title": "Household Budget",
+  "topic": "Money & Calculations",
+  "context": "Monthly income: £1,800. Rent: £650. Bills: £180. Food: £300. Transport: £120. Phone: £25.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What are 'outgoings'?",
+        "options": [
+          "Regular payments you must make",
+          "Money coming in",
+          "Savings",
+          "Bonuses"
+        ],
+        "answer": "Regular payments you must make"
+      },
+      {
+        "question": "What does 'disposable income' mean?",
+        "options": [
+          "Money left after essential bills",
+          "Thrown-away money",
+          "All your income",
+          "Income from investments"
+        ],
+        "answer": "Money left after essential bills"
+      },
+      {
+        "question": "What is 'budgeting'?",
+        "options": [
+          "Planning how to spend and save money",
+          "Spending all your money",
+          "Borrowing money",
+          "Getting a pay rise"
+        ],
+        "answer": "Planning how to spend and save money"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate the budget.",
+    "questions": [
+      {
+        "question": "Total monthly outgoings?",
+        "options": [
+          "£1,275",
+          "£1,180",
+          "£1,350",
+          "£1,100"
+        ],
+        "answer": "£1,275"
+      },
+      {
+        "question": "Disposable income (£1,800 - outgoings)?",
+        "options": [
+          "£525",
+          "£620",
+          "£450",
+          "£700"
+        ],
+        "answer": "£525"
+      },
+      {
+        "question": "What percentage of income goes to rent? (650/1800 × 100)",
+        "options": [
+          "36.1%",
+          "50%",
+          "30%",
+          "25%"
+        ],
+        "answer": "36.1%"
+      },
+      {
+        "question": "If food spending reduces by 10%, new food cost?",
+        "options": [
+          "£270",
+          "£280",
+          "£250",
+          "£290"
+        ],
+        "answer": "£270"
+      }
+    ]
+  },
+  "week": 4,
+  "level": "EL2"
+}

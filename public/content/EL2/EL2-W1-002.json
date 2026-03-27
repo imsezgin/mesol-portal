@@ -1,0 +1,62 @@
+{
+  "id": "EL2-W1-002",
+  "session": 1,
+  "type": "mcq",
+  "title": "Converting Units",
+  "topic": "Weights & Measures",
+  "instruction": "Choose the correct answer for each conversion question.",
+  "questions": [
+    {
+      "question": "1 kilogram is approximately how many pounds?",
+      "options": [
+        "2.2 pounds",
+        "1 pound",
+        "5 pounds",
+        "10 pounds"
+      ],
+      "answer": "2.2 pounds"
+    },
+    {
+      "question": "1 pint is approximately how many millilitres?",
+      "options": [
+        "568 ml",
+        "100 ml",
+        "1000 ml",
+        "250 ml"
+      ],
+      "answer": "568 ml"
+    },
+    {
+      "question": "Which is more: 500g or 1 pound?",
+      "options": [
+        "500g",
+        "1 pound",
+        "They are the same",
+        "Cannot compare"
+      ],
+      "answer": "500g"
+    },
+    {
+      "question": "How many ounces are in 1 pound?",
+      "options": [
+        "16",
+        "10",
+        "12",
+        "8"
+      ],
+      "answer": "16"
+    },
+    {
+      "question": "1 US cup is approximately how many ml?",
+      "options": [
+        "240 ml",
+        "100 ml",
+        "500 ml",
+        "1000 ml"
+      ],
+      "answer": "240 ml"
+    }
+  ],
+  "week": 1,
+  "level": "EL2"
+}

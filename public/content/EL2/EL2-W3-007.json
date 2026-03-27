@@ -1,0 +1,32 @@
+{
+  "id": "EL2-W3-007",
+  "session": 3,
+  "type": "vocab_match",
+  "title": "Money and Fractions",
+  "topic": "Fractions & Percentages",
+  "instruction": "Match each money fraction to its value.",
+  "pairs": [
+    {
+      "term": "half of £1",
+      "definition": "50p"
+    },
+    {
+      "term": "quarter of £1",
+      "definition": "25p"
+    },
+    {
+      "term": "10% of £1",
+      "definition": "10p"
+    },
+    {
+      "term": "75% of £1",
+      "definition": "75p"
+    },
+    {
+      "term": "1/3 of £6",
+      "definition": "£2"
+    }
+  ],
+  "week": 3,
+  "level": "EL2"
+}

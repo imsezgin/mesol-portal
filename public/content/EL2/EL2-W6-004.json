@@ -1,0 +1,90 @@
+{
+  "id": "EL2-W6-004",
+  "session": 6,
+  "type": "mesol_combo",
+  "title": "Scheduling and Timetables",
+  "topic": "Date & Time",
+  "context": "Bus timetable: Bus 372 departs every 20 minutes from 7:00 AM. Last bus: 11:00 PM. Journey time to town centre: 35 minutes.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What is a 'timetable'?",
+        "options": [
+          "A schedule showing times of services",
+          "A table for food",
+          "A type of clock",
+          "A calendar"
+        ],
+        "answer": "A schedule showing times of services"
+      },
+      {
+        "question": "What does 'departs' mean?",
+        "options": [
+          "Leaves",
+          "Arrives",
+          "Stops",
+          "Waits"
+        ],
+        "answer": "Leaves"
+      },
+      {
+        "question": "What does 'peak time' mean?",
+        "options": [
+          "The busiest time of day",
+          "The quietest time",
+          "Nighttime",
+          "Weekend only"
+        ],
+        "answer": "The busiest time of day"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Work out the bus times.",
+    "questions": [
+      {
+        "question": "First bus: 7:00. Second bus?",
+        "options": [
+          "7:20",
+          "7:30",
+          "7:15",
+          "8:00"
+        ],
+        "answer": "7:20"
+      },
+      {
+        "question": "If you catch the 8:40 bus, what time do you arrive?",
+        "options": [
+          "9:15",
+          "9:00",
+          "9:20",
+          "8:55"
+        ],
+        "answer": "9:15"
+      },
+      {
+        "question": "How many buses run between 7:00 and 8:00 (inclusive)?",
+        "options": [
+          "4",
+          "3",
+          "5",
+          "6"
+        ],
+        "answer": "4"
+      },
+      {
+        "question": "How many hours from first to last bus?",
+        "options": [
+          "16 hours",
+          "11 hours",
+          "12 hours",
+          "15 hours"
+        ],
+        "answer": "16 hours"
+      }
+    ]
+  },
+  "week": 6,
+  "level": "EL2"
+}

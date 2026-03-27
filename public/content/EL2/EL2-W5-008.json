@@ -1,0 +1,52 @@
+{
+  "id": "EL2-W5-008",
+  "session": 5,
+  "type": "mcq",
+  "title": "Banking Scenarios",
+  "topic": "Banking",
+  "instruction": "Choose the best option for each scenario.",
+  "questions": [
+    {
+      "question": "You need to pay rent every month (same amount). Best method?",
+      "options": [
+        "Standing order",
+        "Cash",
+        "Cheque",
+        "Credit card"
+      ],
+      "answer": "Standing order"
+    },
+    {
+      "question": "Your electricity bill varies each month. Best method?",
+      "options": [
+        "Direct debit",
+        "Standing order",
+        "Cash",
+        "Cheque"
+      ],
+      "answer": "Direct debit"
+    },
+    {
+      "question": "You want to save for a holiday. Best account?",
+      "options": [
+        "Savings account",
+        "Current account",
+        "Credit card",
+        "Overdraft"
+      ],
+      "answer": "Savings account"
+    },
+    {
+      "question": "You need a new washing machine (£400) and have no savings. Cheapest borrowing?",
+      "options": [
+        "0% interest credit card",
+        "Store finance at 29.9% APR",
+        "Payday loan",
+        "Overdraft at 39.9%"
+      ],
+      "answer": "0% interest credit card"
+    }
+  ],
+  "week": 5,
+  "level": "EL2"
+}

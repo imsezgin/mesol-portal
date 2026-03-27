@@ -1,0 +1,62 @@
+{
+  "id": "EL2-W4-005",
+  "session": 4,
+  "type": "mcq",
+  "title": "Percentage Discounts",
+  "topic": "Money & Calculations",
+  "instruction": "Calculate the discounted prices.",
+  "questions": [
+    {
+      "question": "£80 jacket with 25% off?",
+      "options": [
+        "£60",
+        "£55",
+        "£65",
+        "£40"
+      ],
+      "answer": "£60"
+    },
+    {
+      "question": "£45 shoes with 1/3 off?",
+      "options": [
+        "£30",
+        "£15",
+        "£35",
+        "£20"
+      ],
+      "answer": "£30"
+    },
+    {
+      "question": "Buy 2, get 1 free on items costing £6 each. Cost for 3?",
+      "options": [
+        "£12",
+        "£18",
+        "£6",
+        "£15"
+      ],
+      "answer": "£12"
+    },
+    {
+      "question": "20% off £35?",
+      "options": [
+        "£28",
+        "£30",
+        "£25",
+        "£32"
+      ],
+      "answer": "£28"
+    },
+    {
+      "question": "Which saves more: 25% off £100 or 30% off £80?",
+      "options": [
+        "25% off £100 (saves £25)",
+        "30% off £80 (saves £24)",
+        "Both save the same",
+        "Cannot tell"
+      ],
+      "answer": "25% off £100 (saves £25)"
+    }
+  ],
+  "week": 4,
+  "level": "EL2"
+}

@@ -1,0 +1,90 @@
+{
+  "id": "EL3-W3-004",
+  "session": 3,
+  "type": "mesol_combo",
+  "title": "VAT and Tax Calculations",
+  "topic": "Fractions & Percentages",
+  "context": "UK VAT (Value Added Tax) is currently 20%. Some items have reduced VAT at 5%. Some items have 0% VAT (e.g. most food, children's clothes).",
+  "english_section": {
+    "instruction": "Answer the English questions about tax.",
+    "questions": [
+      {
+        "question": "What does VAT stand for?",
+        "options": [
+          "Value Added Tax",
+          "Very Additional Tax",
+          "Valued Amount Total",
+          "Variable Annual Tax"
+        ],
+        "answer": "Value Added Tax"
+      },
+      {
+        "question": "What does 'exempt' mean?",
+        "options": [
+          "Not required to pay",
+          "Must pay double",
+          "Gets a discount",
+          "Pays the standard rate"
+        ],
+        "answer": "Not required to pay"
+      },
+      {
+        "question": "What does 'inclusive of VAT' mean?",
+        "options": [
+          "The price already includes the tax",
+          "Tax is added on top",
+          "There is no tax",
+          "Tax is optional"
+        ],
+        "answer": "The price already includes the tax"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate VAT amounts.",
+    "questions": [
+      {
+        "question": "A laptop costs £500 + 20% VAT. Total price?",
+        "options": [
+          "£600",
+          "£520",
+          "£500",
+          "£700"
+        ],
+        "answer": "£600"
+      },
+      {
+        "question": "An electricity bill is £100 + 5% VAT. Total?",
+        "options": [
+          "£105",
+          "£120",
+          "£100",
+          "£110"
+        ],
+        "answer": "£105"
+      },
+      {
+        "question": "A coat is £120 including 20% VAT. What was the pre-VAT price?",
+        "options": [
+          "£100",
+          "£96",
+          "£108",
+          "£110"
+        ],
+        "answer": "£100"
+      },
+      {
+        "question": "You save 20% VAT on £80 of children's clothes. How much?",
+        "options": [
+          "£16",
+          "£20",
+          "£8",
+          "£12"
+        ],
+        "answer": "£16"
+      }
+    ]
+  },
+  "week": 3,
+  "level": "EL3"
+}

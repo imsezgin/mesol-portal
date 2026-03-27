@@ -1,0 +1,52 @@
+{
+  "id": "EL3-W6-005",
+  "session": 6,
+  "type": "mcq",
+  "title": "Complex Time Calculations",
+  "topic": "Date & Time",
+  "instruction": "Solve these time problems.",
+  "questions": [
+    {
+      "question": "A shift runs from 22:30 to 06:15. Duration?",
+      "options": [
+        "7 hours 45 minutes",
+        "8 hours 15 minutes",
+        "7 hours 15 minutes",
+        "8 hours 45 minutes"
+      ],
+      "answer": "7 hours 45 minutes"
+    },
+    {
+      "question": "Overtime starts after 8 hours. You work 22:00-07:30. Overtime?",
+      "options": [
+        "1 hour 30 minutes",
+        "30 minutes",
+        "2 hours",
+        "1 hour"
+      ],
+      "answer": "1 hour 30 minutes"
+    },
+    {
+      "question": "A task takes 2.75 hours. In hours and minutes?",
+      "options": [
+        "2 hours 45 minutes",
+        "2 hours 30 minutes",
+        "2 hours 75 minutes",
+        "3 hours 15 minutes"
+      ],
+      "answer": "2 hours 45 minutes"
+    },
+    {
+      "question": "You work 7.5 hours/day, 5 days/week. Annual hours (52 weeks, 25 days leave)?",
+      "options": [
+        "1,687.5 hours",
+        "1,950 hours",
+        "1,500 hours",
+        "2,000 hours"
+      ],
+      "answer": "1,687.5 hours"
+    }
+  ],
+  "week": 6,
+  "level": "EL3"
+}

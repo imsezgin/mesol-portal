@@ -1,0 +1,80 @@
+{
+  "id": "EL1-W1-010",
+  "session": 1,
+  "type": "mesol_combo",
+  "title": "Scaling a Recipe",
+  "topic": "Cooking & Weights",
+  "context": "A recipe for pancakes (makes 10 pancakes): 200g flour, 2 eggs, 300ml milk, 50g butter.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What does 'scaling up' a recipe mean?",
+        "options": [
+          "Making more food",
+          "Making less food",
+          "Cooking faster",
+          "Buying ingredients"
+        ],
+        "answer": "Making more food"
+      },
+      {
+        "question": "What does 'portion' mean?",
+        "options": [
+          "The amount of food for one person",
+          "A type of cooking",
+          "A kitchen tool",
+          "A type of food"
+        ],
+        "answer": "The amount of food for one person"
+      },
+      {
+        "question": "Which word means 'to mix together'?",
+        "options": [
+          "Combine",
+          "Separate",
+          "Weigh",
+          "Measure"
+        ],
+        "answer": "Combine"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Answer the maths questions about scaling the recipe.",
+    "questions": [
+      {
+        "question": "To make 20 pancakes, how much flour do you need?",
+        "options": [
+          "400g",
+          "200g",
+          "100g",
+          "600g"
+        ],
+        "answer": "400g"
+      },
+      {
+        "question": "To make 5 pancakes (half the recipe), how many eggs?",
+        "options": [
+          "1",
+          "2",
+          "4",
+          "3"
+        ],
+        "answer": "1"
+      },
+      {
+        "question": "To make 20 pancakes, how much milk?",
+        "options": [
+          "600ml",
+          "300ml",
+          "150ml",
+          "900ml"
+        ],
+        "answer": "600ml"
+      }
+    ]
+  },
+  "week": 1,
+  "level": "EL1"
+}

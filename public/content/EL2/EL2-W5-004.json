@@ -1,0 +1,90 @@
+{
+  "id": "EL2-W5-004",
+  "session": 5,
+  "type": "mesol_combo",
+  "title": "Debit vs Credit Cards",
+  "topic": "Banking",
+  "context": "Sarah has a debit card (balance £500) and a credit card (limit £1,000, 19.9% APR). She wants to buy a laptop for £450.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What is a 'credit limit'?",
+        "options": [
+          "The maximum amount you can borrow",
+          "The minimum payment",
+          "Your bank balance",
+          "Your salary"
+        ],
+        "answer": "The maximum amount you can borrow"
+      },
+      {
+        "question": "What does 'APR' stand for?",
+        "options": [
+          "Annual Percentage Rate",
+          "Always Pay Regularly",
+          "Account Payment Rate",
+          "Annual Payment Required"
+        ],
+        "answer": "Annual Percentage Rate"
+      },
+      {
+        "question": "What is a 'minimum payment'?",
+        "options": [
+          "The smallest amount you must pay each month",
+          "The full balance",
+          "The interest only",
+          "Zero"
+        ],
+        "answer": "The smallest amount you must pay each month"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Compare the payment options.",
+    "questions": [
+      {
+        "question": "If she uses debit, remaining balance?",
+        "options": [
+          "£50",
+          "£500",
+          "£450",
+          "£0"
+        ],
+        "answer": "£50"
+      },
+      {
+        "question": "If she uses credit and pays after 1 month (19.9% APR ÷ 12)?",
+        "options": [
+          "~£457.46 (£450 + ~£7.46)",
+          "£450",
+          "£539.55",
+          "£500"
+        ],
+        "answer": "~£457.46 (£450 + ~£7.46)"
+      },
+      {
+        "question": "Extra cost of using credit for 1 month?",
+        "options": [
+          "~£7.46",
+          "£0",
+          "£19.90",
+          "£89.55"
+        ],
+        "answer": "~£7.46"
+      },
+      {
+        "question": "Which is cheaper: debit or credit?",
+        "options": [
+          "Debit (no interest)",
+          "Credit (has interest)",
+          "Both the same",
+          "Cannot tell"
+        ],
+        "answer": "Debit (no interest)"
+      }
+    ]
+  },
+  "week": 5,
+  "level": "EL2"
+}

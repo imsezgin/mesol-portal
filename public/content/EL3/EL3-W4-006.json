@@ -1,0 +1,28 @@
+{
+  "id": "EL3-W4-006",
+  "session": 4,
+  "type": "gap_fill",
+  "title": "Loan Calculations",
+  "topic": "Money & Calculations",
+  "instruction": "Complete the loan information.",
+  "passage": "A personal loan of £5,000 at ___% APR over 3 years. Monthly repayment: £___. Total repaid over 3 years: 36 × £152.51 = £___. Total ___ paid: £5,490.36 - £5,000 = £___. This is the cost of ___ money.",
+  "blanks": [
+    "6",
+    "152.51",
+    "5,490.36",
+    "interest",
+    "490.36",
+    "borrowing"
+  ],
+  "word_bank": [
+    "6",
+    "152.51",
+    "5,490.36",
+    "interest",
+    "490.36",
+    "borrowing",
+    "saving"
+  ],
+  "week": 4,
+  "level": "EL3"
+}

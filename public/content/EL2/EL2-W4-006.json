@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W4-006",
+  "session": 4,
+  "type": "gap_fill",
+  "title": "Comparing Tradesperson Quotes",
+  "topic": "Money & Calculations",
+  "instruction": "Complete the comparison of two quotes.",
+  "passage": "Plumber A: £50 per hour, estimated ___ hours. Quote: £150 total. Plumber B: ___ rate of £120. Plumber A might cost more if the job takes ___ than 3 hours. Plumber B is better if the job is ___. Plumber A is cheaper if the job takes ___ than 2 hours 24 minutes.",
+  "blanks": [
+    "3",
+    "fixed",
+    "longer",
+    "complex",
+    "less"
+  ],
+  "word_bank": [
+    "3",
+    "fixed",
+    "longer",
+    "complex",
+    "less",
+    "2",
+    "more"
+  ],
+  "week": 4,
+  "level": "EL2"
+}

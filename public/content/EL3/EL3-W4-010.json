@@ -1,0 +1,90 @@
+{
+  "id": "EL3-W4-010",
+  "session": 4,
+  "type": "mesol_combo",
+  "title": "Tax Return Basics",
+  "topic": "Money & Calculations",
+  "context": "Self-employed hairdresser. Annual income: £28,000. Business expenses: £6,500. Personal allowance: £12,570. Basic rate tax: 20%.",
+  "english_section": {
+    "instruction": "Answer the vocabulary questions.",
+    "questions": [
+      {
+        "question": "What is 'self-employed'?",
+        "options": [
+          "Working for yourself, not a company",
+          "Unemployed",
+          "Working part-time",
+          "Retired"
+        ],
+        "answer": "Working for yourself, not a company"
+      },
+      {
+        "question": "What are 'allowable expenses'?",
+        "options": [
+          "Business costs you can deduct from taxable income",
+          "Personal shopping",
+          "Luxury purchases",
+          "Rent on your home"
+        ],
+        "answer": "Business costs you can deduct from taxable income"
+      },
+      {
+        "question": "What is a 'tax return'?",
+        "options": [
+          "A form declaring your income and expenses to HMRC",
+          "Money you get back from the government",
+          "A tax refund",
+          "A bank statement"
+        ],
+        "answer": "A form declaring your income and expenses to HMRC"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate the tax.",
+    "questions": [
+      {
+        "question": "Taxable profit (income - expenses)?",
+        "options": [
+          "£21,500",
+          "£28,000",
+          "£6,500",
+          "£15,000"
+        ],
+        "answer": "£21,500"
+      },
+      {
+        "question": "Taxable income after personal allowance (£21,500 - £12,570)?",
+        "options": [
+          "£8,930",
+          "£21,500",
+          "£12,570",
+          "£15,430"
+        ],
+        "answer": "£8,930"
+      },
+      {
+        "question": "Income tax at 20%?",
+        "options": [
+          "£1,786",
+          "£4,300",
+          "£2,514",
+          "£1,500"
+        ],
+        "answer": "£1,786"
+      },
+      {
+        "question": "Effective tax rate (tax ÷ total profit × 100)?",
+        "options": [
+          "8.3%",
+          "20%",
+          "6.4%",
+          "10%"
+        ],
+        "answer": "8.3%"
+      }
+    ]
+  },
+  "week": 4,
+  "level": "EL3"
+}

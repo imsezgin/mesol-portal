@@ -1,0 +1,90 @@
+{
+  "id": "EL3-W2-010",
+  "session": 2,
+  "type": "mesol_combo",
+  "title": "Household Budget Comparison",
+  "topic": "Comparisons",
+  "context": "The Ahmed family tracked spending for 3 months: Jan: £1,200, Feb: £980, Mar: £1,350. Categories: Rent £500, Food £280 avg, Transport £120 avg, Bills £180 avg.",
+  "english_section": {
+    "instruction": "Answer the vocabulary questions.",
+    "questions": [
+      {
+        "question": "What does 'expenditure' mean?",
+        "options": [
+          "The amount of money spent",
+          "The amount of money earned",
+          "Money saved",
+          "Money borrowed"
+        ],
+        "answer": "The amount of money spent"
+      },
+      {
+        "question": "What is a 'surplus'?",
+        "options": [
+          "Money left over after expenses",
+          "Money owed to others",
+          "A type of loan",
+          "A discount"
+        ],
+        "answer": "Money left over after expenses"
+      },
+      {
+        "question": "What does 'allocate' mean in budgeting?",
+        "options": [
+          "To set aside money for a specific purpose",
+          "To spend all your money",
+          "To borrow money",
+          "To earn more money"
+        ],
+        "answer": "To set aside money for a specific purpose"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Analyse the family's spending.",
+    "questions": [
+      {
+        "question": "Average monthly spending over 3 months?",
+        "options": [
+          "£1,176.67",
+          "£1,200",
+          "£1,350",
+          "£980"
+        ],
+        "answer": "£1,176.67"
+      },
+      {
+        "question": "What is the range of spending?",
+        "options": [
+          "£370",
+          "£220",
+          "£1,200",
+          "£980"
+        ],
+        "answer": "£370"
+      },
+      {
+        "question": "Total fixed costs (rent + bills) per month?",
+        "options": [
+          "£680",
+          "£500",
+          "£180",
+          "£780"
+        ],
+        "answer": "£680"
+      },
+      {
+        "question": "If income is £1,500/month, average monthly surplus?",
+        "options": [
+          "£323.33",
+          "£300",
+          "£500",
+          "£180"
+        ],
+        "answer": "£323.33"
+      }
+    ]
+  },
+  "week": 2,
+  "level": "EL3"
+}

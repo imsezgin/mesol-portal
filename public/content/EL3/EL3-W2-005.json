@@ -1,0 +1,62 @@
+{
+  "id": "EL3-W2-005",
+  "session": 2,
+  "type": "mcq",
+  "title": "Mean, Median, Mode & Range",
+  "topic": "Comparisons",
+  "instruction": "Calculate the correct statistical measure.",
+  "questions": [
+    {
+      "question": "Data: 5, 8, 8, 10, 12, 15, 20. What is the range?",
+      "options": [
+        "15",
+        "10",
+        "8",
+        "20"
+      ],
+      "answer": "15"
+    },
+    {
+      "question": "Same data. What is the median?",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "11.14"
+      ],
+      "answer": "10"
+    },
+    {
+      "question": "Same data. What is the mode?",
+      "options": [
+        "8",
+        "10",
+        "5",
+        "15"
+      ],
+      "answer": "8"
+    },
+    {
+      "question": "Same data. What is the mean?",
+      "options": [
+        "11.14",
+        "10",
+        "8",
+        "12"
+      ],
+      "answer": "11.14"
+    },
+    {
+      "question": "If we add 22 to the data, does the mode change?",
+      "options": [
+        "No, it stays as 8",
+        "Yes, it becomes 22",
+        "Yes, it becomes 10",
+        "Cannot tell"
+      ],
+      "answer": "No, it stays as 8"
+    }
+  ],
+  "week": 2,
+  "level": "EL3"
+}

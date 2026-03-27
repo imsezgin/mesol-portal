@@ -1,0 +1,36 @@
+{
+  "id": "EL3-W6-001",
+  "session": 6,
+  "type": "vocab_match",
+  "title": "Advanced Time Vocabulary",
+  "topic": "Date & Time",
+  "instruction": "Match each term to its definition.",
+  "pairs": [
+    {
+      "term": "fiscal year",
+      "definition": "a 12-month period for financial reporting (UK: April-March)"
+    },
+    {
+      "term": "biannual",
+      "definition": "happening twice a year"
+    },
+    {
+      "term": "consecutive",
+      "definition": "following one after another without a break"
+    },
+    {
+      "term": "elapsed time",
+      "definition": "the total time that has passed"
+    },
+    {
+      "term": "pro rata",
+      "definition": "calculated proportionally based on time worked"
+    },
+    {
+      "term": "per annum",
+      "definition": "per year (often used in finance)"
+    }
+  ],
+  "week": 6,
+  "level": "EL3"
+}

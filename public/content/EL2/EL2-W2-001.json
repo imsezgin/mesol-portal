@@ -1,0 +1,36 @@
+{
+  "id": "EL2-W2-001",
+  "session": 2,
+  "type": "vocab_match",
+  "title": "Comparison Language",
+  "topic": "Comparisons",
+  "instruction": "Match each comparative/superlative form.",
+  "pairs": [
+    {
+      "term": "more expensive",
+      "definition": "comparative form of 'expensive'"
+    },
+    {
+      "term": "the cheapest",
+      "definition": "superlative form of 'cheap'"
+    },
+    {
+      "term": "better",
+      "definition": "comparative form of 'good'"
+    },
+    {
+      "term": "the worst",
+      "definition": "superlative form of 'bad'"
+    },
+    {
+      "term": "less",
+      "definition": "the opposite of 'more'"
+    },
+    {
+      "term": "the most",
+      "definition": "superlative meaning the highest amount"
+    }
+  ],
+  "week": 2,
+  "level": "EL2"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "EL2-W5-007",
+  "session": 5,
+  "type": "vocab_match",
+  "title": "Online Banking Terms",
+  "topic": "Banking",
+  "instruction": "Match each online banking term to its meaning.",
+  "pairs": [
+    {
+      "term": "payee",
+      "definition": "the person or company you are paying"
+    },
+    {
+      "term": "reference",
+      "definition": "a note to identify what the payment is for"
+    },
+    {
+      "term": "pending",
+      "definition": "the payment is being processed but not complete"
+    },
+    {
+      "term": "two-factor authentication",
+      "definition": "extra security using your phone to confirm identity"
+    },
+    {
+      "term": "standing order",
+      "definition": "a regular payment of a fixed amount"
+    }
+  ],
+  "week": 5,
+  "level": "EL2"
+}

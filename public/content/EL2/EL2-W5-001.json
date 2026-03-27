@@ -1,0 +1,36 @@
+{
+  "id": "EL2-W5-001",
+  "session": 5,
+  "type": "vocab_match",
+  "title": "Banking Terminology",
+  "topic": "Banking",
+  "instruction": "Match each banking term to its definition.",
+  "pairs": [
+    {
+      "term": "current account",
+      "definition": "for everyday spending and receiving wages"
+    },
+    {
+      "term": "savings account",
+      "definition": "for keeping money and earning interest"
+    },
+    {
+      "term": "overdraft",
+      "definition": "borrowing from the bank through your current account"
+    },
+    {
+      "term": "interest rate",
+      "definition": "the percentage the bank pays you (or charges you)"
+    },
+    {
+      "term": "direct debit",
+      "definition": "automatic payment from your account"
+    },
+    {
+      "term": "sort code",
+      "definition": "a 6-digit number identifying your bank branch"
+    }
+  ],
+  "week": 5,
+  "level": "EL2"
+}

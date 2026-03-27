@@ -1,0 +1,90 @@
+{
+  "id": "EL3-W1-004",
+  "session": 1,
+  "type": "mesol_combo",
+  "title": "Professional Kitchen Measurements",
+  "topic": "Cooking & Weights",
+  "context": "A restaurant kitchen needs to prepare meals for a function of 50 guests. The original recipe serves 6.",
+  "english_section": {
+    "instruction": "Answer the English questions about catering.",
+    "questions": [
+      {
+        "question": "What does 'catering' mean?",
+        "options": [
+          "Providing food for an event or group",
+          "Cooking at home",
+          "Buying groceries",
+          "Eating at a restaurant"
+        ],
+        "answer": "Providing food for an event or group"
+      },
+      {
+        "question": "What is a 'function' in this context?",
+        "options": [
+          "A formal event or party",
+          "A mathematical operation",
+          "A job role",
+          "A machine"
+        ],
+        "answer": "A formal event or party"
+      },
+      {
+        "question": "What does 'yield' mean in cooking?",
+        "options": [
+          "The amount of food a recipe produces",
+          "The type of ingredients",
+          "The cooking time",
+          "The temperature"
+        ],
+        "answer": "The amount of food a recipe produces"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Scale the recipe for 50 guests. Original recipe serves 6: 600g chicken, 300ml sauce, 180g rice.",
+    "questions": [
+      {
+        "question": "What is the scaling factor? (50 ÷ 6, rounded up)",
+        "options": [
+          "8.33 (round to 8.5 or 9)",
+          "8",
+          "6",
+          "10"
+        ],
+        "answer": "8.33 (round to 8.5 or 9)"
+      },
+      {
+        "question": "Using a factor of 8.5, how much chicken? (600g × 8.5)",
+        "options": [
+          "5100g (5.1kg)",
+          "4800g",
+          "6000g",
+          "3600g"
+        ],
+        "answer": "5100g (5.1kg)"
+      },
+      {
+        "question": "Using a factor of 8.5, how much sauce? (300ml × 8.5)",
+        "options": [
+          "2550ml (2.55L)",
+          "2400ml",
+          "3000ml",
+          "1800ml"
+        ],
+        "answer": "2550ml (2.55L)"
+      },
+      {
+        "question": "If chicken costs £6.50 per kg, what is the cost for 5.1kg?",
+        "options": [
+          "£33.15",
+          "£32.50",
+          "£35.00",
+          "£30.00"
+        ],
+        "answer": "£33.15"
+      }
+    ]
+  },
+  "week": 1,
+  "level": "EL3"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "EL3-W1-007",
+  "session": 1,
+  "type": "vocab_match",
+  "title": "Food Label Terminology",
+  "topic": "Weights & Measures",
+  "instruction": "Match each label term to its meaning.",
+  "pairs": [
+    {
+      "term": "per 100g",
+      "definition": "the amount of nutrients in 100 grams"
+    },
+    {
+      "term": "recommended daily intake",
+      "definition": "how much of a nutrient you should eat per day"
+    },
+    {
+      "term": "allergens",
+      "definition": "ingredients that can cause allergic reactions"
+    },
+    {
+      "term": "best before",
+      "definition": "the date until the food is at its best quality"
+    },
+    {
+      "term": "use by",
+      "definition": "the last date the food is safe to eat"
+    },
+    {
+      "term": "traffic light label",
+      "definition": "red/amber/green colours showing nutrition levels"
+    }
+  ],
+  "week": 1,
+  "level": "EL3"
+}

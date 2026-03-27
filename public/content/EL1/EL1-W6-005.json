@@ -1,0 +1,62 @@
+{
+  "id": "EL1-W6-005",
+  "session": 6,
+  "type": "mcq",
+  "title": "Ordinal Numbers",
+  "topic": "Date & Time",
+  "instruction": "Choose the correct ordinal number.",
+  "questions": [
+    {
+      "question": "1 = ?",
+      "options": [
+        "1st (first)",
+        "1th",
+        "1nd",
+        "one"
+      ],
+      "answer": "1st (first)"
+    },
+    {
+      "question": "2 = ?",
+      "options": [
+        "2nd (second)",
+        "2th",
+        "2st",
+        "two"
+      ],
+      "answer": "2nd (second)"
+    },
+    {
+      "question": "3 = ?",
+      "options": [
+        "3rd (third)",
+        "3th",
+        "3nd",
+        "three"
+      ],
+      "answer": "3rd (third)"
+    },
+    {
+      "question": "5 = ?",
+      "options": [
+        "5th (fifth)",
+        "5st",
+        "5nd",
+        "fiveth"
+      ],
+      "answer": "5th (fifth)"
+    },
+    {
+      "question": "12 = ?",
+      "options": [
+        "12th (twelfth)",
+        "12nd",
+        "12st",
+        "twelveth"
+      ],
+      "answer": "12th (twelfth)"
+    }
+  ],
+  "week": 6,
+  "level": "EL1"
+}

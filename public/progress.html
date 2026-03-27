@@ -4,58 +4,68 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="theme-color" content="#1a7a35">
-<meta name="apple-mobile-web-app-capable" content="yes">
 <title>YESchool — Progress</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --green:#1a7a35;--green-dark:#0f5225;--green-mid:#2ea34d;
-  --green-pale:#f0faf2;--green-light:#d4edda;
-  --gold:#d4920a;--navy:#1a2a6e;
-  --ink:#0d1117;--mid:#4a5568;--muted:#8a96a3;--line:#e2e8f0;
-  --white:#ffffff;--bg:#f7f8fa;
-}
-html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink)}
+:root{--g:#1a7a35;--gd:#0f5225;--gp:#f0faf2;--gl:#d4edda;--gold:#d4920a;--ink:#0d1117;--mid:#4a5568;--muted:#8a96a3;--line:#e2e8f0;--bg:#f7f9fb;--white:#fff;}
+html,body{min-height:100%;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:15px;color:var(--ink)}
 
-.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:var(--green);position:sticky;top:0;z-index:50}
-.topbar-logo{font-size:22px;font-weight:800;color:#fff;letter-spacing:-1px}
+.topbar{background:var(--g);padding:14px 18px;display:flex;align-items:center;gap:12px}
+.topbar-logo{font-weight:800;font-size:18px;color:white;letter-spacing:-0.5px}
 .topbar-logo span{color:var(--gold)}
-.topbar-title{font-size:16px;font-weight:700;color:#fff}
+.topbar-title{font-size:15px;font-weight:700;color:white;flex:1}
 
-.main{padding:20px 16px 100px;max-width:460px;margin:0 auto}
+.body{padding:16px 16px 80px}
 
-/* Stats row */
-.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
-.stat-card{background:#fff;border-radius:14px;padding:18px 16px;text-align:center;box-shadow:0 1px 6px rgba(0,0,0,.04)}
-.stat-big{font-size:28px;font-weight:800;color:var(--green)}
-.stat-big.gold{color:var(--gold)}
-.stat-sm{font-size:12px;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:.4px}
+/* STAT CARDS */
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.stat-card{background:white;border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:var(--g);line-height:1;margin-bottom:4px}
+.stat-l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;font-weight:600}
+.streak-card{grid-column:1/-1;background:linear-gradient(135deg,var(--gd),var(--g));color:white;border-radius:14px;padding:16px;display:flex;align-items:center;gap:14px}
+.streak-n{font-size:40px;font-weight:800;line-height:1}
+.streak-info{}
+.streak-label{font-size:14px;font-weight:700;margin-bottom:2px}
+.streak-sub{font-size:12px;color:rgba(255,255,255,.7)}
 
-/* Streak section */
-.section-title{font-size:14px;font-weight:700;color:var(--mid);text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px}
+/* CALENDAR */
+.section{background:white;border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:16px}
+.section-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--muted);margin-bottom:14px}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-day{width:100%;aspect-ratio:1;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:var(--muted);background:var(--bg)}
+.cal-day.active{background:var(--g);color:white}
+.cal-day.today{background:var(--gl);color:var(--gd);border:2px solid var(--g)}
+.cal-legend{display:flex;gap:12px;margin-top:10px;font-size:11px;color:var(--muted)}
+.cal-legend-item{display:flex;align-items:center;gap:5px}
+.cal-legend-dot{width:12px;height:12px;border-radius:3px}
 
-.card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 1px 6px rgba(0,0,0,.04);margin-bottom:24px}
+/* BAR CHART */
+.chart-wrap{margin-top:4px}
+.chart-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.chart-label{font-size:12px;font-weight:600;color:var(--mid);width:80px;flex-shrink:0;text-align:right}
+.chart-bar-bg{flex:1;background:var(--bg);border-radius:99px;height:10px;overflow:hidden}
+.chart-bar{height:100%;border-radius:99px;background:var(--g);transition:width .6s ease}
+.chart-val{font-size:12px;font-weight:700;color:var(--g);width:36px;flex-shrink:0}
 
-/* Calendar grid */
-.cal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.cal-month{font-size:14px;font-weight:600;color:var(--ink)}
-.cal-legend{font-size:11px;color:var(--muted)}
-.cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
-.cal-day-label{font-size:10px;color:var(--muted);font-weight:600;padding:4px 0}
-.cal-day{width:100%;aspect-ratio:1;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--muted);background:#fafafa}
-.cal-day.active{background:var(--green);color:#fff;font-weight:700}
-.cal-day.today{border:2px solid var(--green)}
-.cal-day.empty{background:transparent}
+/* RECENT */
+.recent-list{display:flex;flex-direction:column;gap:8px}
+.recent-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.recent-item:last-child{border-bottom:none}
+.recent-icon{font-size:18px;width:32px;text-align:center}
+.recent-info{flex:1}
+.recent-title{font-size:13px;font-weight:600;color:var(--ink)}
+.recent-date{font-size:11px;color:var(--muted)}
+.recent-score{font-size:13px;font-weight:700;color:var(--g)}
 
-/* Bar chart */
-.chart-container{position:relative;width:100%;height:200px}
-canvas{width:100%!important;height:100%!important}
+/* BOTTOM NAV */
+.bottomnav{position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid var(--line);display:flex;height:60px;box-shadow:0 -2px 12px rgba(0,0,0,.06);z-index:20}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-decoration:none;color:var(--muted);font-size:10px;font-weight:600;min-height:44px}
+.nav-item.active{color:var(--g)}
+.nav-item svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
-/* Bottom nav */
-.bottomnav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);display:flex;z-index:50;padding-bottom:env(safe-area-inset-bottom)}
-.bottomnav a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:56px;text-decoration:none;font-size:11px;font-weight:600;color:var(--muted);gap:3px;-webkit-tap-highlight-color:transparent}
-.bottomnav a.active{color:var(--green)}
-.bottomnav a svg{width:22px;height:22px}
+.loading{text-align:center;padding:40px;color:var(--muted)}
+.spinner{width:32px;height:32px;border:3px solid var(--line);border-top-color:var(--g);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 10px}
+@keyframes spin{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
@@ -65,59 +75,23 @@ canvas{width:100%!important;height:100%!important}
   <div class="topbar-title">My Progress</div>
 </div>
 
-<div class="main">
-  <div class="stats-grid">
-    <div class="stat-card">
-      <div class="stat-big" id="totalDone">0</div>
-      <div class="stat-sm">Completed</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-big gold" id="avgPct">0%</div>
-      <div class="stat-sm">Avg Score</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-big" id="streakDays">0</div>
-      <div class="stat-sm">🔥 Streak</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-big gold" id="longestStreak">0</div>
-      <div class="stat-sm">Best Streak</div>
-    </div>
-  </div>
-
-  <div class="section-title">Activity — Last 30 Days</div>
-  <div class="card">
-    <div class="cal-header">
-      <div class="cal-month" id="calMonth"></div>
-      <div class="cal-legend">🟩 = active day</div>
-    </div>
-    <div class="cal-days" id="calGrid"></div>
-  </div>
-
-  <div class="section-title">Score by Topic</div>
-  <div class="card">
-    <div class="chart-container">
-      <canvas id="topicChart"></canvas>
-    </div>
-  </div>
+<div class="body">
+  <div class="loading" id="loadingState"><div class="spinner"></div>Loading...</div>
+  <div id="content" style="display:none"></div>
 </div>
 
 <nav class="bottomnav">
-  <a href="/home">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-    Home
+  <a class="nav-item" href="/home">
+    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home
   </a>
-  <a href="/practice">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-    Practice
+  <a class="nav-item" href="/practice">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Practice
   </a>
-  <a href="/progress" class="active">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-    Progress
+  <a class="nav-item active" href="/progress">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Progress
   </a>
-  <a href="#" onclick="event.preventDefault();alert('Need help?\\n\\nAsk your teacher or email info@yeschool.uk')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-    Help
+  <a class="nav-item" href="/help">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Help
   </a>
 </nav>
 
@@ -127,149 +101,119 @@ if (!TOKEN) window.location.href = '/';
 
 async function loadProgress() {
   try {
-    const res = await fetch('/api/student/progress', {
-      headers: { 'Authorization': 'Bearer ' + TOKEN }
-    });
-    if (res.status === 401) { localStorage.clear(); window.location.href = '/'; return; }
-    const data = await res.json();
+    const res = await fetch('/api/student/progress', { headers: { Authorization: 'Bearer ' + TOKEN } });
+    if (!res.ok) throw new Error();
+    const d = await res.json();
 
-    // Stats
-    document.getElementById('totalDone').textContent = data.totalCompleted;
-    document.getElementById('streakDays').textContent = data.streak;
-    document.getElementById('longestStreak').textContent = data.longestStreak;
-
-    // Avg score
-    if (data.results && data.results.length > 0) {
-      const avg = Math.round(data.results.reduce((sum, r) => sum + (r.score / r.max_score * 100), 0) / data.results.length);
-      document.getElementById('avgPct').textContent = avg + '%';
-    }
-
-    // Calendar
-    renderCalendar(data.activityMap);
-
-    // Topic chart
-    renderTopicChart(data.results);
-
-  } catch (err) {
-    console.error(err);
+    document.getElementById('loadingState').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+    render(d);
+  } catch {
+    document.getElementById('loadingState').innerHTML = '<div style="color:var(--muted)">Could not load progress.</div>';
   }
 }
 
-function renderCalendar(activityMap) {
+function render(d) {
+  const el = document.getElementById('content');
+
+  // Build calendar (last 30 days)
   const today = new Date();
-  const grid = document.getElementById('calGrid');
-  const todayStr = today.toISOString().split('T')[0];
-
-  // Show current month name
-  document.getElementById('calMonth').textContent = today.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
-
-  // Day labels
-  const dayLabels = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
-  grid.innerHTML = dayLabels.map(d => `<div class="cal-day-label">${d}</div>`).join('');
-
-  // Generate last 30 days
   const days = [];
   for (let i = 29; i >= 0; i--) {
-    const d = new Date(today);
-    d.setDate(d.getDate() - i);
-    days.push(d);
+    const d2 = new Date(today); d2.setDate(today.getDate() - i);
+    const key = d2.toISOString().split('T')[0];
+    days.push({ date: d2, key, label: d2.getDate() });
   }
 
-  // Pad start to align with Monday
-  const firstDay = days[0].getDay();
-  const mondayOffset = (firstDay === 0 ? 6 : firstDay - 1);
-  for (let i = 0; i < mondayOffset; i++) {
-    grid.innerHTML += '<div class="cal-day empty"></div>';
-  }
+  const calHtml = days.map(day => {
+    const isToday = day.key === today.toISOString().split('T')[0];
+    const active = d.activityMap && d.activityMap[day.key];
+    return `<div class="cal-day ${isToday ? 'today' : active ? 'active' : ''}">${day.label}</div>`;
+  }).join('');
 
-  days.forEach(d => {
-    const dateStr = d.toISOString().split('T')[0];
-    const dayNum = d.getDate();
-    const isActive = activityMap[dateStr] && activityMap[dateStr] > 0;
-    const isToday = dateStr === todayStr;
-    grid.innerHTML += `<div class="cal-day${isActive ? ' active' : ''}${isToday ? ' today' : ''}">${dayNum}</div>`;
-  });
-}
-
-function renderTopicChart(results) {
-  if (!results || results.length === 0) return;
-
-  // Extract topics from exercise IDs (e.g. W1-S1-forms-gap-EL1 → forms)
+  // Score by topic
   const topicScores = {};
-  results.forEach(r => {
+  (d.results || []).forEach(r => {
     const parts = r.exercise_id.split('-');
-    // Topic is between session and type: e.g. W1-S1-forms-gap-EL1
-    const topic = parts.length >= 4 ? parts[2] : 'other';
-    if (!topicScores[topic]) topicScores[topic] = { total: 0, count: 0 };
-    topicScores[topic].total += (r.score / r.max_score) * 100;
+    const topic = parts.slice(2, parts.length - 1).join(' ') || 'Other';
+    if (!topicScores[topic]) topicScores[topic] = { sum: 0, count: 0 };
+    topicScores[topic].sum += Math.round((r.score / r.max_score) * 100);
     topicScores[topic].count++;
   });
+  const topicAvgs = Object.entries(topicScores)
+    .map(([t, s]) => ({ topic: t, avg: Math.round(s.sum / s.count) }))
+    .sort((a, b) => b.avg - a.avg)
+    .slice(0, 6);
 
-  const labels = Object.keys(topicScores);
-  const values = labels.map(l => Math.round(topicScores[l].total / topicScores[l].count));
+  const chartHtml = topicAvgs.length ? topicAvgs.map(t =>
+    `<div class="chart-bar-row">
+      <div class="chart-label">${t.topic}</div>
+      <div class="chart-bar-bg"><div class="chart-bar" style="width:${t.avg}%"></div></div>
+      <div class="chart-val">${t.avg}%</div>
+    </div>`
+  ).join('') : '<div style="color:var(--muted);font-size:13px">No exercises completed yet</div>';
 
-  // Draw bar chart with Canvas
-  const canvas = document.getElementById('topicChart');
-  const ctx = canvas.getContext('2d');
-  const dpr = window.devicePixelRatio || 1;
-  const rect = canvas.parentElement.getBoundingClientRect();
-  canvas.width = rect.width * dpr;
-  canvas.height = 200 * dpr;
-  canvas.style.width = rect.width + 'px';
-  canvas.style.height = '200px';
-  ctx.scale(dpr, dpr);
+  // Recent results
+  const recent = (d.results || []).slice(0, 8);
+  const TYPE_ICONS = { gap_fill:'📝', mcq:'❓', vocab_match:'🔗', mesol_combo:'🔢' };
+  const recentHtml = recent.length ? recent.map(r => {
+    const pct = Math.round((r.score / r.max_score) * 100);
+    const parts = r.exercise_id.split('-');
+    const topic = parts.slice(2, parts.length - 1).join(' ') || r.exercise_id;
+    const type = parts[2] || '';
+    const icon = TYPE_ICONS[type] || '📝';
+    const date = new Date(r.completed_at).toLocaleDateString('en-GB', { day:'numeric', month:'short' });
+    return `<div class="recent-item">
+      <div class="recent-icon">${icon}</div>
+      <div class="recent-info"><div class="recent-title">${topic}</div><div class="recent-date">${date}</div></div>
+      <div class="recent-score">${pct}%</div>
+    </div>`;
+  }).join('') : '<div style="color:var(--muted);font-size:13px">No exercises completed yet</div>';
 
-  const W = rect.width;
-  const H = 200;
-  const padding = { top: 10, right: 10, bottom: 50, left: 40 };
-  const chartW = W - padding.left - padding.right;
-  const chartH = H - padding.top - padding.bottom;
-  const barW = Math.min(40, (chartW / labels.length) * 0.6);
-  const gap = chartW / labels.length;
+  el.innerHTML = `
+    <div class="stats-grid">
+      <div class="streak-card">
+        <div class="streak-n">🔥 ${d.streak}</div>
+        <div class="streak-info">
+          <div class="streak-label">${d.streak === 1 ? '1 day streak' : d.streak + ' day streak'}</div>
+          <div class="streak-sub">Best: ${d.longestStreak} days</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-n">${d.totalCompleted}</div>
+        <div class="stat-l">Exercises done</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-n">${calculateOverallAvg(d.results)}%</div>
+        <div class="stat-l">Overall avg</div>
+      </div>
+    </div>
 
-  // Y axis
-  ctx.strokeStyle = '#e2e8f0';
-  ctx.lineWidth = 1;
-  ctx.font = '11px -apple-system, sans-serif';
-  ctx.fillStyle = '#8a96a3';
-  ctx.textAlign = 'right';
-  for (let y = 0; y <= 100; y += 25) {
-    const py = padding.top + chartH - (y / 100) * chartH;
-    ctx.beginPath();
-    ctx.moveTo(padding.left, py);
-    ctx.lineTo(W - padding.right, py);
-    ctx.stroke();
-    ctx.fillText(y + '%', padding.left - 6, py + 4);
-  }
+    <div class="section">
+      <div class="section-title">Activity — last 30 days</div>
+      <div class="calendar-grid">${calHtml}</div>
+      <div class="cal-legend">
+        <div class="cal-legend-item"><div class="cal-legend-dot" style="background:var(--g)"></div> Completed</div>
+        <div class="cal-legend-item"><div class="cal-legend-dot" style="background:var(--gl);border:2px solid var(--g)"></div> Today</div>
+      </div>
+    </div>
 
-  // Bars
-  labels.forEach((label, i) => {
-    const x = padding.left + i * gap + (gap - barW) / 2;
-    const barH = (values[i] / 100) * chartH;
-    const y = padding.top + chartH - barH;
+    <div class="section">
+      <div class="section-title">Score by topic</div>
+      <div class="chart-wrap">${chartHtml}</div>
+    </div>
 
-    // Bar
-    ctx.fillStyle = values[i] >= 70 ? '#1a7a35' : values[i] >= 40 ? '#d4920a' : '#c0392b';
-    ctx.beginPath();
-    ctx.roundRect(x, y, barW, barH, [4, 4, 0, 0]);
-    ctx.fill();
+    <div class="section">
+      <div class="section-title">Recent results</div>
+      <div class="recent-list">${recentHtml}</div>
+    </div>
+  `;
+}
 
-    // Value on top
-    ctx.fillStyle = '#4a5568';
-    ctx.textAlign = 'center';
-    ctx.font = 'bold 11px -apple-system, sans-serif';
-    ctx.fillText(values[i] + '%', x + barW / 2, y - 4);
-
-    // Label
-    ctx.fillStyle = '#8a96a3';
-    ctx.font = '11px -apple-system, sans-serif';
-    ctx.save();
-    ctx.translate(x + barW / 2, H - padding.bottom + 8);
-    ctx.rotate(-0.5);
-    ctx.textAlign = 'right';
-    ctx.fillText(label.charAt(0).toUpperCase() + label.slice(0, 8), 0, 0);
-    ctx.restore();
-  });
+function calculateOverallAvg(results) {
+  if (!results || !results.length) return '—';
+  const sum = results.reduce((acc, r) => acc + (r.score / r.max_score) * 100, 0);
+  return Math.round(sum / results.length);
 }
 
 loadProgress();

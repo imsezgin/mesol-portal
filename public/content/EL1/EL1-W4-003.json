@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W4-003",
+  "session": 4,
+  "type": "gap_fill",
+  "title": "At the Cafe",
+  "topic": "Money & Calculations",
+  "instruction": "Complete the cafe conversation.",
+  "passage": "Server: What would you ___? Customer: A tea and a sandwich, ___. Server: That is three pounds ___. Customer: Here is a ___ pound note. Server: Your ___ is one pound fifty.",
+  "blanks": [
+    "like",
+    "please",
+    "fifty",
+    "five",
+    "change"
+  ],
+  "word_bank": [
+    "like",
+    "please",
+    "fifty",
+    "five",
+    "change",
+    "ten"
+  ],
+  "week": 4,
+  "level": "EL1"
+}

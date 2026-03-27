@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W1-009",
+  "session": 1,
+  "type": "gap_fill",
+  "title": "Comparing Products",
+  "topic": "Weights & Measures",
+  "instruction": "Complete the comparison of two products.",
+  "passage": "Brand A butter costs £2.00 for 250g. Brand B costs £3.50 for ___g. To compare, we calculate the price ___ 100g. Brand A: £2.00 ÷ 2.5 = ___ per 100g. Brand B: £3.50 ÷ 5 = ___ per 100g. Brand ___ is better value.",
+  "blanks": [
+    "500",
+    "per",
+    "80p",
+    "70p",
+    "B"
+  ],
+  "word_bank": [
+    "500",
+    "per",
+    "80p",
+    "70p",
+    "B",
+    "A",
+    "100"
+  ],
+  "week": 1,
+  "level": "EL3"
+}

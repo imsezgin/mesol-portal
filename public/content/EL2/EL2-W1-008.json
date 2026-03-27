@@ -1,0 +1,53 @@
+{
+  "id": "EL2-W1-008",
+  "session": 1,
+  "type": "mcq",
+  "title": "Scaling Recipes Up and Down",
+  "topic": "Cooking & Weights",
+  "instruction": "Answer the questions about changing recipe amounts.",
+  "context": "Original recipe (serves 4): 400g pasta, 200g cheese, 500ml cream, 4 cloves of garlic.",
+  "questions": [
+    {
+      "question": "To serve 2 people, how much pasta?",
+      "options": [
+        "200g",
+        "400g",
+        "100g",
+        "800g"
+      ],
+      "answer": "200g"
+    },
+    {
+      "question": "To serve 8 people, how much cheese?",
+      "options": [
+        "400g",
+        "200g",
+        "100g",
+        "600g"
+      ],
+      "answer": "400g"
+    },
+    {
+      "question": "To serve 6 people, how much cream? (Hint: 500 ÷ 4 = 125 per person)",
+      "options": [
+        "750ml",
+        "500ml",
+        "1000ml",
+        "375ml"
+      ],
+      "answer": "750ml"
+    },
+    {
+      "question": "To serve 1 person, how many cloves of garlic?",
+      "options": [
+        "1",
+        "4",
+        "2",
+        "0"
+      ],
+      "answer": "1"
+    }
+  ],
+  "week": 1,
+  "level": "EL2"
+}

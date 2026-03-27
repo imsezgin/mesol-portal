@@ -1,0 +1,36 @@
+{
+  "id": "EL3-W2-007",
+  "session": 2,
+  "type": "vocab_match",
+  "title": "Statistical Terms",
+  "topic": "Comparisons",
+  "instruction": "Match each statistical term to its definition.",
+  "pairs": [
+    {
+      "term": "range",
+      "definition": "the difference between the highest and lowest values"
+    },
+    {
+      "term": "outlier",
+      "definition": "a value that is much higher or lower than the others"
+    },
+    {
+      "term": "trend",
+      "definition": "the general direction data is moving over time"
+    },
+    {
+      "term": "sample",
+      "definition": "a smaller group used to represent a larger population"
+    },
+    {
+      "term": "frequency",
+      "definition": "how often something occurs in a dataset"
+    },
+    {
+      "term": "variable",
+      "definition": "something that can change or have different values"
+    }
+  ],
+  "week": 2,
+  "level": "EL3"
+}

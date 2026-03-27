@@ -1,0 +1,62 @@
+{
+  "id": "EL2-W5-005",
+  "session": 5,
+  "type": "mcq",
+  "title": "Positive and Negative Integers",
+  "topic": "Banking",
+  "instruction": "Work with positive and negative numbers.",
+  "questions": [
+    {
+      "question": "Balance +£200, spend £300. New balance?",
+      "options": [
+        "-£100",
+        "+£100",
+        "-£300",
+        "+£500"
+      ],
+      "answer": "-£100"
+    },
+    {
+      "question": "-£50 + £80 = ?",
+      "options": [
+        "+£30",
+        "-£130",
+        "+£130",
+        "-£30"
+      ],
+      "answer": "+£30"
+    },
+    {
+      "question": "Which is higher: -£20 or -£50?",
+      "options": [
+        "-£20",
+        "-£50",
+        "Both the same",
+        "Cannot tell"
+      ],
+      "answer": "-£20"
+    },
+    {
+      "question": "Temperature: -3°C + 7°C = ?",
+      "options": [
+        "4°C",
+        "-4°C",
+        "10°C",
+        "-10°C"
+      ],
+      "answer": "4°C"
+    },
+    {
+      "question": "Balance: -£120. You deposit £200. New balance?",
+      "options": [
+        "+£80",
+        "-£320",
+        "+£200",
+        "-£80"
+      ],
+      "answer": "+£80"
+    }
+  ],
+  "week": 5,
+  "level": "EL2"
+}

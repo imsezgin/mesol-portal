@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W5-006",
+  "session": 5,
+  "type": "gap_fill",
+  "title": "Understanding Interest",
+  "topic": "Banking",
+  "instruction": "Complete the explanation of interest.",
+  "passage": "Banks pay ___ on savings accounts. If the rate is 3% per year and you save £1,000, you earn ___ in interest after one year. Your new balance is £___. If you ___ money (credit card, loan), YOU pay the bank interest. Credit card interest rates are usually much ___ than savings rates.",
+  "blanks": [
+    "interest",
+    "£30",
+    "1,030",
+    "borrow",
+    "higher"
+  ],
+  "word_bank": [
+    "interest",
+    "£30",
+    "1,030",
+    "borrow",
+    "higher",
+    "lower",
+    "£300"
+  ],
+  "week": 5,
+  "level": "EL2"
+}

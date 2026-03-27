@@ -1,0 +1,36 @@
+{
+  "id": "EL2-W1-007",
+  "session": 1,
+  "type": "vocab_match",
+  "title": "Cooking Verbs",
+  "topic": "Cooking & Weights",
+  "instruction": "Match each cooking verb to what it means.",
+  "pairs": [
+    {
+      "term": "chop",
+      "definition": "cut into small pieces"
+    },
+    {
+      "term": "stir",
+      "definition": "move a spoon around in a mixture"
+    },
+    {
+      "term": "pour",
+      "definition": "move liquid from one container to another"
+    },
+    {
+      "term": "weigh",
+      "definition": "use scales to find how heavy something is"
+    },
+    {
+      "term": "preheat",
+      "definition": "turn on the oven before you start cooking"
+    },
+    {
+      "term": "simmer",
+      "definition": "cook gently with small bubbles"
+    }
+  ],
+  "week": 1,
+  "level": "EL2"
+}

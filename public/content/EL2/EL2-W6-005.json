@@ -1,0 +1,52 @@
+{
+  "id": "EL2-W6-005",
+  "session": 6,
+  "type": "mcq",
+  "title": "Calculating Time Differences",
+  "topic": "Date & Time",
+  "instruction": "Calculate the time difference.",
+  "questions": [
+    {
+      "question": "From 9:15 to 11:45?",
+      "options": [
+        "2 hours 30 minutes",
+        "2 hours 15 minutes",
+        "3 hours 30 minutes",
+        "2 hours 45 minutes"
+      ],
+      "answer": "2 hours 30 minutes"
+    },
+    {
+      "question": "From 14:00 to 16:30?",
+      "options": [
+        "2 hours 30 minutes",
+        "2 hours",
+        "3 hours",
+        "2 hours 45 minutes"
+      ],
+      "answer": "2 hours 30 minutes"
+    },
+    {
+      "question": "A film starts at 7:45 PM and is 1 hour 50 minutes. Ends at?",
+      "options": [
+        "9:35 PM",
+        "9:25 PM",
+        "9:45 PM",
+        "10:35 PM"
+      ],
+      "answer": "9:35 PM"
+    },
+    {
+      "question": "Flight departs 11:30, arrives 14:15. Duration?",
+      "options": [
+        "2 hours 45 minutes",
+        "2 hours 30 minutes",
+        "3 hours",
+        "3 hours 15 minutes"
+      ],
+      "answer": "2 hours 45 minutes"
+    }
+  ],
+  "week": 6,
+  "level": "EL2"
+}

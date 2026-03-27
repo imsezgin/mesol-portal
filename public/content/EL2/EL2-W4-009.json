@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W4-009",
+  "session": 4,
+  "type": "gap_fill",
+  "title": "Splitting a Restaurant Bill",
+  "topic": "Money & Calculations",
+  "instruction": "Complete the bill-splitting conversation.",
+  "passage": "The ___ bill is £75. There are ___ of us eating. If we split equally, each person pays ___. But Aisha only had a starter (£8) while others had mains. Fairly, Aisha pays ___ plus her share of the service charge. The service charge is £7.50, so her ___ of that is £2.50.",
+  "blanks": [
+    "total",
+    "3",
+    "£25",
+    "£8",
+    "share"
+  ],
+  "word_bank": [
+    "total",
+    "3",
+    "£25",
+    "£8",
+    "share",
+    "5",
+    "£15"
+  ],
+  "week": 4,
+  "level": "EL2"
+}

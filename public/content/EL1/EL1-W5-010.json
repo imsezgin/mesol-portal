@@ -1,0 +1,80 @@
+{
+  "id": "EL1-W5-010",
+  "session": 5,
+  "type": "mesol_combo",
+  "title": "Understanding Inflation",
+  "topic": "Banking",
+  "context": "Last year, a loaf of bread cost £1.00. This year, the same bread costs £1.10.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What is 'inflation'?",
+        "options": [
+          "When prices go up over time",
+          "When prices go down",
+          "When prices stay the same",
+          "When shops close"
+        ],
+        "answer": "When prices go up over time"
+      },
+      {
+        "question": "What does 'afford' mean?",
+        "options": [
+          "Have enough money to buy something",
+          "Want something",
+          "Need something",
+          "Return something"
+        ],
+        "answer": "Have enough money to buy something"
+      },
+      {
+        "question": "What does 'cost of living' mean?",
+        "options": [
+          "How much money you need to live",
+          "The price of a house",
+          "Your salary",
+          "A type of tax"
+        ],
+        "answer": "How much money you need to live"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Answer the maths questions about prices.",
+    "questions": [
+      {
+        "question": "How much more does bread cost this year?",
+        "options": [
+          "10p",
+          "£1.00",
+          "£1.10",
+          "£2.10"
+        ],
+        "answer": "10p"
+      },
+      {
+        "question": "If milk goes from £1.00 to £1.05, how much more?",
+        "options": [
+          "5p",
+          "£1.05",
+          "£1.00",
+          "50p"
+        ],
+        "answer": "5p"
+      },
+      {
+        "question": "If everything costs 10% more, a £50 shop now costs...",
+        "options": [
+          "£55",
+          "£50",
+          "£60",
+          "£45"
+        ],
+        "answer": "£55"
+      }
+    ]
+  },
+  "week": 5,
+  "level": "EL1"
+}

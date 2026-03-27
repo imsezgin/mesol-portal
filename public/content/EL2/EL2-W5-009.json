@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W5-009",
+  "session": 5,
+  "type": "gap_fill",
+  "title": "Inflation Explained",
+  "topic": "Banking",
+  "instruction": "Complete the inflation explanation.",
+  "passage": "Inflation means prices ___ over time. The UK target is ___% per year. If inflation is 5% and your savings earn 2%, your money ___ value in real terms. Your purchasing ___ decreases by about 3%. To protect against inflation, savings interest should be ___ than inflation.",
+  "blanks": [
+    "rise",
+    "2",
+    "loses",
+    "power",
+    "higher"
+  ],
+  "word_bank": [
+    "rise",
+    "2",
+    "loses",
+    "power",
+    "higher",
+    "lower",
+    "fall"
+  ],
+  "week": 5,
+  "level": "EL2"
+}

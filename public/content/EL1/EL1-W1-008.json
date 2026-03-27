@@ -1,0 +1,53 @@
+{
+  "id": "EL1-W1-008",
+  "session": 1,
+  "type": "mcq",
+  "title": "Reading Food Labels",
+  "topic": "Weights & Measures",
+  "instruction": "Look at the food label information and answer.",
+  "context": "A tin of beans weighs 400g. The label says: Protein 5g, Fat 0.5g, Carbohydrates 12g per 100g serving.",
+  "questions": [
+    {
+      "question": "How much does the whole tin weigh?",
+      "options": [
+        "400g",
+        "100g",
+        "500g",
+        "200g"
+      ],
+      "answer": "400g"
+    },
+    {
+      "question": "How many 100g servings are in the tin?",
+      "options": [
+        "4",
+        "1",
+        "2",
+        "10"
+      ],
+      "answer": "4"
+    },
+    {
+      "question": "How much protein is in one serving?",
+      "options": [
+        "5g",
+        "10g",
+        "20g",
+        "400g"
+      ],
+      "answer": "5g"
+    },
+    {
+      "question": "Which has the most per serving?",
+      "options": [
+        "Carbohydrates",
+        "Protein",
+        "Fat",
+        "All the same"
+      ],
+      "answer": "Carbohydrates"
+    }
+  ],
+  "week": 1,
+  "level": "EL1"
+}

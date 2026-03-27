@@ -1,0 +1,62 @@
+{
+  "id": "EL1-W3-002",
+  "session": 3,
+  "type": "mcq",
+  "title": "Simple Fractions",
+  "topic": "Fractions & Percentages",
+  "instruction": "Choose the correct answer.",
+  "questions": [
+    {
+      "question": "What is half of 10?",
+      "options": [
+        "5",
+        "2",
+        "10",
+        "20"
+      ],
+      "answer": "5"
+    },
+    {
+      "question": "What is a quarter of 8?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "1"
+      ],
+      "answer": "2"
+    },
+    {
+      "question": "Half of a pizza has how many slices out of 8?",
+      "options": [
+        "4",
+        "2",
+        "8",
+        "6"
+      ],
+      "answer": "4"
+    },
+    {
+      "question": "1/2 is the same as...",
+      "options": [
+        "50%",
+        "25%",
+        "100%",
+        "10%"
+      ],
+      "answer": "50%"
+    },
+    {
+      "question": "1/4 is the same as...",
+      "options": [
+        "25%",
+        "50%",
+        "75%",
+        "10%"
+      ],
+      "answer": "25%"
+    }
+  ],
+  "week": 3,
+  "level": "EL1"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "EL1-W1-005",
+  "session": 1,
+  "type": "vocab_match",
+  "title": "Abbreviations",
+  "topic": "Weights & Measures",
+  "instruction": "Match each abbreviation to its full word.",
+  "pairs": [
+    {
+      "term": "kg",
+      "definition": "kilogram"
+    },
+    {
+      "term": "g",
+      "definition": "gram"
+    },
+    {
+      "term": "ml",
+      "definition": "millilitre"
+    },
+    {
+      "term": "l",
+      "definition": "litre"
+    },
+    {
+      "term": "lb",
+      "definition": "pound"
+    }
+  ],
+  "week": 1,
+  "level": "EL1"
+}

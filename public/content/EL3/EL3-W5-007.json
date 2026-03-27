@@ -1,0 +1,36 @@
+{
+  "id": "EL3-W5-007",
+  "session": 5,
+  "type": "vocab_match",
+  "title": "Investment Terms",
+  "topic": "Banking",
+  "instruction": "Match each investment term to its definition.",
+  "pairs": [
+    {
+      "term": "dividend",
+      "definition": "a share of company profits paid to shareholders"
+    },
+    {
+      "term": "capital gain",
+      "definition": "profit from selling an asset for more than you paid"
+    },
+    {
+      "term": "diversification",
+      "definition": "spreading investments across different assets to reduce risk"
+    },
+    {
+      "term": "inflation-adjusted return",
+      "definition": "investment return minus the inflation rate"
+    },
+    {
+      "term": "compound growth",
+      "definition": "earning returns on your returns over time"
+    },
+    {
+      "term": "tax wrapper",
+      "definition": "an account structure that provides tax benefits (e.g. ISA)"
+    }
+  ],
+  "week": 5,
+  "level": "EL3"
+}

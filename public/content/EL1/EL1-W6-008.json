@@ -1,0 +1,62 @@
+{
+  "id": "EL1-W6-008",
+  "session": 6,
+  "type": "mcq",
+  "title": "Numbers to 60",
+  "topic": "Date & Time",
+  "instruction": "Choose the correct number.",
+  "questions": [
+    {
+      "question": "Fifteen = ?",
+      "options": [
+        "15",
+        "50",
+        "5",
+        "51"
+      ],
+      "answer": "15"
+    },
+    {
+      "question": "Thirty-five = ?",
+      "options": [
+        "35",
+        "53",
+        "305",
+        "3.5"
+      ],
+      "answer": "35"
+    },
+    {
+      "question": "How do you say 42?",
+      "options": [
+        "Forty-two",
+        "Four-two",
+        "Fourty-two",
+        "Twenty-four"
+      ],
+      "answer": "Forty-two"
+    },
+    {
+      "question": "Round 23 to the nearest 5.",
+      "options": [
+        "25",
+        "20",
+        "30",
+        "23"
+      ],
+      "answer": "25"
+    },
+    {
+      "question": "Round 47 to the nearest 5.",
+      "options": [
+        "45",
+        "50",
+        "40",
+        "47"
+      ],
+      "answer": "45"
+    }
+  ],
+  "week": 6,
+  "level": "EL1"
+}

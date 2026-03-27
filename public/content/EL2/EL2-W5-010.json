@@ -1,0 +1,90 @@
+{
+  "id": "EL2-W5-010",
+  "session": 5,
+  "type": "mesol_combo",
+  "title": "Tax and National Insurance",
+  "topic": "Banking",
+  "context": "UK personal allowance: £12,570 per year (no tax). Basic rate: 20% on income £12,571-£50,270. National Insurance: 12% on earnings above £12,570.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What is 'income tax'?",
+        "options": [
+          "Tax paid on money you earn",
+          "Tax on items you buy",
+          "Council tax",
+          "Road tax"
+        ],
+        "answer": "Tax paid on money you earn"
+      },
+      {
+        "question": "What is 'National Insurance'?",
+        "options": [
+          "A payment towards state pension and NHS",
+          "Car insurance",
+          "Home insurance",
+          "Travel insurance"
+        ],
+        "answer": "A payment towards state pension and NHS"
+      },
+      {
+        "question": "What is 'PAYE'?",
+        "options": [
+          "Pay As You Earn — tax deducted from your wages",
+          "Pay After Year End",
+          "Personal Annual Yearly Earnings",
+          "A type of bank account"
+        ],
+        "answer": "Pay As You Earn — tax deducted from your wages"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate tax on a £25,000 salary.",
+    "questions": [
+      {
+        "question": "Taxable income after allowance (£25,000 - £12,570)?",
+        "options": [
+          "£12,430",
+          "£25,000",
+          "£12,570",
+          "£37,570"
+        ],
+        "answer": "£12,430"
+      },
+      {
+        "question": "Income tax at 20%?",
+        "options": [
+          "£2,486",
+          "£5,000",
+          "£2,514",
+          "£1,243"
+        ],
+        "answer": "£2,486"
+      },
+      {
+        "question": "NI at 12% of £12,430?",
+        "options": [
+          "£1,491.60",
+          "£3,000",
+          "£1,508.40",
+          "£2,486"
+        ],
+        "answer": "£1,491.60"
+      },
+      {
+        "question": "Monthly take-home pay (£25,000 - £2,486 - £1,491.60) ÷ 12?",
+        "options": [
+          "£1,751.87",
+          "£2,083.33",
+          "£1,500",
+          "£1,876.45"
+        ],
+        "answer": "£1,751.87"
+      }
+    ]
+  },
+  "week": 5,
+  "level": "EL2"
+}

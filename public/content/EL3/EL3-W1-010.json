@@ -1,0 +1,90 @@
+{
+  "id": "EL3-W1-010",
+  "session": 1,
+  "type": "mesol_combo",
+  "title": "Kitchen Maths Challenge",
+  "topic": "Cooking & Weights",
+  "context": "You run a small cafe. Today you need to make 20 portions of shepherd's pie. Your recipe makes 4 portions.",
+  "english_section": {
+    "instruction": "Answer the vocabulary questions.",
+    "questions": [
+      {
+        "question": "What does 'batch cooking' mean?",
+        "options": [
+          "Cooking large quantities at once",
+          "Cooking one meal at a time",
+          "Cooking very slowly",
+          "Cooking for yourself"
+        ],
+        "answer": "Cooking large quantities at once"
+      },
+      {
+        "question": "What is a 'portion'?",
+        "options": [
+          "An amount of food served to one person",
+          "A type of container",
+          "A cooking technique",
+          "An ingredient"
+        ],
+        "answer": "An amount of food served to one person"
+      },
+      {
+        "question": "What does 'cost-effective' mean?",
+        "options": [
+          "Good value for the money spent",
+          "Very expensive",
+          "Free of charge",
+          "Costing nothing"
+        ],
+        "answer": "Good value for the money spent"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate the quantities needed for 20 portions (multiply by 5).",
+    "questions": [
+      {
+        "question": "Recipe: 400g mince for 4. How much for 20?",
+        "options": [
+          "2000g (2kg)",
+          "1600g",
+          "800g",
+          "4000g"
+        ],
+        "answer": "2000g (2kg)"
+      },
+      {
+        "question": "Recipe: 800g potatoes for 4. For 20 portions?",
+        "options": [
+          "4000g (4kg)",
+          "3200g",
+          "1600g",
+          "2400g"
+        ],
+        "answer": "4000g (4kg)"
+      },
+      {
+        "question": "Mince costs £5.50/kg. Cost for 2kg?",
+        "options": [
+          "£11.00",
+          "£5.50",
+          "£16.50",
+          "£8.00"
+        ],
+        "answer": "£11.00"
+      },
+      {
+        "question": "Total ingredient cost is £22. Price per portion?",
+        "options": [
+          "£1.10",
+          "£2.20",
+          "£1.00",
+          "£4.40"
+        ],
+        "answer": "£1.10"
+      }
+    ]
+  },
+  "week": 1,
+  "level": "EL3"
+}

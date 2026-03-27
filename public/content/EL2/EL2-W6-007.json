@@ -1,0 +1,32 @@
+{
+  "id": "EL2-W6-007",
+  "session": 6,
+  "type": "vocab_match",
+  "title": "Time Expressions",
+  "topic": "Date & Time",
+  "instruction": "Match each time expression to its usage.",
+  "pairs": [
+    {
+      "term": "since",
+      "definition": "from a point in time until now (since 2020)"
+    },
+    {
+      "term": "for",
+      "definition": "a length of time (for 3 years)"
+    },
+    {
+      "term": "ago",
+      "definition": "in the past (2 years ago)"
+    },
+    {
+      "term": "by",
+      "definition": "before or at a deadline (by Friday)"
+    },
+    {
+      "term": "within",
+      "definition": "inside a time period (within 2 weeks)"
+    }
+  ],
+  "week": 6,
+  "level": "EL2"
+}

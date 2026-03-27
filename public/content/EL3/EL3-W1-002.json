@@ -1,0 +1,62 @@
+{
+  "id": "EL3-W1-002",
+  "session": 1,
+  "type": "mcq",
+  "title": "Complex Conversions",
+  "topic": "Weights & Measures",
+  "instruction": "Work out the correct answer for each conversion.",
+  "questions": [
+    {
+      "question": "A recipe calls for 12 oz of flour. What is this in grams? (1 oz ≈ 28g)",
+      "options": [
+        "336g",
+        "280g",
+        "120g",
+        "168g"
+      ],
+      "answer": "336g"
+    },
+    {
+      "question": "A container holds 2.5 litres. How many 330ml glasses can you fill?",
+      "options": [
+        "7",
+        "8",
+        "5",
+        "10"
+      ],
+      "answer": "7"
+    },
+    {
+      "question": "You need 1.5 kg of potatoes. They cost £1.20 per kg. How much will it cost?",
+      "options": [
+        "£1.80",
+        "£1.50",
+        "£1.20",
+        "£2.40"
+      ],
+      "answer": "£1.80"
+    },
+    {
+      "question": "A package weighs 3 lbs 8 oz. What is this in ounces? (1 lb = 16 oz)",
+      "options": [
+        "56 oz",
+        "48 oz",
+        "38 oz",
+        "64 oz"
+      ],
+      "answer": "56 oz"
+    },
+    {
+      "question": "Convert 750ml to litres.",
+      "options": [
+        "0.75 litres",
+        "7.5 litres",
+        "75 litres",
+        "0.075 litres"
+      ],
+      "answer": "0.75 litres"
+    }
+  ],
+  "week": 1,
+  "level": "EL3"
+}

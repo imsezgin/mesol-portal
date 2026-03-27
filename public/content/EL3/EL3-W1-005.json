@@ -1,0 +1,62 @@
+{
+  "id": "EL3-W1-005",
+  "session": 1,
+  "type": "mcq",
+  "title": "Net Weight vs Gross Weight",
+  "topic": "Weights & Measures",
+  "instruction": "Answer questions about product weights and labelling.",
+  "questions": [
+    {
+      "question": "A jar of jam: gross weight 450g, jar weight 100g. What is the net weight?",
+      "options": [
+        "350g",
+        "450g",
+        "550g",
+        "100g"
+      ],
+      "answer": "350g"
+    },
+    {
+      "question": "Net weight 200g, packaging 50g. What is the gross weight?",
+      "options": [
+        "250g",
+        "200g",
+        "150g",
+        "300g"
+      ],
+      "answer": "250g"
+    },
+    {
+      "question": "Which weight is shown on food labels in the UK?",
+      "options": [
+        "Net weight",
+        "Gross weight",
+        "Tare weight",
+        "Both"
+      ],
+      "answer": "Net weight"
+    },
+    {
+      "question": "You buy 5 tins at 400g net weight each. Total net weight?",
+      "options": [
+        "2000g (2kg)",
+        "400g",
+        "500g",
+        "2500g"
+      ],
+      "answer": "2000g (2kg)"
+    },
+    {
+      "question": "A box of cereal says 'e 500g'. What does the 'e' mean?",
+      "options": [
+        "Estimated/average weight",
+        "Exact weight",
+        "Extra weight",
+        "Empty weight"
+      ],
+      "answer": "Estimated/average weight"
+    }
+  ],
+  "week": 1,
+  "level": "EL3"
+}

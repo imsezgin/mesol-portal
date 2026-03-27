@@ -1,0 +1,32 @@
+{
+  "id": "EL2-W4-007",
+  "session": 4,
+  "type": "vocab_match",
+  "title": "Addition & Subtraction Words",
+  "topic": "Money & Calculations",
+  "instruction": "Match each maths word to its meaning.",
+  "pairs": [
+    {
+      "term": "sum",
+      "definition": "the result of adding numbers together"
+    },
+    {
+      "term": "difference",
+      "definition": "the result of subtracting one number from another"
+    },
+    {
+      "term": "minus",
+      "definition": "to take away / subtract"
+    },
+    {
+      "term": "plus",
+      "definition": "to add"
+    },
+    {
+      "term": "remainder",
+      "definition": "what is left over after division"
+    }
+  ],
+  "week": 4,
+  "level": "EL2"
+}

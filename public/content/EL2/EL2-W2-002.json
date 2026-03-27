@@ -1,0 +1,62 @@
+{
+  "id": "EL2-W2-002",
+  "session": 2,
+  "type": "mcq",
+  "title": "Price Per Unit",
+  "topic": "Comparisons",
+  "instruction": "Calculate the price per unit to find the best deal.",
+  "questions": [
+    {
+      "question": "Brand A: 500g for £2.00. Price per 100g?",
+      "options": [
+        "40p",
+        "50p",
+        "20p",
+        "£1.00"
+      ],
+      "answer": "40p"
+    },
+    {
+      "question": "Brand B: 750g for £2.25. Price per 100g?",
+      "options": [
+        "30p",
+        "40p",
+        "25p",
+        "50p"
+      ],
+      "answer": "30p"
+    },
+    {
+      "question": "Based on the above, which brand is better value?",
+      "options": [
+        "Brand B",
+        "Brand A",
+        "Both the same",
+        "Cannot tell"
+      ],
+      "answer": "Brand B"
+    },
+    {
+      "question": "Mobile: 5p per minute. How much for a 20-minute call?",
+      "options": [
+        "£1.00",
+        "£0.50",
+        "£2.00",
+        "20p"
+      ],
+      "answer": "£1.00"
+    },
+    {
+      "question": "Parking: £1.50 per hour. Cost for 4 hours?",
+      "options": [
+        "£6.00",
+        "£4.50",
+        "£5.00",
+        "£3.00"
+      ],
+      "answer": "£6.00"
+    }
+  ],
+  "week": 2,
+  "level": "EL2"
+}

@@ -4,108 +4,135 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="theme-color" content="#1a7a35">
-<meta name="apple-mobile-web-app-capable" content="yes">
 <title>YESchool — Exercise</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --green:#1a7a35;--green-dark:#0f5225;--green-mid:#2ea34d;
-  --green-pale:#f0faf2;--green-light:#d4edda;
-  --gold:#d4920a;--navy:#1a2a6e;
-  --ink:#0d1117;--mid:#4a5568;--muted:#8a96a3;--line:#e2e8f0;
-  --white:#ffffff;--bg:#f7f8fa;
+  --g:#1a7a35;--gd:#0f5225;--gm:#2ea34d;--gp:#f0faf2;--gl:#d4edda;
+  --gold:#d4920a;--navy:#1a2a6e;--navy2:#e8eaf6;--ink:#0d1117;--mid:#4a5568;
+  --muted:#8a96a3;--line:#e2e8f0;--bg:#f7f9fb;--white:#fff;
   --error:#c0392b;--error-bg:#fdecea;
 }
-html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink)}
+html,body{min-height:100%;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:15px;color:var(--ink)}
 
-/* ── Top bar ───────────────────────────────────── */
-.topbar{display:flex;align-items:center;padding:14px 16px;background:var(--green);position:sticky;top:0;z-index:50;gap:12px}
-.back-btn{color:#fff;background:none;border:none;font-size:22px;cursor:pointer;padding:4px;-webkit-tap-highlight-color:transparent;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
-.topbar-title{flex:1;font-size:15px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.progress-pill{background:rgba(255,255,255,.18);border-radius:20px;padding:5px 14px;font-size:13px;font-weight:700;color:#fff;white-space:nowrap}
+/* HEADER */
+.header{background:var(--g);padding:14px 18px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:10}
+.back-btn{color:white;font-size:22px;cursor:pointer;padding:4px;background:none;border:none;line-height:1}
+.header-info{flex:1}
+.header-topic{font-size:13px;color:rgba(255,255,255,.7);font-weight:500}
+.header-title{font-size:16px;font-weight:700;color:white}
+.progress-bar-wrap{position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(255,255,255,.2)}
+.progress-bar{height:100%;background:var(--gold);transition:width .3s}
 
-/* ── Main ──────────────────────────────────────── */
-.main{padding:20px 16px 40px;max-width:460px;margin:0 auto}
-.card{background:#fff;border-radius:16px;padding:24px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px}
+/* BODY */
+.body{padding:20px 16px 100px;max-width:560px;margin:0 auto}
 
-.instruction{font-size:14px;color:var(--mid);line-height:1.6;margin-bottom:20px;background:var(--green-pale);padding:14px 16px;border-radius:12px;border-left:4px solid var(--green)}
+/* CONTEXT BOX */
+.context-box{background:white;border:1px solid var(--line);border-left:4px solid var(--g);border-radius:10px;padding:14px 16px;margin-bottom:20px;font-size:13.5px;line-height:1.65;color:var(--mid)}
+.context-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--g);margin-bottom:6px}
 
-/* ── Gap Fill ──────────────────────────────────── */
-.passage{font-size:16px;line-height:1.8;color:var(--ink);margin-bottom:20px}
-.blank{display:inline-block;min-width:100px;border-bottom:2px dashed var(--green);padding:2px 8px;margin:0 2px;cursor:pointer;border-radius:4px;transition:all .15s;font-weight:600;color:var(--green-dark);background:var(--green-pale);min-height:28px;vertical-align:baseline}
-.blank.filled{border-bottom-style:solid;background:var(--green-light)}
-.blank.correct{border-color:var(--green);background:var(--green-light);color:var(--green-dark)}
-.blank.wrong{border-color:var(--error);background:var(--error-bg);color:var(--error)}
-.blank.active{background:#e8f5e9;box-shadow:0 0 0 2px var(--green)}
+/* SECTION HEADER (mesol_combo) */
+.section-header{background:var(--navy);color:white;border-radius:10px;padding:12px 16px;margin-bottom:16px;font-weight:700;font-size:14px}
+.section-header.english{background:var(--g)}
 
-.word-bank{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.chip{padding:10px 16px;border-radius:10px;background:var(--green-pale);color:var(--green-dark);font-size:14px;font-weight:600;cursor:pointer;transition:all .15s;border:2px solid transparent;-webkit-tap-highlight-color:transparent;min-height:44px;display:flex;align-items:center}
-.chip:hover{background:var(--green-light)}
-.chip.used{opacity:.3;pointer-events:none;text-decoration:line-through}
-.chip.selected{border-color:var(--green);background:var(--green-light)}
+/* INSTRUCTION */
+.instruction{font-size:14px;color:var(--mid);margin-bottom:20px;line-height:1.6}
 
-/* ── MCQ ───────────────────────────────────────── */
-.question-text{font-size:17px;font-weight:600;line-height:1.5;margin-bottom:20px;color:var(--ink)}
+/* GAP FILL */
+.passage{font-size:15px;line-height:2.2;margin-bottom:20px;background:white;border:1px solid var(--line);border-radius:12px;padding:16px}
+.blank{display:inline-block;min-width:80px;height:30px;border-bottom:2px solid var(--g);margin:0 4px;vertical-align:middle;text-align:center;font-weight:700;color:var(--g);font-size:14px;cursor:pointer;padding:0 6px;border-radius:4px 4px 0 0;transition:background .15s}
+.blank:hover{background:var(--gp)}
+.blank.filled{background:var(--gp);border-bottom-color:var(--gd)}
+.word-bank{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chip{background:white;border:2px solid var(--line);border-radius:99px;padding:7px 14px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;color:var(--ink)}
+.chip:hover{border-color:var(--g);color:var(--g);background:var(--gp)}
+.chip.used{opacity:.35;cursor:default;pointer-events:none}
+.chip.selected{border-color:var(--g);background:var(--g);color:white}
+
+/* MCQ */
+.question-text{font-size:16px;font-weight:600;line-height:1.55;margin-bottom:20px;color:var(--ink)}
+.question-counter{font-size:12px;color:var(--muted);margin-bottom:8px;font-weight:600}
 .options{display:flex;flex-direction:column;gap:10px}
-.option{padding:16px 18px;border-radius:12px;border:2px solid var(--line);font-size:15px;cursor:pointer;transition:all .15s;background:#fff;-webkit-tap-highlight-color:transparent;min-height:52px;display:flex;align-items:center}
-.option:hover{border-color:var(--green);background:var(--green-pale)}
-.option.selected{border-color:var(--green);background:var(--green-light);font-weight:600}
-.option.correct{border-color:var(--green);background:var(--green-light);color:var(--green-dark)}
+.option{background:white;border:2px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:500;cursor:pointer;text-align:left;transition:all .2s;line-height:1.5}
+.option:hover{border-color:var(--g);background:var(--gp)}
+.option.correct{border-color:var(--g);background:var(--gl);color:var(--gd)}
 .option.wrong{border-color:var(--error);background:var(--error-bg);color:var(--error)}
-.option.disabled{pointer-events:none;opacity:.7}
+.option:disabled{cursor:default}
 
-/* ── Vocab Match ───────────────────────────────── */
-.match-container{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.match-item{padding:14px 12px;border-radius:12px;border:2px solid var(--line);font-size:13px;line-height:1.4;cursor:pointer;transition:all .15s;background:#fff;text-align:center;min-height:52px;display:flex;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent}
-.match-item:hover{border-color:var(--green)}
-.match-item.selected{border-color:var(--green);background:var(--green-light);font-weight:600}
-.match-item.matched{border-color:var(--green);background:var(--green-light);opacity:.6;pointer-events:none}
-.match-item.wrong{border-color:var(--error);background:var(--error-bg);animation:shake .35s ease}
-.match-left{border-left:3px solid var(--navy)}
-.match-right{border-left:3px solid var(--gold)}
+/* VOCAB MATCH */
+.match-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.match-col-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--muted);margin-bottom:8px;text-align:center}
+.match-col{display:flex;flex-direction:column;gap:8px}
+.match-item{background:white;border:2px solid var(--line);border-radius:10px;padding:11px 12px;font-size:13px;font-weight:600;cursor:pointer;text-align:center;line-height:1.4;min-height:52px;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.match-item:hover{border-color:var(--g);background:var(--gp)}
+.match-item.selected{border-color:var(--g);background:var(--g);color:white}
+.match-item.matched{border-color:var(--gm);background:var(--gl);color:var(--gd);cursor:default;pointer-events:none}
+.match-item.wrong{animation:shake .3s ease}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}60%{transform:translateX(6px)}}
 
-@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-4px)}40%{transform:translateX(4px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
+/* SUBMIT BUTTON */
+.submit-btn{width:100%;padding:16px;background:var(--g);color:white;font-size:16px;font-weight:700;border:none;border-radius:14px;cursor:pointer;margin-top:16px;transition:background .15s}
+.submit-btn:hover{background:var(--gm)}
+.submit-btn:disabled{background:var(--muted);cursor:not-allowed}
 
-/* ── Combo section header ──────────────────────── */
-.section-header{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:16px;padding:10px 14px;background:#eef0ff;border-radius:10px;text-align:center}
-.section-header.maths{color:var(--gold);background:#fff8e1}
+/* SCORE SCREEN */
+.score-screen{display:none;text-align:center;padding:32px 20px}
+.score-screen.show{display:block}
+.score-ring{width:140px;height:140px;border-radius:50%;margin:0 auto 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;border:6px solid var(--g)}
+.score-ring.high{border-color:var(--g);background:var(--gp)}
+.score-ring.mid{border-color:var(--gold);background:var(--gold)10}
+.score-ring.low{border-color:var(--error);background:var(--error-bg)}
+.score-pct{font-size:42px;line-height:1;color:var(--g)}
+.score-pct.mid{color:var(--gold)}
+.score-pct.low{color:var(--error)}
+.score-emoji{font-size:28px;margin-bottom:4px}
+.score-label{font-size:18px;font-weight:700;margin-bottom:8px}
+.score-sub{font-size:14px;color:var(--muted);margin-bottom:28px}
+.score-breakdown{background:white;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:24px;text-align:left}
+.score-breakdown-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.score-breakdown-row:last-child{border-bottom:none;font-weight:700}
+.score-actions{display:flex;gap:10px}
+.btn-retry{flex:1;padding:14px;background:var(--bg);border:2px solid var(--line);color:var(--ink);font-size:15px;font-weight:700;border-radius:12px;cursor:pointer}
+.btn-next{flex:2;padding:14px;background:var(--g);color:white;font-size:15px;font-weight:700;border:none;border-radius:12px;cursor:pointer}
 
-/* ── Context block ─────────────────────────────── */
-.context-block{font-size:14px;line-height:1.7;color:var(--mid);background:#fafafa;padding:16px;border-radius:12px;border:1px solid var(--line);margin-bottom:20px}
-
-/* ── Result screen ─────────────────────────────── */
-.result-screen{text-align:center;padding:40px 20px}
-.result-emoji{font-size:64px;margin-bottom:16px}
-.result-pct{font-size:56px;font-weight:800;color:var(--green);font-family:Georgia,'Times New Roman',serif;margin-bottom:8px}
-.result-pct.ok{color:var(--gold)}
-.result-pct.low{color:var(--error)}
-.result-label{font-size:16px;color:var(--mid);margin-bottom:24px}
-.result-msg{font-size:14px;color:var(--mid);margin-bottom:32px;line-height:1.5}
-.result-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn{padding:16px 28px;border-radius:12px;font-size:15px;font-weight:700;border:none;cursor:pointer;transition:all .15s;min-height:52px;-webkit-tap-highlight-color:transparent}
-.btn-primary{background:var(--green);color:#fff}
-.btn-primary:hover{background:var(--green-mid)}
-.btn-outline{background:#fff;color:var(--green);border:2px solid var(--green)}
-.btn-outline:hover{background:var(--green-pale)}
-
-/* ── Loading ───────────────────────────────────── */
-.loading-state{text-align:center;padding:60px 20px;color:var(--muted);font-size:15px}
-.loading-state .spinner{width:40px;height:40px;border:3px solid var(--line);border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
+/* LOADING */
+.loading{text-align:center;padding:60px 20px;color:var(--muted)}
+.loading-spinner{width:36px;height:36px;border:3px solid var(--line);border-top-color:var(--g);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 12px}
 @keyframes spin{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <button class="back-btn" onclick="goBack()" aria-label="Go back">←</button>
-  <div class="topbar-title" id="topTitle">Loading...</div>
-  <div class="progress-pill" id="progressPill">--</div>
+<div class="header" id="header">
+  <button class="back-btn" onclick="goBack()">←</button>
+  <div class="header-info">
+    <div class="header-topic" id="headerTopic">Loading...</div>
+    <div class="header-title" id="headerTitle"></div>
+  </div>
+  <div style="font-size:12px;color:rgba(255,255,255,.65)" id="headerProgress"></div>
+  <div class="progress-bar-wrap"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
 </div>
 
-<div class="main" id="mainContent">
-  <div class="loading-state" id="loadingState">
-    <div class="spinner"></div>
-    Loading exercise...
+<div class="body">
+  <div class="loading" id="loadingState">
+    <div class="loading-spinner"></div>
+    <div>Loading exercise...</div>
+  </div>
+
+  <div id="exerciseContent" style="display:none"></div>
+
+  <div class="score-screen" id="scoreScreen">
+    <div class="score-ring" id="scoreRing">
+      <div class="score-emoji" id="scoreEmoji">🎉</div>
+      <div class="score-pct" id="scorePct">0%</div>
+    </div>
+    <div class="score-label" id="scoreLabel">Well done!</div>
+    <div class="score-sub" id="scoreSub"></div>
+    <div class="score-breakdown" id="scoreBreakdown"></div>
+    <div class="score-actions">
+      <button class="btn-retry" onclick="retryExercise()">↺ Retry</button>
+      <button class="btn-next" onclick="nextExercise()">Next exercise →</button>
+    </div>
   </div>
 </div>
 
@@ -114,458 +141,318 @@ const TOKEN = localStorage.getItem('yes_token');
 if (!TOKEN) window.location.href = '/';
 
 const params = new URLSearchParams(window.location.search);
-const exerciseId = params.get('id');
-const level = params.get('level') || localStorage.getItem('yes_level');
+const EXERCISE_ID = params.get('id');
+const LEVEL = params.get('level') || localStorage.getItem('yes_level') || 'EL1';
 
-let exerciseData = null;
-let startTime = Date.now();
-let currentQuestion = 0;
-let score = 0;
-let totalQuestions = 0;
-let answered = [];
-// Combo tracking
-let comboPhase = null; // 'english' | 'maths'
-let englishScore = 0;
-let mathsScore = 0;
+let exercise = null;
+let state = { selected: null, blanks: [], answers: [], matches: {}, currentQ: 0, correct: 0, total: 0, startTime: Date.now(), comboSection: 'english', comboEnglishScore: {correct:0,total:0}, comboMathsScore: {correct:0,total:0} };
 
-function goBack() {
-  window.location.href = '/practice';
+// Save progress on exit
+window.addEventListener('beforeunload', saveProgress);
+function saveProgress() {
+  if (exercise && state.total > 0) {
+    localStorage.setItem('progress_' + EXERCISE_ID, JSON.stringify(state));
+  }
 }
 
-// ── Load exercise ──────────────────────────────────
 async function loadExercise() {
-  if (!exerciseId || !level) {
-    showError('Missing exercise ID or level.');
-    return;
-  }
-
-  // Try localStorage first (saved progress)
-  const saved = localStorage.getItem('yes_progress_' + exerciseId);
-
+  if (!EXERCISE_ID) { window.location.href = '/practice'; return; }
   try {
-    const res = await fetch(`/content/${level}/${exerciseId}.json`);
-    if (!res.ok) throw new Error('Exercise not found');
-    exerciseData = await res.json();
-  } catch (err) {
-    showError('Could not load exercise. Check your connection.');
+    const res = await fetch(`/content/${LEVEL}/${EXERCISE_ID}.json`);
+    if (!res.ok) throw new Error('Not found');
+    exercise = await res.json();
+
+    // Restore saved progress
+    const saved = localStorage.getItem('progress_' + EXERCISE_ID);
+    if (saved) {
+      try { const s = JSON.parse(saved); if (s && s.total < s.correct + 1) Object.assign(state, s); } catch {}
+    }
+
+    document.getElementById('headerTopic').textContent = 'Week ' + exercise.week + ' · ' + exercise.topic;
+    document.getElementById('headerTitle').textContent = exercise.title;
+    document.getElementById('loadingState').style.display = 'none';
+    document.getElementById('exerciseContent').style.display = 'block';
+    renderExercise();
+  } catch(e) {
+    document.getElementById('loadingState').innerHTML = '<div style="color:var(--error)">Exercise not found. <a href="/practice">Back to practice</a></div>';
+  }
+}
+
+function renderExercise() {
+  const el = document.getElementById('exerciseContent');
+  const type = exercise.type === 'mesol_combo' ? (state.comboSection === 'english' ? 'mcq_combo_english' : 'mcq_combo_maths') : exercise.type;
+
+  if (exercise.type === 'mesol_combo') {
+    const section = state.comboSection === 'english' ? exercise.english_section : exercise.maths_section;
+    renderMCQ(el, section, true);
+  } else if (exercise.type === 'mcq') {
+    renderMCQ(el, exercise, false);
+  } else if (exercise.type === 'gap_fill') {
+    renderGapFill(el);
+  } else if (exercise.type === 'vocab_match') {
+    renderVocabMatch(el);
+  }
+}
+
+// ── GAP FILL ──────────────────────────────────────────────────
+function renderGapFill(el) {
+  state.blanks = Array(exercise.blanks.length).fill(null);
+  state.total = exercise.blanks.length;
+
+  let passageHtml = exercise.passage;
+  let i = 0;
+  passageHtml = passageHtml.replace(/___/g, () => `<span class="blank" id="blank-${i}" onclick="blankClick(${i++})"></span>`);
+
+  const chips = [...exercise.word_bank].sort(() => Math.random() - 0.5);
+
+  el.innerHTML = `
+    <p class="instruction">${exercise.instruction}</p>
+    ${exercise.context ? `<div class="context-box"><div class="context-label">Context</div>${exercise.context}</div>` : ''}
+    <div class="passage">${passageHtml}</div>
+    <div class="section-title" style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:10px">Word bank</div>
+    <div class="word-bank" id="wordBank">
+      ${chips.map((c,idx) => `<div class="chip" id="chip-${idx}" onclick="chipClick(${idx},'${c}')">${c}</div>`).join('')}
+    </div>
+    <button class="submit-btn" id="submitBtn" onclick="submitGapFill()" disabled>Check answers</button>
+  `;
+  updateProgress();
+}
+
+let selectedChipIdx = null;
+let selectedBlankIdx = null;
+
+function chipClick(idx, word) {
+  // Deselect if already selected
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+  if (selectedChipIdx === idx) { selectedChipIdx = null; return; }
+  selectedChipIdx = idx;
+  document.getElementById('chip-' + idx).classList.add('selected');
+  // If blank already selected, fill it
+  if (selectedBlankIdx !== null) fillBlank(selectedBlankIdx, idx, word);
+}
+
+function blankClick(idx) {
+  // If blank already filled, return word to bank
+  if (state.blanks[idx] !== null) {
+    const oldWord = state.blanks[idx].word;
+    const oldChipIdx = state.blanks[idx].chipIdx;
+    state.blanks[idx] = null;
+    const blankEl = document.getElementById('blank-' + idx);
+    blankEl.textContent = '';
+    blankEl.classList.remove('filled');
+    if (oldChipIdx !== null) {
+      const chip = document.getElementById('chip-' + oldChipIdx);
+      if (chip) chip.classList.remove('used');
+    }
+    checkSubmit();
     return;
   }
-
-  document.getElementById('topTitle').textContent = exerciseData.title || exerciseId;
-  startTime = Date.now();
-
-  switch (exerciseData.type) {
-    case 'gap_fill':    renderGapFill(); break;
-    case 'mcq':         renderMCQ(); break;
-    case 'vocab_match': renderVocabMatch(); break;
-    case 'mesol_combo': renderCombo(); break;
-    default: showError('Unknown exercise type: ' + exerciseData.type);
-  }
+  if (selectedChipIdx === null) return;
+  const chip = document.getElementById('chip-' + selectedChipIdx);
+  fillBlank(idx, selectedChipIdx, chip.textContent);
 }
 
-function showError(msg) {
-  document.getElementById('loadingState').innerHTML = `<div style="font-size:40px;margin-bottom:12px">⚠️</div>${msg}<br><br><a href="/practice" style="color:var(--green);font-weight:600">Back to Practice</a>`;
+function fillBlank(blankIdx, chipIdx, word) {
+  state.blanks[blankIdx] = { word, chipIdx };
+  const blankEl = document.getElementById('blank-' + blankIdx);
+  blankEl.textContent = word;
+  blankEl.classList.add('filled');
+  document.getElementById('chip-' + chipIdx).classList.add('used');
+  selectedChipIdx = null;
+  selectedBlankIdx = null;
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+  checkSubmit();
 }
 
-// ══════════════════════════════════════════════════
-//  GAP FILL
-// ══════════════════════════════════════════════════
-function renderGapFill() {
-  const d = exerciseData;
-  totalQuestions = d.blanks.length;
-  const blanks = d.blanks;
-  let filledBlanks = new Array(blanks.length).fill(null);
-  let activeBlank = 0;
+function checkSubmit() {
+  const allFilled = state.blanks.every(b => b !== null);
+  document.getElementById('submitBtn').disabled = !allFilled;
+}
 
-  // Build passage with blank spans
-  let passageHtml = d.passage;
-  for (let i = 0; i < blanks.length; i++) {
-    passageHtml = passageHtml.replace('___', `<span class="blank${i === 0 ? ' active' : ''}" data-idx="${i}" id="blank${i}"></span>`);
-  }
-
-  // Shuffle word bank
-  const bank = [...d.word_bank].sort(() => Math.random() - 0.5);
-
-  document.getElementById('progressPill').textContent = `0/${totalQuestions}`;
-
-  document.getElementById('mainContent').innerHTML = `
-    <div class="card">
-      <div class="instruction">${d.instruction}</div>
-      <div class="passage" id="passage">${passageHtml}</div>
-      <div class="word-bank" id="wordBank">
-        ${bank.map((w, i) => `<div class="chip" data-word="${w}" onclick="selectWord(this)">${w}</div>`).join('')}
-      </div>
-    </div>`;
-
-  // Tap blank to make it active
-  document.querySelectorAll('.blank').forEach(el => {
-    el.addEventListener('click', () => {
-      document.querySelectorAll('.blank').forEach(b => b.classList.remove('active'));
-      el.classList.add('active');
-      activeBlank = parseInt(el.dataset.idx);
-    });
+function submitGapFill() {
+  let correct = 0;
+  exercise.blanks.forEach((answer, i) => {
+    const given = state.blanks[i]?.word?.toLowerCase().trim();
+    if (given === answer.toLowerCase().trim()) correct++;
   });
-
-  window.selectWord = function(chip) {
-    const word = chip.dataset.word;
-    const blankEl = document.getElementById('blank' + activeBlank);
-
-    // If this blank already has a word, free the old chip
-    if (filledBlanks[activeBlank]) {
-      document.querySelectorAll('.chip').forEach(c => {
-        if (c.dataset.word === filledBlanks[activeBlank] && c.classList.contains('used')) {
-          c.classList.remove('used');
-        }
-      });
-    }
-
-    filledBlanks[activeBlank] = word;
-    blankEl.textContent = word;
-    blankEl.classList.add('filled');
-    chip.classList.add('used');
-
-    // Move to next empty blank
-    const nextEmpty = filledBlanks.findIndex((v, i) => i > activeBlank && v === null);
-    if (nextEmpty >= 0) {
-      document.querySelectorAll('.blank').forEach(b => b.classList.remove('active'));
-      document.getElementById('blank' + nextEmpty).classList.add('active');
-      activeBlank = nextEmpty;
-    } else {
-      // Check if all filled
-      const firstEmpty = filledBlanks.indexOf(null);
-      if (firstEmpty === -1) {
-        // All blanks filled — check answers
-        setTimeout(() => checkGapFill(filledBlanks, blanks), 300);
-      } else {
-        document.querySelectorAll('.blank').forEach(b => b.classList.remove('active'));
-        document.getElementById('blank' + firstEmpty).classList.add('active');
-        activeBlank = firstEmpty;
-      }
-    }
-
-    document.getElementById('progressPill').textContent = `${filledBlanks.filter(v => v !== null).length}/${totalQuestions}`;
-  };
+  showScore(correct, exercise.blanks.length);
 }
 
-function checkGapFill(filled, correct) {
-  let s = 0;
-  filled.forEach((word, i) => {
-    const el = document.getElementById('blank' + i);
-    if (word && word.toLowerCase().trim() === correct[i].toLowerCase().trim()) {
-      el.classList.add('correct');
-      s++;
-    } else {
-      el.classList.add('wrong');
-      el.title = 'Correct: ' + correct[i];
-    }
-  });
-  score = s;
-  // Disable word bank
-  document.querySelectorAll('.chip').forEach(c => c.style.pointerEvents = 'none');
-  setTimeout(() => showResult(score, totalQuestions), 1500);
+// ── MCQ ───────────────────────────────────────────────────────
+function renderMCQ(el, section, isCombo) {
+  const q = section.questions[state.currentQ];
+  const total = section.questions.length;
+  updateProgress(state.currentQ + 1, total);
+  document.getElementById('headerProgress').textContent = (state.currentQ + 1) + '/' + total;
+
+  const sectionBanner = isCombo ? `<div class="section-header ${state.comboSection}">${state.comboSection === 'english' ? '📖 English section' : '🔢 Maths section'}</div>` : '';
+
+  el.innerHTML = `
+    ${sectionBanner}
+    ${exercise.context ? `<div class="context-box"><div class="context-label">Context</div>${exercise.context}</div>` : ''}
+    <p class="instruction">${section.instruction || exercise.instruction}</p>
+    <div class="question-counter">Question ${state.currentQ + 1} of ${total}</div>
+    <div class="question-text">${q.question}</div>
+    <div class="options" id="options">
+      ${q.options.map((opt, i) => `<button class="option" id="opt-${i}" onclick="selectOption(${i},'${opt.replace(/'/g,"\\'")}','${q.answer.replace(/'/g,"\\'")}', ${isCombo})">${opt}</button>`).join('')}
+    </div>
+  `;
 }
 
-// ══════════════════════════════════════════════════
-//  MCQ
-// ══════════════════════════════════════════════════
-function renderMCQ() {
-  const questions = exerciseData.questions;
-  totalQuestions = questions.length;
-  currentQuestion = 0;
-  score = 0;
-
-  function showQuestion(idx) {
-    const q = questions[idx];
-    document.getElementById('progressPill').textContent = `${idx + 1}/${totalQuestions}`;
-
-    document.getElementById('mainContent').innerHTML = `
-      <div class="card">
-        <div class="instruction">${exerciseData.instruction}</div>
-        <div class="question-text">${q.question}</div>
-        <div class="options" id="options">
-          ${q.options.map((opt, i) => `<div class="option" data-val="${opt}" onclick="pickOption(this)">${opt}</div>`).join('')}
-        </div>
-      </div>`;
+function selectOption(idx, chosen, answer, isCombo) {
+  document.querySelectorAll('.option').forEach(o => o.disabled = true);
+  const isCorrect = chosen === answer;
+  document.getElementById('opt-' + idx).classList.add(isCorrect ? 'correct' : 'wrong');
+  if (!isCorrect) {
+    const opts = document.querySelectorAll('.option');
+    const section = isCombo ? (state.comboSection === 'english' ? exercise.english_section : exercise.maths_section) : exercise;
+    const q = section.questions[state.currentQ];
+    opts.forEach((o, i) => { if (q.options[i] === answer) o.classList.add('correct'); });
+  }
+  if (isCorrect) {
+    if (isCombo) {
+      if (state.comboSection === 'english') state.comboEnglishScore.correct++;
+      else state.comboMathsScore.correct++;
+    } else {
+      state.correct++;
+    }
   }
 
-  window.pickOption = function(el) {
-    if (el.parentElement.querySelector('.correct,.wrong')) return; // Already answered
-    const q = questions[currentQuestion];
-    const isCorrect = el.dataset.val === q.answer;
-
-    // Disable all options
-    el.parentElement.querySelectorAll('.option').forEach(o => o.classList.add('disabled'));
-
-    if (isCorrect) {
-      el.classList.add('correct');
-      score++;
+  setTimeout(() => {
+    state.currentQ++;
+    const section = isCombo ? (state.comboSection === 'english' ? exercise.english_section : exercise.maths_section) : exercise;
+    if (state.currentQ < section.questions.length) {
+      renderExercise();
+    } else if (isCombo && state.comboSection === 'english') {
+      state.comboSection = 'maths';
+      state.comboMathsScore.total = exercise.maths_section.questions.length;
+      state.currentQ = 0;
+      renderExercise();
     } else {
-      el.classList.add('wrong');
-      // Highlight correct
-      el.parentElement.querySelectorAll('.option').forEach(o => {
-        if (o.dataset.val === q.answer) o.classList.add('correct');
-      });
-    }
-
-    setTimeout(() => {
-      currentQuestion++;
-      if (currentQuestion < totalQuestions) {
-        showQuestion(currentQuestion);
+      if (isCombo) {
+        const totalCorrect = state.comboEnglishScore.correct + state.comboMathsScore.correct;
+        const totalQ = exercise.english_section.questions.length + exercise.maths_section.questions.length;
+        showScore(totalCorrect, totalQ, true);
       } else {
-        showResult(score, totalQuestions);
+        showScore(state.correct, exercise.questions.length);
       }
-    }, 1500);
-  };
-
-  showQuestion(0);
+    }
+  }, 1400);
 }
 
-// ══════════════════════════════════════════════════
-//  VOCAB MATCH
-// ══════════════════════════════════════════════════
-function renderVocabMatch() {
-  const pairs = exerciseData.pairs;
-  totalQuestions = pairs.length;
-  score = 0;
-  let selectedTerm = null;
-  let matchedPairs = 0;
+// ── VOCAB MATCH ───────────────────────────────────────────────
+function renderVocabMatch(el) {
+  const pairs = [...exercise.pairs].sort(() => Math.random() - 0.5);
+  const defs = [...exercise.pairs].map(p => p.definition).sort(() => Math.random() - 0.5);
+  state.total = pairs.length;
+  state.matchedCount = 0;
+  state.selectedTerm = null;
 
-  // Shuffle both columns independently
-  const terms = pairs.map((p, i) => ({ text: p.term, idx: i })).sort(() => Math.random() - 0.5);
-  const defs  = pairs.map((p, i) => ({ text: p.definition, idx: i })).sort(() => Math.random() - 0.5);
-
-  document.getElementById('progressPill').textContent = `0/${totalQuestions}`;
-
-  document.getElementById('mainContent').innerHTML = `
-    <div class="card">
-      <div class="instruction">${exerciseData.instruction}</div>
-      <div class="match-container" id="matchGrid">
-        ${terms.map(t => `<div class="match-item match-left" data-type="term" data-idx="${t.idx}" onclick="pickMatch(this)">${t.text}</div>`).join('')}
-        ${defs.map(d => `<div class="match-item match-right" data-type="def" data-idx="${d.idx}" onclick="pickMatch(this)">${d.text}</div>`).join('')}
+  el.innerHTML = `
+    <p class="instruction">${exercise.instruction}</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+      <div class="match-col-label">Term</div>
+      <div class="match-col-label">Definition</div>
+    </div>
+    <div class="match-grid">
+      <div class="match-col" id="terms">
+        ${pairs.map((p,i) => `<div class="match-item" id="term-${i}" onclick="termClick(${i},'${p.term.replace(/'/g,"\\'")}')">${p.term}</div>`).join('')}
       </div>
-    </div>`;
-
-  // Reorder: interleave left and right columns
-  const grid = document.getElementById('matchGrid');
-  const leftItems = [...grid.querySelectorAll('.match-left')];
-  const rightItems = [...grid.querySelectorAll('.match-right')];
-  grid.innerHTML = '';
-  const maxLen = Math.max(leftItems.length, rightItems.length);
-  for (let i = 0; i < maxLen; i++) {
-    if (leftItems[i]) grid.appendChild(leftItems[i]);
-    if (rightItems[i]) grid.appendChild(rightItems[i]);
-  }
-
-  window.pickMatch = function(el) {
-    if (el.classList.contains('matched')) return;
-
-    const type = el.dataset.type;
-    const idx = parseInt(el.dataset.idx);
-
-    if (!selectedTerm) {
-      if (type !== 'term') return; // Must pick term first
-      selectedTerm = { el, idx };
-      el.classList.add('selected');
-    } else {
-      if (type !== 'def') {
-        // Clicked another term — switch selection
-        selectedTerm.el.classList.remove('selected');
-        selectedTerm = { el, idx };
-        el.classList.add('selected');
-        return;
-      }
-
-      // Check match
-      if (idx === selectedTerm.idx) {
-        // Correct match
-        selectedTerm.el.classList.remove('selected');
-        selectedTerm.el.classList.add('matched');
-        el.classList.add('matched');
-        score++;
-        matchedPairs++;
-        document.getElementById('progressPill').textContent = `${matchedPairs}/${totalQuestions}`;
-      } else {
-        // Wrong match
-        el.classList.add('wrong');
-        selectedTerm.el.classList.add('wrong');
-        setTimeout(() => {
-          el.classList.remove('wrong');
-          selectedTerm.el.classList.remove('wrong', 'selected');
-          selectedTerm = null;
-        }, 600);
-        selectedTerm = null;
-        return;
-      }
-
-      selectedTerm = null;
-
-      if (matchedPairs === totalQuestions) {
-        setTimeout(() => showResult(score, totalQuestions), 800);
-      }
-    }
-  };
+      <div class="match-col" id="defs">
+        ${defs.map((d,i) => `<div class="match-item" id="def-${i}" onclick="defClick(${i},'${d.replace(/'/g,"\\'")}')">${d}</div>`).join('')}
+      </div>
+    </div>
+    <div style="text-align:center;font-size:13px;color:var(--muted);margin-top:12px" id="matchStatus">Tap a term, then tap its definition</div>
+  `;
+  // Store pairs for checking
+  window._matchPairs = pairs;
+  window._matchDefs = defs;
 }
 
-// ══════════════════════════════════════════════════
-//  MESOL COMBO
-// ══════════════════════════════════════════════════
-function renderCombo() {
-  const d = exerciseData;
-  const engQ = d.english_section.questions;
-  const mathQ = d.maths_section.questions;
-  totalQuestions = engQ.length + mathQ.length;
-  englishScore = 0;
-  mathsScore = 0;
-  comboPhase = 'english';
-  currentQuestion = 0;
+function termClick(idx, term) {
+  document.querySelectorAll('.match-item').forEach(m => { if (!m.classList.contains('matched')) m.classList.remove('selected'); });
+  state.selectedTerm = { idx, term };
+  document.getElementById('term-' + idx).classList.add('selected');
+}
 
-  function showComboQuestion() {
-    const isEnglish = comboPhase === 'english';
-    const questions = isEnglish ? engQ : mathQ;
-    const qIdx = currentQuestion;
-    const q = questions[qIdx];
-    const globalIdx = isEnglish ? qIdx : engQ.length + qIdx;
+function defClick(idx, def) {
+  if (!state.selectedTerm) return;
+  const correctDef = window._matchPairs.find(p => p.term === state.selectedTerm.term)?.definition;
+  const termEl = document.getElementById('term-' + state.selectedTerm.idx);
+  const defEl = document.getElementById('def-' + idx);
 
-    document.getElementById('progressPill').textContent = `${globalIdx + 1}/${totalQuestions}`;
-
-    let contextHtml = d.context ? `<div class="context-block">${d.context}</div>` : '';
-    let headerHtml = isEnglish
-      ? `<div class="section-header">📖 ${d.english_section.title}</div>`
-      : `<div class="section-header maths">🔢 ${d.maths_section.title}</div>`;
-
-    document.getElementById('mainContent').innerHTML = `
-      <div class="card">
-        ${contextHtml}
-        ${headerHtml}
-        <div class="question-text">${q.question}</div>
-        <div class="options" id="options">
-          ${q.options.map(opt => `<div class="option" data-val="${opt}" onclick="pickCombo(this)">${opt}</div>`).join('')}
-        </div>
-      </div>`;
-  }
-
-  window.pickCombo = function(el) {
-    if (el.parentElement.querySelector('.correct,.wrong')) return;
-
-    const isEnglish = comboPhase === 'english';
-    const questions = isEnglish ? engQ : mathQ;
-    const q = questions[currentQuestion];
-    const isCorrect = el.dataset.val === q.answer;
-
-    el.parentElement.querySelectorAll('.option').forEach(o => o.classList.add('disabled'));
-
-    if (isCorrect) {
-      el.classList.add('correct');
-      if (isEnglish) englishScore++; else mathsScore++;
-    } else {
-      el.classList.add('wrong');
-      el.parentElement.querySelectorAll('.option').forEach(o => {
-        if (o.dataset.val === q.answer) o.classList.add('correct');
-      });
+  if (def === correctDef) {
+    termEl.classList.remove('selected');
+    termEl.classList.add('matched');
+    defEl.classList.add('matched');
+    state.matchedCount++;
+    state.correct++;
+    if (state.matchedCount === state.total) {
+      setTimeout(() => showScore(state.correct, state.total), 600);
     }
-
+  } else {
+    termEl.classList.add('wrong');
+    defEl.classList.add('wrong');
     setTimeout(() => {
-      currentQuestion++;
-      if (currentQuestion < questions.length) {
-        showComboQuestion();
-      } else if (comboPhase === 'english') {
-        comboPhase = 'maths';
-        currentQuestion = 0;
-        showComboQuestion();
-      } else {
-        score = englishScore + mathsScore;
-        showResult(score, totalQuestions);
-      }
-    }, 1500);
-  };
-
-  showComboQuestion();
+      termEl.classList.remove('wrong','selected');
+      defEl.classList.remove('wrong');
+    }, 600);
+  }
+  state.selectedTerm = null;
 }
 
-// ══════════════════════════════════════════════════
-//  RESULT SCREEN
-// ══════════════════════════════════════════════════
-function showResult(correct, total) {
+// ── SCORE SCREEN ──────────────────────────────────────────────
+function showScore(correct, total, isCombo) {
+  localStorage.removeItem('progress_' + EXERCISE_ID);
+  document.getElementById('exerciseContent').style.display = 'none';
+  const screen = document.getElementById('scoreScreen');
+  screen.classList.add('show');
+
   const pct = Math.round((correct / total) * 100);
-  const tier = pct >= 70 ? 'good' : pct >= 40 ? 'ok' : 'low';
-  const emoji = pct >= 90 ? '🌟' : pct >= 70 ? '✅' : pct >= 40 ? '💪' : '📖';
-  const msg = pct >= 90 ? 'Brilliant work!' : pct >= 70 ? 'Well done — keep going!' : pct >= 40 ? 'Good try — practice makes perfect!' : 'Don\'t worry — try again to improve!';
+  const ring = document.getElementById('scoreRing');
+  const pctEl = document.getElementById('scorePct');
+  const emoji = pct >= 80 ? '🎉' : pct >= 60 ? '👍' : '💪';
+  const label = pct >= 80 ? 'Excellent work!' : pct >= 60 ? 'Good effort!' : 'Keep practising!';
 
-  const timeSec = Math.round((Date.now() - startTime) / 1000);
+  ring.className = 'score-ring ' + (pct >= 80 ? 'high' : pct >= 60 ? 'mid' : 'low');
+  pctEl.className = 'score-pct ' + (pct >= 80 ? '' : pct >= 60 ? 'mid' : 'low');
+  document.getElementById('scoreEmoji').textContent = emoji;
+  pctEl.textContent = pct + '%';
+  document.getElementById('scoreLabel').textContent = label;
+  document.getElementById('scoreSub').textContent = correct + ' out of ' + total + ' correct';
 
-  document.getElementById('progressPill').textContent = `${total}/${total}`;
-
-  let comboDetail = '';
-  if (exerciseData.type === 'mesol_combo') {
-    comboDetail = `
-      <div style="display:flex;gap:16px;justify-content:center;margin-bottom:16px">
-        <div style="background:#eef0ff;padding:10px 18px;border-radius:10px;font-size:14px">📖 English: <strong>${englishScore}/${exerciseData.english_section.questions.length}</strong></div>
-        <div style="background:#fff8e1;padding:10px 18px;border-radius:10px;font-size:14px">🔢 Maths: <strong>${mathsScore}/${exerciseData.maths_section.questions.length}</strong></div>
-      </div>`;
+  let breakdown = `<div class="score-breakdown-row"><span>Correct</span><span style="color:var(--g)">${correct}</span></div>
+    <div class="score-breakdown-row"><span>Incorrect</span><span style="color:var(--error)">${total - correct}</span></div>`;
+  if (isCombo) {
+    breakdown += `<div class="score-breakdown-row"><span>English</span><span>${state.comboEnglishScore.correct}/${exercise.english_section.questions.length}</span></div>
+    <div class="score-breakdown-row"><span>Maths</span><span>${state.comboMathsScore.correct}/${exercise.maths_section.questions.length}</span></div>`;
   }
-
-  document.getElementById('mainContent').innerHTML = `
-    <div class="card result-screen">
-      <div class="result-emoji">${emoji}</div>
-      <div class="result-pct ${tier}">${pct}%</div>
-      <div class="result-label">${correct} out of ${total} correct</div>
-      ${comboDetail}
-      <div class="result-msg">${msg}</div>
-      <div class="result-btns">
-        <button class="btn btn-outline" onclick="retryExercise()">↻ Try again</button>
-        <button class="btn btn-primary" onclick="window.location.href='/practice'">Next →</button>
-      </div>
-    </div>`;
+  breakdown += `<div class="score-breakdown-row"><span>Score</span><span>${pct}%</span></div>`;
+  document.getElementById('scoreBreakdown').innerHTML = breakdown;
 
   // Save result
-  saveResult(correct, total, timeSec);
-
-  // Clear any saved progress
-  localStorage.removeItem('yes_progress_' + exerciseId);
+  const timeSec = Math.round((Date.now() - state.startTime) / 1000);
+  fetch('/api/results', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + TOKEN },
+    body: JSON.stringify({ exercise_id: EXERCISE_ID, score: correct, max_score: total, time_seconds: timeSec })
+  }).catch(() => {});
 }
 
-async function saveResult(correct, total, timeSec) {
-  try {
-    await fetch('/api/results', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + TOKEN
-      },
-      body: JSON.stringify({
-        exercise_id: exerciseId,
-        score: correct,
-        max_score: total,
-        time_seconds: timeSec,
-        attempt: 1
-      })
-    });
-  } catch (err) {
-    // Save offline if API fails
-    const offlineResults = JSON.parse(localStorage.getItem('yes_offline_results') || '[]');
-    offlineResults.push({ exercise_id: exerciseId, score: correct, max_score: total, time_seconds: timeSec, attempt: 1, saved_at: new Date().toISOString() });
-    localStorage.setItem('yes_offline_results', JSON.stringify(offlineResults));
-  }
+function updateProgress(current, total) {
+  if (!current || !total) return;
+  document.getElementById('progressBar').style.width = ((current / total) * 100) + '%';
 }
 
 function retryExercise() {
-  score = 0;
-  currentQuestion = 0;
-  englishScore = 0;
-  mathsScore = 0;
-  comboPhase = null;
-  startTime = Date.now();
-  loadExercise();
+  state = { selected: null, blanks: [], answers: [], matches: {}, currentQ: 0, correct: 0, total: 0, startTime: Date.now(), comboSection: 'english', comboEnglishScore:{correct:0,total:0}, comboMathsScore:{correct:0,total:0} };
+  document.getElementById('scoreScreen').classList.remove('show');
+  document.getElementById('exerciseContent').style.display = 'block';
+  renderExercise();
 }
 
-// ── Save progress on leave ─────────────────────────
-window.addEventListener('beforeunload', () => {
-  if (score === 0 && currentQuestion > 0) {
-    localStorage.setItem('yes_progress_' + exerciseId, JSON.stringify({
-      currentQuestion, score, comboPhase, englishScore, mathsScore
-    }));
-  }
-});
+function nextExercise() { window.location.href = '/practice'; }
+function goBack() { window.history.back(); }
 
 loadExercise();
 </script>

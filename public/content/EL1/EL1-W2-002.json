@@ -1,0 +1,62 @@
+{
+  "id": "EL1-W2-002",
+  "session": 2,
+  "type": "mcq",
+  "title": "Comparing Prices",
+  "topic": "Comparisons",
+  "instruction": "Choose the correct answer.",
+  "questions": [
+    {
+      "question": "A apple costs 30p. A banana costs 20p. Which is cheaper?",
+      "options": [
+        "The banana",
+        "The apple",
+        "They are the same",
+        "Cannot tell"
+      ],
+      "answer": "The banana"
+    },
+    {
+      "question": "Shop A: bread £1.20. Shop B: bread £1.50. Which shop is cheaper?",
+      "options": [
+        "Shop A",
+        "Shop B",
+        "Both the same",
+        "Cannot tell"
+      ],
+      "answer": "Shop A"
+    },
+    {
+      "question": "Big = bigger = ___",
+      "options": [
+        "biggest",
+        "bigest",
+        "most big",
+        "more big"
+      ],
+      "answer": "biggest"
+    },
+    {
+      "question": "Cheap = cheaper = ___",
+      "options": [
+        "cheapest",
+        "most cheap",
+        "more cheaper",
+        "cheaps"
+      ],
+      "answer": "cheapest"
+    },
+    {
+      "question": "£2.50 is ___ than £1.80",
+      "options": [
+        "more",
+        "less",
+        "same",
+        "equal"
+      ],
+      "answer": "more"
+    }
+  ],
+  "week": 2,
+  "level": "EL1"
+}

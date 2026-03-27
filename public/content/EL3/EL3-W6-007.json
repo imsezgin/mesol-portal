@@ -1,0 +1,36 @@
+{
+  "id": "EL3-W6-007",
+  "session": 6,
+  "type": "vocab_match",
+  "title": "Scheduling Terms",
+  "topic": "Date & Time",
+  "instruction": "Match each scheduling term to its definition.",
+  "pairs": [
+    {
+      "term": "tentative",
+      "definition": "not confirmed; provisional"
+    },
+    {
+      "term": "reschedule",
+      "definition": "change to a different date or time"
+    },
+    {
+      "term": "recurring",
+      "definition": "happening at regular intervals"
+    },
+    {
+      "term": "agenda",
+      "definition": "a list of items to discuss in a meeting"
+    },
+    {
+      "term": "adjourn",
+      "definition": "to pause or end a meeting temporarily"
+    },
+    {
+      "term": "slot",
+      "definition": "an available time period for a booking"
+    }
+  ],
+  "week": 6,
+  "level": "EL3"
+}

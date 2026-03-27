@@ -1,0 +1,90 @@
+{
+  "id": "EL2-W3-004",
+  "session": 3,
+  "type": "mesol_combo",
+  "title": "Sales and Discounts",
+  "topic": "Fractions & Percentages",
+  "context": "Winter sale: Coat £80 (25% off), Boots £60 (1/3 off), Scarf £15 (10% off).",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What does '25% off' mean?",
+        "options": [
+          "You save one quarter of the price",
+          "You pay 25% of the price",
+          "The item costs £25",
+          "You get 25 items"
+        ],
+        "answer": "You save one quarter of the price"
+      },
+      {
+        "question": "What is a 'winter sale'?",
+        "options": [
+          "A sale during the winter season",
+          "Selling winter clothes only",
+          "A cold shop",
+          "Buying in winter"
+        ],
+        "answer": "A sale during the winter season"
+      },
+      {
+        "question": "What does 'RRP' stand for?",
+        "options": [
+          "Recommended Retail Price",
+          "Really Reduced Price",
+          "Regular Return Policy",
+          "Revised Rate Plan"
+        ],
+        "answer": "Recommended Retail Price"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate the sale prices.",
+    "questions": [
+      {
+        "question": "Coat: 25% off £80. Sale price?",
+        "options": [
+          "£60",
+          "£20",
+          "£40",
+          "£70"
+        ],
+        "answer": "£60"
+      },
+      {
+        "question": "Boots: 1/3 off £60. Sale price?",
+        "options": [
+          "£40",
+          "£20",
+          "£45",
+          "£30"
+        ],
+        "answer": "£40"
+      },
+      {
+        "question": "Scarf: 10% off £15. Sale price?",
+        "options": [
+          "£13.50",
+          "£12.00",
+          "£14.00",
+          "£10.50"
+        ],
+        "answer": "£13.50"
+      },
+      {
+        "question": "Total savings across all three items?",
+        "options": [
+          "£21.50",
+          "£20",
+          "£25",
+          "£30"
+        ],
+        "answer": "£21.50"
+      }
+    ]
+  },
+  "week": 3,
+  "level": "EL2"
+}

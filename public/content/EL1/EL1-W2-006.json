@@ -1,0 +1,80 @@
+{
+  "id": "EL1-W2-006",
+  "session": 2,
+  "type": "mesol_combo",
+  "title": "Supermarket Shopping",
+  "topic": "Comparisons",
+  "context": "You are shopping for dinner. You need rice, chicken, and vegetables.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "Where do you buy food?",
+        "options": [
+          "A supermarket",
+          "A bank",
+          "A library",
+          "A hospital"
+        ],
+        "answer": "A supermarket"
+      },
+      {
+        "question": "What is an 'offer'?",
+        "options": [
+          "A special lower price",
+          "A normal price",
+          "A very high price",
+          "Free food"
+        ],
+        "answer": "A special lower price"
+      },
+      {
+        "question": "What does 'buy one get one free' mean?",
+        "options": [
+          "You pay for one and get two",
+          "You get one free item only",
+          "Everything is free",
+          "You pay double"
+        ],
+        "answer": "You pay for one and get two"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Answer the maths questions.",
+    "questions": [
+      {
+        "question": "Rice: £1.50. Chicken: £3.00. Vegetables: £1.00. What is the total?",
+        "options": [
+          "£5.50",
+          "£4.50",
+          "£5.00",
+          "£6.00"
+        ],
+        "answer": "£5.50"
+      },
+      {
+        "question": "You pay with a £10 note. How much change?",
+        "options": [
+          "£4.50",
+          "£5.50",
+          "£3.50",
+          "£4.00"
+        ],
+        "answer": "£4.50"
+      },
+      {
+        "question": "Chicken is on offer: 50% off £3.00. New price?",
+        "options": [
+          "£1.50",
+          "£2.00",
+          "£2.50",
+          "£1.00"
+        ],
+        "answer": "£1.50"
+      }
+    ]
+  },
+  "week": 2,
+  "level": "EL1"
+}

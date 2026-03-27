@@ -1,0 +1,32 @@
+{
+  "id": "EL1-W3-001",
+  "session": 3,
+  "type": "vocab_match",
+  "title": "Fraction Words",
+  "topic": "Fractions & Percentages",
+  "instruction": "Match each fraction word to its meaning.",
+  "pairs": [
+    {
+      "term": "half",
+      "definition": "one of two equal parts (1/2)"
+    },
+    {
+      "term": "quarter",
+      "definition": "one of four equal parts (1/4)"
+    },
+    {
+      "term": "third",
+      "definition": "one of three equal parts (1/3)"
+    },
+    {
+      "term": "whole",
+      "definition": "all of something / complete"
+    },
+    {
+      "term": "equal",
+      "definition": "the same size or amount"
+    }
+  ],
+  "week": 3,
+  "level": "EL1"
+}

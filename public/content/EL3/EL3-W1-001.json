@@ -1,0 +1,36 @@
+{
+  "id": "EL3-W1-001",
+  "session": 1,
+  "type": "vocab_match",
+  "title": "Advanced Measurement Terms",
+  "topic": "Weights & Measures",
+  "instruction": "Match each term to its precise definition.",
+  "pairs": [
+    {
+      "term": "calibrate",
+      "definition": "to adjust a measuring instrument for accuracy"
+    },
+    {
+      "term": "precision",
+      "definition": "the degree of exactness in a measurement"
+    },
+    {
+      "term": "gross weight",
+      "definition": "the total weight including packaging"
+    },
+    {
+      "term": "net weight",
+      "definition": "the weight of the product only"
+    },
+    {
+      "term": "tare",
+      "definition": "the weight of the empty container"
+    },
+    {
+      "term": "yield",
+      "definition": "the amount of food produced from a recipe"
+    }
+  ],
+  "week": 1,
+  "level": "EL3"
+}

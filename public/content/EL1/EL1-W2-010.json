@@ -1,0 +1,80 @@
+{
+  "id": "EL1-W2-010",
+  "session": 2,
+  "type": "mesol_combo",
+  "title": "Choosing a Mobile Phone",
+  "topic": "Comparisons",
+  "context": "Plan A: £10/month, 100 minutes, 500MB data. Plan B: £15/month, unlimited minutes, 2GB data.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What is a 'tariff'?",
+        "options": [
+          "A phone plan with a set price",
+          "A type of phone",
+          "A phone number",
+          "A text message"
+        ],
+        "answer": "A phone plan with a set price"
+      },
+      {
+        "question": "What does 'unlimited' mean?",
+        "options": [
+          "No limit / as much as you want",
+          "Very limited",
+          "Only 10",
+          "None"
+        ],
+        "answer": "No limit / as much as you want"
+      },
+      {
+        "question": "What does 'data' mean on a phone plan?",
+        "options": [
+          "Internet usage on your phone",
+          "Phone calls",
+          "Text messages",
+          "The phone itself"
+        ],
+        "answer": "Internet usage on your phone"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Answer the maths questions about the phone plans.",
+    "questions": [
+      {
+        "question": "How much more per month is Plan B than Plan A?",
+        "options": [
+          "£5",
+          "£10",
+          "£15",
+          "£25"
+        ],
+        "answer": "£5"
+      },
+      {
+        "question": "Plan A for one year (12 months) costs...",
+        "options": [
+          "£120",
+          "£100",
+          "£180",
+          "£150"
+        ],
+        "answer": "£120"
+      },
+      {
+        "question": "Plan B for one year costs...",
+        "options": [
+          "£180",
+          "£120",
+          "£150",
+          "£200"
+        ],
+        "answer": "£180"
+      }
+    ]
+  },
+  "week": 2,
+  "level": "EL1"
+}

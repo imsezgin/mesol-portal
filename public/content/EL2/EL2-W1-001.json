@@ -1,0 +1,36 @@
+{
+  "id": "EL2-W1-001",
+  "session": 1,
+  "type": "vocab_match",
+  "title": "Measurement Vocabulary",
+  "topic": "Weights & Measures",
+  "instruction": "Match each term to its correct definition.",
+  "pairs": [
+    {
+      "term": "convert",
+      "definition": "to change from one unit to another"
+    },
+    {
+      "term": "approximately",
+      "definition": "close to but not exactly"
+    },
+    {
+      "term": "imperial",
+      "definition": "the old British system (pounds, ounces)"
+    },
+    {
+      "term": "metric",
+      "definition": "the modern system (kilograms, grams)"
+    },
+    {
+      "term": "equivalent",
+      "definition": "equal in value or amount"
+    },
+    {
+      "term": "scale",
+      "definition": "a device for weighing things"
+    }
+  ],
+  "week": 1,
+  "level": "EL2"
+}

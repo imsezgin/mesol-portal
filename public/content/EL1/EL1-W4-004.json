@@ -1,0 +1,80 @@
+{
+  "id": "EL1-W4-004",
+  "session": 4,
+  "type": "mesol_combo",
+  "title": "Shopping Addition",
+  "topic": "Money & Calculations",
+  "context": "You buy: Bread £1.20, Milk £0.90, Eggs £1.50, Butter £1.80.",
+  "english_section": {
+    "instruction": "Answer the English questions.",
+    "questions": [
+      {
+        "question": "What does 'How much is this?' mean?",
+        "options": [
+          "What is the price?",
+          "How heavy is it?",
+          "How big is it?",
+          "Where is it?"
+        ],
+        "answer": "What is the price?"
+      },
+      {
+        "question": "What does 'That comes to...' mean?",
+        "options": [
+          "The total is...",
+          "It is coming soon",
+          "It is from...",
+          "It looks like..."
+        ],
+        "answer": "The total is..."
+      },
+      {
+        "question": "What does 'keep the change' mean?",
+        "options": [
+          "You do not want the change back",
+          "Save the money",
+          "Exchange the money",
+          "Count the money"
+        ],
+        "answer": "You do not want the change back"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Calculate the totals.",
+    "questions": [
+      {
+        "question": "Bread + Milk = ?",
+        "options": [
+          "£2.10",
+          "£2.00",
+          "£1.10",
+          "£2.20"
+        ],
+        "answer": "£2.10"
+      },
+      {
+        "question": "Total of all four items?",
+        "options": [
+          "£5.40",
+          "£4.40",
+          "£5.00",
+          "£6.40"
+        ],
+        "answer": "£5.40"
+      },
+      {
+        "question": "Pay with £10. Change?",
+        "options": [
+          "£4.60",
+          "£5.40",
+          "£4.40",
+          "£5.60"
+        ],
+        "answer": "£4.60"
+      }
+    ]
+  },
+  "week": 4,
+  "level": "EL1"
+}

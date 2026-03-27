@@ -1,0 +1,62 @@
+{
+  "id": "EL3-W5-002",
+  "session": 5,
+  "type": "mcq",
+  "title": "Compound Interest",
+  "topic": "Banking",
+  "instruction": "Calculate compound interest.",
+  "questions": [
+    {
+      "question": "£1,000 at 5% compound interest for 2 years. Year 1 interest?",
+      "options": [
+        "£50",
+        "£100",
+        "£500",
+        "£5"
+      ],
+      "answer": "£50"
+    },
+    {
+      "question": "Same investment. Balance after Year 1?",
+      "options": [
+        "£1,050",
+        "£1,000",
+        "£1,100",
+        "£1,500"
+      ],
+      "answer": "£1,050"
+    },
+    {
+      "question": "Year 2 interest (5% of £1,050)?",
+      "options": [
+        "£52.50",
+        "£50",
+        "£55",
+        "£100"
+      ],
+      "answer": "£52.50"
+    },
+    {
+      "question": "Total after 2 years?",
+      "options": [
+        "£1,102.50",
+        "£1,100",
+        "£1,050",
+        "£1,200"
+      ],
+      "answer": "£1,102.50"
+    },
+    {
+      "question": "How much more than simple interest?",
+      "options": [
+        "£2.50",
+        "£0",
+        "£5",
+        "£50"
+      ],
+      "answer": "£2.50"
+    }
+  ],
+  "week": 5,
+  "level": "EL3"
+}

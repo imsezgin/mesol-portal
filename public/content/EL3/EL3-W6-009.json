@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W6-009",
+  "session": 6,
+  "type": "gap_fill",
+  "title": "Course Review: Money & Banking",
+  "topic": "Course Review",
+  "instruction": "Complete the review of financial topics.",
+  "passage": "VAT in the UK is currently ___%. To find the pre-VAT price from a VAT-inclusive price, divide by ___. A credit card at 24% APR charges approximately ___% per month. Compound interest means earning interest on your ___. The personal tax allowance is £___.",
+  "blanks": [
+    "20",
+    "1.20",
+    "2",
+    "interest",
+    "12,570"
+  ],
+  "word_bank": [
+    "20",
+    "1.20",
+    "2",
+    "interest",
+    "12,570",
+    "1.10",
+    "25"
+  ],
+  "week": 6,
+  "level": "EL3"
+}

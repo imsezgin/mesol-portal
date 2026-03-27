@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W6-006",
+  "session": 6,
+  "type": "gap_fill",
+  "title": "Timesheet Calculations",
+  "topic": "Date & Time",
+  "instruction": "Complete the weekly timesheet summary.",
+  "passage": "Monday: 09:00-17:30 (___h). Tuesday: 08:30-16:45 (___h). Wednesday: 09:15-18:00 (___h). Thursday: 08:00-16:30 (___h). Friday: 09:00-15:30 (6.5h). Total weekly hours: ___.",
+  "blanks": [
+    "8.5",
+    "8.25",
+    "8.75",
+    "8.5",
+    "40.5"
+  ],
+  "word_bank": [
+    "8.5",
+    "8.25",
+    "8.75",
+    "8.5",
+    "40.5",
+    "7.5",
+    "39"
+  ],
+  "week": 6,
+  "level": "EL3"
+}

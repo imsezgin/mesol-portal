@@ -1,0 +1,62 @@
+{
+  "id": "EL3-W4-002",
+  "session": 4,
+  "type": "mcq",
+  "title": "Complex Money Calculations",
+  "topic": "Money & Calculations",
+  "instruction": "Calculate the correct amounts.",
+  "questions": [
+    {
+      "question": "Bill: £85.60 + 12.5% service. Service charge?",
+      "options": [
+        "£10.70",
+        "£8.56",
+        "£12.50",
+        "£10.00"
+      ],
+      "answer": "£10.70"
+    },
+    {
+      "question": "Item: £150 ex-VAT. 20% VAT. 10% loyalty discount (applied after VAT). Final price?",
+      "options": [
+        "£162",
+        "£150",
+        "£165",
+        "£180"
+      ],
+      "answer": "£162"
+    },
+    {
+      "question": "A £30,000 salary. Monthly gross before tax?",
+      "options": [
+        "£2,500",
+        "£2,000",
+        "£3,000",
+        "£2,750"
+      ],
+      "answer": "£2,500"
+    },
+    {
+      "question": "An item is £72 after 20% discount. Original price?",
+      "options": [
+        "£90",
+        "£86.40",
+        "£80",
+        "£96"
+      ],
+      "answer": "£90"
+    },
+    {
+      "question": "Exchange rate: £1 = €1.15. Convert £250.",
+      "options": [
+        "€287.50",
+        "€250",
+        "€217.39",
+        "€300"
+      ],
+      "answer": "€287.50"
+    }
+  ],
+  "week": 4,
+  "level": "EL3"
+}

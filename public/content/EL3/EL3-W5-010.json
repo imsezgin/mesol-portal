@@ -1,0 +1,90 @@
+{
+  "id": "EL3-W5-010",
+  "session": 5,
+  "type": "mesol_combo",
+  "title": "Financial Planning Scenario",
+  "topic": "Banking",
+  "context": "You earn £32,000/year. Monthly take-home: ~£2,100. Monthly costs: rent £700, bills £200, food £300, transport £150, phone £30. You want to save for a £2,000 holiday in 8 months.",
+  "english_section": {
+    "instruction": "Answer the vocabulary questions.",
+    "questions": [
+      {
+        "question": "What is a 'financial goal'?",
+        "options": [
+          "A specific money target you want to reach",
+          "Your salary",
+          "Your bank balance",
+          "A type of account"
+        ],
+        "answer": "A specific money target you want to reach"
+      },
+      {
+        "question": "What does 'disposable income' mean?",
+        "options": [
+          "Money left after essential expenses",
+          "Wasted money",
+          "Income before tax",
+          "Credit card limit"
+        ],
+        "answer": "Money left after essential expenses"
+      },
+      {
+        "question": "What is an 'emergency fund'?",
+        "options": [
+          "Savings for unexpected costs (3-6 months expenses)",
+          "A loan for emergencies",
+          "Insurance",
+          "Government support"
+        ],
+        "answer": "Savings for unexpected costs (3-6 months expenses)"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Plan the savings.",
+    "questions": [
+      {
+        "question": "Total monthly essential costs?",
+        "options": [
+          "£1,380",
+          "£1,200",
+          "£1,500",
+          "£1,080"
+        ],
+        "answer": "£1,380"
+      },
+      {
+        "question": "Monthly disposable income?",
+        "options": [
+          "£720",
+          "£900",
+          "£600",
+          "£1,380"
+        ],
+        "answer": "£720"
+      },
+      {
+        "question": "Monthly saving needed for £2,000 in 8 months?",
+        "options": [
+          "£250",
+          "£200",
+          "£300",
+          "£2,000"
+        ],
+        "answer": "£250"
+      },
+      {
+        "question": "After saving £250/month, what is left for other spending?",
+        "options": [
+          "£470",
+          "£720",
+          "£250",
+          "£350"
+        ],
+        "answer": "£470"
+      }
+    ]
+  },
+  "week": 5,
+  "level": "EL3"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "EL1-W5-005",
+  "session": 5,
+  "type": "mcq",
+  "title": "Positive and Negative",
+  "topic": "Banking",
+  "instruction": "Choose the correct answer about positive and negative numbers.",
+  "questions": [
+    {
+      "question": "You have £30. What is your balance?",
+      "options": [
+        "+£30 (positive)",
+        "-£30 (negative)",
+        "£0",
+        "Cannot tell"
+      ],
+      "answer": "+£30 (positive)"
+    },
+    {
+      "question": "You owe the bank £50. Your balance is...",
+      "options": [
+        "-£50",
+        "+£50",
+        "£0",
+        "£50"
+      ],
+      "answer": "-£50"
+    },
+    {
+      "question": "What does 'in credit' mean?",
+      "options": [
+        "You have money in your account",
+        "You owe money",
+        "Your account is empty",
+        "You borrowed money"
+      ],
+      "answer": "You have money in your account"
+    },
+    {
+      "question": "What does 'overdrawn' mean?",
+      "options": [
+        "You have spent more than you have",
+        "You have lots of money",
+        "You saved money",
+        "Your account is closed"
+      ],
+      "answer": "You have spent more than you have"
+    }
+  ],
+  "week": 5,
+  "level": "EL1"
+}

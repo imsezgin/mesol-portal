@@ -1,0 +1,26 @@
+{
+  "id": "EL1-W1-009",
+  "session": 1,
+  "type": "gap_fill",
+  "title": "At the Market",
+  "topic": "Weights & Measures",
+  "instruction": "Complete the conversation at the market.",
+  "passage": "Customer: How ___ are the apples? Seller: They are two ___ per kilogram. Customer: I would like half a ___. How much is that? Seller: That is one ___. Customer: Here you are. Thank ___.",
+  "blanks": [
+    "much",
+    "pounds",
+    "kilo",
+    "pound",
+    "you"
+  ],
+  "word_bank": [
+    "much",
+    "pounds",
+    "kilo",
+    "pound",
+    "you",
+    "please"
+  ],
+  "week": 1,
+  "level": "EL1"
+}

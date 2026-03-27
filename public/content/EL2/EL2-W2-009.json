@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W2-009",
+  "session": 2,
+  "type": "gap_fill",
+  "title": "Calculating Averages",
+  "topic": "Comparisons",
+  "instruction": "Complete the explanation of how to calculate a mean average.",
+  "passage": "To find the ___ (average), first ___ all the numbers together. Then ___ by how many numbers there are. Example: 20, 30, 40. Step 1: 20 + 30 + 40 = ___. Step 2: 90 ÷ 3 = ___.",
+  "blanks": [
+    "mean",
+    "add",
+    "divide",
+    "90",
+    "30"
+  ],
+  "word_bank": [
+    "mean",
+    "add",
+    "divide",
+    "90",
+    "30",
+    "multiply",
+    "mode"
+  ],
+  "week": 2,
+  "level": "EL2"
+}

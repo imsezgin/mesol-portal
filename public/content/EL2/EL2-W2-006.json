@@ -1,0 +1,27 @@
+{
+  "id": "EL2-W2-006",
+  "session": 2,
+  "type": "gap_fill",
+  "title": "Mobile Phone Comparison",
+  "topic": "Comparisons",
+  "instruction": "Complete the comparison review.",
+  "passage": "I compared three ___ phone plans. Plan A costs £12 per ___ with 3GB data. Plan B is the most ___ at £25 but has unlimited data. Plan C offers the best ___ at £15 with 10GB. For most people, Plan C is the ___ choice.",
+  "blanks": [
+    "mobile",
+    "month",
+    "expensive",
+    "value",
+    "best"
+  ],
+  "word_bank": [
+    "mobile",
+    "month",
+    "expensive",
+    "value",
+    "best",
+    "worst",
+    "cheapest"
+  ],
+  "week": 2,
+  "level": "EL2"
+}

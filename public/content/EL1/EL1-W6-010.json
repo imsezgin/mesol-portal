@@ -1,0 +1,80 @@
+{
+  "id": "EL1-W6-010",
+  "session": 6,
+  "type": "mesol_combo",
+  "title": "Course Review Quiz",
+  "topic": "Course Review",
+  "context": "This quiz reviews the topics from all 6 weeks of the MESOL course.",
+  "english_section": {
+    "instruction": "Answer the English review questions.",
+    "questions": [
+      {
+        "question": "What does 'weigh' mean?",
+        "options": [
+          "Find out how heavy something is",
+          "Cook something",
+          "Buy something",
+          "Eat something"
+        ],
+        "answer": "Find out how heavy something is"
+      },
+      {
+        "question": "'Cheaper' is the comparative form of...",
+        "options": [
+          "cheap",
+          "expensive",
+          "cheapest",
+          "less"
+        ],
+        "answer": "cheap"
+      },
+      {
+        "question": "What is 'inflation'?",
+        "options": [
+          "When prices go up over time",
+          "A type of bank account",
+          "A fraction",
+          "A unit of weight"
+        ],
+        "answer": "When prices go up over time"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Answer the maths review questions.",
+    "questions": [
+      {
+        "question": "1/4 = ?%",
+        "options": [
+          "25%",
+          "50%",
+          "75%",
+          "10%"
+        ],
+        "answer": "25%"
+      },
+      {
+        "question": "£3.50 + £2.75 = ?",
+        "options": [
+          "£6.25",
+          "£5.25",
+          "£6.75",
+          "£5.75"
+        ],
+        "answer": "£6.25"
+      },
+      {
+        "question": "20% of £80 = ?",
+        "options": [
+          "£16",
+          "£20",
+          "£8",
+          "£80"
+        ],
+        "answer": "£16"
+      }
+    ]
+  },
+  "week": 6,
+  "level": "EL1"
+}

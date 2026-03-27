@@ -1,0 +1,90 @@
+{
+  "id": "EL3-W5-004",
+  "session": 5,
+  "type": "mesol_combo",
+  "title": "Investment Comparison",
+  "topic": "Banking",
+  "context": "Option A: Savings account, 4% AER, instant access. Option B: Fixed bond, 5.5% for 2 years (no withdrawals). Option C: Stocks & Shares ISA, average 7% but can go up or down.",
+  "english_section": {
+    "instruction": "Answer the vocabulary questions.",
+    "questions": [
+      {
+        "question": "What does 'AER' stand for?",
+        "options": [
+          "Annual Equivalent Rate",
+          "Average Earnings Rate",
+          "Annual Extra Rate",
+          "Actual Expected Return"
+        ],
+        "answer": "Annual Equivalent Rate"
+      },
+      {
+        "question": "What does 'fixed bond' mean?",
+        "options": [
+          "Your money is locked away for a set period",
+          "A type of government debt",
+          "A flexible savings account",
+          "A type of insurance"
+        ],
+        "answer": "Your money is locked away for a set period"
+      },
+      {
+        "question": "What is 'risk tolerance'?",
+        "options": [
+          "How much financial risk you are comfortable with",
+          "Your bank balance",
+          "Your income",
+          "Your age"
+        ],
+        "answer": "How much financial risk you are comfortable with"
+      }
+    ]
+  },
+  "maths_section": {
+    "instruction": "Compare £10,000 invested in each option for 2 years.",
+    "questions": [
+      {
+        "question": "Option A after 2 years (simple interest)?",
+        "options": [
+          "£10,800",
+          "£10,400",
+          "£11,000",
+          "£10,816"
+        ],
+        "answer": "£10,800"
+      },
+      {
+        "question": "Option B after 2 years (compound)?",
+        "options": [
+          "£11,130.25",
+          "£11,100",
+          "£11,000",
+          "£10,550"
+        ],
+        "answer": "£11,130.25"
+      },
+      {
+        "question": "Option B earns how much more than A?",
+        "options": [
+          "£330.25",
+          "£200",
+          "£100",
+          "£550"
+        ],
+        "answer": "£330.25"
+      },
+      {
+        "question": "Option C could return 7% or lose 10%. Best case vs worst case after 1 year?",
+        "options": [
+          "£10,700 vs £9,000",
+          "£10,700 vs £10,000",
+          "£11,000 vs £9,500",
+          "£10,500 vs £9,300"
+        ],
+        "answer": "£10,700 vs £9,000"
+      }
+    ]
+  },
+  "week": 5,
+  "level": "EL3"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "EL3-W2-009",
+  "session": 2,
+  "type": "gap_fill",
+  "title": "Writing a Cost-Benefit Analysis",
+  "topic": "Comparisons",
+  "instruction": "Complete the cost-benefit analysis paragraph.",
+  "passage": "A cost-benefit analysis ___ whether the benefits of a decision outweigh the costs. The annual ___ of the premium plan is £360. The standard plan costs £240, a ___ of £120. However, the premium includes features worth approximately £200 in ___. Therefore, the net ___ of upgrading is £80.",
+  "blanks": [
+    "evaluates",
+    "cost",
+    "difference",
+    "value",
+    "benefit"
+  ],
+  "word_bank": [
+    "evaluates",
+    "cost",
+    "difference",
+    "value",
+    "benefit",
+    "loss",
+    "compares"
+  ],
+  "week": 2,
+  "level": "EL3"
+}
