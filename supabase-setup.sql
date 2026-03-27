@@ -70,8 +70,8 @@ ALTER TABLE staff DISABLE ROW LEVEL SECURITY;
 -- Insert initial accounts
 -- PIN/Password is DOB digits for now (e.g. 29081995)
 INSERT INTO staff (name, email, password, role, dob, phone) VALUES
-('Gwyn Maher', 'GwynMaher@gmail.com', '29081995', 'admin', '29/08/1995', '07762163947'),
-('Steve Culhane', 'steveculhane67@gmail.com', '06051967', 'teacher', '06/05/1967', '07541651064')
+('Gwyn Maher', 'GwynMaher@gmail.com', '1995', 'admin', '29/08/1995', '07762163947'),
+('Steve Culhane', 'steveculhane67@gmail.com', '1967', 'teacher', '06/05/1967', '07541651064')
 ON CONFLICT (email) DO NOTHING;
 
 -- ── Verification ─────────────────────────────────────────────
